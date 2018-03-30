@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.rousing.oen.rousing.PresetActivity"
+    tools:showIn="@layout/activity_preset">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/effect1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Effect 1"
+                android:onClick="handleButtonClick"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/effect2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Effect 2"
+                android:onClick="handleButtonClick"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/effect3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Effect 3"
+                android:onClick="handleButtonClick"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/effect4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Effect 4"
+                android:onClick="handleButtonClick"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/effect5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Effect 5"
+                android:onClick="handleButtonClick"/>
+        </TableRow>
+    </TableLayout>
+</android.support.constraint.ConstraintLayout>

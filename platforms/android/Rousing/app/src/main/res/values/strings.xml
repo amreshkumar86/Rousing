@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Rousing</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_Control">Control</string>
+    <string name="title_Color">Color</string>
+    <string name="title_Preset">Preset</string>
+    <string name="title_Setting">Setting</string>
+    <string name="title_activity_color">ColorActivity</string>
+    <string name="title_activity_preset">PresetActivity</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="LIFXtoken">c7d77fe4b94a81d39eb21623a63b1fc82388c072b7aa5796013bee73cf1a12d1</string>
+    <string name="LIFXID">d073d531f221</string>
 </resources>
