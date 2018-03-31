@@ -11,4 +11,5 @@
     <string name="title_activity_setting">SettingActivity</string>
     <string name="LIFXtoken">c7d77fe4b94a81d39eb21623a63b1fc82388c072b7aa5796013bee73cf1a12d1</string>
     <string name="LIFXID">d073d531f221</string>
+    <string name="NO_LIGHTS_STRING">No configured devices found. Press this button to search for lights in your network.</string>
 </resources>
