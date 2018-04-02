@@ -1,19 +1,17 @@
 #include <ESP8266WiFi.h>
 #include <Adafruit_NeoPixel.h>
 #include <WebSocketsServer.h>
-#include <WiFiUdp.h>
-
+#include <ESP8266WebServer.h>
+#include <ESP8266SSDP.h>
+ESP8266WebServer HTTP(80);
 //Define Constants
 //Wifi Access Point Config
-const char *ssid = "RousingNeopixel";
-const char *password = "rousingdemo";
-unsigned int localPort = 2390;
-WiFiUDP Udp;
-char packetBuffer[255];
-char ipAddBuff[255];
+const char *ssid = "RousingDesign";
+const char *password = "RousingInternet";
+
 //Neopixel Strip Config
 #define PIN 2
-#define NUM_LEDS 60
+#define NUM_LEDS 8
 #define BRIGHTNESS 255
 
 //Webserver Config
@@ -25,63 +23,37 @@ Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_LEDS, PIN, NEO_GRBW + NEO_KHZ800
 int r = 0, g = 0, b = 0, w = 0, s = 100, e = 0;
 //Setup WiFi Access Point
 void setupWifi() {
-//  WiFi.softAP(ssid, password);
-//  IPAddress myIP = WiFi.softAPIP();
-//  Serial.println("AP IP address: ");
-//  Serial.println(myIP);
   WiFi.mode(WIFI_STA);
-  WiFi.begin("RousingDesign", "RousingInternet");
-//  WiFi.begin("BANGERS", "B@NGERS543@!");
-  pinMode(LED_BUILTIN, OUTPUT);
+  WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
-//    digitalWrite(LED_BUILTIN, LOW);
-Serial.print(".");  
+    Serial.print(".");  
     delay(250);
-//    digitalWrite(LED_BUILTIN, HIGH);
   }
-
-  digitalWrite(LED_BUILTIN, LOW);
-
   Serial.println("");
   Serial.println("WiFi connected");  
   Serial.println("IP address: ");
   IPAddress ip = WiFi.localIP();
   Serial.println(ip);
-  sprintf(ipAddBuff, "ws://%d.%d.%d.%d:81", ip[0], ip[1], ip[2], ip[3] );
-  Udp.begin(localPort);
   delay(500);
-}
+  Serial.printf("Starting HTTP...\n");
+  HTTP.on("/index.html", HTTP_GET, [](){
+    HTTP.send(200, "text/plain", "Hello World!");
+  });
+  HTTP.on("/description.xml", HTTP_GET, [](){
+    SSDP.schema(HTTP.client());
+  });
+  HTTP.begin();
 
-void handleUDP()
-{
-  // if there's data available, read a packet
-  int packetSize = Udp.parsePacket();
-  if (packetSize) {
-    Serial.print("Received packet of size ");
-    Serial.println(packetSize);
-    Serial.print("From ");
-    IPAddress remoteIp = Udp.remoteIP();
-    Serial.print(remoteIp);
-    Serial.print(", port ");
-    Serial.println(Udp.remotePort());
-
-    // read the packet into packetBufffer
-    int len = Udp.read(packetBuffer, 255);
-    if (len > 0) {
-      packetBuffer[len] = 0;
-    }
-    Serial.println("Contents:");
-    Serial.println(packetBuffer);
-
-    Serial.print("Sending: ");
-    Serial.print(ipAddBuff);
-    Serial.println(" to:");
-    Serial.println(remoteIp);
-    // send a reply, to the IP address and port that sent us the packet we received
-    Udp.beginPacket(Udp.remoteIP(), Udp.remotePort());
-    Udp.write(ipAddBuff);
-    Udp.endPacket();
-  }
+  Serial.printf("Starting SSDP...\n");
+  SSDP.setSchemaURL("description.xml");
+  SSDP.setDeviceType("urn:schemas-upnp-org:service:RousingLight:1");
+  SSDP.setHTTPPort(80);
+  SSDP.setName("Rousing NeoPixel Strip");
+  SSDP.setSerialNumber("0000000002");
+  SSDP.setURL("index.html");
+  SSDP.setModelName("Rousing NeoPixel Strip 2018");
+  SSDP.setModelNumber("RNP00001");
+  SSDP.begin();
 }
 
 //Web Socket Handling
@@ -404,14 +376,14 @@ void setup() {
  Serial.println();
  Serial.print("Configuring access point...");
  setupWifi();
-// setupPixelStrip();
-// webSocket.begin();
-// webSocket.onEvent(webSocketEvent);
+ setupPixelStrip();
+ webSocket.begin();
+ webSocket.onEvent(webSocketEvent);
 }
 
 void loop() {
-//  webSocket.loop();
-  handleUDP();
+  webSocket.loop();
+  HTTP.handleClient();
   if(e > 0) {
     switch(e) {
       case 1:
