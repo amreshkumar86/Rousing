@@ -1,0 +1,6 @@
+{
+    "terminal.integrated.env.osx": {
+        "PATH": "/Users/amreshkumar/.platformio/penv/bin:/Users/amreshkumar/.platformio/penv:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Users/amreshkumar/.nvm/versions/node/v8.2.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/amreshkumar/bin/Sencha/Cmd/6.5.0.180:/Users/amreshkumar/Library/Android/sdk/tools:/Users/amreshkumar/Library/Android/sdk/platform-tools",
+        "PLATFORMIO_CALLER": "vscode"
+    }
+}
