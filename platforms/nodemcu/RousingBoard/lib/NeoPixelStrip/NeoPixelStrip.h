@@ -1,5 +1,10 @@
-#include <Adafruit_NeoPixel.h>
 #include <RousingLight.h>
 class NeoPixelStrip : public RousingLight {
-    void getDetails();
+  public:
+    NeoPixelStrip();
+    virtual void setup();
+    virtual void update();
+    virtual RousingLightFeatures getCapabilities();
+    virtual LightState getCurrentState();
+    virtual void setCurrentState(LightState state);
 };
