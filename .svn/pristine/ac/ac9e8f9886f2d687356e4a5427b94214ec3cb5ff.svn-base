@@ -1,0 +1,5 @@
+.o-block._u-width-100p.u-p-small.u-collapse._u-mb-small(class='u-4/12 u-width-100p@lg- u-pl-none@lg+')
+  include user-card/index.pug
+  include menu/index.pug
+  include friends/index.pug
+  include family/index.pug

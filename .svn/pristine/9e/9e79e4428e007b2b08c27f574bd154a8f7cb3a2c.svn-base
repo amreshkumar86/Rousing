@@ -1,0 +1,37 @@
+//- Home Layout
+extends views/scaffolding/layouts/non-app.pug
+
+block vars
+  - var pageTitle = "500";
+
+
+block page
+  .o-block.u-text-center.u-fullscreen.u-overflow-auto.u-bg-error.u-color-white-900
+    .o-block__cell.u-flex.u-flexGrow-1.u-mb-medium
+      .u-m-auto
+        .o-block._u-mb-small.u-collapse
+          .o-block__cell
+            h1.u-color-white-900(style='font-size: 10em') 500
+          .o-block__cell
+            h2.u-font-light.u-text-capitalize.u-color-white-900 Oops, Internal Server Error!!!
+          .o-block__cell.u-mt-large
+            span(class='u-inlineBlock' tooltip='Home')
+              a(href='./' class='c-button c-button--icon c-button--main c-button--hollow u-radius-circle') home
+            span(class='u-inlineBlock' tooltip='Sign In' class='u-ml-small')
+              a(href='#' class='c-button c-button--icon c-button--main c-button--hollow u-radius-circle') lock
+            span(class='u-inlineBlock' tooltip='Get Help' class='u-ml-small')
+              a(href='#' class='c-button c-button--icon c-button--main c-button--hollow u-radius-circle') help
+
+
+    .o-block__cell.u-p-small
+      .o-stack.o-stack--center.o-stack--nowrap.u-font-small
+        .o-stack__cell
+          a(href='#' class='u-text-bare u-color-white-900 u-opacity-70 u-block') FAQ
+        .o-stack__cell.u-mx-tiny
+          | •
+        .o-stack__cell
+          a(href='#' class='u-text-bare u-color-white-900 u-opacity-70 u-block') Contact
+        .o-stack__cell.u-mx-tiny
+          | •
+        .o-stack__cell
+          a(href='#' class='u-text-bare u-color-white-900 u-opacity-70 u-block') Other

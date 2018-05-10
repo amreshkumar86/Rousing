@@ -1,0 +1,10 @@
+.u-bg-secondary
+  .o-container.u-py-medium
+    .o-stack.o-stack--center.u-collapse(class='_u-width-100p@md- _u-mt-medium@md-')
+      .o-stack__cell.o-stack__cell--expanded
+        h3.u-color-white-900.u-font-light Professional Admin Template Built With Angular 1.x
+      .o-stack__cell.u-collapse--horizontal._u-ml-small
+        a.c-button.u-bg-white-900.u-color-secondary.u-radius-rounded(href="javascript:void(0)")
+          span Buy Item
+        a.c-button.u-bg-white-900.u-color-secondary.u-radius-rounded(href="https://themeforest.net/user/krazicode" target='_blank')
+          span Get Support

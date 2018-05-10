@@ -1,0 +1,234 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginTop="35dp"
+        android:id="@+id/details_scroll"
+        android:overScrollMode="never">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/circle_rl"
+                android:layout_marginTop="-32dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="@dimen/power_omlette_dimen"
+                    android:layout_height="@dimen/power_omlette_dimen"
+                    android:src="@drawable/omlette"
+                    android:layout_centerInParent="true"/>
+
+                <com.niveus.oen.Utils.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="180\nKWH"
+                    android:textColor="#FEBCCA"
+                    android:textSize="@dimen/power_omlette_font"
+                    android:gravity="center"
+                    android:id="@+id/power_usage_tv"
+                    android:layout_centerInParent="true"
+                    app:font="roboto_regular"/>
+
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/circle_rl"
+                android:id="@+id/stat_scroll"
+                android:scrollbars="none"
+                android:layout_marginTop="-15dp"
+                android:overScrollMode="never"
+                android:layout_gravity="bottom">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/power_card_w"
+                        android:layout_height="@dimen/power_card_h"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:background="@drawable/lights_stat_bg">
+
+                        <com.niveus.oen.Utils.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lights"
+                            android:textSize="@dimen/power_card_font1"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="15dp"
+                            android:textColor="#FEBCCA"
+                            app:font="roboto_light"/>
+
+                        <com.niveus.oen.Utils.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7 Lights 50% dimmed"
+                            android:textSize="@dimen/power_card_font2"
+                            android:id="@+id/dim_tv"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginBottom="38dp"
+                            android:layout_alignParentBottom="true"
+                            android:textColor="#FEBCCA"
+                            app:font="roboto_light"/>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="35dp"
+                            android:id="@+id/line1"
+                            android:background="@color/white"
+                            android:layout_toRightOf="@+id/dim_tv"/>
+
+                        <com.niveus.oen.Utils.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10 Lights on"
+                            android:textSize="@dimen/power_card_font2"
+                            android:layout_toLeftOf="@+id/line1"
+                            android:layout_above="@+id/dim_tv"
+                            android:textColor="#FEBCCA"
+                            app:font="roboto_light"/>
+
+                        <com.niveus.oen.Utils.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="150\nKWH"
+                            android:textSize="@dimen/power_card_font3"
+                            android:gravity="end"
+                            android:layout_toRightOf="@+id/line1"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="35dp"
+                            android:textColor="#FEBCCA"
+                            app:font="roboto_light"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/power_card_w"
+                        android:layout_height="@dimen/power_card_h"
+                        android:layout_marginRight="25dp"
+                        android:background="@drawable/gateways_stat_bg">
+
+                        <com.niveus.oen.Utils.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gateways"
+                            android:textSize="@dimen/power_card_font1"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="15dp"
+                            android:textColor="#FEBCCA"
+                            app:font="roboto_light"/>
+
+                        <com.niveus.oen.Utils.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2 gateways connected"
+                            android:textSize="@dimen/power_card_font2"
+                            android:id="@+id/gateways_connected_tv"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginBottom="40dp"
+                            android:layout_alignParentBottom="true"
+                            android:textColor="#FEBCCA"
+                            app:font="roboto_light"/>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="35dp"
+                            android:id="@+id/line2"
+                            android:background="@color/white"
+                            android:layout_toRightOf="@+id/gateways_connected_tv"/>
+
+                        <com.niveus.oen.Utils.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="30\nKWH"
+                            android:textSize="@dimen/power_card_font3"
+                            android:gravity="end"
+                            android:layout_toRightOf="@+id/line2"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="40dp"
+                            android:textColor="#FEBCCA"
+                            app:font="roboto_light"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <com.niveus.oen.Utils.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_below="@+id/stat_scroll"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:textColor="#FEBCCA"
+                android:id="@+id/energy_usage_tv"
+                android:layout_marginLeft="25dp"
+                android:text="Energy Usage"
+                app:font="roboto_light"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/energy_usage_tv"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="15dp">
+
+                <com.niveus.oen.Utils.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/kwh_tv"
+                    android:textColor="#c2c2c2"
+                    android:layout_marginLeft="10dp"
+                    android:text="KWH"
+                    app:font="roboto_light"/>
+
+                <com.jjoe64.graphview.GraphView
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_toRightOf="@+id/kwh_tv"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/graph"/>
+
+                <com.niveus.oen.Utils.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/graph"
+                    android:textColor="#c2c2c2"
+                    android:text="Hours"
+                    app:font="roboto_light"/>
+
+                </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

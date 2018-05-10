@@ -1,0 +1,17 @@
+//- Home Layout
+extends views/scaffolding/layouts/non-app.pug
+
+block vars
+  - var pageTitle  = "Landing";
+  - var lightTheme = true;
+  - var scopeID    = 's-landing'
+
+
+block page
+  include views/scenes/landing/index.pug
+  // build:js landing.min.js
+  script( type='text/javascript' src='scaffolding/scripts/vendor/toggles-switches.js' )
+  script( type='text/javascript' src='scaffolding/scripts/vendor/smooth-scroll.min.js' )
+  script( type='text/javascript' src='views/scenes/landing/index.js' )
+  // /build
+

@@ -1,0 +1,136 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ * + @Top
+ * + @Right
+ * + @Bottom
+ * + @Left
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+$side-prop-values          = '0' 'auto' '50%' '100%'
+$top-prop-classes          = '.u-t-none' '.u-t-auto' '.u-t-50p' '.u-t-100p'
+$right-prop-classes        = '.u-r-none' '.u-r-auto' '.u-r-50p' '.u-r-100p'
+$bottom-prop-classes       = '.u-b-none' '.u-b-auto' '.u-b-50p' '.u-b-100p'
+$left-prop-classes         = '.u-l-none' '.u-l-auto' '.u-l-50p' '.u-l-100p'
+$top-right-prop-classes    = '.u-tr-none' '.u-tr-auto' '.u-tr-50p' '.u-tr-100p'
+$top-left-prop-classes     = '.u-tl-none' '.u-tl-auto' '.u-tl-50p' '.u-tl-100p'
+$bottom-right-prop-classes = '.u-br-none' '.u-br-auto' '.u-br-50p' '.u-br-100p'
+$bottom-left-prop-classes  = '.u-bl-none' '.u-bl-auto' '.u-bl-50p' '.u-bl-100p'
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Top
+// ---------------------------------------------------------
+
+-generate-rules('top', $side-prop-values, $top-prop-classes)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Right
+// ---------------------------------------------------------
+
+-generate-rules('right', $side-prop-values, $right-prop-classes)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Bottom
+// ---------------------------------------------------------
+
+-generate-rules('bottom', $side-prop-values, $bottom-prop-classes)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Left
+// ---------------------------------------------------------
+
+-generate-rules('left', $side-prop-values, $left-prop-classes)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Top Right
+// ---------------------------------------------------------
+
+-generate-rules('top' 'right', $side-prop-values, $top-right-prop-classes)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Top Left
+// ---------------------------------------------------------
+
+-generate-rules('top' 'left', $side-prop-values, $top-left-prop-classes)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Bottom Right
+// ---------------------------------------------------------
+
+-generate-rules('bottom' 'right', $side-prop-values, $bottom-right-prop-classes)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Bottom Left
+// ---------------------------------------------------------
+
+-generate-rules('bottom' 'left', $side-prop-values, $bottom-left-prop-classes)

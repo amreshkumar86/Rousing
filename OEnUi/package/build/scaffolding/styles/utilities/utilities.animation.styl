@@ -1,0 +1,147 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Fade In Animation Settings
+ *     - #Fade Up Animation Settings
+ *     - #Fade Down Animation Settings
+ *     - #Scale In Animation Settings
+ *
+ *
+ * + @Fade In Animation
+ * + @Fade Up Animation
+ * + @Fade Down Animation
+ * + @Scale In Animation
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Fade In Animation Settings
+// -------------------------------------
+
+$fadein-animation-length = 1s
+$fadein-animation-easing = ease-in-out
+$fadein-animation-name   = fadeIn
+
+
+
+
+
+
+
+// #Fade Up Animation Settings
+// -------------------------------------
+
+$fadeup-animation-length = 0.3s
+$fadeup-animation-easing = ease-out
+$fadeup-animation-delay  = 1s
+$fadeup-animation-fill   = forwards
+$fadeup-animation-name   = fadeUp
+
+
+
+
+
+
+
+// #Fade Down Animation Settings
+// -------------------------------------
+
+$fadedown-animation-length = 0.3s
+$fadedown-animation-easing = ease-in
+$fadedown-animation-fill   = forwards
+$fadedown-animation-name   = fadeDown
+
+
+
+
+
+
+
+// #Scale In Animation Settings
+// -------------------------------------
+
+$fadein-animation-length = 0.15s
+$fadein-animation-easing = ease-in-out
+$fadein-animation-name   = scaleIn
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Fade In Animation
+// ---------------------------------------------------------
+
+.u-animate-fadeIn
+  animation: $fadein-animation-length $fadein-animation-easing $fadein-animation-name
+  transform: translate3d(0, 0, 0)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Fade Up Animation
+// ---------------------------------------------------------
+
+/**
+ * Fade in and slide up an element.
+ */
+
+.u-animate-fadeUp
+  opacity: 0
+  animation: $fadeup-animation-length $fadeup-animation-easing $fadeup-animation-delay $fadeup-animation-fill $fadeup-animation-name
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Fade Down Animation
+// ---------------------------------------------------------
+
+/**
+ * Fade an element out and slide down.
+ */
+
+.u-animate-fadeDown
+  animation: $fadedown-animation-length $fadedown-animation-easing $fadedown-animation-fill $fadedown-animation-name
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Scale In Animation
+// ---------------------------------------------------------
+
+/**
+ * Fade in an element and scale it fast.
+ */
+
+.u-animate-scaleIn
+  animation: $fadein-animation-length $fadein-animation-easing $fadein-animation-name

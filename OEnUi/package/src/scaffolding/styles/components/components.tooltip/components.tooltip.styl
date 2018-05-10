@@ -1,0 +1,278 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/*
+ * + @Settings
+ *     - #Typography Variables
+ *     - #Layout Variables
+ *     - #Styles Variables
+ *     - #Color Variables
+ *
+ *
+ * + @Tooltip
+ *     - #Tooltip Structure
+ *     - #Tooltip States
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Typography Variables
+// -------------------------------------
+
+$tooltip-font-size     = 12px
+$tooltip-font-family   = $font-stack-sans
+
+
+
+
+
+
+
+// #Layout Variables
+// -------------------------------------
+
+$tooltip-tip-size      = 5px
+$tooltip-spacing       = 8px
+$tooltip-min-width     = 3em
+$tooltip-max-width     = 20em
+$tooltip-padding       = 1em 1.5em
+
+
+
+
+
+
+
+// #Styles Variables
+// -------------------------------------
+
+$tooltip-border-radius = $base-border-radius
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$tooltip-background    = $color-grey-pivotal
+$tooltip-color         = $color-main
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Tooltip
+// ---------------------------------------------------------
+
+// #Tooltip Structure
+// -------------------------------------
+
+[tooltip]
+  // Layout
+  position: relative
+
+
+
+  // === Pseudo Elements
+
+  &::before,
+  &::after
+    // Typography
+    font-size: $tooltip-font-size
+    text-transform: none
+    line-height: 1
+
+    // Layout
+    position: absolute
+    visibility: hidden
+    // Styles
+    opacity: 0
+
+    // Easing
+    transition: $default-transition
+
+    // Extra
+    user-select: none
+    pointer-events: none
+
+
+  &::before
+    // Layout
+    z-index: $over-control
+    // Styles
+    border: $tooltip-tip-size solid
+    // Theme
+    border-color: transparent
+
+    // Extra
+    content: ''
+
+
+  &::after
+    // Typography
+    font-family: $tooltip-font-family
+    text-align: center
+    text-overflow: ellipsis
+
+    // Layout
+    z-index: $over-control
+    min-width: $tooltip-min-width
+    max-width: $tooltip-max-width
+    white-space: nowrap
+    overflow: hidden
+    padding: $tooltip-padding
+
+    // Styles
+    border-radius: $tooltip-border-radius
+
+    // Theme
+    background: $tooltip-background
+    color: $tooltip-color
+
+    // Extra
+    content: attr(tooltip) !important
+
+
+
+  // === Coupling
+
+  &:not([direction])::before,
+  &[direction^='up']::before
+    // Layout
+    bottom: 100%
+
+    // Styles
+    border-bottom-width: 0
+
+    // Theme
+    border-top-color: $tooltip-background
+
+
+  &:not([direction])::after,
+  &[direction^='up']::after
+    // Layout
+    bottom: 'calc(100% + %s)' % $tooltip-tip-size
+
+
+  &:not([direction])::before,
+  &:not([direction])::after,
+  &[direction^='up']::before,
+  &[direction^='up']::after
+    // Layout
+    left: 50%
+
+    // Extra
+    transform: translate3d(-50%, -($tooltip-spacing), 0)
+
+
+  &[direction^='down']::before
+    // Layout
+    top: 100%
+
+    // Styles
+    border-top-width: 0
+
+    // Theme
+    border-bottom-color: $tooltip-background
+
+
+  &[direction^='down']::after
+    // Layout
+    top: 'calc(100% + %s)' % $tooltip-tip-size
+
+
+  &[direction^='down']::before,
+  &[direction^='down']::after
+    // Layout
+    left: 50%
+
+    // Extra
+    transform: translate3d(-50%, ($tooltip-spacing), 0)
+
+
+  &[direction^='left']::before
+    // Layout
+    top: 50%
+    left: 'calc(0em - %s)' % $tooltip-tip-size
+
+    // Styles
+    border-right-width: 0
+
+    // Theme
+    border-left-color: $tooltip-background
+
+    // Extra
+    transform: translate3d(-($tooltip-spacing), -50%, 0)
+
+
+  &[direction^='left']::after
+    // Layout
+    top: 50%
+    right: 'calc(100% + %s)' % $tooltip-tip-size
+
+    // Extra
+    transform: translate3d(-($tooltip-spacing), -50%, 0)
+
+
+  &[direction^='right']::before
+    // Layout
+    top: 50%
+    right: 'calc(0em - %s)' % $tooltip-tip-size
+
+    // Styles
+    border-left-width: 0
+
+    // Theme
+    border-right-color: $tooltip-background
+
+    // Extra
+    transform: translate3d($tooltip-spacing, -50%, 0)
+
+
+  &[direction^='right']::after
+    // Layout
+    top: 50%
+    left: 'calc(100% + %s)' % $tooltip-tip-size
+
+    // Extra
+    transform: translate3d(($tooltip-spacing), -50%, 0)
+
+
+
+
+[tooltip='']::before,
+[tooltip='']::after
+  // Layout
+  visibility: hidden !important
+
+
+
+
+
+
+
+// #Tooltip States
+// -------------------------------------
+
+[tooltip]:hover::before,
+[tooltip]:hover::after
+  // Layout
+  visibility: visible
+  opacity: 1

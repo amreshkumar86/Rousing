@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.niveus.oen">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".Utils.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.AddDevicesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.DashboardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.LightControlActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.LightMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.AccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ConfigurationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.AddDeviceToServerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.GroupSettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activities.DefaultStateActivity" />
+        <activity android:name=".Activities.ColorPickerActivity" />
+        <activity android:name=".Activities.SleepTimerActivity" />
+
+        <receiver android:name=".Utils.DeviceListReceiver">
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_LIST" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".Activities.GroupManagementActivity"></activity>
+    </application>
+
+</manifest>

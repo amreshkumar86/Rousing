@@ -1,0 +1,9 @@
+{
+  "options": {
+    "type": "pie",
+    "width": "180",
+    "height": "180",
+    "sliceColors": ["#2196f3", "#f44336", "#3f51b5"]
+  },
+  "data": [20, 45, 35]
+}

@@ -1,0 +1,45 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ * + @Margins
+ * + @Margins Horizontal
+ * + @Margins Vertical
+ * + @Margins Top
+ * + @Margins Right
+ * + @Margins Bottom
+ * + @Margins Left
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+$offset-prop-values  = 'calc(100% * 1 / 12)' 'calc(100% * 2 / 12)' '25%' 'calc(100% * 4 / 12)' 'calc(100% * 5 / 12)' '50%' 'calc(100% * 7 / 12)' 'calc(100% * 8 / 12)' '75%' 'calc(100% * 10 / 12)' 'calc(100% * 11 / 12)'
+$offset-prop-classes = '.u-offset-1\/12' '.u-offset-2\/12' '.u-offset-3\/12' '.u-offset-4\/12' '.u-offset-5\/12' '.u-offset-6\/12' '.u-offset-7\/12' '.u-offset-8\/12' '.u-offset-9\/12' '.u-offset-10\/12' '.u-offset-11\/12'
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Margins
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate regular/responsive classes for `margin-left` for grid offsets.
+ */
+
+-generate-rules('margin-left', $offset-prop-values, $offset-prop-classes, false)

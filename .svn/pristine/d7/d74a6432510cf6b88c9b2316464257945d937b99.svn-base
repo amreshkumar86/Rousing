@@ -1,0 +1,7 @@
+include navbar/index.pug
+include hero/index.pug
+include demos/index.pug
+include features/index.pug
+include tools/index.pug
+include callout/index.pug
+include footer/index.pug

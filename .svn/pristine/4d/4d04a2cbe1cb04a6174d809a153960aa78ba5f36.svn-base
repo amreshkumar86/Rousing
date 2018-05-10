@@ -1,0 +1,18 @@
+// ---------------------------------------------------------
+// @Hash Looper Function
+// ---------------------------------------------------------
+
+/**
+ * Function used to loop through a hash
+ * and perform an iterator function.
+ */
+
+-each($list, -iterator)
+  if -is-hash($list)
+    for $key, $value in $list
+      -iterator($value, $key, $list)
+  else
+    for $value, $index in $list
+      -iterator($value, $index, $list)
+
+  return false

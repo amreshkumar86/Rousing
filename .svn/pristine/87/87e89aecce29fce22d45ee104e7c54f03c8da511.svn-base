@@ -1,0 +1,39 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ * + @Floats
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+$float-prop-values  = 'right' 'left' 'none'
+$float-prop-classes = '.u-float-right' '.u-float-left' '.u-float-none'
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Floats
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate regular/responsive classes for `float`.
+ */
+
+-generate-rules('float', $float-prop-values, $float-prop-classes)

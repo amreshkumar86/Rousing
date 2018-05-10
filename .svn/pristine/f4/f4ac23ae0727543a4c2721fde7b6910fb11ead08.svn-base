@@ -1,0 +1,101 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    //login
+    <dimen name="la_circle_margin_top">20dp</dimen>
+    <dimen name="la_logo_w">122.2dp</dimen>
+    <dimen name="la_logo_h">85.4dp</dimen>
+    <dimen name="la_page_title_m_t">20dp</dimen>
+    <dimen name="la_page_title_font">26sp</dimen>
+
+    <dimen name="la_details_m_l">60dp</dimen>
+    <dimen name="la_details_m_r">60dp</dimen>
+    <dimen name="la_details_m_t">120dp</dimen>
+
+    <dimen name="la_text_font">14sp</dimen>
+    <dimen name="la_et_p">25dp</dimen>
+
+    <dimen name="la_et_font">20sp</dimen>
+    <dimen name="la_btn_font">14sp</dimen>
+
+    //light menu
+    <dimen name="lm_light_text_font">25sp</dimen>
+    <dimen name="lm_light_text_m_t">15dp</dimen>
+    <dimen name="lm_ll_details_m_t">20dp</dimen>
+    <dimen name="lm_details_font">20sp</dimen>
+    <dimen name="lm_line_m_t">35dp</dimen>
+    <dimen name="lm_line_m_l">40dp</dimen>
+    <dimen name="lm_m">60dp</dimen>
+
+
+    //add devices
+    <dimen name="add_dev_circle_margin_top">30dp</dimen>
+    <dimen name="add_dev_circle_dimen">200dp</dimen>
+    <dimen name="add_dev_page_title_font">26sp</dimen>
+    <dimen name="add_dev_devices_top">25dp</dimen>
+    <dimen name="add_dev_devices_font">24sp</dimen>
+    <dimen name="add_dev_details_margin_top">60dp</dimen>
+    <dimen name="add_dev_tap_to_find">160dp</dimen>
+
+    <dimen name="add_dev_radar_dimen">330dp</dimen>
+    <dimen name="add_dev_small_circle_dimen">225dp</dimen>
+    <dimen name="add_dev_radar_m_top">-50dp</dimen>
+
+    //config
+    <dimen name="conf_circle_margin_top">10dp</dimen>
+    <dimen name="conf_circle_dimen">120dp</dimen>
+    <dimen name="conf_page_title_font">24sp</dimen>
+    <dimen name="conf_devices_top">60dp</dimen>
+    <dimen name="conf_details_margin_bottom">60dp</dimen>
+
+    //settings
+    <dimen name="settings_details_padding">40dp</dimen>
+    <dimen name="settings_details_font">24sp</dimen>
+
+    //menu
+    <dimen name="menu_item_padding">50dp</dimen>
+
+    //tab
+    <dimen name="tab_width">180dp</dimen>
+    <dimen name="tab_icon_dimen">36dp</dimen>
+
+    //dashboard
+    <dimen name="dash_circle_dimen">250dp</dimen>
+    <dimen name="dash_circle_text_font">25sp</dimen>
+    <dimen name="dash_viewpager_m_t">160dp</dimen>
+
+    <dimen name="dash_circle_gradient_radius">160dp</dimen>
+
+    <dimen name="brightness_thumb_shadow_radius">17dp</dimen>
+
+    //devices fragment
+    <dimen name="devices_icon_dimen">32dp</dimen>
+    <dimen name="devices_name_font">16sp</dimen>
+    <dimen name="devices_sub_font">14sp</dimen>
+
+    //power fragment
+    <dimen name="power_omlette_dimen">330dp</dimen>
+    <dimen name="power_omlette_font">40sp</dimen>
+    <dimen name="power_card_w">320dp</dimen>
+    <dimen name="power_card_h">150dp</dimen>
+    <dimen name="power_card_font1">22sp</dimen>
+    <dimen name="power_card_font2">17sp</dimen>
+    <dimen name="power_card_font3">28sp</dimen>
+
+    //scenes fragment
+    <dimen name="scene_name_font">22sp</dimen>
+    <dimen name="scene_item_padding">20dp</dimen>
+
+    //tiny seek bar switch
+    <dimen name="tiny_seek_bar_switch_grad_rad">10dp</dimen>
+
+    //brightness seek bar
+    <dimen name="brightness_seek_bar_w">280dp</dimen>
+
+</resources>

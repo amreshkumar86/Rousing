@@ -1,0 +1,74 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Width Settings
+ *     - #Height Settings
+ * + @Width
+ * + @Height
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Width Settings
+// -------------------------------------
+
+$width-prop-values  = 'calc(100% * 1 / 12)' 'calc(100% * 2 / 12)' '25%' 'calc(100% * 4 / 12)' 'calc(100% * 5 / 12)' '50%' 'calc(100% * 7 / 12)' 'calc(100% * 8 / 12)' '75%' 'calc(100% * 10 / 12)' 'calc(100% * 11 / 12)' 'auto' '100%'
+$width-prop-classes = '.u-1\/12' '.u-2\/12' '.u-3\/12' '.u-4\/12' '.u-5\/12' '.u-6\/12' '.u-7\/12' '.u-8\/12' '.u-9\/12' '.u-10\/12' '.u-11\/12' '.u-width-auto' '.u-width-100p'
+
+
+
+
+
+
+
+// #Height Settings
+// -------------------------------------
+
+$height-prop-values    = 'auto' '50%' '100%' '100vh'
+$height-prop-classes   = '.u-height-auto' '.u-height-50p' '.u-height-100p' '.u-fullscreen'
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Width
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate regular/responsive classes for `width`.
+ */
+
+-generate-rules('width', $width-prop-values, $width-prop-classes)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Height
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate regular/responsive classes for `height`.
+ */
+
+-generate-rules('height', $height-prop-values, $height-prop-classes)

@@ -1,0 +1,412 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *    - #Styles Variables
+ *    - #Color Variables
+ *
+ *
+ * + @Popup
+ *    - #Popup Structure
+ *    - #Popup Modifiers
+ *    - #Popup States
+ *
+ *
+ * + @Popup Box
+ *    - #Popup Box Structure
+ *    - #Popup Box Context
+ *
+ *
+ * + @Popup Decendants
+ *    - #Popup Box Decendants Structure
+ *
+ *
+ * + @Popup Header
+ *    - #Popup Header Structure
+ *
+ *
+ * + @Popup Title
+ *    - #Popup Title Structure
+ *
+ *
+ * + @Popup Close
+ *    - #Popup Close Structure
+ *    - #Popup Close Context
+ *
+ *
+ * + @Popup Content
+ *    - #Popup Content Structure
+ *    - #Popup Content Context
+ *
+ *
+ * + @Popup Footer
+ *    - #Popup Footer Structure
+ *
+ *
+ * + @Popup Footer Decendants
+ *    - #Popup Footer Decendants Structure
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Styles Variables
+// -------------------------------------
+
+$popup-box-border-radius = 4px
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$popup-box-background    = $color-main
+$popup-background        = rgba(0, 0, 0, 0.75)
+$popup-border-color      = $color-grey-muted
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Popup
+// ---------------------------------------------------------
+
+// #Popup Structure
+// -------------------------------------
+
+.c-popup
+  // Layout
+  visibility: hidden
+  display: none
+  flex-flow: column nowrap
+  justify-content: flex-start
+  align-items: center
+  overflow-x: hidden
+  max-width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index:  $over-screen
+
+  // Theme
+  background: transparent
+
+  // Easing
+  transition: $default-transition
+
+
+
+
+
+
+
+// #Popup Modifiers
+// -------------------------------------
+
+.c-popup--flushed
+  // Layout
+  max-width: none
+  width: auto
+
+
+
+
+
+
+
+// #Popup States
+// -------------------------------------
+
+
+.c-popup
+  &.is-visible
+    // Layout
+    display: flex
+
+
+  &.is-animated
+    // Layout
+    visibility: visible
+
+    // Theme
+    background: $popup-background
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Popup Box
+// ---------------------------------------------------------
+
+// #Popup Box Structure
+// -------------------------------------
+
+.c-popup__box
+  // Layout
+  max-width: 80%
+  margin: auto
+  position: relative
+
+  // Styles
+  border-radius: $popup-box-border-radius
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.15)
+  opacity: 0
+
+  // Theme
+  background: $popup-box-background
+
+  // Easing
+  transition: $default-transition
+
+  // Extra
+  transform: translate3d(0, -2em, 0)
+  transform-origin: center
+
+
+
+
+
+
+
+// #Popup Box Context
+// -------------------------------------
+
+.c-popup__box
+  .c-popup--small > &
+    // Layout
+    max-width: 50%
+
+
+  .c-popup.is-animated &
+    // Styles
+    opacity: 1
+
+    // Extra
+    transform: translate3d(0, 0, 0)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Popup Decendants
+// ---------------------------------------------------------
+
+// #Popup Box Decendants Structure
+// -------------------------------------
+
+*
+  .c-popup__box > &
+    // Layout
+    padding-right: 2em
+    padding-left: 2em
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Popup Header
+// ---------------------------------------------------------
+
+// #Popup Header Structure
+// -------------------------------------
+
+.c-popup__header
+  // Layout
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding-top: 1em
+  padding-bottom: 1em
+
+  // Styles
+  border-bottom: $base-border
+
+  // Theme
+  border-color: $popup-border-color
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Popup Title
+// ---------------------------------------------------------
+
+// #Popup Title Structure
+// -------------------------------------
+
+.c-popup_title
+  // Typography
+  text-transform: capitalize
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Popup Close
+// ---------------------------------------------------------
+
+// #Popup Close Structure
+// -------------------------------------
+
+.c-popup__close
+  // Layout
+  padding: 0.5em
+  margin: -0.5em
+
+  // Extra
+  cursor: pointer
+
+
+
+
+
+
+
+// #Popup Close Context
+// -------------------------------------
+
+.c-popup__close
+  .c-popup__box > &
+    // Typography
+    line-height: 2.1em
+    text-align: center
+
+    // Layout
+    display: block
+    width: 2em
+    height: 2em
+    margin: 0
+    position: absolute
+    top: 0
+    right: 0
+    padding: 0
+
+    // Styles
+    border-radius: 50%
+
+    // Theme
+    background: $color-main
+
+    // Extra
+    transform: translate(50%, -50%)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Popup Content
+// ---------------------------------------------------------
+
+// #Popup Content Structure
+// -------------------------------------
+
+.c-popup__content
+  // Layout
+  padding-top: 2em
+  padding-bottom: 2em
+
+
+
+
+
+
+
+// #Popup Content Context
+// -------------------------------------
+
+.c-popup__content
+  .c-popup--flushed &
+    // Layout
+    padding: 0.5em
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Popup Footer
+// ---------------------------------------------------------
+
+// #Popup Footer Structure
+// -------------------------------------
+
+.c-popup__footer
+  // Layout
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  padding-top: 1em
+  padding-bottom: 1em
+
+  // Styles
+  border-top: $base-border
+
+  // Theme
+  border-color: $popup-border-color
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Popup Footer Decendants
+// ---------------------------------------------------------
+
+// #Popup Footer Decendants Structure
+// -------------------------------------
+
+*
+  .c-popup__footer > &
+    // Layout
+    margin-left: 0.5em

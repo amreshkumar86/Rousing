@@ -1,0 +1,46 @@
+.o-block.u-width-100p._u-width-100p.u-bg-main
+  .o-block__cell.u-flex.u-flexJustifyEnd.u-p-small
+    .u-relative( dropdown='' )
+      .fn-dropdownTrigger
+        a(href='javascript:void(0)' class='c-icon c-icon--main u-color-minor u-opacity-50p') more_vert
+
+      ul.c-menu.c-menu--dropdown.u-r-none
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            span.c-menu__text Projects
+        li.c-menu__separator
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            span.c-menu__text Tasks
+            span.c-badge.c-menu__badge(data-badge="15")
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            span.c-menu__text Calendar
+        li.c-menu__separator
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            span.c-menu__text Lock
+
+
+  .o-block__cell.u-text-center.u-collapse._u-mb-mini.u-mb-medium.u-p-small
+    .c-avatar.c-avatar--medium
+      a(href='javascript:void(0)')
+        img(src='resources/images/avatars/avatar-small-1.jpg' alt='avatar')
+    h4.u-font-regular Albert Brenamen
+    p London, UK
+    a(href='javascript:void(0)' class='c-button c-button--hollow c-button--primary u-radius-rounded') Follow
+
+
+
+  .o-block__cell.u-border-top
+    .o-stack.o-stack--distributed.u-text-center.u-bg-primary
+      a(href='javascript:void(0)' class='o-stack__cell u-p-small  u-text-bare u-color-white-900  u-border-right u-border-white-100')
+        p.u-font-medium.u-font-bold 100
+        span Friends
+      a(href='javascript:void(0)' class='o-stack__cell u-p-small  u-text-bare u-color-white-900 u-border-right u-border-white-100')
+        p.u-font-medium.u-font-bold 220
+        span Followers
+      a(href='javascript:void(0)' class='o-stack__cell u-p-small u-text-bare u-color-white-900')
+        p.u-font-medium.u-font-bold 878
+        span Lovers
+

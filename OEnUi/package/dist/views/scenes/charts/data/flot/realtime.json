@@ -1,0 +1,38 @@
+{
+  "options": {
+    "colors": [ "colors.red[500]" ],
+    "series": {
+      "shadowSize": 0
+    },
+
+    "yaxis": {
+      "min": 0,
+      "max": 100,
+
+      "font": {
+        "color": "colors.palette.grey.minor"
+      },
+
+      "tickColor": "colors.palette.grey.muted"
+    },
+
+    "xaxis": {
+      "show": false
+    },
+
+    "grid": {
+      "borderWidth": {
+        "top": 1,
+        "right": 1,
+        "bottom": 1,
+        "left": 1
+      },
+
+      "borderColor": "colors.palette.grey.muted",
+      "margin": 0,
+      "minBorderMargin": 0,
+      "labelMargin": 14
+    }
+  },
+  "data": []
+}

@@ -1,0 +1,13 @@
+.c-secondaryNav
+  flex-shrink: 0
+  position: relative
+  z-index: $over-content
+
+  +from($viewport-lg)
+    width: 250px
+
+
+.c-secondaryNav__header
+.c-secondaryNav__main
+  +to($viewport-lg)
+    border-bottom: 1px solid $color-grey-muted

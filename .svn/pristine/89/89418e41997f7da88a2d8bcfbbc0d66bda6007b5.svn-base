@@ -1,0 +1,11 @@
+/**
+ * App styles
+ */
+
+@import 'scaffolding/styles/settings/index-1'
+@import 'scaffolding/styles/tools'
+@import 'scaffolding/styles/generic'
+@import 'scaffolding/styles/components'
+@import 'scaffolding/styles/vendor'
+@import 'views'
+@import 'scaffolding/styles/utilities'

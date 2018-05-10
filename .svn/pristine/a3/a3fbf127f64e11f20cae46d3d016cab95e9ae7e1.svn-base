@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_plain">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="@drawable/toolbar_bg"
+        android:layout_height="40dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:id="@+id/view">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rel">
+
+            <ImageView
+                android:id="@+id/menu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/menu2"
+                android:clickable="true"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:src="@drawable/oen_small"
+                android:padding="10dp"
+                android:clickable="true"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/circle_rl"
+        android:layout_below="@+id/view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/add_dev_circle_margin_top">
+
+        <ImageView
+            android:layout_width="@dimen/add_dev_circle_dimen"
+            android:layout_height="@dimen/add_dev_circle_dimen"
+            android:transitionName="circle"
+            android:src="@drawable/circle_bg"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LET'S ADD\nDEVICES"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#FF01F9"
+            android:textSize="@dimen/add_dev_page_title_font"
+            android:id="@+id/page_title_tv"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_trans">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/devices_tv"
+        android:layout_marginTop="@dimen/add_dev_devices_top"
+        android:layout_below="@id/circle_rl"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="37.2dp"
+            android:layout_height="52.8dp"
+            android:src="@drawable/devices_big" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DEVICES"
+            android:textColor="#FEBCCA"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textSize="@dimen/add_dev_devices_font"
+            android:id="@+id/lights_tv" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:id="@+id/device_lv_rl"
+        android:layout_below="@id/devices_tv">
+
+        <ListView
+            android:id="@+id/device_lv"
+            android:layout_width="match_parent"
+            android:divider="@drawable/list_divider"
+            android:background="@android:color/transparent"
+            android:scrollbarSize="4dp"
+            android:fadeScrollbars="false"
+            android:dividerHeight="1dp"
+            android:scrollbars="none"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_height="wrap_content" >
+        </ListView>
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/load"
+        android:clickable="true"
+        android:background="@android:color/transparent">
+
+        <com.tuyenmonkey.mkloader.MKLoader
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:mk_type="Sharingan"
+            android:layout_centerInParent="true"
+            app:mk_color="@color/colorPrimary" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/devices_tv">
+
+        //
+        <ImageView
+            android:layout_width="@dimen/add_dev_tap_to_find"
+            android:layout_height="@dimen/add_dev_tap_to_find"
+            android:id="@+id/add_button"
+            android:layout_centerInParent="true"
+            android:src="@drawable/tap_to_find"/>
+
+        <RelativeLayout
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/radar_rl"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:layout_width="@dimen/add_dev_radar_dimen"
+                android:layout_height="@dimen/add_dev_radar_dimen"
+                android:id="@+id/radar_iv"
+                android:layout_marginTop="@dimen/add_dev_radar_m_top"
+                android:src="@drawable/radar_small"
+                android:layout_centerInParent="true"/>
+
+            <ImageView
+                android:layout_width="@dimen/add_dev_small_circle_dimen"
+                android:layout_height="@dimen/add_dev_small_circle_dimen"
+                android:layout_marginTop="@dimen/add_dev_radar_m_top"
+                android:src="@drawable/shadow_circle_tiny"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginLeft="82dp"
+                android:text="Finding"
+                android:layout_centerInParent="true"
+                android:id="@+id/finding_tv"
+                android:textColor="#FEBCCA"
+                android:textSize="12sp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    </RelativeLayout>

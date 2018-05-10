@@ -1,0 +1,4 @@
+@import 'post-main'
+@import 'post-image'
+@import 'post-text'
+@import 'post-quote'

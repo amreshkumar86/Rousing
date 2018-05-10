@@ -1,0 +1,758 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Typography Variables
+ *     - #Layout Variables
+ *     - #Styles Variables
+ *     - #Color Variables
+ *     - #Easing Variables
+ *
+ *
+ * + @Control
+ *     - #Control Structure
+ *     - #Control Modifiers
+ *
+ *     - #Control States
+ *         > $Control Focus State
+ *         > $Control Invalid State
+ *         > $Control Valid State
+ *         > $Control Disabled/Readonly State
+ *
+ *
+ * + @Control Decendants
+ *     - #Control Decendants Structure
+ *
+ *
+ * + @Control Bottom Line
+ *     - #Control Bottom Line Structure
+ *     - #Control Bottom Line Context
+ *
+ *
+ * + @Control Input Wrapper
+ *     - #Control Input Wrapper Structure
+ *
+ *
+ * + @Control Input
+ *     - #Control Input Structure
+ *     - #Control Input Context
+ *
+ *
+ * + @Control Textarea
+ *     - #Control Textarea Structure
+ *
+ *
+ * + @Control File Input Wrapper
+ *     - #Control File Input Wrapper Structure
+ *
+ *
+ * + @Control File Input
+ *     - #Control File Input Structure
+ *
+ *
+ * + @Control File Input Button
+ *     - #Control File Input Button Structure
+ *     - #Control File Input Button Context
+ *
+ *
+ * + @Control Label
+ *     - #Control Label Structure
+ *     - #Control Label Context
+ *
+ *
+ * + @Control Helper
+ *     - #Control Helper Structure
+ *     - #Control Helper Context
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Typography Variables
+// -------------------------------------
+
+$label-font-size                            = 1em
+$helper-font-size                           = $font-size-small
+$control-file-input-button-content          = 'Upload Files'
+
+
+
+
+
+
+
+// #Layout Variables
+// -------------------------------------
+
+$control-padding                            = 0.66em
+$control-text-area-height                   = 8em
+$control-file-input-button-padding          = 0.5em 1em
+
+
+
+
+
+
+
+// #Styles Variables
+// -------------------------------------
+
+$control-border-width                       = 2px
+$control-file-input-button-border-radius    = 2px
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$control-focus-color                        = $color-grey-major
+$control-error-color                        = $color-aside-error
+$control-success-color                      = $color-aside-success
+
+$control-idle-border-color                  = $color-grey-muted
+$control-focus-border-color                 = $color-variant-primary
+$control-error-border-color                 = $color-aside-error
+$control-success-border-color               = $color-aside-success
+
+$label-idle-color                           = $color-grey-muted
+$label-focus-color                          = $color-variant-primary
+$label-error-color                          = $color-aside-error
+$label-success-color                        = $color-aside-success
+
+$addon-before-idle-color                    = $color-grey-omitted
+$addon-before-focus-color                   = $color-variant-primary
+$addon-before-error-color                   = $color-aside-error
+$addon-before-success-color                 = $color-aside-success
+
+$addon-after-idle-color                     = $color-grey-omitted
+$addon-after-focus-color                    = $color-variant-primary
+$addon-after-error-color                    = $color-aside-error
+$addon-after-success-color                  = $color-aside-success
+
+$helper-idle-color                          = $color-grey-major
+$helper-error-color                         = $color-aside-error
+$helper-success-color                       = $color-aside-success
+
+$control-file-input-button-background       = $color-variant-primary
+$control-file-input-button-color            = $color-main
+$control-file-input-button-hover-background = $color-grey-pivotal
+
+
+
+
+
+
+
+// #Easing Variables
+// -------------------------------------
+
+$control-transition                         = $default-transition
+$label-transition                           = $control-transition
+$helper-transition                          = $control-transition
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Control
+// ---------------------------------------------------------
+
+// #Control Structure
+// -------------------------------------
+
+.c-control
+  // Typography
+  font-size: 1em
+  line-height: 1
+
+  // Layout
+  display: inline-flex
+  justify-content: space-between
+  align-items: center
+  min-width: 15em
+  position: relative
+  padding: $control-padding 0
+
+  // Styles
+  border: 0
+  border-bottom-width: $control-border-width
+  border-style: solid
+
+  // Theme
+  border-color: $control-idle-border-color
+
+  // Easing
+  transition: $control-transition
+
+
+
+  // === Mixins
+
+  collapse('horizontal')
+
+
+
+
+
+
+
+// #Control Modifiers
+// -------------------------------------
+
+.c-control--boxed
+  // Layout
+  padding: $control-padding
+
+  // Styles
+  border-width: $control-border-width
+
+
+
+
+.c-control--inverted
+  // Theme
+  color: $color-main
+  border-color: alpha($color-main, 0.4)
+
+
+
+
+
+
+
+// #Control States
+// -------------------------------------
+
+/**
+ * ===== $Control Focus State
+ */
+
+.is-focused
+  .c-control&
+    // Theme
+    color: $control-focus-color
+
+
+  .c-control--boxed&
+    // Theme
+    border-color: $control-focus-border-color
+
+
+  .c-control--inverted&
+    // Theme
+    border-color: alpha($color-main, 0.7)
+
+
+
+
+
+
+/**
+ * ===== $Control Invalid State
+ */
+
+.is-invalid
+  .c-control&
+    // Theme
+    color: $control-error-color
+
+
+  .c-control--boxed&
+    // Theme
+    border-color: $control-error-border-color
+
+
+
+
+
+
+/**
+ * ===== $Control Valid State
+ */
+
+.is-valid
+  .c-control&
+    // Theme
+    color: $control-success-color
+
+
+  .c-control--boxed&
+    // Theme
+    border-color: $control-success-border-color
+
+
+
+
+
+
+/**
+ * ===== $Control Disabled/Readonly State
+ */
+
+.is-disabled,
+.is-readonly
+  .c-control&
+    // Extra
+    pointer-events: none
+
+
+
+
+.is-readonly
+  .c-control&
+    // Styles
+    opacity: 0.7
+
+
+
+
+.is-disabled
+  .c-control&
+    // Styles
+    opacity: 0.35
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Control Decendants
+// ---------------------------------------------------------
+
+// #Control Decendants Structure
+// -------------------------------------
+
+*
+  .c-control > &
+    // Layout
+    margin-left: 1em
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Control Bottom Line
+// ---------------------------------------------------------
+
+// #Control Bottom Line Structure
+// -------------------------------------
+
+::after
+  .c-control&
+    // Layout
+    display: block
+    width: 100%
+    height: 2px
+    position: absolute
+    bottom: -($control-border-width)
+    left: 0
+
+    // Theme
+    background-color: $control-focus-border-color
+
+    // Easing
+    transition: $control-transition
+
+    // Extra
+    content: ''
+    transform: scaleX(0) translate3d(0, 0, 0)
+
+
+
+
+
+
+
+// #Control Bottom Line Context
+// -------------------------------------
+
+::after
+  .c-control.is-focused&
+  .c-control.is-invalid&
+  .c-control.is-valid&
+    // Extra
+    transform: scaleX(1) translate3d(0, 0, 0)
+
+
+  .c-control.is-invalid&
+    // Theme
+    background-color: $control-error-border-color
+
+
+  .c-control.is-valid&
+    // Theme
+    background-color: $control-success-border-color
+
+
+  .c-control--inverted&
+    // Theme
+    background-color: alpha($color-main, 0.4)
+
+
+  .c-control--inverted.is-focused&
+    // Theme
+    background-color: alpha($color-main, 0.7)
+
+
+  .c-control--boxed&
+    // Layout
+    display: none
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Control Input Wrapper
+// ---------------------------------------------------------
+
+// #Control Input Wrapper Structure
+// -------------------------------------
+
+.c-control__input-box
+  // Layout
+  position: relative
+  flex: 1 1 auto
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Control Input
+// ---------------------------------------------------------
+
+// #Control Input Structure
+// -------------------------------------
+
+.c-control__input
+  // Layout
+  width: 100%
+  margin: 0
+
+  // Style
+  border: 0
+
+  // Theme
+  color: inherit
+  background-color: transparent
+
+
+
+
+
+
+
+// #Control Input Context
+// -------------------------------------
+
+.c-control__input
+  .c-control.is-focused &
+    // Theme
+    color: $control-focus-color
+
+
+  .c-control.is-invalid &
+    // Theme
+    color: $control-error-color
+
+
+  .c-control.is-valid &
+    // Theme
+    color: $control-success-color
+
+
+  .c-control--inverted &
+    // Theme
+    color: $color-main
+
+    &::placeholder
+      // Theme
+      color: alpha($color-main, 0.7)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Control Textarea
+// ---------------------------------------------------------
+
+// #Control Textarea Structure
+// -------------------------------------
+
+textarea
+  &.c-control__input
+    // Structure
+    min-height: $control-text-area-height
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Control File Input Wrapper
+// ---------------------------------------------------------
+
+// #Control File Input Wrapper Structure
+// -------------------------------------
+
+.c-control__fileInputHolder
+  // Layout
+  display: flex
+  flex-flow: row nowrap
+  justify-content: flex-start
+  align-items: center
+  position: relative
+  overflow: hidden
+
+  // Extra
+  cursor: pointer
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Control File Input
+// ---------------------------------------------------------
+
+// #Control File Input Structure
+// -------------------------------------
+
+[type='file']
+  &.c-control__input
+    // Layout
+    flex-grow: 1
+    align-self: stretch
+
+    // Styles
+    opacity: 0
+
+    // Extra
+    cursor: pointer
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Control File Input Button
+// ---------------------------------------------------------
+
+// #Control File Input Button Structure
+// -------------------------------------
+
+::before
+  .c-control__fileInputHolder&
+    // Typography
+    white-space: nowrap
+    line-height: 1
+
+    // Layout
+    display: block
+    padding: $control-file-input-button-padding
+    z-index: $over-control
+    flex: 0 0 auto
+
+    // Styles
+    border-radius: $control-file-input-button-border-radius
+
+    // Theme
+    background: $control-file-input-button-background
+    color: $control-file-input-button-color
+
+    // Easing
+    transition: $default-transition
+
+    // Extra
+    content: $control-file-input-button-content
+
+
+
+
+
+
+
+
+// #Control File Input Button Context
+// -------------------------------------
+
+::before
+  .c-control__fileInputHolder:hover&
+    // Theme
+    background: $control-file-input-button-hover-background
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Control Label
+// ---------------------------------------------------------
+
+// #Control Label Structure
+// -------------------------------------
+
+.c-control__label
+  // Typography
+  font-size: $label-font-size
+  text-align: left
+  white-space: nowrap
+
+  // Layout
+  display: block
+  width: 100%
+  position: absolute
+  top: 50%
+
+  // Theme
+  color: $label-idle-color
+
+  // Easing
+  transition: $label-transition
+
+  // Extra
+  pointer-events: none
+  transform: translateY(-50%)
+  transform-origin: 0 0
+
+
+
+
+
+
+
+// #Control Label Context
+// -------------------------------------
+
+.c-control__label
+  .c-control:not(.c-control--boxed).is-focused &,
+  .c-control.is-dirty &,
+  &.is-floated
+    // Layout
+    top: 0
+    transform: scale(0.75) translateY(-100%)
+    margin-top: -($control-padding)
+
+
+  .c-control.is-focused &
+    // Theme
+    color: $label-focus-color
+
+
+  .c-control.is-invalid &
+    // Theme
+    color: $label-error-color
+
+
+  .c-control.is-valid &
+    // Theme
+    color: $label-success-color
+
+
+  .c-control__input[placeholder] + &,
+  .c-control__input[type='file'] + &
+    // Layout
+    visibility: hidden
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Control Helper
+// ---------------------------------------------------------
+
+// #Control Helper Structure
+// -------------------------------------
+
+.c-control__helper
+  // Typography
+  font-size: $helper-font-size
+  line-height: $base-line-height
+
+  // Layout
+  display: block
+  position: absolute
+  bottom: 0
+  left: 0
+  margin-left: 0
+  margin-bottom: -($control-padding)
+
+  // Theme
+  color: $helper-idle-color
+
+  // Easing
+  transition: $helper-transition
+
+  // Extra
+  transform: translateY(66%)
+
+
+
+
+
+
+
+// #Control Helper Context
+// -------------------------------------
+
+.c-control__helper
+  .c-control.is-invalid &
+    // Theme
+    color: $helper-error-color
+
+
+  .c-control.is-valid &
+    // Theme
+    color: $helper-success-color

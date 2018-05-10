@@ -1,0 +1,39 @@
+{
+  "options": {
+    "series": {
+      "pie": {
+        "show": true,
+        "innerRadius": 0.7,
+        "stroke": {
+          "width": 0
+        },
+
+        "label": {
+          "show": false,
+          "threshold": 0.05
+        }
+      }
+    },
+
+    "colors": ["colors.red[500]","colors.deepPurple[500]","colors.lightBlue[500]","colors.green[500]","colors.yellow[500]"],
+
+    "grid": {
+      "hoverable": true,
+      "clickable": true,
+      "borderWidth": 0,
+      "color": null
+    },
+
+    "tooltip": true,
+    "tooltipOpts": {
+      "content": "%p.0%"
+    }
+  },
+  "data": [
+    { "label": "Data A",  "data": 90},
+    { "label": "Data B",  "data": 50},
+    { "label": "Data C",  "data": 90},
+    { "label": "Data D",  "data": 70},
+    { "label": "Data E",  "data": 80}
+  ]
+}

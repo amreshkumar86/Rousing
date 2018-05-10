@@ -1,0 +1,20 @@
+.c-miniProfile
+  background: $color-variant-secondary
+  border-color: $clr-white-50
+  color: $clr-white-800
+
+
+.c-miniProfile h4
+  color: $clr-white-900
+
+.js-offcanvas--collapsed .c-miniProfile
+  padding: 0 !important
+
+.js-offcanvas--collapsed .c-miniProfile__info
+  // Layout
+  display: none
+
+.js-offcanvas--collapsed .c-miniProfile__img img
+  border-radius: 0
+  width: 100%
+  height: auto

@@ -1,0 +1,95 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *    - #Layout Variables
+ *
+ *
+ * + @Box
+ *    - #Box Structure
+ *    - #Box Modifiers
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Layout Variables
+// -------------------------------------
+
+$box-padding-mini   = $spacing-unit-mini
+$box-padding-tiny   = $spacing-unit-tiny
+$box-padding-small  = $spacing-unit-small
+$box-padding-medium = $spacing-unit-medium
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Box
+// ---------------------------------------------------------
+
+// #Box Structure
+// -------------------------------------
+
+.o-box
+  // Layout
+  position: relative
+  padding: $box-padding-small
+
+
+
+  // === Mixins
+
+  collapse()
+
+
+
+
+// #Box Modifiers
+// -------------------------------------
+
+.o-box--flush
+  // Layout
+  padding: 0
+
+
+
+
+.o-box--mini
+  // Layout
+  padding: $box-padding-mini
+
+
+
+
+.o-box--tiny
+  // Layout
+  padding: $box-padding-tiny
+
+
+
+
+.o-box--small
+  // Layout
+  padding: $box-padding-small
+
+
+
+
+.o-box--medium
+  // Layout
+  padding: $box-padding-medium

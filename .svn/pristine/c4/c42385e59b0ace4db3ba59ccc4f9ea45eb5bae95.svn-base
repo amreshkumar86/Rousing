@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <com.niveus.oen.Utils.FontTextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Deviceddddddddd 1"
+        android:textSize="@dimen/devices_name_font"
+        android:textColor="#FEBCCA"
+        android:id="@+id/device_name_tv"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        app:font="roboto_light"/>
+
+</RelativeLayout>

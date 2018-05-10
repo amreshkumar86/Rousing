@@ -1,0 +1,37 @@
+
+<div class="u-height-100p u-bg-main u-border-x u-overflow-auto u-relative" perfect-scrollbar="" tuck="{ from: &quot;1024px&quot; }">
+  <div class="o-block u-p-small u-width-100p _u-width-100p">
+    <div class="o-block__cell u-my-tiny">
+      <div class="o-stack o-stack--center o-stack--nowrap">
+        <div class="o-stack__cell o-stack__cell--expanded">
+          <div class="c-topbar__searchBox">
+            <form action="./" method="POST">
+              <div class="c-chatSearchControl c-control c-control--boxed c-control--searchBG u-border-none u-radius-rounded u-pl-small u-width-100p"><span class="c-icon c-icon--main">search</span>
+                <div class="c-control__input-box">
+                  <input class="c-control__input u-pr-small" type="search" name="search" placeholder="Search Here..." ng-model="$parent.query"/>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="o-stack__cell u-hide@lg+ u-ml-tiny"><a class="c-button c-button--error c-button--icon" href="javascript:void(0)" id="chatSidebarClear">clear</a></div>
+      </div>
+    </div>
+    <div class="c-chatList o-block__cell" ng-repeat="person in vm.chat | search : [&quot;name&quot;, &quot;job&quot;] : $parent.query">
+      <div class="o-stack o-stack--nowrap o-stack--center u-border-bottom u-py-tiny u-cursor-pointer" ng-click="vm.switchConversation( $index ); activity.item = $index" ng-class="{ 'is-active': activity.item === $index }">
+        <div class="o-stack__cell u-mr-tiny">
+          <div class="c-avatar"><img ng-src="{{ person.avatar }}" alt="{{ person.name }}"/></div>
+        </div>
+        <div class="o-stack__cell--expanded">
+          <div class="o-stack o-stack--center o-stack--nowrap o-stack--splitted u-width-100p u-mb-mini">
+            <div class="o-stack__cell o-stack__cell--expanded">
+              <p>{{ person.name }}</p><span class="u-block u-lh-normal u-font-small u-color-omitted">{{ person.job }}</span>
+            </div>
+            <div class="o-stack__cell"><span class="c-badge c-badge--success" data-badge=""></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="o-block__cell"><a class="u-block u-p-tiny u-color-omitted u-text-bare c-icon c-icon--main u-text-center" href="javascript:void(0)" tooltip="View More">refresh</a></div>
+  </div>
+</div>

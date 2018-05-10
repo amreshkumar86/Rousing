@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/menu_bg">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="@drawable/toolbar_bg"
+        android:layout_height="50dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:id="@+id/view">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rel">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/arrow_left"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="GROUP SETTINGS"
+                android:textSize="20sp"
+                android:textColor="#FEBCCA"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/white_btn_bg">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/group_man_rl">
+
+            <com.niveus.oen.Utils.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Group Management"
+                android:id="@+id/group_man_tv"
+                android:gravity="center"
+                android:textColor="#FEBCCA"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="25dp"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/lm_details_font"
+                app:font="roboto_light"/>
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:id="@+id/update_iv"
+                android:padding="5dp"
+                android:rotation="90"
+                android:layout_toRightOf="@id/group_man_tv"
+                android:src="@drawable/arrow_right"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_below="@+id/group_man_rl"
+            android:layout_above="@+id/ll_buttons"
+            android:layout_width="match_parent"
+            android:divider="@null"
+            android:background="@android:color/transparent"
+            android:scrollbarSize="4dp"
+            android:fadeScrollbars="false"
+            android:dividerHeight="0.5dp"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:id="@+id/ll_buttons"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_bg"
+                android:textColor="@color/white"
+                android:id="@+id/save_btn_tv"
+                android:gravity="center"
+                android:layout_weight="0.4"
+                android:text="SAVE"
+                android:textSize="15sp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:background="@color/white"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/white_curved_bg"
+                android:textColor="#FEBCCA"
+                android:gravity="center"
+                android:id="@+id/cancel_btn_tv"
+                android:layout_weight="0.4"
+                android:text="CANCEL"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

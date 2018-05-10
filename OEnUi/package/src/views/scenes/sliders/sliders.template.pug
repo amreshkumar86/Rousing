@@ -1,0 +1,411 @@
+
+.c-main.o-stack.o-stack--nowrap.u-relative
+  .o-block.u-p-small.u-width-100p
+    .u-width-100p
+      .c-Masonry.u-relative.o-grid.o-grid--smallGap(class='_u-3/12@hd+ _u-4/12@lg+ _u-6/12@md+ _u-width-100p@md-' masonry="{ itemSelector: '.o-grid__cell', columnWidth: '.c-Masonry__sizer', percentPosition: true }")
+        .c-Masonry__sizer.u-absolute
+        .o-grid__cell
+          .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-main
+            .c-portlet__header.o-block__cell.u-px-small.u-py-tiny.u-border-bottom
+                h5 Slider Demo 01
+
+
+            .c-portlet__content.o-block__cell.u-p-small.u-collapse._u-mb-small
+              p Start without params.
+              input#range_01( ion-range-slider='' )
+
+
+
+
+        .o-grid__cell
+          .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-main
+            .c-portlet__header.o-block__cell.u-px-small.u-py-tiny.u-border-bottom
+                h5 Slider Demo 02
+
+
+            .c-portlet__content.o-block__cell.u-p-small.u-collapse._u-mb-small
+              p Set min value, max value and start point.
+              input#range_02( ion-range-slider=`{
+                min: 100,
+                max: 1000,
+                from: 550
+              }` )
+
+
+
+
+        .o-grid__cell
+          .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-main
+            .c-portlet__header.o-block__cell.u-px-small.u-py-tiny.u-border-bottom
+                h5 Slider Demo 03
+
+
+            .c-portlet__content.o-block__cell.u-p-small.u-collapse._u-mb-small
+              p Set type to double and specify range, also showing grid and a.
+              input#range_03( ion-range-slider=`{
+                type: "double",
+                grid: true,
+                min: 0,
+                max: 1000,
+                from: 200,
+                to: 800,
+                prefix: "$"
+              }` )
+
+
+
+
+        .o-grid__cell
+          .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-main
+            .c-portlet__header.o-block__cell.u-px-small.u-py-tiny.u-border-bottom
+                h5 Slider Demo 04
+
+
+            .c-portlet__content.o-block__cell.u-p-small.u-collapse._u-mb-small
+              p Set up range with negative values.
+              input#range_04( ion-range-slider=`{
+                type: "double",
+                grid: true,
+                min: -1000,
+                max: 1000,
+                from: -500,
+                to: 500
+              }` )
+
+
+
+
+        .o-grid__cell
+          .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-main
+            .c-portlet__header.o-block__cell.u-px-small.u-py-tiny.u-border-bottom
+                h5 Slider Demo 05
+
+
+            .c-portlet__content.o-block__cell.u-p-small.u-collapse._u-mb-small
+              p Using step 250.
+              input#range_05( ion-range-slider=`{
+                type: "double",
+                grid: true,
+                min: -1000,
+                max: 1000,
+                from: -500,
+                to: 500,
+                step: 250
+              }` )
+
+
+
+
+        .o-grid__cell
+          .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-main
+            .c-portlet__header.o-block__cell.u-px-small.u-py-tiny.u-border-bottom
+                h5 Slider Demo 06
+
+
+            .c-portlet__content.o-block__cell.u-p-small.u-collapse._u-mb-small
+              p Set up range with fractional values, using fractional step.
+              input#range_06( ion-range-slider=`{
+                type: "double",
+                grid: true,
+                min: -12.8,
+                max: 12.8,
+                from: -3.2,
+                to: 3.2,
+                step: 0.1
+              }` )
+
+
+
+
+        .o-grid__cell
+          .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-main
+            .c-portlet__header.o-block__cell.u-px-small.u-py-tiny.u-border-bottom
+                h5 Slider Demo 07
+
+
+            .c-portlet__content.o-block__cell.u-p-small.u-collapse._u-mb-small
+              p Set up you own numbers.
+              input#range_07( ion-range-slider=`{
+                type: "double",
+                grid: true,
+                from: 1,
+                to: 5,
+                values: [0, 10, 100, 1000, 10000, 100000, 1000000]
+              }` )
+
+
+
+
+        .o-grid__cell
+          .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-main
+            .c-portlet__header.o-block__cell.u-px-small.u-py-tiny.u-border-bottom
+                h5 Slider Demo 08
+
+
+            .c-portlet__content.o-block__cell.u-p-small.u-collapse._u-mb-small
+              p Using any strings as your values.
+              input#range_08( ion-range-slider=`{
+                grid: true,
+                from: 5,
+                values: [
+                  "zero", "one",
+                  "two", "three",
+                  "four", "five",
+                  "six", "seven",
+                  "eight", "nine",
+                  "ten"
+                ]
+              }` )
+
+
+
+
+        .o-grid__cell
+          .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-main
+            .c-portlet__header.o-block__cell.u-px-small.u-py-tiny.u-border-bottom
+                h5 Slider Demo 09
+
+
+            .c-portlet__content.o-block__cell.u-p-small.u-collapse._u-mb-small
+              p One more example with strings.
+              input#range_09( ion-range-slider=`{
+                grid: true,
+                from: 3,
+                values: [
+                  "January", "February", "March",
+                  "April", "May", "June",
+                  "July", "August", "September",
+                  "October", "November", "December"
+                ]
+              }` )
+
+
+
+
+        .o-grid__cell
+          .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-main
+            .c-portlet__header.o-block__cell.u-px-small.u-py-tiny.u-border-bottom
+                h5 Slider Demo 10
+
+
+            .c-portlet__content.o-block__cell.u-p-small.u-collapse._u-mb-small
+              p No prettify. Big numbers are ugly and unreadable.
+              input#range_10( ion-range-slider=`{
+                grid: true,
+                min: 1000,
+                max: 1000000,
+                from: 100000,
+                step: 1000,
+                prettify_enabled: false
+              }` )
+
+
+
+
+        .o-grid__cell
+          .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-main
+            .c-portlet__header.o-block__cell.u-px-small.u-py-tiny.u-border-bottom
+                h5 Slider Demo 11
+
+
+            .c-portlet__content.o-block__cell.u-p-small.u-collapse._u-mb-small
+              p Prettify enabled. Much better!.
+              input#range_11( ion-range-slider=`{
+                grid: true,
+                min: 1000,
+                max: 1000000,
+                from: 200000,
+                step: 1000,
+                prettify_enabled: true
+              }` )
+
+
+
+
+        .o-grid__cell
+          .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-main
+            .c-portlet__header.o-block__cell.u-px-small.u-py-tiny.u-border-bottom
+                h5 Slider Demo 12
+
+
+            .c-portlet__content.o-block__cell.u-p-small.u-collapse._u-mb-small
+              p Don't like space as separator? Use anything you like!.
+              input#range_12( ion-range-slider=`{
+                grid: true,
+                min: 1000,
+                max: 1000000,
+                from: 300000,
+                step: 1000,
+                prettify_enabled: true,
+                prettify_separator: "."
+              }` )
+
+
+
+        .o-grid__cell
+          .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-main
+            .c-portlet__header.o-block__cell.u-px-small.u-py-tiny.u-border-bottom
+                h5 Slider Demo 14
+
+
+            .c-portlet__content.o-block__cell.u-p-small.u-collapse._u-mb-small
+              p Using prefixes.
+              input#range_14( ion-range-slider=`{
+                type: "double",
+                grid: true,
+                min: 0,
+                max: 10000,
+                from: 1000,
+                step: 9000,
+                prefix: "$"
+              }` )
+
+
+
+
+        .o-grid__cell
+          .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-main
+            .c-portlet__header.o-block__cell.u-px-small.u-py-tiny.u-border-bottom
+                h5 Slider Demo 15
+
+
+            .c-portlet__content.o-block__cell.u-p-small.u-collapse._u-mb-small
+              p Using postfixes.
+              input#range_15( ion-range-slider=`{
+                type: "single",
+                grid: true,
+                min: -90,
+                max: 90,
+                from: 0,
+                postfix: "°"
+              }` )
+
+
+
+
+        .o-grid__cell
+          .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-main
+            .c-portlet__header.o-block__cell.u-px-small.u-py-tiny.u-border-bottom
+                h5 Slider Demo 16
+
+
+            .c-portlet__content.o-block__cell.u-p-small.u-collapse._u-mb-small
+              p Want to show that max number is not the biggest one?.
+              input#range_16( ion-range-slider=`{
+                grid: true,
+                min: 18,
+                max: 70,
+                from: 30,
+                prefix: "Age ",
+                max_postfix: "+"
+              }` )
+
+
+
+
+        .o-grid__cell
+          .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-main
+            .c-portlet__header.o-block__cell.u-px-small.u-py-tiny.u-border-bottom
+                h5 Slider Demo 17
+
+
+            .c-portlet__content.o-block__cell.u-p-small.u-collapse._u-mb-small
+              p Taking care about how from and to values connect? U.
+              input#range_17( ion-range-slider=`{
+                type: "double",
+                min: 100,
+                max: 200,
+                from: 145,
+                to: 155,
+                prefix: "Weight: ",
+                postfix: " million pounds",
+                decorate_both: true
+              }` )
+
+
+
+
+        .o-grid__cell
+          .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-main
+            .c-portlet__header.o-block__cell.u-px-small.u-py-tiny.u-border-bottom
+                h5 Slider Demo 18
+
+
+            .c-portlet__content.o-block__cell.u-p-small.u-collapse._u-mb-small
+              p Remove double decoration.
+              input#range_18( ion-range-slider=`{
+                type: "double",
+                min: 100,
+                max: 200,
+                from: 145,
+                to: 155,
+                prefix: "Weight: ",
+                postfix: " million pounds",
+                decorate_both: false
+              }` )
+
+
+
+
+        .o-grid__cell
+          .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-main
+            .c-portlet__header.o-block__cell.u-px-small.u-py-tiny.u-border-bottom
+                h5 Slider Demo 19
+
+
+            .c-portlet__content.o-block__cell.u-p-small.u-collapse._u-mb-small
+              p Use your own separator symbol with <b>values_separator</b> →.
+              input#range_19( ion-range-slider=`{
+                type: "double",
+                min: 100,
+                max: 200,
+                from: 148,
+                to: 152,
+                prefix: "Weight: ",
+                postfix: " million pounds",
+                values_separator: " &rarr; "
+              }` )
+
+
+
+
+        .o-grid__cell
+          .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-main
+            .c-portlet__header.o-block__cell.u-px-small.u-py-tiny.u-border-bottom
+                h5 Slider Demo 20
+
+
+            .c-portlet__content.o-block__cell.u-p-small.u-collapse._u-mb-small
+              p You can disable all the sliders visual details, if you wish..
+              input#range_21( ion-range-slider=`{
+                type: "double",
+                min: 1000,
+                max: 2000,
+                from: 1200,
+                to: 1800,
+                hide_min_max: true,
+                hide_from_to: true,
+                grid: false
+              }` )
+
+
+
+
+        .o-grid__cell
+          .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-main
+            .c-portlet__header.o-block__cell.u-px-small.u-py-tiny.u-border-bottom
+                h5 Slider Demo 21
+
+
+            .c-portlet__content.o-block__cell.u-p-small.u-collapse._u-mb-small
+              p You can hide any part you wish.
+              input#range_22( ion-range-slider=`{
+                type: "double",
+                min: 1000,
+                max: 2000,
+                from: 1200,
+                to: 1800,
+                hide_min_max: true,
+                hide_from_to: true,
+                grid: true
+              }` )

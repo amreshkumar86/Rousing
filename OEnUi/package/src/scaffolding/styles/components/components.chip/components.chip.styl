@@ -1,0 +1,175 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Typography Variables
+ *     - #Layout Variables
+ *
+ *
+ * + @Chip
+ *     - #Chip Structure
+ *
+ *
+ * + @Chip Avatar
+ *     - #Chip Avatar Structure
+ *
+ *
+ * + @Avatar Text
+ *     - #Avatar Text Structure
+ *
+ *
+ * + @Chip Dismiss
+ *     - #Chip Dismiss Structure
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Typography Variables
+// -------------------------------------
+
+$chip-font-size          = 0.8em
+$chip-avatar-font-size   = 1.5em
+$chip-dismiss-font-size  = 1em
+$chip-text-line-height   = 2.5em
+$chip-avatar-line-height = 1.66em
+
+
+
+
+
+
+
+// #Layout Variables
+// -------------------------------------
+
+$chip-padding-right      = 1em
+$chip-avatar-width       = 1.66em
+$chip-avatar-height      = 1.66em
+$chip-text-padding       = 0 0.5em
+$chip-text-margin        = 0.5em
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Chip
+// ---------------------------------------------------------
+
+// #Chip Structure
+// -------------------------------------
+
+.c-chip
+  // Typography
+  font-size: $chip-font-size
+
+  // Layout
+  display: inline-flex
+  vertical-align: middle
+  align-items: center
+  padding-right: $chip-padding-right
+
+  // Styles
+  border-radius: 10em
+
+  // Theme
+  background: $color-grey-muted
+
+  // Extra
+  cursor: pointer
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Chip Avatar
+// ---------------------------------------------------------
+
+// #Chip Avatar Structure
+// -------------------------------------
+
+.c-chip__avatar
+  // Typography
+  text-align: center
+  font-size: $chip-avatar-font-size
+
+  // Layout
+  display: block
+  flex-basis: auto
+  width: $chip-avatar-width
+  height: $chip-avatar-height
+  line-height: $chip-avatar-line-height
+
+  // Styles
+  border-radius: 50%
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Avatar Text
+// ---------------------------------------------------------
+
+// #Avatar Text Structure
+
+.c-chip__text
+  // Typography
+  line-height: $chip-text-line-height
+
+  // Layout
+  padding: $chip-text-padding
+
+
+
+  // === Coupling
+
+  &:first-child
+    // Layout
+    margin-left: $chip-text-margin
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Chip Dismiss
+// ---------------------------------------------------------
+
+// #Chip Dismiss Structure
+// -------------------------------------
+
+.c-chip__dismiss
+  // Typography
+  font-size: $chip-dismiss-font-size
+  text-align: center
+
+  // Layout
+  display: block
+  cursor: pointer
+  position: relative
+  z-index: $over-content

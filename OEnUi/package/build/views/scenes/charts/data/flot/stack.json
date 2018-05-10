@@ -1,0 +1,63 @@
+{
+  "options": {
+    "legend": {
+      "backgroundOpacity": 0,
+      "position": "ne",
+      "noColumns": 3
+    },
+
+    "bars": {
+      "show": true,
+      "fill": true,
+      "lineWidth": 0,
+      "barWidth": 2,
+      "order": 1
+    },
+
+    "colors": ["#f44336", "#2196f3", "#ffeb3b"],
+
+    "series": {
+      "shadowSize": 1
+    },
+
+    "xaxis":{
+      "font": {
+        "color": "colors.palette.grey.minor"
+      },
+
+      "tickColor": "colors.palette.grey.muted"
+    },
+
+    "yaxis":{
+      "font": {
+        "color": "colors.palette.grey.minor"
+      },
+
+      "tickColor": "colors.palette.grey.muted"
+    },
+
+    "grid": {
+      "borderWidth": {
+        "top": 1,
+        "right": 1,
+        "bottom": 1,
+        "left": 1
+      },
+
+      "borderColor": "colors.palette.grey.muted",
+      "margin": 0,
+      "minBorderMargin": 0,
+      "labelMargin": 14,
+      "hoverable": true,
+      "clickable": true,
+      "mouseActiveRadius": 6
+    },
+
+    "tooltip": true
+  },
+  "data": [
+    { "label": "Pizza",  "data": [ [10, 120], [20, 70], [30, 70], [40, 60] ] },
+    { "label": "Ham",    "data": [ [10, 50],  [20, 60], [30, 90],  [40, 35] ] },
+    { "label": "Cheeze", "data": [ [10, 80],  [20, 40], [30, 30],  [40, 20] ] }
+  ]
+}

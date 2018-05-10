@@ -1,0 +1,201 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Layout Variables
+ *     - #Styles Variables
+ *     - #Color Variables
+ *
+ *
+ * + @Switch Rail
+ *     - #Switch Rail Structure
+ *     - #Switch Rail States
+ *     - #Switch Rail Context
+ *
+ *
+ * + @Switch Checkbox Input
+ *     - #Switch Checkbox Input Structure
+ *
+ *
+ * + @Switch Button
+ *     - #Switch Button Structure
+ *     - #Switch Button Context
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Layout Variables
+// -------------------------------------
+
+$switch-rail-width                = 3em
+$switch-rail-height               = 2em
+$switch-button-width              = 1.5em
+$switch-button-height             = 1.5em
+$switch-text-spacing              = 1.5em
+
+
+
+
+
+
+
+// #Styles Variables
+// -------------------------------------
+
+$switch-rail-shadow-size          = 1.5em
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$switch-rail-background           = $color-grey-muted
+$switch-rail-shadow-active-color  = $color-grey-omitted
+$switch-rail-shadow-checked-color = $color-aside-success
+$switch-button-background         = $clr-white-900
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Switch Rail
+// ---------------------------------------------------------
+
+// #Switch Rail Structure
+// -------------------------------------
+
+.c-switch__rail
+  // Layout
+  display: flex
+  align-items: center
+  width: $switch-rail-width
+  height: $switch-rail-height
+  position: relative
+
+  // Styles
+  border-radius: @width
+
+  // Theme
+  background: $switch-rail-background
+
+  // Easing
+  transition: $default-transition
+
+  // Extra
+  cursor: pointer
+
+
+
+
+
+
+
+// #Switch Rail States
+// -------------------------------------
+
+.c-switch__rail:active
+  // Styles
+  box-shadow: inset 0 0 0 $switch-rail-shadow-size $switch-rail-shadow-active-color
+
+
+
+
+
+
+
+// #Switch Rail Context
+// -------------------------------------
+
+.c-switch__rail
+  .c-switch__input:checked + &
+    // Styles
+    box-shadow: inset 0 0 0 $switch-rail-shadow-size $switch-rail-shadow-checked-color
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Switch Checkbox Input
+// ---------------------------------------------------------
+
+// #Switch Checkbox Input Structure
+// -------------------------------------
+
+.c-switch__input
+  // Layout
+  display: none
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Switch Button
+// ---------------------------------------------------------
+
+// #Switch Button Structure
+// -------------------------------------
+
+.c-switch__button
+  // Typography
+  // Layout
+  display: inline-flex
+  flex: 1 0 auto
+  vertical-align: middle
+  height: $switch-button-height
+  width: $switch-button-width
+  margin-left: (($switch-rail-height - $switch-button-height) / 2)
+  margin-right: ($switch-rail-width - $switch-button-width - @margin-left) + $switch-text-spacing
+
+  // Styles
+  border-radius: @height
+
+  // Theme
+  background: $switch-button-background
+
+  // Easing
+  transition: $default-transition
+
+  // Extra
+  pointer-events: none
+
+
+
+
+
+
+
+// #Switch Button Context
+// -------------------------------------
+
+.c-switch__button
+  .c-switch__input:checked + .c-switch__rail > &
+    // Layout
+    margin-left: $switch-rail-width - $switch-button-width - (($switch-rail-height - $switch-button-height) / 2)
+    margin-right: $switch-text-spacing + (($switch-rail-height - $switch-button-height) / 2)

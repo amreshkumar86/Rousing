@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.niveus.oen.Utils.FontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:id="@+id/text_tv"
+        android:textColor="#FEBCCA"
+        android:layout_centerHorizontal="true"
+        android:text="Please tell us how we can help you!"
+        app:font="roboto_light"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_tv"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title"
+            android:textSize="14sp"
+            android:textColor="#467A88"
+            android:id="@+id/title_et"
+            android:textColorHint="@color/button_color"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:inputType="textCapWords|textNoSuggestions"
+            android:background="@drawable/edit_text_contact_us_bg"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="20dp"
+            android:hint="Type your query here!"
+            android:textSize="14sp"
+            android:textColor="#467A88"
+            android:id="@+id/query_et"
+            android:textColorHint="@color/button_color"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="@dimen/la_et_p"
+            android:gravity="start"
+            android:background="@drawable/edit_text_contact_us_bg"/>
+
+        <com.niveus.oen.Utils.FontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="SEND"
+            android:textSize="12sp"
+            android:id="@+id/send_btn_tv"
+            android:gravity="center"
+            android:padding="@dimen/la_et_p"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_bg"
+            app:font="roboto_light"/>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,27 @@
+[
+  {
+    "options": {
+      "type": "line",
+      "height": "180",
+      "chartRangeMax": 50,
+      "lineColor": "hsla(231, 48%, 48%, 1)",
+      "fillColor": "hsla(231, 48%, 48%, 0.3)",
+      "highlightLineColor": "rgba(0,0,0,.1)",
+      "highlightSpotColor": "rgba(0,0,0,.2)"
+    },
+    "data": [0, 23, 43, 35, 44, 45, 56, 37, 40]
+  },
+  {
+    "options": {
+      "type": "line",
+      "height": "180",
+      "chartRangeMax": 40,
+      "lineColor": "hsla(207, 90%, 54%, 1)",
+      "fillColor": "hsla(207, 90%, 54%, 0.3)",
+      "composite": true,
+      "highlightLineColor": "rgba(0,0,0,.1)",
+      "highlightSpotColor": "rgba(0,0,0,.2)"
+    },
+    "data": [25, 23, 26, 24, 25, 32, 30, 24, 19]
+  }
+]

@@ -1,0 +1,211 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/*
+ * + @Settings
+ *     - #Typography Variables
+ *     - #Layout Variables
+ *     - #Color Variables
+ *
+ *
+ * + @Overlay Container
+ *     - #Overlay Container Structure
+ *
+ *
+ * + @Overlay
+ *     - #Overlay Structure
+ *     - #Overlay Modifiers
+ *     - #Overlay Context
+ *
+ *
+ * + @Overlay Title
+ *     - #Overlay Title Structure
+ *
+ *
+ * + @Overlay Details
+ *     - #Overlay Details Structure
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Typography Variables
+// -------------------------------------
+
+$overlay-title-font-size = 1.5em
+
+
+
+
+
+
+
+// #Layout Variables
+// -------------------------------------
+
+$overlay-padding         = 2em
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$overlay-background      = rgba(0, 0, 0, 0.5)
+$overlay-title-color     = $clr-white-900
+$overlay-details-color   = $clr-white-900
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Overlay Container
+// ---------------------------------------------------------
+
+// #Overlay Container Structure
+// -------------------------------------
+
+.has-overlay
+  // Layout
+  position: relative
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Overlay
+// ---------------------------------------------------------
+
+// #Overlay Structure
+// -------------------------------------
+
+.c-overlay
+  // Typography
+  text-align: center
+
+  // Layout
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 100%
+  padding: $overlay-padding
+  position: absolute
+  top: 0
+  left: 0
+  visibility: hidden
+
+  // Styles
+  opacity: 0
+
+  // Theme
+  background: $overlay-background
+
+  // Easing
+  transition: $default-transition
+
+  // Extra
+  transform: scale(0.8)
+
+
+
+
+
+
+
+// #Overlay Modifiers
+// -------------------------------------
+
+.c-overlay--contentTop
+  // Layout
+  justify-content: flex-start
+  align-items: flex-start
+
+
+
+
+.c-overlay--contentBottom
+  // Layout
+  justify-content: flex-start
+  align-items: flex-end
+
+
+
+
+
+
+
+// #Overlay Context
+// -------------------------------------
+
+.c-overlay
+  .has-overlay:hover &
+    // Layout
+    visibility: visible
+
+    // Styles
+    opacity: 1
+
+    // Extra
+    transform: scale(1)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Overlay Title
+// ---------------------------------------------------------
+
+// #Overlay Title Structure
+// -------------------------------------
+
+.c-overlay__title
+  // Typography
+  font-size: $overlay-title-font-size
+  font-weight: bold
+  text-transform: capitalize
+
+  // Theme
+  color: $overlay-title-color
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Overlay Details
+// ---------------------------------------------------------
+
+// #Overlay Details Structure
+// -------------------------------------
+
+.c-overlay__details
+  // Theme
+  color: $overlay-details-color

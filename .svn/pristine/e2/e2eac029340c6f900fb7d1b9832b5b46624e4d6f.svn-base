@@ -1,0 +1,155 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ * + @Margins
+ * + @Margins Horizontal
+ * + @Margins Vertical
+ * + @Margins Top
+ * + @Margins Right
+ * + @Margins Bottom
+ * + @Margins Left
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+$margin-prop-values         = 'auto' $spacing-unit-mini $spacing-unit-tiny $spacing-unit-small $spacing-unit-medium $spacing-unit-large $spacing-unit-big $spacing-unit-huge $spacing-unit-massive $spacing-unit-gigantic $spacing-unit-divine '0'
+$margin-prop-classes        = '.u-m-auto' '.u-m-mini' '.u-m-tiny' '.u-m-small' '.u-m-medium' '.u-m-large' '.u-m-big' '.u-m-huge' '.u-m-massive' '.u-m-gigantic' '.u-m-divine' '.u-m-none'
+$margin-x-prop-classes      = '.u-mx-auto' '.u-mx-mini' '.u-mx-tiny' '.u-mx-small' '.u-mx-medium' '.u-mx-large' '.u-mx-big' '.u-mx-huge' '.u-mx-massive' '.u-mx-gigantic' '.u-mx-divine' '.u-mx-none'
+$margin-y-prop-classes      = '.u-my-auto' '.u-my-mini' '.u-my-tiny' '.u-my-small' '.u-my-medium' '.u-my-large' '.u-my-big' '.u-my-huge' '.u-my-massive' '.u-my-gigantic' '.u-my-divine' '.u-my-none'
+$margin-top-prop-classes    = '.u-mt-auto' '.u-mt-mini' '.u-mt-tiny' '.u-mt-small' '.u-mt-medium' '.u-mt-large' '.u-mt-big' '.u-mt-huge' '.u-mt-massive' '.u-mt-gigantic' '.u-mt-divine' '.u-mt-none'
+$margin-right-prop-classes  = '.u-mr-auto' '.u-mr-mini' '.u-mr-tiny' '.u-mr-small' '.u-mr-medium' '.u-mr-large' '.u-mr-big' '.u-mr-huge' '.u-mr-massive' '.u-mr-gigantic' '.u-mr-divine' '.u-mr-none'
+$margin-bottom-prop-classes = '.u-mb-auto' '.u-mb-mini' '.u-mb-tiny' '.u-mb-small' '.u-mb-medium' '.u-mb-large' '.u-mb-big' '.u-mb-huge' '.u-mb-massive' '.u-mb-gigantic' '.u-mb-divine' '.u-mb-none'
+$margin-left-prop-classes   = '.u-ml-auto' '.u-ml-mini' '.u-ml-tiny' '.u-ml-small' '.u-ml-medium' '.u-ml-large' '.u-ml-big' '.u-ml-huge' '.u-ml-massive' '.u-ml-gigantic' '.u-ml-divine' '.u-ml-none'
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Margins
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate regular/responsive classes for `margin`.
+ */
+
+-generate-rules('margin', $margin-prop-values, $margin-prop-classes)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Margins Horizontal
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate regular/responsive classes
+ * for `margin-right` & `margin-left`.
+ */
+
+-generate-rules('margin-right' 'margin-left', $margin-prop-values, $margin-x-prop-classes)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Margins Vertical
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate regular/responsive classes
+ * for `margin-top` & `margin-bottom`.
+ */
+
+-generate-rules('margin-top' 'margin-bottom', $margin-prop-values, $margin-y-prop-classes)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Margins Top
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate regular/responsive classes for `margin-top`.
+ */
+
+-generate-rules('margin-top', $margin-prop-values, $margin-top-prop-classes)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Margins Right
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate regular/responsive classes for `margin-right`.
+ */
+
+-generate-rules('margin-right', $margin-prop-values, $margin-right-prop-classes)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Margins Bottom
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate regular/responsive classes for `margin-bottom`.
+ */
+
+-generate-rules('margin-bottom', $margin-prop-values, $margin-bottom-prop-classes)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Margins Left
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate regular/responsive classes for `margin-left`.
+ */
+
+-generate-rules('margin-left', $margin-prop-values, $margin-left-prop-classes)

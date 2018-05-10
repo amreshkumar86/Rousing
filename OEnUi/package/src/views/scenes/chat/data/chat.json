@@ -1,0 +1,800 @@
+[
+  {
+    "avatar": "https://randomuser.me/api/portraits/med/men/1.jpg",
+    "name": "John Doe",
+    "job": "Developer",
+    "conversation": [
+      {
+        "me": false,
+        "messages": [
+          {
+            "text": "Dolore in labore et dolor anim ullamco laborum in",
+            "date": "2016-07-31T04:24:19-02:00"
+          },
+          {
+            "text": "Lorem ipsum est adipisicing elit qui aute proident amet dolor magna sed in et in consectetur magna.",
+            "date": "2017-04-02T06:16:04-02:00"
+          },
+          {
+            "text": "Laboris aliquip in consequat minim do esse aliquip officia voluptate aliqua ex fugiat qui.",
+            "date": "2015-06-18T04:13:31-02:00"
+          }
+        ]
+      },
+      {
+        "me": true,
+        "status": "seen",
+        "messages": [
+          {
+            "text": "Lorem ipsum ut cillum dolor sunt exercitation officia est fugiat id incididunt est id duis sunt.",
+            "date": "2015-02-13T10:26:29-02:00"
+          },
+          {
+            "text": "Aliquip enim consectetur ut consequat enim ut qui anim dolore excepteur in occaecat adipisicing magna.",
+            "date": "2014-04-07T04:38:38-02:00"
+          },
+          {
+            "text": "Ut nulla aliqua nulla adipisicing in aliquip duis officia.",
+            "date": "2016-01-27T03:55:28-02:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "avatar": "https://randomuser.me/api/portraits/med/men/2.jpg",
+    "name": "Jesse Albert",
+    "job": "Designer",
+    "conversation": [
+      {
+        "me": false,
+        "messages": [
+          {
+            "text": "Eiusmod enim qui veniam ea eiusmod non amet deserunt cupidatat amet duis in non dolor laborum in dolor tempor.",
+            "date": "2014-11-13T08:29:21-02:00"
+          },
+          {
+            "text": "Proident voluptate culpa consectetur dolor pariatur sunt sed nostrud ut eu commodo adipisicing tempor consequat sint esse.",
+            "date": "2015-03-24T08:04:24-02:00"
+          },
+          {
+            "text": "Sunt consequat occaecat cupidatat aliqua cupidatat commodo laborum cillum ut consequat aliqua id eiusmod cillum.",
+            "date": "2014-01-01T11:47:32-02:00"
+          }
+        ]
+      },
+      {
+        "me": true,
+        "status": "delivered",
+        "messages": [
+          {
+            "text": "Tempor reprehenderit non quis enim in in minim elit in fugiat sit sit dolor in irure amet.",
+            "date": "2015-03-19T11:31:54-02:00"
+          },
+          {
+            "text": "Culpa minim incididunt ad laborum dolor quis esse sint veniam.",
+            "date": "2015-02-05T01:56:09-02:00"
+          },
+          {
+            "text": "Lorem ipsum dolore non labore fugiat culpa occaecat labore dolor incididunt tempor id.",
+            "date": "2014-09-15T04:19:39-02:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "avatar": "https://randomuser.me/api/portraits/med/men/3.jpg",
+    "name": "Emma Stone",
+    "job": "Actress",
+    "conversation": [
+      {
+        "me": false,
+        "messages": [
+          {
+            "text": "Lorem ipsum nulla minim non laborum duis in ut nulla eu ad.",
+            "date": "2016-07-31T04:24:19-02:00"
+          },
+          {
+            "text": "Deserunt incididunt aute amet fugiat dolor veniam sed labore dolor pariatur officia mollit labore officia laborum aute aute aliqua.",
+            "date": "2017-04-02T06:16:04-02:00"
+          },
+          {
+            "text": "Lorem ipsum enim non commodo esse et nostrud exercitation dolor consectetur velit elit commodo.",
+            "date": "2015-06-18T04:13:31-02:00"
+          }
+        ]
+      },
+      {
+        "me": true,
+        "status": "delivered",
+        "messages": [
+          {
+            "text": "Do magna ullamco officia et dolor ut non irure nostrud sit sed et duis ut tempor duis.",
+            "date": "2015-02-13T10:26:29-02:00"
+          },
+          {
+            "text": "Lorem ipsum et aliquip labore ut commodo ex cupidatat consectetur dolore dolore ullamco veniam deserunt sint in.",
+            "date": "2014-04-07T04:38:38-02:00"
+          },
+          {
+            "text": "Irure amet ullamco laborum in dolore culpa dolor ad in anim elit non.",
+            "date": "2016-01-27T03:55:28-02:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "avatar": "https://randomuser.me/api/portraits/med/men/4.jpg",
+    "name": "John Doe",
+    "job": "Developer",
+    "conversation": [
+      {
+        "me": false,
+        "messages": [
+          {
+            "text": "Irure ullamco sunt sint ex sunt anim cillum ad anim esse cillum dolore laboris adipisicing ut labore esse.",
+            "date": "2014-11-13T08:29:21-02:00"
+          },
+          {
+            "text": "Dolor minim eiusmod commodo velit aliquip ullamco culpa in sunt aliqua nisi qui officia irure est et.",
+            "date": "2015-03-24T08:04:24-02:00"
+          },
+          {
+            "text": "Adipisicing quis qui ullamco ea id cupidatat commodo ad in reprehenderit aliquip sunt anim incididunt minim incididunt consectetur.",
+            "date": "2014-01-01T11:47:32-02:00"
+          }
+        ]
+      },
+      {
+        "me": true,
+        "status": "seen",
+        "messages": [
+          {
+            "text": "In sed nostrud aliquip in excepteur eiusmod in ut nostrud excepteur officia voluptate officia commodo. Me",
+            "date": "2015-03-19T11:31:54-02:00"
+          },
+          {
+            "text": "Amet fugiat laboris ad ut cillum ut id aliquip laboris irure reprehenderit. Me",
+            "date": "2015-02-05T01:56:09-02:00"
+          },
+          {
+            "text": "Enim fugiat id non sit consectetur culpa nisi ullamco. Me",
+            "date": "2014-09-15T04:19:39-02:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "avatar": "https://randomuser.me/api/portraits/med/men/5.jpg",
+    "name": "Jesse Albert",
+    "job": "Designer",
+    "conversation": [
+      {
+        "me": false,
+        "messages": [
+          {
+            "text": "Est deserunt voluptate qui eu excepteur nisi enim nostrud consequat. Second",
+            "date": "2016-07-31T04:24:19-02:00"
+          },
+          {
+            "text": "Lorem ipsum in sed proident mollit do laborum commodo culpa in ea anim non sit. Second",
+            "date": "2017-04-02T06:16:04-02:00"
+          },
+          {
+            "text": "Lorem ipsum in nostrud minim anim elit laborum cupidatat irure voluptate ut adipisicing pariatur culpa labore aliquip deserunt sit aute. Second",
+            "date": "2015-06-18T04:13:31-02:00"
+          }
+        ]
+      },
+      {
+        "me": true,
+        "status": "delivered",
+        "messages": [
+          {
+            "text": "Laboris ut tempor ad commodo in sint qui non exercitation ullamco ut mollit nisi commodo in nostrud. Second",
+            "date": "2015-02-13T10:26:29-02:00"
+          },
+          {
+            "text": "Lorem ipsum labore nisi magna culpa ea in adipisicing nisi ad excepteur magna et cillum. Second",
+            "date": "2014-04-07T04:38:38-02:00"
+          },
+          {
+            "text": "Tempor labore nisi non excepteur in dolor laborum est elit culpa. Second",
+            "date": "2016-01-27T03:55:28-02:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "avatar": "https://randomuser.me/api/portraits/med/men/6.jpg",
+    "name": "Emma Stone",
+    "job": "Actress",
+    "conversation": [
+      {
+        "me": false,
+        "messages": [
+          {
+            "text": "Exercitation in sunt adipisicing voluptate commodo occaecat exercitation ut aute.",
+            "date": "2014-11-13T08:29:21-02:00"
+          },
+          {
+            "text": "Labore voluptate magna ex elit deserunt consectetur commodo consectetur incididunt eiusmod officia sit ullamco sunt sit eu occaecat esse.",
+            "date": "2015-03-24T08:04:24-02:00"
+          },
+          {
+            "text": "Ad dolore ad laborum ut consequat laborum pariatur officia aute laborum dolore magna consequat culpa in.",
+            "date": "2014-01-01T11:47:32-02:00"
+          }
+        ]
+      },
+      {
+        "me": true,
+        "status": "delivered",
+        "messages": [
+          {
+            "text": "Lorem ipsum in eu do incididunt pariatur sunt nisi ex non anim tempor.",
+            "date": "2015-03-19T11:31:54-02:00"
+          },
+          {
+            "text": "Aliquip nulla laborum adipisicing quis reprehenderit aliqua officia in voluptate deserunt exercitation ex tempor consectetur officia.",
+            "date": "2015-02-05T01:56:09-02:00"
+          },
+          {
+            "text": "Lorem ipsum officia consequat amet cillum magna minim commodo esse irure sit voluptate.",
+            "date": "2014-09-15T04:19:39-02:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "avatar": "https://randomuser.me/api/portraits/med/men/7.jpg",
+    "name": "John Doe",
+    "job": "Developer",
+    "conversation": [
+      {
+        "me": false,
+        "messages": [
+          {
+            "text": "Occaecat adipisicing aliquip ea dolore in ea nisi dolor quis sit anim occaecat eiusmod culpa commodo enim.",
+            "date": "2016-07-31T04:24:19-02:00"
+          },
+          {
+            "text": "Ad dolor commodo et eu eu enim minim do ex non.",
+            "date": "2017-04-02T06:16:04-02:00"
+          },
+          {
+            "text": "Ad proident labore minim minim consectetur amet tempor ut cillum ut culpa laborum est eu qui.",
+            "date": "2015-06-18T04:13:31-02:00"
+          }
+        ]
+      },
+      {
+        "me": true,
+        "status": "seen",
+        "messages": [
+          {
+            "text": "Consectetur consectetur anim proident aliqua sint laboris magna velit do velit sunt. Me",
+            "date": "2015-02-13T10:26:29-02:00"
+          },
+          {
+            "text": "Aute esse ullamco deserunt in minim ad dolor eiusmod ullamco anim in excepteur voluptate proident eu adipisicing. Me",
+            "date": "2014-04-07T04:38:38-02:00"
+          },
+          {
+            "text": "Commodo ullamco sint sed non dolor ut deserunt esse pariatur in eiusmod sint nostrud sunt ut eu. Me",
+            "date": "2016-01-27T03:55:28-02:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "avatar": "https://randomuser.me/api/portraits/med/men/8.jpg",
+    "name": "Jesse Albert",
+    "job": "Designer",
+    "conversation": [
+      {
+        "me": false,
+        "messages": [
+          {
+            "text": "In adipisicing tempor anim proident dolor dolor laboris sit ad ex sunt. Second",
+            "date": "2014-11-13T08:29:21-02:00"
+          },
+          {
+            "text": "Lorem ipsum minim laboris amet dolor cillum cillum sint qui adipisicing et amet ut est. Second",
+            "date": "2015-03-24T08:04:24-02:00"
+          },
+          {
+            "text": "Amet sunt pariatur duis ut proident qui aliquip proident nostrud pariatur. Second",
+            "date": "2014-01-01T11:47:32-02:00"
+          }
+        ]
+      },
+      {
+        "me": true,
+        "status": "delivered",
+        "messages": [
+          {
+            "text": "Culpa deserunt in nostrud enim voluptate ex do aliqua laborum officia irure. Second",
+            "date": "2015-03-19T11:31:54-02:00"
+          },
+          {
+            "text": "Ut fugiat est consectetur velit fugiat fugiat aliqua eiusmod in dolor ad. Second",
+            "date": "2015-02-05T01:56:09-02:00"
+          },
+          {
+            "text": "Lorem ipsum aliquip deserunt commodo ut dolor ad mollit esse ut. Second",
+            "date": "2014-09-15T04:19:39-02:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "avatar": "https://randomuser.me/api/portraits/med/men/9.jpg",
+    "name": "Emma Stone",
+    "job": "Actress",
+    "conversation": [
+      {
+        "me": false,
+        "messages": [
+          {
+            "text": "Esse in culpa in culpa qui duis ut enim ullamco elit pariatur irure.",
+            "date": "2016-07-31T04:24:19-02:00"
+          },
+          {
+            "text": "Velit commodo excepteur ad voluptate dolore veniam ullamco sit sed anim cupidatat tempor dolore ea sit.",
+            "date": "2017-04-02T06:16:04-02:00"
+          },
+          {
+            "text": "Excepteur ad eiusmod exercitation proident voluptate irure labore incididunt.",
+            "date": "2015-06-18T04:13:31-02:00"
+          }
+        ]
+      },
+      {
+        "me": true,
+        "status": "delivered",
+        "messages": [
+          {
+            "text": "Laborum in adipisicing labore eiusmod velit dolor proident aute mollit.",
+            "date": "2015-02-13T10:26:29-02:00"
+          },
+          {
+            "text": "Sit consectetur dolor dolore reprehenderit nisi sed consequat dolore proident minim officia.",
+            "date": "2014-04-07T04:38:38-02:00"
+          },
+          {
+            "text": "Proident excepteur adipisicing tempor dolore velit aliqua sunt anim ad laboris dolor anim non in ad proident cupidatat.",
+            "date": "2016-01-27T03:55:28-02:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "avatar": "https://randomuser.me/api/portraits/med/men/10.jpg",
+    "name": "Jesse Albert",
+    "job": "Designer",
+    "conversation": [
+      {
+        "me": false,
+        "messages": [
+          {
+            "text": "Excepteur velit laboris ut duis reprehenderit esse consequat aute dolor laboris occaecat enim sit. Second",
+            "date": "2014-11-13T08:29:21-02:00"
+          },
+          {
+            "text": "Laboris cillum incididunt dolor do culpa fugiat mollit occaecat. Second",
+            "date": "2015-03-24T08:04:24-02:00"
+          },
+          {
+            "text": "Cillum nostrud laboris non velit excepteur nisi pariatur adipisicing minim tempor cillum commodo ullamco. Second",
+            "date": "2014-01-01T11:47:32-02:00"
+          }
+        ]
+      },
+      {
+        "me": true,
+        "status": "delivered",
+        "messages": [
+          {
+            "text": "Qui esse est tempor cupidatat cupidatat elit esse labore ut tempor ea. Second",
+            "date": "2015-03-19T11:31:54-02:00"
+          },
+          {
+            "text": "Veniam proident dolore enim ea laboris consectetur eu proident in elit. Second",
+            "date": "2015-02-05T01:56:09-02:00"
+          },
+          {
+            "text": "Nisi ea consectetur pariatur ad cupidatat commodo id voluptate anim occaecat. Second",
+            "date": "2014-09-15T04:19:39-02:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "avatar": "https://randomuser.me/api/portraits/med/men/11.jpg",
+    "name": "Emma Stone",
+    "job": "Actress",
+    "conversation": [
+      {
+        "me": false,
+        "messages": [
+          {
+            "text": "In tempor sunt cupidatat pariatur eu est incididunt consectetur incididunt dolore.",
+            "date": "2016-07-31T04:24:19-02:00"
+          },
+          {
+            "text": "Enim velit sit eiusmod aliqua laboris ea ad adipisicing ut veniam amet exercitation pariatur enim.",
+            "date": "2017-04-02T06:16:04-02:00"
+          },
+          {
+            "text": "Non id qui deserunt magna fugiat elit do dolore ut et magna aute irure est.",
+            "date": "2015-06-18T04:13:31-02:00"
+          }
+        ]
+      },
+      {
+        "me": true,
+        "status": "delivered",
+        "messages": [
+          {
+            "text": "Lorem ipsum ut magna pariatur enim ea dolore do nisi eiusmod.",
+            "date": "2015-02-13T10:26:29-02:00"
+          },
+          {
+            "text": "Irure labore non reprehenderit sed quis dolore labore officia in in sunt ullamco in tempor.",
+            "date": "2014-04-07T04:38:38-02:00"
+          },
+          {
+            "text": "Sed proident ut ad consequat excepteur labore excepteur do.",
+            "date": "2016-01-27T03:55:28-02:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "avatar": "https://randomuser.me/api/portraits/med/men/12.jpg",
+    "name": "John Doe",
+    "job": "Developer",
+    "conversation": [
+      {
+        "me": false,
+        "messages": [
+          {
+            "text": "Tempor occaecat dolore consectetur ullamco cillum dolore eiusmod mollit minim tempor dolore ut officia magna minim excepteur eiusmod.",
+            "date": "2014-11-13T08:29:21-02:00"
+          },
+          {
+            "text": "Velit laboris proident dolore duis enim dolor in mollit.",
+            "date": "2015-03-24T08:04:24-02:00"
+          },
+          {
+            "text": "Sed dolore officia irure labore quis mollit esse eu.",
+            "date": "2014-01-01T11:47:32-02:00"
+          }
+        ]
+      },
+      {
+        "me": true,
+        "status": "seen",
+        "messages": [
+          {
+            "text": "Nisi laborum sit ex veniam incididunt in in consequat commodo ut eiusmod dolore nulla reprehenderit velit. Me",
+            "date": "2015-03-19T11:31:54-02:00"
+          },
+          {
+            "text": "Enim quis aliqua est ut enim adipisicing ad aliqua deserunt est minim eiusmod reprehenderit voluptate. Me",
+            "date": "2015-02-05T01:56:09-02:00"
+          },
+          {
+            "text": "Velit adipisicing eiusmod et ullamco in dolor in dolore fugiat. Me",
+            "date": "2014-09-15T04:19:39-02:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "avatar": "https://randomuser.me/api/portraits/med/men/13.jpg",
+    "name": "Jesse Albert",
+    "job": "Designer",
+    "conversation": [
+      {
+        "me": false,
+        "messages": [
+          {
+            "text": "Consectetur magna esse ut ut occaecat veniam incididunt anim quis elit nisi ut voluptate. Second",
+            "date": "2016-07-31T04:24:19-02:00"
+          },
+          {
+            "text": "Dolor fugiat laborum dolore laboris deserunt officia fugiat cillum deserunt. Second",
+            "date": "2017-04-02T06:16:04-02:00"
+          },
+          {
+            "text": "Ad in quis enim dolore aliqua consectetur laborum deserunt velit ullamco aliquip exercitation dolore et laborum. Second",
+            "date": "2015-06-18T04:13:31-02:00"
+          }
+        ]
+      },
+      {
+        "me": true,
+        "status": "delivered",
+        "messages": [
+          {
+            "text": "Irure officia culpa aute cillum anim enim elit in officia consectetur. Second",
+            "date": "2015-02-13T10:26:29-02:00"
+          },
+          {
+            "text": "Velit elit dolore elit adipisicing ullamco et laborum ut reprehenderit consequat in ea commodo mollit eiusmod labore sed. Second",
+            "date": "2014-04-07T04:38:38-02:00"
+          },
+          {
+            "text": "Cillum deserunt consequat proident exercitation magna labore mollit ea pariatur ut velit culpa reprehenderit duis. Second",
+            "date": "2016-01-27T03:55:28-02:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "avatar": "https://randomuser.me/api/portraits/med/men/14.jpg",
+    "name": "Emma Stone",
+    "job": "Actress",
+    "conversation": [
+      {
+        "me": false,
+        "messages": [
+          {
+            "text": "In esse ea sit sint incididunt magna id enim non non sunt sunt anim duis dolor deserunt voluptate.",
+            "date": "2014-11-13T08:29:21-02:00"
+          },
+          {
+            "text": "Lorem ipsum id labore enim sit veniam mollit et incididunt aliquip ad.",
+            "date": "2015-03-24T08:04:24-02:00"
+          },
+          {
+            "text": "Exercitation veniam dolor ullamco nostrud excepteur in laboris officia commodo cupidatat ex mollit aliqua do adipisicing.",
+            "date": "2014-01-01T11:47:32-02:00"
+          }
+        ]
+      },
+      {
+        "me": true,
+        "status": "delivered",
+        "messages": [
+          {
+            "text": "Labore sunt aliqua deserunt in esse ad ullamco sunt aliqua exercitation officia sed laborum in tempor est eu.",
+            "date": "2015-03-19T11:31:54-02:00"
+          },
+          {
+            "text": "Veniam dolor occaecat duis dolore cupidatat qui commodo sit velit qui eu consequat proident.",
+            "date": "2015-02-05T01:56:09-02:00"
+          },
+          {
+            "text": "Magna esse dolor commodo culpa consectetur reprehenderit mollit ut.",
+            "date": "2014-09-15T04:19:39-02:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "avatar": "https://randomuser.me/api/portraits/med/men/15.jpg",
+    "name": "Jesse Albert",
+    "job": "Designer",
+    "conversation": [
+      {
+        "me": false,
+        "messages": [
+          {
+            "text": "Occaecat in proident commodo adipisicing ullamco adipisicing dolor consequat. Second",
+            "date": "2016-07-31T04:24:19-02:00"
+          },
+          {
+            "text": "Pariatur in eu proident mollit incididunt laborum et aliqua id est ea commodo sed. Second",
+            "date": "2017-04-02T06:16:04-02:00"
+          },
+          {
+            "text": "Deserunt reprehenderit occaecat in excepteur laboris cupidatat aliqua veniam dolore qui voluptate incididunt aute occaecat. Second",
+            "date": "2015-06-18T04:13:31-02:00"
+          }
+        ]
+      },
+      {
+        "me": true,
+        "status": "delivered",
+        "messages": [
+          {
+            "text": "Et nulla eu anim eiusmod irure dolore irure et tempor incididunt. Second",
+            "date": "2015-02-13T10:26:29-02:00"
+          },
+          {
+            "text": "Anim dolor adipisicing adipisicing adipisicing sit consectetur quis ut ex id irure minim pariatur cupidatat consectetur quis. Second",
+            "date": "2014-04-07T04:38:38-02:00"
+          },
+          {
+            "text": "Lorem ipsum anim commodo occaecat laborum consequat cupidatat nisi tempor velit ut sit amet elit sunt ex non incididunt officia nisi. Second",
+            "date": "2016-01-27T03:55:28-02:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "avatar": "https://randomuser.me/api/portraits/med/men/16.jpg",
+    "name": "Emma Stone",
+    "job": "Actress",
+    "conversation": [
+      {
+        "me": false,
+        "messages": [
+          {
+            "text": "Dolor sint enim quis nulla reprehenderit excepteur proident ea.",
+            "date": "2014-11-13T08:29:21-02:00"
+          },
+          {
+            "text": "Sunt est occaecat ut laboris deserunt ea esse ea exercitation culpa id irure.",
+            "date": "2015-03-24T08:04:24-02:00"
+          },
+          {
+            "text": "Aliqua ut sunt laborum ut et dolor cillum eiusmod.",
+            "date": "2014-01-01T11:47:32-02:00"
+          }
+        ]
+      },
+      {
+        "me": true,
+        "status": "delivered",
+        "messages": [
+          {
+            "text": "Laboris sint nostrud qui nisi enim duis ut nisi in nostrud est dolor quis excepteur aute culpa aute.",
+            "date": "2014-01-01T11:47:32-02:00"
+          },
+          {
+            "text": "Lorem ipsum duis laboris adipisicing aliquip occaecat dolore ut elit do proident officia voluptate fugiat voluptate laborum sunt ea nulla.",
+            "date": "2015-03-19T11:31:54-02:00"
+          },
+          {
+            "text": "Ullamco dolore exercitation labore dolor consequat pariatur ad mollit laborum magna pariatur ex.",
+            "date": "2015-02-05T01:56:09-02:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "avatar": "https://randomuser.me/api/portraits/med/men/17.jpg",
+    "name": "John Doe",
+    "job": "Developer",
+    "conversation": [
+      {
+        "me": false,
+        "messages": [
+          {
+            "text": "Ea aute occaecat tempor sunt nostrud nulla magna nisi adipisicing fugiat id est in aliqua qui in esse.",
+            "date": "2014-09-15T04:19:39-02:00"
+          },
+          {
+            "text": "Lorem ipsum non laboris laborum amet anim exercitation deserunt minim exercitation incididunt consequat.",
+            "date": "2015-03-19T11:31:54-02:00"
+          },
+          {
+            "text": "Reprehenderit esse tempor excepteur exercitation est ullamco proident id aute fugiat laboris nulla exercitation in proident.",
+            "date": "2015-02-05T01:56:09-02:00"
+          }
+        ]
+      },
+      {
+        "me": true,
+        "status": "seen",
+        "messages": [
+          {
+            "text": "Lorem ipsum pariatur aliqua in veniam ea sunt cupidatat adipisicing sint culpa anim est magna nisi sunt enim. Me",
+            "date": "2014-09-15T04:19:39-02:00"
+          },
+          {
+            "text": "Ut reprehenderit pariatur reprehenderit consequat sed voluptate ea ullamco in nisi nostrud sit ex. Me",
+            "date": "2016-07-31T04:24:19-02:00"
+          },
+          {
+            "text": "In esse aute dolore irure et cupidatat ut ut. Me",
+            "date": "2017-04-02T06:16:04-02:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "avatar": "https://randomuser.me/api/portraits/med/men/18.jpg",
+    "name": "Jesse Albert",
+    "job": "Designer",
+    "conversation": [
+      {
+        "me": false,
+        "messages": [
+          {
+            "text": "Aliqua et aliqua ex sed ullamco minim in excepteur laboris fugiat consequat mollit. Second",
+            "date": "2015-06-18T04:13:31-02:00"
+          },
+          {
+            "text": "Sit dolore culpa dolor minim esse est aliquip esse est eu ex ut proident in in. Second",
+            "date": "2015-02-13T10:26:29-02:00"
+          },
+          {
+            "text": "Consequat consectetur nisi labore minim duis est qui deserunt sit officia. Second",
+            "date": "2014-04-07T04:38:38-02:00"
+          }
+        ]
+      },
+      {
+        "me": true,
+        "status": "delivered",
+        "messages": [
+          {
+            "text": "Enim tempor tempor ad non do excepteur adipisicing enim mollit. Second",
+            "date": "2014-04-07T04:38:38-02:00"
+          },
+          {
+            "text": "Elit commodo eiusmod id nulla et velit proident incididunt dolor cupidatat ut laboris sed labore voluptate anim magna. Second",
+            "date": "2014-04-07T04:38:38-02:00"
+          },
+          {
+            "text": "Labore esse pariatur sit aliqua fugiat ut tempor quis. Second",
+            "date": "2016-01-27T03:55:28-02:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "avatar": "https://randomuser.me/api/portraits/med/men/19.jpg",
+    "name": "Emma Stone",
+    "job": "Actress",
+    "conversation": [
+      {
+        "me": false,
+        "messages": [
+          {
+            "text": "Aliqua velit adipisicing est mollit ea pariatur quis dolor aute nostrud esse et sint aliqua.",
+            "date": "2014-11-13T08:29:21-02:00"
+          },
+          {
+            "text": "Aliquip amet cillum cillum ut ut cillum mollit in anim non incididunt dolore esse ex pariatur.",
+            "date": "2015-03-24T08:04:24-02:00"
+          },
+          {
+            "text": "Lorem ipsum irure adipisicing labore id excepteur commodo amet tempor cillum eiusmod ex adipisicing aliqua nostrud labore ut.",
+            "date": "2014-01-01T11:47:32-02:00"
+          }
+        ]
+      },
+      {
+        "me": true,
+        "status": "delivered",
+        "messages": [
+          {
+            "text": "Ex dolore ea incididunt irure in velit nisi aute aliqua dolor enim commodo sit dolore commodo magna pariatur consectetur.",
+            "date": "2015-03-19T11:31:54-02:00"
+          },
+          {
+            "text": "Anim commodo excepteur consequat dolor do velit et duis consequat ea mollit consectetur dolore.",
+            "date": "2015-02-05T01:56:09-02:00"
+          },
+          {
+            "text": "Dolore dolore excepteur sed do consequat in commodo anim commodo excepteur sint aliquip sit id consequat quis voluptate quis.",
+            "date": "2014-09-15T04:19:39-02:00"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,49 @@
+<div class="o-stack o-stack--center o-stack--distributed u-p-medium">
+	<div class="o-stack__cell">
+		<h3 class="u-lh-normal">Dashboard</h3>
+		<p class="u-mt-mini">Welcome To Alicorn Dashboard</p>
+	</div>
+	<div class="o-stack__cell u-text-center u-hide@lg-">
+		<div
+			class="o-stack o-stack--center o-stack--nowrap u-flexJustifyCenter">
+			<div class="o-stack__cell">
+				<div>
+					<span>1500 Sales</span>
+					<div id="sparkline-inline-1" sparkline=""
+						sparkline-data-url="views/scenes/charts/data/sparkline/sparkline-inline-1.json"></div>
+				</div>
+			</div>
+			<div class="o-stack__cell u-ml-small">
+				<div>
+					<span>$0.99 Revenue</span>
+					<div id="sparkline-inline-2" sparkline=""
+						sparkline-data-url="views/scenes/charts/data/sparkline/sparkline-inline-2.json"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="o-stack__cell u-hide@sm-">
+		<div class="o-stack o-stack--center o-stack--nowrap u-flexJustifyEnd">
+			<div class="o-stack__cell u-text-center u-text-capitalize">
+				<a class="u-text-bare u-block u-color-pivotal u-opacity-70p"
+					href="javascript:void(0)"><i
+					class="c-icon c-icon--main u-font-large u-color-secondary">schedule</i>
+				<p>schedule</p></a>
+			</div>
+			<div
+				class="o-stack__cell u-text-center u-text-capitalize u-ml-medium">
+				<a class="u-text-bare u-block u-color-pivotal u-opacity-70p"
+					href="javascript:void(0)"><i
+					class="c-icon c-icon--main u-font-large u-color-secondary">done</i>
+				<p>tasks</p></a>
+			</div>
+			<div
+				class="o-stack__cell u-text-center u-text-capitalize u-ml-medium">
+				<a class="u-text-bare u-block u-color-pivotal u-opacity-70p"
+					href="javascript:void(0)"><i
+					class="c-icon c-icon--main u-font-large u-color-secondary">attach_money</i>
+				<p>invoices</p></a>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,116 @@
+.c-offcanvas__categories
+  .c-menu
+    .c-menu__item
+      &:hover
+        .c-menu__link,
+        .c-menu__icon
+          color: $color-variant-primary
+
+        .c-menu__link
+          background-color: $color-main-dimmed
+
+        .c-menu__icon
+          background-color: transparent
+
+      .c-menu__link
+        // Layout
+        padding-left: 0 !important
+        padding-right: 1.2rem
+        border-bottom: 1px solid $color-grey-muted
+
+        &.is-active
+        &.is-active .c-menu__icon
+          background-color: $color-main-dimmed
+          color: $color-variant-primary
+          pointer-events: none
+
+        .c-menu__icon
+          &:first-child
+            line-height: inherit
+            padding: 0 1.23rem
+
+        .c-menu__text
+          border-left: 1px solid $color-grey-muted
+          margin-left: 0
+          padding-left: 1em
+
+
+.c-menu .has-menu
+  // Layout
+  flex-direction: column
+
+
+.c-menu .c-menu.c-menu--pinned
+  // Layout
+  visibility: visible
+  overflow: hidden
+  max-height: none
+  transform: none
+  transition: none
+  position: relative
+  left: 0
+  display: none
+
+  // Styles
+  border: 0
+  opacity: 1
+  box-shadow: none
+
+  // Theme
+  background: rgba(0, 0, 0, .1)
+
+
+.c-menu .c-menu.c-menu--pinned.is-visible
+  // Layout
+  max-height: none
+  display: block
+
+  // Styles
+  border-bottom: 1px solid  $color-grey-muted
+  border-top: 1px solid  $color-grey-muted
+
+
+.c-menu:not(.c-menu--dropdown) .c-menu__link
+  height: 3em
+  line-height: 3em
+  padding-top: 0
+  padding-bottom: 0
+
+
+body:not(.js-offcanvas--collapsed) .c-offcanvas__categoryTitle [tooltip]
+  // Layout
+  display: none
+
+
+
+
+.js-offcanvas--collapsed .c-offcanvas__categories > .c-menu > li > .c-menu__link > *
+  // Layout
+  display: none
+
+
+
+
+.js-offcanvas--collapsed .c-menu__link > :first-child
+  // Layout
+  display: block !important
+
+
+
+
+.js-offcanvas--collapsed .c-offcanvas__categories > .c-menu
+  // Layout
+  min-width: 0
+
+
+
+
+.js-offcanvas--collapsed .c-offcanvas__categories > .c-menu > li >  .c-menu__link
+.js-offcanvas--collapsed .c-offcanvas__categoryTitle > *
+  // Typography
+  text-align: center
+
+  // Layout
+  padding-left: 0
+  padding-right: 0
+  justify-content: center

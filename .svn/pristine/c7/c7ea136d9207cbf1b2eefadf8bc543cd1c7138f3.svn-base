@@ -1,0 +1,174 @@
+
+.c-main.o-stack.o-stack--nowrap.u-relative
+  .u-p-small.u-width-100p
+    .o-block.u-width-100p._u-width-100p.u-bg-main.u-shadow-medium
+      .o-block__cell.u-border-bottom.u-py-mini.u-px-small
+        .o-stack.o-stack--center.o-stack--splitted
+          .o-stack__cell
+            h5(class='u-mb-small@sm-') Alicorn Invoice
+
+          .o-stack__cell
+            .o-stack.o-stack--center
+              .o-stack__cell
+                a(href='javascript:void(0)' class='c-button c-button--primary c-button--labeledBefore')
+                  i.c-button__label-icon.c-icon.c-icon--main save
+                  span save
+              .o-stack__cell.u-ml-mini
+                a(href='javascript:void(0)' class='c-button c-button--secondary c-button--labeledBefore')
+                  i.c-button__label-icon.c-icon.c-icon--main print
+                  span print
+
+
+
+
+
+
+      .o-block__cell.u-border-bottom.u-p-small
+        .o-stack.o-stack--splitted(class='_u-width-100p@sm-')
+          .o-stack__cell
+            img(src='http://placehold.it/120x20' alt='#')
+            .u-mt-tiny
+              ul.u-list-bare.u-mt-tiny
+                li 123 Street Name ST.
+                li London, UK
+                li 111-222-3333
+
+          .o-stack__cell(class='u-mt-small@sm- u-text-right@sm+')
+            h4.u-mb-tiny INVOICE #12356
+            ul.u-list-bare
+              li
+                | Date: &nbsp;
+                b Feb 01, 2020
+              li
+                | Due Date: &nbsp;
+                b Feb 01, 3030
+
+
+
+
+
+
+
+      .o-block__cell.u-p-small
+        .o-stack.o-stack--splitted(class='_u-width-100p@sm-')
+          .o-stack__cell
+            span.u-color-omitted Invoice To:
+            .u-mt-tiny
+              ul.u-list-bare
+                li
+                  h4 Morgan Freeman
+                li Skrill LTD
+                li 123 Street Name
+                li London F7 10BF
+                li United Kingdom
+                li 111-222-333
+                li
+                  a(href='javascript:void(0)' class='c-link') email@site.com
+
+          .o-stack__cell(class='u-mt-small@sm-  u-text-right@sm+')
+            span.u-color-omitted Payment Details:
+            .u-mt-tiny
+              ul.u-list-bare.u-text-left
+                li.u-border-bottom
+                  h4.u-mb-tiny Total Due: $1,000,000
+                li.u-border-bottom
+                  .o-stack.o-stack--splitted
+                    b.o-stack__cell Bank Name:
+                    span.o-stack__cell.u-ml-big.u-text-right HSBC
+                li.u-border-bottom
+                  .o-stack.o-stack--splitted
+                    b.o-stack__cell Country:
+                    span.o-stack__cell.u-ml-big.u-text-right United Kingdom
+                li.u-border-bottom
+                  .o-stack.o-stack--splitted
+                    b.o-stack__cell City:
+                    span.o-stack__cell.u-ml-big.u-text-right Liverpool F7 10BF
+                li.u-border-bottom
+                  .o-stack.o-stack--splitted
+                    b.o-stack__cell Address:
+                    span.o-stack__cell.u-ml-big.u-text-right 123 Street Name
+                li.u-border-bottom
+                  .o-stack.o-stack--splitted
+                    b.o-stack__cell IBAN:
+                    span.o-stack__cell.u-ml-big.u-text-right kljnkjnsdkfjsnds214sd
+                li
+                  .o-stack.o-stack--splitted
+                    b.o-stack__cell SWIFT code:
+                    span.o-stack__cell.u-ml-big.u-text-right JNASJND
+
+
+
+
+
+
+
+
+      .o-block__cell.u-p-small
+        .u-overflow-auto
+          table.c-table.c-table--tiny.c-table--bordered
+            thead
+              tr
+                th(class='u-1/12') QTY
+                th DESCRIPTION
+                th(class='u-1/12 u-ws-nowrap') UNIT PRICE
+                th(class='u-1/12 u-ws-nowrap') TOTAL
+            tbody
+              tr
+                td 1
+                td iPhone 20+
+                td $100K
+                td $100K
+              tr
+                td 1
+                td iPad 20+
+                td $200K
+                td $200K
+              tr
+                td 1
+                td iDie 100+
+                td $0.99
+                td $0.99
+
+
+
+
+
+
+      .o-block__cell.u-border-bottom.u-p-small
+        .o-stack.o-stack--splitted(class='_u-width-100p@sm-')
+          .o-stack__cell
+            img(src='http://placehold.it/120x20' alt='#')
+            .u-mt-tiny
+              ul.u-list-bare.u-mt-tiny
+                li 123 Street Name ST.
+                li London, UK
+                li 111-222-3333
+
+          .o-stack__cell.u-text-right(class='u-mt-small@sm-')
+            table.c-table.c-table--mini.u-ws-nowrap
+              tr
+                td
+                  h4 Total due
+                td
+              tr.u-border-bottom
+                td
+                  b Subtotal
+                td $1000
+              tr.u-border-bottom
+                td
+                  b Shipping
+                td $1000
+              tr.u-border-bottom
+                td
+                  b VAT Included in Tottal
+                td $1000
+              tr
+                td
+                  b TOTAL
+                td.u-color-main.u-bg-primary
+                  b $3000
+
+
+      .o-block__cell.u-p-small
+        h4.u-mb-tiny Terms & Conditions
+        p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.

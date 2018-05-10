@@ -1,0 +1,84 @@
+<div class="c-main o-stack o-stack--nowrap u-relative u-flexColumn@lg-"
+	ng-controller="todoCtrl as todo">
+	<div
+		class="c-todo__nav o-stack__cell u-border-top u-bg-main u-border-right u-overflow-auto u-width-100p@lg- u-3/12@lg+ u-height-100p@lg+ u-border-bottom"
+		perfect-scrollbar="" tuck="{ from: '1024px' }">
+		<div class="u-mt-medium _u-mt-small u-p-medium u-pt-none">
+			<h4>Filters</h4>
+			<p>Use filters below to categories your todo list items.</p>
+			<ul class="c-menu c-menu--borderless c-menu--expanded u-shadow-none">
+				<li class="c-menu__item"
+					ng-repeat="filter in todoService.filters track by $index"><a
+					class="c-menu__link" href=""
+					ng-click="todoService.filter(filter.method)"
+					ng-class="{ 'is-active': $index == todoService.activeFilter }"><i
+						class="c-icon c-icon--main c-menu__icon">sort</i><span
+						class="c-menu__text">{{ filter.title }}</span></a></li>
+			</ul>
+		</div>
+	</div>
+	<div
+		class="o-stack__cell--expanded u-border-top u-bg-main u-bg-main u-width-100p@lg-"
+		tuck="{ from: '1024px' }" perfect-scrollbar="">
+		<div
+			class="o-block u-width-100p u-p-medium _u-width-100p u-collapse _u-mt-small">
+			<div class="o-block__cell">
+				<h2>Todo's</h2>
+			</div>
+			<div class="o-block__cell">
+				<form
+					class="o-stack o-stack--nowrap u-collapse--horizontal _u-ml-small"
+					ng-submit="todoService.saveTodo()">
+					<div class="o-stack__cell o-stack__cell--expanded">
+						<div class="c-control u-width-100p">
+							<span class="c-icon c-icon--main">check</span>
+							<div class="c-control__input-box">
+								<input class="c-control__input" type="text" name=""
+									ng-model="todoService.todo.title" placeholder="Type Some...">
+							</div>
+						</div>
+					</div>
+					<div class="o-stack__cell">
+						<button class="c-button c-button--primary" type="submit">{{
+							todoService.todo.editing ? 'Save' : 'Add' }}</button>
+					</div>
+				</form>
+			</div>
+			<div class="o-block__cell">
+				<ul class="u-list-bare" ng-show="todos.length">
+					<li
+						ng-repeat="todo in todos | filter:todoService.todoFilter track by $id($index)"><div
+							class="o-stack o-stack--nowrap">
+							<div class="o-stack__cell o-stack__cell--expanded"
+								ng-click="todoService.toggleDone(todo)">
+								<div class="o-stack o-stack--nowrap">
+									<div class="o-stack__cell">
+										<label class="c-checkable"><input
+											class="c-checkable__input c-checkable__input--checkbox"
+											type="checkbox" name="" value="" ng-model="todo.done"><span
+											class="c-checkable__mask c-checkable__mask--checkbox"></span></label>
+									</div>
+									<div class="o-stack__cell">
+										<span ng-class="{ 'u-text-lineThrough': todo.done }">{{
+											todo.title }}</span>
+									</div>
+								</div>
+							</div>
+							<div class="o-stack__cell">
+								<button
+									class="c-button c-button--transparent c-button--primary c-button--icon"
+									ng-click="todoService.editTodo(todo)">edit</button>
+							</div>
+						</div></li>
+				</ul>
+			</div>
+			<div class="o-block__cell" ng-show="!todos.length">
+				<p>Well done! No more todo's.</p>
+			</div>
+			<div class="o-block__cell">
+				<button class="c-button c-button--primary"
+					ng-click="todoService.clearCompleted()">All Done</button>
+			</div>
+		</div>
+	</div>
+</div>

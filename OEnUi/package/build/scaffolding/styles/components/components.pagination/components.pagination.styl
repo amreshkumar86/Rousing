@@ -1,0 +1,366 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/*
+ * + @Settings
+ *     - #Layout Variables
+ *     - #Styles Variables
+ *     - #Color Variables
+ *
+ *
+ * + @Pagination
+ *     - #Pagination Structure
+ *     - #Pagination Modifiers
+ *
+ *
+ * + @Pagination Item
+ *     - #Pagination Item Structure
+ *     - #Pagination Item Modifiers
+ *     - #Pagination Item Context
+ *
+ *
+ * + @Pagination List
+ *     - #Pagination List Structure
+ *
+ *
+ * + @Pagination Content
+ *     - #Pagination Content Structure
+ *     - #Pagination Content States
+ *     - #Pagination Content Context
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Layout Variables
+// -------------------------------------
+
+$pagination-gap                        = 0.5em
+$pagination-content-width              = 3em
+$pagination-content-padding            = 1.5em
+$pagination-content-height             = 3em
+
+
+
+
+
+
+
+// #Styles Variables
+// -------------------------------------
+
+$pagination-content-border             = 1px solid
+$pagination-content-border-radius      = 2px
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$pagination-content-color              = $color-grey-minor
+$pagination-content-border-color       = $color-grey-muted
+$pagination-content-state-background   = $color-variant-primary
+$pagination-content-state-color        = $clr-white-900
+$pagination-content-state-border-color = $color-variant-primary
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Pagination
+// ---------------------------------------------------------
+
+// #Pagination Structure
+// -------------------------------------
+
+.c-pagination
+  // Layout
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-left: -($pagination-gap)
+  margin-bottom: -($pagination-gap)
+
+  // Styles
+  list-style: none
+
+
+
+
+
+
+
+// #Pagination Modifiers
+// -------------------------------------
+
+.c-pagination--compacted
+  // Layout
+  margin-left: 0
+  margin-bottom: 0
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Pagination Item
+// ---------------------------------------------------------
+
+// #Pagination Item Structure
+// -------------------------------------
+
+.c-pagination__item
+  // Layout
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  vertical-align: middle
+  margin-left: $pagination-gap
+  margin-bottom: $pagination-gap
+
+
+
+  // === Breakpoints
+
+  +to($viewport-sm)
+    align-self: stretch
+
+
+
+
+
+
+
+// #Pagination Item Modifiers
+// -------------------------------------
+
+.c-pagination__item--control
+  // Layout
+  flex: 1 1 auto
+
+
+
+
+.c-pagination__item--prev
+  // Layout
+  justify-content: flex-start
+
+
+
+
+.c-pagination__item--next
+  // Layout
+  justify-content: flex-end
+
+
+
+
+
+
+
+// #Pagination Item Context
+// -------------------------------------
+
+.c-pagination__item--control
+  .c-pagination--compacted &
+    // Layout
+    flex: 0 0 auto
+
+
+
+
+
+
+// #Pagination Item Context
+// -------------------------------------
+
+.c-pagination__item
+  .c-pagination__list > &
+    // Layout
+    flex: 1 1 auto
+
+
+
+    // === Breakpoints
+
+    +to($viewport-sm)
+      // Layout
+      flex: 1 1 30%
+
+
+
+
+.c-pagination__item
+  .c-pagination--compacted &
+    // Layout
+    margin-left: 0
+    margin-bottom: 0
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Pagination List
+// ---------------------------------------------------------
+
+// #Pagination List Structure
+// -------------------------------------
+
+.c-pagination__list
+  // Layout
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-flow: row wrap
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Pagination Content
+// ---------------------------------------------------------
+
+// #Pagination Content Structure
+// -------------------------------------
+
+.c-pagination__content
+  // Typography
+  font-size: 12px
+  font-weight: bold
+  text-align: center
+  text-decoration: none
+  line-height: $pagination-content-height
+  text-transform: uppercase
+
+  // Layout
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  min-width: $pagination-content-width
+  padding: 0 $pagination-content-padding
+  min-height: $pagination-content-height
+
+  // Styles
+  border: $pagination-content-border
+  border-radius: $pagination-content-border-radius
+
+  // Theme
+  background: transparent
+  color: $pagination-content-color
+  border-color: $pagination-content-border-color
+
+  // Easing
+  transition: $default-transition
+
+  // Extra
+  pointer-events: none
+
+
+
+  // === Mixins
+
+  selectable(none)
+
+
+
+  // === Coupling
+
+  &[href]
+    pointer-events: auto
+
+
+
+  // === Breakpoints
+
+  +to($viewport-sm)
+    align-self: stretch
+
+
+
+
+
+
+
+// #Pagination Content States
+// -------------------------------------
+
+.c-pagination__content[href]:hover
+.c-pagination__content[href]:focus
+.c-pagination__content[href].is-current
+  // Theme
+  background: $pagination-content-state-background
+  color: $pagination-content-state-color
+  border-color: $pagination-content-state-border-color
+
+
+
+
+
+
+
+// #Pagination Content Context
+// -------------------------------------
+
+.c-pagination__content
+  .c-pagination__list &
+    // Layout
+    flex: 1 1 auto
+
+
+
+
+.c-pagination__content
+  .c-pagination--borderless &
+    // Styles
+    border: 0
+
+
+
+.c-pagination__content
+  .c-pagination--compacted .c-pagination__list &
+    // Styles
+    border-radius: 0
+
+
+  .c-pagination--compacted &
+    // Layout
+    margin-left: -1px
+    margin-bottom: -1px
+
+
+  .c-pagination--compacted > .c-pagination__item--prev &
+    // Styles
+    border-radius: $pagination-content-border-radius 0 0 $pagination-content-border-radius
+
+
+  .c-pagination--compacted > .c-pagination__item--next &
+    // Styles
+    border-radius: 0 $pagination-content-border-radius $pagination-content-border-radius 0

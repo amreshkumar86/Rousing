@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/light_menu_bg">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="@drawable/toolbar_bg"
+        android:layout_height="50dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:id="@+id/view"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rel">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_left"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DEFAULT STATE"
+                android:textSize="@dimen/lm_light_text_font"
+                android:id="@+id/light_control_text"
+                android:textColor="#FFBACC"
+                android:layout_centerInParent="true"/>
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/close"
+                android:layout_alignParentRight="true"
+                android:clickable="true"/>
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lm_ll_details_m_t"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        //
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/lm_m">
+
+                <com.niveus.oen.Utils.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last State Recovery"
+                    android:textColor="#FFBACC"
+                    android:layout_toLeftOf="@+id/seek_bar_switch"
+                    android:textSize="@dimen/lm_details_font"
+                    android:layout_centerVertical="true"
+                    app:font="roboto_light"/>
+
+                <SeekBar
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:thumb="@drawable/tiny_seekbar_switch_thumb"
+                    android:thumbOffset="0.3dp"
+                    android:progress="0"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="-16dp"
+                    android:splitTrack="false"
+                    android:id="@+id/seek_bar_switch"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:progressDrawable="@drawable/tiny_seekbar_switch_track" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Off"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="28dp"
+                    android:textSize="12dp"
+                    android:id="@+id/switch_text_tv"
+                    android:textColor="#FFBACC"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        //
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:id="@+id/current_default_rl">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/lm_m">
+
+                <com.niveus.oen.Utils.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Default"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#FFBACC"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/lm_details_font"
+                    app:font="roboto_light"/>
+
+                <View
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/color_picker_v"
+                    android:background="@drawable/default_state_circle"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

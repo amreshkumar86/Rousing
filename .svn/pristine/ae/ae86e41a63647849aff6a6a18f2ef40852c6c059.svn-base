@@ -1,0 +1,32 @@
+.c-mailboxMessages__searchBox
+  +between($viewport-md, $viewport-hd)
+    border-bottom: 0
+
+.c-mailboxMessages__actionBar > .o-stack__cell
+  +to($viewport-xlg)
+    flex: 1 1 auto
+
+.c-mailbox__messageBrief.is-active
+.c-mailbox__messageBrief:hover
+  background: alpha($color-grey-muted, 0.1)
+
+
+.c-emailMsgWrapper
+  overflow: auto
+
+
+.c-mailboxMessages
+  position: relative
+  height: auto
+
+.c-emailMsgWrapper
+  +to($viewport-hd)
+    position: absolute
+    z-index: $over-content
+    width: calc(100% - 250px)
+    left: 250px
+
+  +to($viewport-lg)
+    position: relative
+    width: 100%
+    left: 0

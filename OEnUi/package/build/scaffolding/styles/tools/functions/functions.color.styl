@@ -1,0 +1,145 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ * + @Lighten Function
+ * + @Lighter Function
+ * + @Lightest Function
+ * + @Darken Function
+ * + @Darker Function
+ * + @Darkest Function
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+/**
+ * Percent added/subtracted from color under process.
+ * Higer or lower percents use this number as a base.
+ */
+
+$factor = 12%
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Lighten Function
+// ---------------------------------------------------------
+
+/**
+ * Function to raise the brightness of
+ * a color by a predefined `$factor`.
+ */
+
+-light($color)
+  lightness($color, (lightness($color) + $factor))
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Lighter Function
+// ---------------------------------------------------------
+
+/**
+ * Function to raise the brightness of
+ * a color by intial `$factor` multiplied by 2.
+ */
+
+-lighter($color)
+  lightness($color, (lightness($color) + $factor * 2))
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Lightest Function
+// ---------------------------------------------------------
+
+/**
+ * Function to raise the brightness of
+ * a color by intial `$factor`  multiplied by 3.
+ */
+
+-lightest($color)
+  lightness($color, (lightness($color) + $factor * 3))
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Darken Function
+// ---------------------------------------------------------
+
+/**
+ * Function to raise the darkness of
+ * a color by a predefined `$factor`.
+ */
+
+-dark($color)
+  darken($color, (lightness($color) - $factor))
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Darker Function
+// ---------------------------------------------------------
+
+/**
+ * Function to raise the darkness of
+ * a color by intial `$factor`  multiplied by 2.
+ */
+
+-darker($color)
+  darken($color, (lightness($color) - $factor * 2))
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Darkest Function
+// ---------------------------------------------------------
+
+/**
+ * Function to raise the darkness of
+ * a color by intial `$factor`  multiplied by 3.
+ */
+
+-darkest($color)
+  darken($color, (lightness($color) - $factor * 3))

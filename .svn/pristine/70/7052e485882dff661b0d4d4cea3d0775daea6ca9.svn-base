@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@android:color/transparent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:id="@+id/ll"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/devices_icon_dimen"
+            android:layout_height="@dimen/devices_icon_dimen"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/thumb_color"
+            android:id="@+id/device_icon"
+            android:layout_weight="0.25"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical"
+            android:layout_weight="0.5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deviceddddddddddddddddd 1"
+                android:textSize="@dimen/devices_name_font"
+                android:textColor="#012061"
+                android:id="@+id/device_name_tv"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Off"
+                android:textSize="@dimen/devices_sub_font"
+                android:textColor="#012061"
+                android:id="@+id/sub_name_tv"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="@dimen/devices_icon_dimen"
+            android:layout_height="@dimen/devices_icon_dimen"
+            android:src="@drawable/power_btn"
+            android:id="@+id/power_btn_iv"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.25"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

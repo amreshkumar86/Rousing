@@ -1,0 +1,200 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Typography Variables
+ *     - #Layout Variables
+ *     - #Color Variables
+ *
+ *
+ * + @Avatar
+ *     - #Avatar Structure
+ *     - #Avatar Modifiers
+ *     - #Avatar Context
+ *
+ *
+ * + @Avatar Image
+ *     - #Avatar Image Structure
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Typography Variables
+// -------------------------------------
+
+$avatar-mini-font-size    = 0.66em
+$avatar-tiny-font-size    = 1em
+$avatar-default-font-size = 1.33em
+$avatar-small-font-size   = 1.66em
+$avatar-medium-font-size  = 2em
+
+
+
+
+
+
+
+// #Layout Variables
+// -------------------------------------
+
+$avatar-mini-size         = 1.66em
+$avatar-tiny-size         = 1.66em
+$avatar-default-size      = 2em
+$avatar-small-size        = 2.5em
+$avatar-medium-size       = 3em
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$avatar-color             = $color-main
+$avatar-icon-background   = $color-main
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Avatar
+// ---------------------------------------------------------
+
+// #Avatar Structure
+// -------------------------------------
+
+.c-avatar
+  // Typography
+  font-size: $avatar-default-font-size
+  font-weight: normal
+  line-height: 1
+  text-align: center
+
+  // Layout
+  display: inline-block
+  width: $avatar-default-size
+  height: $avatar-default-size
+  margin: 0
+  position: relative
+  vertical-align: middle
+
+  // Styles
+  border-radius: 50%
+
+  // Theme
+  color: $avatar-color
+
+
+
+
+
+
+
+// #Avatar Modifiers
+// -------------------------------------
+
+.c-avatar--mini
+  // Typography
+  font-size: $avatar-mini-font-size
+
+  // layout
+  width: $avatar-mini-size
+  height: $avatar-mini-size
+
+
+
+
+.c-avatar--tiny
+  // Typography
+  font-size: $avatar-tiny-font-size
+
+  // layout
+  width: $avatar-tiny-size
+  height: $avatar-tiny-size
+
+
+
+
+.c-avatar--small
+  // Typography
+  font-size: $avatar-small-font-size
+
+  // layout
+  width: $avatar-small-size
+  height: $avatar-small-size
+
+
+
+
+.c-avatar--medium
+  // Typography
+  font-size: $avatar-medium-font-size
+
+  // layout
+  width: $avatar-medium-size
+  height: $avatar-medium-size
+
+
+
+
+
+
+
+// #Avatar Context
+// -------------------------------------
+
+.c-avatar
+  .c-avatar
+    // Layout
+    width: 50%
+    height: 50%
+    border: 0.125em solid
+    z-index: $over-control
+
+    // Theme
+    border-color: $color-main
+
+    // Extra
+    transform: translate(75%, -75%)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Avatar Image
+// ---------------------------------------------------------
+
+// #Avatar Image Structure
+// -------------------------------------
+
+.c-avatar img
+  // Layout
+  width: 100%
+  height: 100%
+  position: relative
+  z-index: $over-content
+  vertical-align: top
+
+  // Styles
+  border-radius: 50%

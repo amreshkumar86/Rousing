@@ -1,0 +1,120 @@
+
+<div class="u-bg-muted" id="features">
+  <div class="o-container u-py-big u-collapse _u-mb-big">
+    <div class="o-block u-text-center">
+      <div class="o-block__cell u-text-capitalize"><span class="u-color-secondary">packed with a lot of features</span>
+        <h1>ponut  features</h1>
+      </div>
+    </div>
+    <div class="o-grid o-grid--mediumGap _u-4/12@lg+ _u-6/12@md+ _u-width-100p@md-">
+      <div class="o-grid__cell">
+        <div class="o-stack o-stack--nowrap">
+          <div class="o-stack__cell u-mr-small"><i class="c-icon c-icon--main u-font-massive u-color-secondary">star</i></div>
+          <div class="o-stack__cell o-stack__cell--expanded">
+            <h3 class="u-text-capitalize u-mb-tiny">Clean & Simple Code</h3>
+            <p>By professionals for professionals</p>
+          </div>
+        </div>
+      </div>
+      <div class="o-grid__cell">
+        <div class="o-stack o-stack--nowrap">
+          <div class="o-stack__cell u-mr-small"><i class="c-icon c-icon--main u-font-massive u-color-secondary">star</i></div>
+          <div class="o-stack__cell o-stack__cell--expanded">
+            <h3 class="u-text-capitalize u-mb-tiny">Easy Customizable</h3>
+            <p>Well documented and isolated framework code</p>
+          </div>
+        </div>
+      </div>
+      <div class="o-grid__cell">
+        <div class="o-stack o-stack--nowrap">
+          <div class="o-stack__cell u-mr-small"><i class="c-icon c-icon--main u-font-massive u-color-secondary">star</i></div>
+          <div class="o-stack__cell o-stack__cell--expanded">
+            <h3 class="u-text-capitalize u-mb-tiny">Modern Design</h3>
+            <p>On trend-following, well look and feel</p>
+          </div>
+        </div>
+      </div>
+      <div class="o-grid__cell">
+        <div class="o-stack o-stack--nowrap">
+          <div class="o-stack__cell u-mr-small"><i class="c-icon c-icon--main u-font-massive u-color-secondary">star</i></div>
+          <div class="o-stack__cell o-stack__cell--expanded">
+            <h3 class="u-text-capitalize u-mb-tiny">Premium Support</h3>
+            <p>Response time can be up to 1 business day</p>
+          </div>
+        </div>
+      </div>
+      <div class="o-grid__cell">
+        <div class="o-stack o-stack--nowrap">
+          <div class="o-stack__cell u-mr-small"><i class="c-icon c-icon--main u-font-massive u-color-secondary">star</i></div>
+          <div class="o-stack__cell o-stack__cell--expanded">
+            <h3 class="u-text-capitalize u-mb-tiny">Premium Quality</h3>
+            <p>4+ years experience of creating Web UI</p>
+          </div>
+        </div>
+      </div>
+      <div class="o-grid__cell">
+        <div class="o-stack o-stack--nowrap">
+          <div class="o-stack__cell u-mr-small"><i class="c-icon c-icon--main u-font-massive u-color-secondary">star</i></div>
+          <div class="o-stack__cell o-stack__cell--expanded">
+            <h3 class="u-text-capitalize u-mb-tiny">3 Color Schemes</h3>
+            <p>Packed with 3 pre-defined color schemes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="o-grid__cell">
+        <div class="o-stack o-stack--nowrap">
+          <div class="o-stack__cell u-mr-small"><i class="c-icon c-icon--main u-font-massive u-color-secondary">star</i></div>
+          <div class="o-stack__cell o-stack__cell--expanded">
+            <h3 class="u-text-capitalize u-mb-tiny">UI Components</h3>
+            <p>60+ UI Components being given with Ponut Admin Pack.</p>
+          </div>
+        </div>
+      </div>
+      <div class="o-grid__cell">
+        <div class="o-stack o-stack--nowrap">
+          <div class="o-stack__cell u-mr-small"><i class="c-icon c-icon--main u-font-massive u-color-secondary">star</i></div>
+          <div class="o-stack__cell o-stack__cell--expanded">
+            <h3 class="u-text-capitalize u-mb-tiny">1000+ Font Icons</h3>
+            <p>Packed with Material Design & Zocial icon font.</p>
+          </div>
+        </div>
+      </div>
+      <div class="o-grid__cell">
+        <div class="o-stack o-stack--nowrap">
+          <div class="o-stack__cell u-mr-small"><i class="c-icon c-icon--main u-font-massive u-color-secondary">star</i></div>
+          <div class="o-stack__cell o-stack__cell--expanded">
+            <h3 class="u-text-capitalize u-mb-tiny">Fully Responsive</h3>
+            <p>All the layout of Ponut Admin is Fully Responsive and widely tested.</p>
+          </div>
+        </div>
+      </div>
+      <div class="o-grid__cell">
+        <div class="o-stack o-stack--nowrap">
+          <div class="o-stack__cell u-mr-small"><i class="c-icon c-icon--main u-font-massive u-color-secondary">star</i></div>
+          <div class="o-stack__cell o-stack__cell--expanded">
+            <h3 class="u-text-capitalize u-mb-tiny">Stylus & PostCSS</h3>
+            <p>Our Css is written in Stylus & PostCSS make your life easier.</p>
+          </div>
+        </div>
+      </div>
+      <div class="o-grid__cell">
+        <div class="o-stack o-stack--nowrap">
+          <div class="o-stack__cell u-mr-small"><i class="c-icon c-icon--main u-font-massive u-color-secondary">star</i></div>
+          <div class="o-stack__cell o-stack__cell--expanded">
+            <h3 class="u-text-capitalize u-mb-tiny">Lots of Chart Options</h3>
+            <p>Yes lots of variations for Charts.</p>
+          </div>
+        </div>
+      </div>
+      <div class="o-grid__cell">
+        <div class="o-stack o-stack--nowrap">
+          <div class="o-stack__cell u-mr-small"><i class="c-icon c-icon--main u-font-massive u-color-secondary">star</i></div>
+          <div class="o-stack__cell o-stack__cell--expanded">
+            <h3 class="u-text-capitalize u-mb-tiny">AnuglarJS</h3>
+            <p>Starter Kit that make developer's life easier.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

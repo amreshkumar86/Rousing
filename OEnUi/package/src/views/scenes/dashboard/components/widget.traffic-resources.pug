@@ -1,0 +1,122 @@
+.o-grid__cell
+  .c-portlet.u-bg-main.u-shadow-mini
+    .c-portlet__header.o-stack.o-stack--center.o-stack--splitted.u-border-bottom.u-px-small.u-py-mini
+      .o-stack__cell
+        h5 Traffic Resources
+      .o-stack__cell
+        .o-stack.o-stack--center.o-stack--nowrap.o-stack--tinyGap.u-font-small
+          .o-stack__cell.u-relative
+            a(href='javascript:void(0)' class='c-icon c-icon--main u-color-minor u-opacity-50p') refresh
+          .o-stack__cell.u-relative( dropdown='' )
+            .fn-dropdownTrigger
+              a(href='javascript:void(0)' class='c-icon c-icon--main u-color-minor u-opacity-50p') settings
+
+            ul.c-menu.c-menu--dropdown.u-r-none
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Projects
+              li.c-menu__separator
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Tasks
+                  span.c-badge.c-menu__badge(data-badge="15")
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Calendar
+              li.c-menu__separator
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Lock
+          .o-stack__cell.u-relative
+            a(href='javascript:void(0)' class='c-icon c-icon--main u-color-minor u-opacity-50p') clear
+
+    .c-portlet__content.u-p-small
+      .o-stack.o-stack--splitted._u-mb-small
+        .o-stack__cell
+          p Showing Traffic Resources For Last 3 Months.
+
+        .o-stack__cell.u-relative( dropdown='' )
+          .fn-dropdownTrigger
+            a(href='javascript:void(0)' class='c-button c-button--small c-button--primary u-radius-rounded')
+              span Actions
+              i.c-icon.c-icon--main expand_more
+
+          ul.c-menu.c-menu--dropdown(class='u-r-none@sm+')
+            li.c-menu__item
+              a.c-menu__link(href='javascript:void(0)')
+                span.c-menu__text Projects
+            li.c-menu__separator
+            li.c-menu__item
+              a.c-menu__link(href='javascript:void(0)')
+                span.c-menu__text Tasks
+                span.c-badge.c-menu__badge(data-badge="15")
+            li.c-menu__item
+              a.c-menu__link(href='javascript:void(0)')
+                span.c-menu__text Calendar
+            li.c-menu__separator
+            li.c-menu__item
+              a.c-menu__link(href='javascript:void(0)')
+                span.c-menu__text Lock
+
+      #bar-chart(style="height: 250px;" flot='' flot-resize='true' flot-data-url='views/scenes/charts/data/flot/bar.json')
+
+    .c-portlet__footer.o-stack(class='_u-6/12 _u-width-100@sm- _u-py-mini _u-px-small')
+      .o-stack__cell.u-border-top.u-border-right
+        .o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted
+          .o-stack__cell
+            h5
+              span.c-status.c-status--blue.u-mr-mini
+              | Direct
+          .o-stack__cell
+            span.u-color-error -2%
+
+
+      .o-stack__cell.u-border-top
+        .o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted
+          .o-stack__cell
+            h5
+              span.c-status.c-status--red.u-mr-mini
+              | Links
+          .o-stack__cell
+            span.u-color-success +10%
+
+
+      .o-stack__cell.u-border-top.u-border-right
+        .o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted
+          .o-stack__cell
+            h5
+              span.c-status.c-status--indigo.u-mr-mini
+              | Search
+          .o-stack__cell
+            span.u-color-error -5%
+
+      .o-stack__cell.u-border-top
+        .o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted
+          .o-stack__cell
+            h5
+              span.c-status.c-status--yellow.u-mr-mini
+              | Social
+          .o-stack__cell
+            span.u-color-success +20%
+
+
+      .o-stack__cell.u-border-top.u-border-right
+        .o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted
+          .o-stack__cell
+            h5
+              span.c-status.c-status--magneta.u-mr-mini
+              | Mail
+          .o-stack__cell
+            span.u-color-success +7%
+
+
+      .o-stack__cell.u-border-top
+        .o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted
+          .o-stack__cell
+            h5
+              span.c-status.c-status--green.u-mr-mini
+              | Display
+          .o-stack__cell
+            span.u-color-error -1%
+
+

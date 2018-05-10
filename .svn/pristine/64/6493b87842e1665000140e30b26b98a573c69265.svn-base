@@ -1,0 +1,415 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/*
+ * + @Settings
+ *    - #Typography Variables
+ *    - #Layout Variables
+ *    - #Styles Variables
+ *    - #Color Variables
+ *
+ *
+ * + @Stepper
+ *    - #Stepper Structure
+ *
+ *
+ * + @Stepper List
+ *    - #Stepper List Structure
+ *
+ *
+ * + @Stepper Item
+ *    - #Stepper Item Structure
+ *    - #Stepper Item Modifiers
+ *
+ *
+ * + @Steppper Item Decendants
+ *    - #Steppper Item Decendants Context
+ *
+ *
+ * + @Stepper Icon
+ *    - #Stepper Icon Structure
+ *    - #Steppper Icon Context
+ *
+ *
+ * + @Stepper Title
+ *    - #Stepper Title Structure
+ *    - #Steppper Title Context
+ */
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Typography Variables
+// -------------------------------------
+
+$stepper-title-font-size           = 1em
+
+
+
+
+
+
+
+// #Layout Variables
+// -------------------------------------
+
+$stepper-item-spacing              = 1em
+$stepper-item-spacing-big          = 5em
+$stepper-divider-height            = 2px
+$stepper-icon-size                 = 2em
+$stepper-title-spacing-sm          = 1em
+$stepper-title-spacing-md-up       = 0.5em
+
+
+
+
+
+
+
+// #Styles Variables
+// -------------------------------------
+
+$stepper-icon-border-width         = 0.125em
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$stepper-icon-background           = $color-main
+$stepper-item-background           = $color-grey-muted
+$stepper-item-done-color           = $color-aside-success
+$stepper-icon-current-background   = $color-main
+$stepper-icon-current-color        = $color-aside-success
+$stepper-icon-current-border-color = $color-aside-success
+$stepper-icon-done-background      = $color-aside-success
+$stepper-icon-done-color           = $clr-white-900
+$stepper-icon-done-border-color    = $color-aside-success
+$stepper-title-current-color       = $color-aside-success
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Stepper
+// ---------------------------------------------------------
+
+// #Stepper Structure
+// -------------------------------------
+
+
+.c-stepper
+  // Typography
+  text-transform: capitalize
+
+  // Layout
+  max-width: 80%
+  margin: 0 auto
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Stepper List
+// ---------------------------------------------------------
+
+// #Stepper List Structure
+// -------------------------------------
+
+.c-stepper__list
+  // Layout
+  display: flex
+  flex-flow: column nowrap
+  align-items: flex-start
+  justify-content: center
+  margin: 0 0 -($stepper-item-spacing) -($stepper-item-spacing)
+
+
+
+  // === Breakpoints
+
+  +from($viewport-md)
+    // Layout
+    flex-flow: row nowrap
+    margin: 0 0 -($stepper-item-spacing-big) -($stepper-item-spacing-big)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Stepper Item
+// ---------------------------------------------------------
+
+// #Stepper Item Structure
+// -------------------------------------
+
+.c-stepper__item
+  // Layout
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 0 $stepper-item-spacing $stepper-item-spacing
+  position: relative
+
+  // Easing
+  transition: $default-transition
+
+  // Extra
+  cursor: pointer
+
+
+
+  // === Breakpoints
+
+  +from($viewport-md)
+    // Layout
+    flex-flow: column nowrap
+    margin: 0 0 $stepper-item-spacing-big $stepper-item-spacing-big
+    flex: 1 1 0
+
+
+
+    // === Pseudo Elements
+
+    &:not(:last-child)::after
+      // Layout
+      display: block
+      width: 'calc(100% + %s)' % ($stepper-icon-size * 0.5)
+      height: $stepper-divider-height
+      position: absolute
+      top: 'calc(%s - %s)' % (($stepper-icon-size * 0.5) @height)
+      left: 'calc(50% + %s)'  % ($stepper-icon-size)
+
+      // Theme
+      background: $stepper-item-background
+
+      // Extra
+      content: ''
+
+
+// #Stepper Item Modifiers
+// -------------------------------------
+
+.c-stepper__item--done
+  // Theme
+  color: $stepper-item-done-color
+
+
+  // Breakpoints
+  +from($viewport-md)
+    // Layout
+    &:not(:last-child)::after
+      // Theme
+      background: $stepper-item-done-color
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Steppper Item Decendants
+// ---------------------------------------------------------
+
+// #Steppper Item Decendants Context
+// -------------------------------------
+
+*
+  .c-stepper__item > &
+    // Styles
+    opacity: 0.5
+
+
+
+
+*
+  .c-stepper__item--done > &
+  .c-stepper__item--current > &
+    // Styles
+    opacity: 1
+
+
+
+
+*
+  .c-stepper__item:hover > &
+    // Styles
+    opacity: 1
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Stepper Icon
+// ---------------------------------------------------------
+
+// #Stepper Icon Structure
+// -------------------------------------
+
+.c-stepper__icon
+  // Typography
+  text-align: center
+  line-height: 'calc(%s - %s)' % ($stepper-icon-size ($stepper-icon-border-width * 2))
+  font-weight: bold
+
+  // Layout
+  display: flex
+  align-items: center
+  justify-content: center
+  width: $stepper-icon-size
+  height: $stepper-icon-size
+  position: relative
+  overflow: hidden
+
+  // Styles
+  border: $stepper-icon-border-width solid
+  border-radius: 50%
+
+  // Theme
+  background: $stepper-icon-background
+
+  // Easing
+  transition: $default-transition
+
+
+
+  // === Pseudo Elements
+
+  &::after
+    // Typography
+    font-family: $font-icon
+    font-weight: normal
+    text-transform: none
+
+    // Layout
+    position: absolute
+    margin: auto
+
+
+
+
+
+
+
+// #Steppper Icon Context
+// -------------------------------------
+
+.c-stepper__icon
+  .c-stepper__item--current &
+    // Theme
+    background: $stepper-icon-current-background
+    color: $stepper-icon-current-color
+    border-color: $stepper-icon-current-border-color
+
+
+
+
+.c-stepper__icon
+  .c-stepper__item--done &
+    // Theme
+    background: $stepper-icon-done-background
+    color: transparent
+    border-color: $stepper-icon-done-border-color
+
+
+
+    // === Pseudo Elements
+
+    &::after
+      // Typography
+      font-feature-settings: 'liga'
+
+      // Layout
+      display: block
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+      // Theme
+      color: $stepper-icon-done-color
+
+      // Extra
+      content: 'done'
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Stepper Title
+// ---------------------------------------------------------
+
+// #Stepper Title Structure
+// -------------------------------------
+
+.c-stepper__title
+  // Typography
+  text-align: center
+  font-size: $stepper-title-font-size
+  line-height: 1.25
+
+  // Layout
+  margin-left: $stepper-title-spacing-sm
+  max-width: 5em
+
+  // Easing
+  transition: $default-transition
+
+
+
+  // === Breakpoints
+
+  +from($viewport-md)
+    // Layout
+    margin-left: 0
+    margin-top: $stepper-title-spacing-md-up
+
+    // Theme
+    transition: $default-transition
+
+
+
+
+
+
+
+// #Steppper Title Context
+// -------------------------------------
+
+.c-stepper__title
+  .c-stepper__item--current &
+    // Theme
+    color: $stepper-title-current-color

@@ -1,0 +1,287 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Typography Variables
+ *     - #Layout Variables
+ *     - #Styles Variables
+ *     - #Color Variables
+ *
+ *
+ * + @Message
+ *     - #Message Structure
+ *     - #Message Modifiers
+ *
+ *
+ * + @Message Decendants
+ *     - #Message Decendants Structure
+ *
+ *
+ * + @Message Body
+ *     - #Message Body Structure
+ *
+ *
+ * + @Message Body Decendants
+ *     - #Message Body Decendants Structure
+ *
+ *
+ * + @Message Close
+ *     - #Message Close Structure
+ *     - #Message Close States
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Typography Variables
+// -------------------------------------
+
+$message-text-size            = $font-responsive
+
+
+
+
+
+
+
+// #Layout Variables
+// -------------------------------------
+
+$message-padding              = 1.5em
+$message-spacing              = 1.5em
+$message-close-padding        = 0.5em
+
+
+
+
+
+
+
+// #Styles Variables
+// -------------------------------------
+
+$message-shadow               = $shadow-tiny
+$message-radius               = $base-border-radius
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$message-background           = $color-variant-primary
+$message-color                = $clr-white-900
+$message-primary-background   = $color-variant-primary
+$message-secondary-background = $color-variant-secondary
+$message-accent-background    = $color-variant-accent
+$message-info-background      = $color-aside-info
+$message-warning-background   = $clr-yellow-800
+$message-error-background     = $color-aside-error
+$message-success-background   = $color-aside-success
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Message
+// ---------------------------------------------------------
+
+// #Message Structure
+// -------------------------------------
+
+.c-message
+  // Layout
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-between
+  align-items: flex-start
+  padding: $message-padding
+
+  // Theme
+  background: $message-background
+  color: $message-color
+
+
+
+  // === Mixins
+
+  collapse('horizontal')
+
+
+
+
+
+
+
+// #Message Modifiers
+// -------------------------------------
+
+
+.c-message--primary
+  // Theme
+  background: $message-primary-background
+
+
+
+
+.c-message--secondary
+  // Theme
+  background: $message-secondary-background
+
+
+
+
+.c-message--accent
+  // Theme
+  background: $message-accent-background
+
+
+
+
+.c-message--info
+  // Theme
+  background: $message-info-background
+
+
+
+
+.c-message--warning
+  // Theme
+  background: $message-warning-background
+
+
+
+
+.c-message--error
+  // Theme
+  background: $message-error-background
+
+
+
+
+.c-message--success
+  // Theme
+  background: $message-success-background
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Message Decendants
+// ---------------------------------------------------------
+
+// #Message Decendants Structure
+// -------------------------------------
+
+*
+  .c-message > &
+    // Layout
+    margin-left: $message-spacing
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Message Body
+// ---------------------------------------------------------
+
+// #Message Body Structure
+// -------------------------------------
+
+.c-message__body
+  // Typography
+  {$message-text-size}
+  line-height: 1.414
+
+  // Layout
+  flex: 1 1 0
+
+
+
+  // === Mixins
+  collapse()
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Message Body Decendants
+// ---------------------------------------------------------
+
+// #Message Body Decendants Structure
+// -------------------------------------
+
+*
+  .c-message__body > &
+    // Layout
+    margin-bottom: 1em
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Message Close
+// ---------------------------------------------------------
+
+// #Message Close Structure
+// -------------------------------------
+
+.c-message__close
+  // Layout
+  padding: $message-close-padding
+  margin: (-@padding) (-@padding) (-@padding) $message-spacing
+
+  // Styles
+  opacity: 0.7
+
+  // Easing
+  transition: $default-transition
+
+  // Extra
+  cursor: pointer
+
+
+
+
+
+
+
+// #Message Close States
+// -------------------------------------
+
+.c-message__close:hover
+  // Styles
+  opacity: 1

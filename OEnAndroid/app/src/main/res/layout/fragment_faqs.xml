@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.niveus.oen.Utils.FontTextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="25dp"
+        android:textSize="16sp"
+        android:textColor="#FEBCCA"
+        android:text="My device is offline?\n\nThis is because your device is offline. In other words devices is not online. And this is a sample answer, so you won't get the actual reason why your devices is offline"
+        app:font="roboto_light"/>
+
+</RelativeLayout>

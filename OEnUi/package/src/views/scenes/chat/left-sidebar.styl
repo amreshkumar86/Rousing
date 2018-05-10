@@ -1,0 +1,35 @@
+.c-chatSidebar
+  +to($viewport-lg)
+    order: 0 !important
+    transform: translate3d(250px, 0, 0)
+    position: absolute
+    top: 0
+    right: 0
+    z-index: $over-content
+
+
+
+
+.c-chatSidebar > div
+  width: 250px
+
+
+
+
+form .c-chatSearchControl
+  min-width: 0
+
+
+
+
+.c-chatSidebar.is-open
+  +to($viewport-lg)
+    transform: translate3d(0, 0, 0)
+
+
+
+
+.c-chatList > .is-active
+  border-bottom: 2px solid $color-variant-primary
+
+

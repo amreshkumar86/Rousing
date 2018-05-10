@@ -1,0 +1,50 @@
+
+.c-main.o-stack.o-stack--nowrap.u-relative(ng-controller='todoCtrl as todo' class='u-flexColumn@lg-')
+  .c-todo__nav.o-stack__cell.u-border-top.u-bg-main.u-border-right.u-overflow-auto(class='u-width-100p@lg- u-3/12@lg+ u-height-100p@lg+ u-border-bottom' perfect-scrollbar ='' tuck="{ from: '1024px' }" )
+    .u-mt-medium._u-mt-small.u-p-medium.u-pt-none
+      h4 Filters
+      p Use filters below to categories your todo list items.
+
+      ul.c-menu.c-menu--borderless.c-menu--expanded.u-shadow-none
+        li.c-menu__item(ng-repeat='filter in todoService.filters track by $index')
+          a.c-menu__link(href='', ng-click='todoService.filter(filter.method)', ng-class="{ 'is-active': $index == todoService.activeFilter }")
+            i.c-icon.c-icon--main.c-menu__icon sort
+            span.c-menu__text {{ filter.title }}
+
+  .o-stack__cell--expanded.u-border-top.u-bg-main.u-bg-main( tuck="{ from: '1024px' }" perfect-scrollbar='' class='u-width-100p@lg-' )
+    .o-block.u-width-100p.u-p-medium._u-width-100p.u-collapse._u-mt-small
+      .o-block__cell
+        h2 Todo's
+
+      .o-block__cell
+        form.o-stack.o-stack--nowrap.u-collapse--horizontal._u-ml-small(ng-submit='todoService.saveTodo()')
+          .o-stack__cell.o-stack__cell--expanded
+            .c-control.u-width-100p
+              span.c-icon.c-icon--main check
+              .c-control__input-box
+                input.c-control__input( type="text" name="" ng-model='todoService.todo.title' placeholder='Type Some...' )
+          .o-stack__cell
+            button(type='submit' class='c-button c-button--primary')
+              | {{ todoService.todo.editing ? 'Save' : 'Add' }}
+
+      .o-block__cell
+        ul.u-list-bare(ng-show='todos.length')
+          li(ng-repeat='todo in todos | filter:todoService.todoFilter track by $id($index)')
+            .o-stack.o-stack--nowrap
+              .o-stack__cell.o-stack__cell--expanded(ng-click='todoService.toggleDone(todo)')
+                .o-stack.o-stack--nowrap
+                  .o-stack__cell
+                    label.c-checkable
+                      input.c-checkable__input.c-checkable__input--checkbox(type='checkbox', name='', value='' ng-model='todo.done')
+                      span.c-checkable__mask.c-checkable__mask--checkbox
+                  .o-stack__cell
+                    span(ng-class="{ 'u-text-lineThrough': todo.done }") {{ todo.title }}
+              .o-stack__cell
+                button(ng-click='todoService.editTodo(todo)' class='c-button c-button--transparent c-button--primary c-button--icon') edit
+              //- button.c-button.c-button--icon(ng-class="{ 'c-button--success': todo.done }") done
+
+      .o-block__cell(ng-show='!todos.length')
+        p Well done! No more todo's.
+
+      .o-block__cell
+        button(ng-click='todoService.clearCompleted()' class='c-button c-button--primary') All Done

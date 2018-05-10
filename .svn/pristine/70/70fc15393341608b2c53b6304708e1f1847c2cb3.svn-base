@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/light_menu_bg">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="@drawable/toolbar_bg"
+        android:layout_height="50dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:id="@+id/view">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rel">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_left"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LIGHTS"
+                android:textSize="@dimen/lm_light_text_font"
+                android:id="@+id/light_control_text"
+                android:textColor="#FFBACC"
+                android:layout_centerInParent="true"/>
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/menu"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/menu_dots"
+                android:layout_alignParentRight="true"
+                android:clickable="true"/>
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/activity_light_control"
+        android:layout_below="@+id/view">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/current_rl"
+            android:layout_marginTop="70dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <com.niveus.oen.Utils.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Default"
+                    android:textColor="#FFBACC"
+                    android:id="@+id/current_txt"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/lm_details_font"
+                    app:font="roboto_light"/>
+
+                <View
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_toRightOf="@+id/current_txt"
+                    android:id="@+id/color_picker_v"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/default_state_circle"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_below="@+id/current_rl"
+            android:id="@+id/buttons_ll"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <com.niveus.oen.Utils.FontTextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:id="@+id/save_btn_tv"
+                android:text="SAVE"
+                android:layout_marginLeft="30dp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_gravity="center_vertical"
+                app:font="roboto_light"/>
+
+            <com.niveus.oen.Utils.FontTextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="CANCEL"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/white_btn_bg"
+                android:id="@+id/cancel_btn_tv"
+                android:padding="10dp"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                app:font="roboto_light"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttons_ll"
+            android:id="@+id/wheel_rl"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true">
+
+            <com.lukedeighton.wheelview.WheelView
+                android:id="@+id/wheelview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:wheelColor="@android:color/transparent"
+                app:rotatableWheelDrawable="false"
+                app:selectionAngle="0"
+                app:wheelPosition="bottom"
+                app:wheelOffsetY="60dp"
+                app:repeatItems="false"
+                app:wheelRadius="280dp"
+                app:wheelItemCount="14"
+                app:wheelPadding="13dp"
+                app:wheelItemRadius="43dp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="510dp"
+            android:layout_height="510dp"
+            android:layout_marginLeft="-100dp"
+            android:layout_marginRight="-100dp"
+            android:layout_marginBottom="-285dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/color_wheel_rl">
+
+            <View
+                android:layout_width="510dp"
+                android:layout_height="510dp"
+                android:id="@+id/rot"
+                android:background="@drawable/color_wheel"/>
+
+        </RelativeLayout>
+
+        <com.niveus.oen.Utils.VerticalSeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="244dp"
+            android:thumb="@drawable/seekbar_color_thumb"
+            android:minHeight="0.1dp"
+            android:maxHeight="0.1dp"
+            android:id="@+id/seek_bar_color"
+            android:layout_marginBottom="-8dp"
+            android:progressDrawable="@color/white"
+            android:progressTint="@color/white"
+            android:progress="100"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

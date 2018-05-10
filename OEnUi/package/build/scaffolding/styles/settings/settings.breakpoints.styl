@@ -1,0 +1,139 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Viewport Sizes
+ * + @Viewport Shortcuts
+ * + @Media Queries Order
+ *
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Viewport Sizes
+// ---------------------------------------------------------
+
+/**
+ * Most common breakpoints to define where design should change.
+ */
+
+$viewport-xs  = 320px
+$viewport-sm  = 600px
+$viewport-md  = 800px
+$viewport-lg  = 1024px
+$viewport-xlg = 1280px
+$viewport-hd  = 1600px
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Viewport Shortcuts
+// ---------------------------------------------------------
+
+$mq-shortcuts   = 'xs' 'sm' 'md' 'lg' 'xlg' 'hd'
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Media Queries Order
+// ---------------------------------------------------------
+
+/**
+ * Fake media queries to define the order in which
+ * the same media queries rules should be gathered
+ */
+
+@media screen and (min-width: $viewport-xs)
+  // Fake Media Query
+  body
+    outline: 0
+@media screen and (min-width: $viewport-sm)
+  // Fake Media Query
+  body
+    outline: 0
+@media screen and (min-width: $viewport-md)
+  // Fake Media Query
+  body
+    outline: 0
+@media screen and (min-width: $viewport-lg)
+  // Fake Media Query
+  body
+    outline: 0
+@media screen and (min-width: $viewport-xlg)
+  // Fake Media Query
+  body
+    outline: 0
+@media screen and (min-width: $viewport-hd)
+  // Fake Media Query
+  body
+    outline: 0
+
+
+
+
+@media screen and (max-width: ($viewport-hd - 1px))
+  // Fake Media Query
+  body
+    outline: 0
+@media screen and (max-width: ($viewport-xlg - 1px))
+  // Fake Media Query
+  body
+    outline: 0
+@media screen and (max-width: ($viewport-lg - 1px))
+  // Fake Media Query
+  body
+    outline: 0
+@media screen and (max-width: ($viewport-md - 1px))
+  // Fake Media Query
+  body
+    outline: 0
+@media screen and (max-width: ($viewport-sm - 1px))
+  // Fake Media Query
+  body
+    outline: 0
+@media screen and (max-width: ($viewport-xs - 1px))
+  // Fake Media Query
+  body
+    outline: 0
+
+
+
+
+@media screen and (min-width: $viewport-xs) and (max-width: ($viewport-sm - 1px))
+  // Fake Media Query
+  body
+    outline: 0
+@media screen and (min-width: $viewport-sm) and (max-width: ($viewport-md - 1px))
+  // Fake Media Query
+  body
+    outline: 0
+@media screen and (min-width: $viewport-md) and (max-width: ($viewport-lg - 1px))
+  // Fake Media Query
+  body
+    outline: 0
+@media screen and (min-width: $viewport-lg) and (max-width: ($viewport-xlg - 1px))
+  // Fake Media Query
+  body
+    outline: 0
+@media screen and (min-width: $viewport-xlg) and (max-width: ($viewport-hd - 1px))
+  // Fake Media Query
+  body
+    outline: 0
+

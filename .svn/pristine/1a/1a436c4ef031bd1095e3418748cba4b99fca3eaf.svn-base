@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/menu_bg">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="@drawable/toolbar_bg"
+        android:layout_height="50dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:id="@+id/view">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rel">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/arrow_left"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="SETTINGS"
+                android:textSize="20sp"
+                android:textColor="#FEBCCA"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <com.niveus.oen.Utils.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Server Selection"
+                android:id="@+id/server_selection_tv"
+                android:gravity="center"
+                android:textColor="#FEBCCA"
+                android:paddingTop="@dimen/settings_details_padding"
+                android:paddingBottom="@dimen/settings_details_padding"
+                android:textSize="@dimen/settings_details_font"
+                app:font="roboto_light"/>
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:padding="5dp"
+                android:src="@drawable/arrow_right"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#033399"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <com.niveus.oen.Utils.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LAN Control"
+                android:id="@+id/lan_control_tv"
+                android:gravity="center"
+                android:textColor="#FEBCCA"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:paddingTop="@dimen/settings_details_padding"
+                android:paddingBottom="@dimen/settings_details_padding"
+                android:textSize="@dimen/settings_details_font"
+                app:font="roboto_light"/>
+
+            <SeekBar
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:thumb="@drawable/tiny_seekbar_switch_thumb"
+                android:thumbOffset="0.3dp"
+                android:progress="0"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginRight="-15dp"
+                android:splitTrack="false"
+                android:id="@+id/seek_bar_switch"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:progressDrawable="@drawable/tiny_seekbar_switch_track" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Off"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="27dp"
+                android:textSize="12dp"
+                android:id="@+id/switch_text_tv"
+                android:textColor="#FFBACC"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#033399"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <com.niveus.oen.Utils.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check for Updates"
+                android:id="@+id/check_updates_tv"
+                android:gravity="center"
+                android:textColor="#FEBCCA"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/settings_details_font"
+                android:paddingLeft="@dimen/settings_details_padding"
+                android:paddingRight="20dp"
+                android:paddingTop="@dimen/settings_details_padding"
+                android:paddingBottom="@dimen/settings_details_padding"
+                app:font="roboto_light"/>
+
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:id="@+id/update_iv"
+                android:padding="5dp"
+                android:src="@drawable/refresh_ambient"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#033399"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+        <com.niveus.oen.Utils.FontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About OEn"
+            android:textColor="#FEBCCA"
+            android:id="@+id/about_tv"
+            android:gravity="center"
+            android:textSize="@dimen/settings_details_font"
+            android:paddingTop="@dimen/settings_details_padding"
+            android:paddingBottom="@dimen/settings_details_padding"
+            app:font="roboto_light"/>
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:padding="5dp"
+                android:src="@drawable/arrow_right"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

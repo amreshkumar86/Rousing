@@ -1,0 +1,231 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Typography Variables
+ *     - #Layout Variables
+ *     - #Styles Variables
+ *     - #Color Variables
+ *
+ *
+ * + @Badge Wrapper
+ *     - #Badge Wrapper Structure
+ *
+ *
+ * + @Badge Box
+ *     - #Badge Box Structure
+ *     - #Badge Box Context
+ *
+ *
+ * + @Dot Badge
+ *     - #Dot Badge Structure
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Typography Variables
+// -------------------------------------
+
+$badge-font-size            = 12px
+
+
+
+
+
+
+
+// #Layout Variables
+// -------------------------------------
+
+$badge-height               = 2em
+$badge-padding              = 0.33em
+
+
+
+
+
+
+
+// #Styles Variables
+// -------------------------------------
+
+$badge-border-width         = 1px
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$badge-color                = $clr-white-900
+$badge-border-color         = $clr-white-200
+$badge-background-color     = $color-variant-primary
+$badge-primary-background   = $color-variant-primary
+$badge-secondary-background = $color-variant-secondary
+$badge-accent-background    = $color-variant-accent
+$badge-info-background      = $color-aside-info
+$badge-warning-background   = $color-aside-warning
+$badge-error-background     = $color-aside-error
+$badge-success-background   = $color-aside-success
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Badge Wrapper
+// ---------------------------------------------------------
+
+// #Badge Wrapper Structure
+// -------------------------------------
+
+.c-badge
+  // Layout
+  position: relative
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Badge Box
+// ---------------------------------------------------------
+
+// #Badge Box Structure
+// -------------------------------------
+
+::after
+  .c-badge&
+    // Typography
+    font-family: $font-family-base
+    font-size: $badge-font-size
+    text-decoration: none
+    font-weight: bold
+    line-height: 1
+    text-align: center
+    white-space: nowrap
+
+    // Layout
+    display: inline-flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    align-content: center
+    align-items: center
+    min-width: $badge-height
+    padding: $badge-padding (1.5 * $badge-padding)
+    vertical-align: middle
+
+    // Styles
+    border: $badge-border-width solid
+    border-radius: 3em
+    background-clip: padding-box
+
+    // Theme
+    background: $badge-background-color
+    color: $badge-color
+    border-color: $badge-border-color
+
+    // Extra
+    content: attr(data-badge)
+
+
+
+
+
+
+
+// #Badge Box Context
+// -------------------------------------
+
+::after
+  .c-badge--primary&
+    // Theme
+    background: $badge-primary-background
+
+
+  .c-badge--secondary&
+    // Theme
+    background: $badge-secondary-background
+
+
+  .c-badge--accent&
+    // Theme
+    background: $badge-accent-background
+
+
+  .c-badge--info&
+    // Theme
+    background: $badge-info-background
+
+
+  .c-badge--warning&
+    // Theme
+    background: $badge-warning-background
+
+
+  .c-badge--error&
+    // Theme
+    background: $badge-error-background
+
+
+  .c-badge--success&
+    // Theme
+    background: $badge-success-background
+
+
+  .c-badge--overlap&
+    // Layout
+    position: absolute 0 0 auto auto
+
+    // Styles
+    opacity: 1
+
+    // Extra
+    transform: translate(50%, -50%)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Dot Badge
+// ---------------------------------------------------------
+
+// #Dot Badge Structure
+// -------------------------------------
+
+:not([data-badge])::after,
+[data-badge='']::after
+  .c-badge&
+    // Typography
+    line-height: 0
+
+    // Layout
+    height: 8px
+    min-width: 8px
+    padding: 0
+    width: 8px

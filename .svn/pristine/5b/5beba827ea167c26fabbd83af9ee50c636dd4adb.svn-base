@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/menu_bg">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="@drawable/toolbar_bg"
+        android:layout_height="50dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:id="@+id/view">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rel">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/arrow_left"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="ACCOUNT"
+                android:textSize="20sp"
+                android:textColor="#FEBCCA"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/la_details_m_l"
+        android:layout_marginRight="@dimen/la_details_m_r"
+        android:layout_marginTop="@dimen/la_details_m_t"
+        android:orientation="vertical">
+
+        <com.niveus.oen.Utils.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EMAIL ID"
+            android:textSize="@dimen/la_text_font"
+            android:textColor="#C2C2C2"
+            android:id="@+id/email_id_txt_tv"
+            app:font="roboto_light"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/email_id_et"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="@dimen/la_et_p"
+            android:paddingBottom="@dimen/la_et_p"
+            android:textColor="#FEBCCA"
+            android:text="adarsh.kh4u@oen.com"
+            android:textSize="@dimen/la_et_font"
+            android:drawableRight="@drawable/pencil"
+            android:background="@drawable/edit_text_bg"
+            android:inputType="textEmailAddress"/>
+
+        <com.niveus.oen.Utils.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PASSWORD"
+            android:textColor="#C2C2C2"
+            android:textSize="@dimen/la_text_font"
+            android:layout_marginTop="15dp"
+            android:id="@+id/password_txt_tv"
+            app:font="roboto_light"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password_et"
+            android:layout_marginTop="5dp"
+            android:textColor="#FEBCCA"
+            android:textSize="@dimen/la_et_font"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="@dimen/la_et_p"
+            android:paddingBottom="@dimen/la_et_p"
+            android:text="12345678"
+            android:background="@drawable/edit_text_bg"
+            android:inputType="textPassword"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/refresh_iv"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/refresh_big"
+                android:layout_alignParentRight="true"/>
+
+            <com.niveus.oen.Utils.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reset Password"
+                android:textColor="#FEBCCA"
+                android:textSize="10sp"
+                android:layout_below="@id/refresh_iv"
+                android:layout_alignParentRight="true"
+                app:font="roboto_light"/>
+        </RelativeLayout>
+
+        <com.niveus.oen.Utils.FontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="SIGN OUT"
+            android:textSize="@dimen/la_btn_font"
+            android:id="@+id/sign_out_btn_tv"
+            android:gravity="center"
+            android:padding="@dimen/la_et_p"
+            android:textColor="@color/white"
+            android:background="@drawable/button_bg"
+            app:font="roboto_light"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

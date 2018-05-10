@@ -1,0 +1,16 @@
+// ---------------------------------------------------------
+// @Contains Function
+// ---------------------------------------------------------
+
+/**
+ * Function used to loop through a hash or a list
+ * searching for some value.
+ */
+
+-contains($list, $value)
+  if -is-hash($list)
+    for $key, $item in $list
+      if $item is $value
+        return true
+  else
+    return $value in $list

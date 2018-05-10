@@ -1,0 +1,14 @@
+// ---------------------------------------------------------
+// @String Type Checker Function
+// ---------------------------------------------------------
+
+/**
+ * Function used to check if the provided
+ * parameter is a string.
+ */
+
+-is-string($value)
+  if typeof($value) == 'string' && length($value) == 1
+    return true
+
+  return false

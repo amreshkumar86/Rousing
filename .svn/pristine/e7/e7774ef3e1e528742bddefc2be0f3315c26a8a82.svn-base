@@ -1,0 +1,72 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Display Settings
+ *     - #Visivility Settings
+ *
+ *
+ * + @Display
+ * + @Visibility
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Display Settings
+// -------------------------------------
+
+$display-prop-values  = 'block' 'inline-block' 'inline' 'table' 'table-cell' 'table-row' 'none'
+$display-prop-classes = '.u-block' '.u-inlineBlock' '.u-inline' '.u-table' '.u-tableCell' '.u-tableRow' '.u-hide'
+
+
+
+// #Visivility Settings
+// -------------------------------------
+
+$visibility-prop-values  = 'visible' 'hidden'
+$visibility-prop-classes = '.u-visible' '.u-invisible'
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Display
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate regular/responsive classes for `display`.
+ */
+
+-generate-rules('display', $display-prop-values, $display-prop-classes)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Visibility
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate regular/responsive classes for `visibility`.
+ */
+
+-generate-rules('visibility', $visibility-prop-values, $visibility-prop-classes)

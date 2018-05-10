@@ -1,0 +1,170 @@
+
+<div class="c-main o-stack o-stack--nowrap u-relative">
+  <div class="u-p-small u-width-100p">
+    <div class="c-Masonry u-relative o-grid o-grid--smallGap _u-6/12@lg+ _u-width-100p@lg- _u-4/12@hd+">
+      <div class="c-Masonry__sizer u-absolute"></div>
+      <div class="o-grid__cell">
+        <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-accent-2 u-color-white-900">
+          <div class="c-portlet__header o-stack o-stack--center o-stack--splitted u-px-small u-py-mini">
+            <div class="o-stack__cell">
+              <h5 class="u-color-white-900">Quick Stats</h5>
+            </div>
+          </div>
+          <div class="c-portlet__content u-pt-small">
+            <div class="o-stack o-stack--center _u-px-small">
+              <div class="o-stack__cell">
+                <h5 class="u-color-white-900" style="font-size: 18px;">Groups</h5><span class="count-font">{{groupCount}}</span>
+              </div>
+              <div class="o-stack__cell">
+                <h5 class="u-color-white-900" style="font-size: 18px;">Bulbs</h5><span class="count-font">{{bulbCount}}</span>
+              </div>
+             
+            
+            </div>
+            <div class="u-p-small">
+             
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="o-grid__cell">
+        <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-primary u-color-white-900">
+          <div class="c-portlet__header o-stack o-stack--center o-stack--splitted u-px-small u-py-mini">
+            <div class="o-stack__cell">
+              <h5 class="u-color-white-900">Quick Stats</h5>
+            </div>
+          </div>
+          <div class="c-portlet__content u-pt-small">
+            <div class="o-stack o-stack--center _u-px-small">
+              <div class="o-stack__cell">
+                <h5 class="u-color-white-900" style="font-size: 18px;">Lights On</h5><span class="count-font">{{totalLightCount}}</span>
+              </div>
+              <div class="o-stack__cell">
+                <h5 class="u-color-white-900" style="font-size: 18px;">Lights</h5><span class="count-font">{{totalLightEnergy.toFixed(2)}}</span>
+              </div>
+              <div class="o-stack__cell">
+                <h5 class="u-color-white-900" style="font-size: 18px;">Gateways</h5><span class="count-font">{{totalGatewayEnergy.toFixed(2)}}</span>
+              </div>
+              <div class="o-stack__cell">
+                <h5 class="u-color-white-900" style="font-size: 18px;">Total(in KWH)</h5><span class="count-font">{{totalEnergy.toFixed(2)}}</span>
+              </div>
+            </div>
+            <div class="u-p-small">
+             
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+     
+      <div class="o-grid__cell">
+      <div class="o-block__cell  u-width-100p _u-width-100p">
+        <div class="o-block__cell">
+         <table class="c-table c-table--bordered u-bg-main">
+            <thead class="font-header">
+              <tr>
+                <th>Groups</th>
+                <th>No.</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-if="stores.type == 'group'" data-ng-repeat="stores in responseData">
+                <td >{{stores.name}}</td>
+                <td>{{stores.device_list.length}}</td>
+                <td ng-if="stores.attrib_info.POWER ==1">ON</td>
+                 <td ng-if="stores.attrib_info.POWER == 0">OFF</td>
+                    <td ng-if="stores.attrib_info.POWER !=0 && stores.attrib_info.POWER !=1 ">--</td>  
+                 <td ng-show="isObjectEmpty(stores.attrib_info)">--</td>    
+                <td ><span id="{{stores.id}}" class="c-status u-mr-mini grp-icon" ng-style="getColorForGroup(stores.attrib_info.COLOR,stores.id,stores.attrib_info.MODE);"></span></td>
+              </tr>
+              
+            </tbody>
+          </table>
+      </div></div></div>
+      
+       <div class="o-grid__cell">
+        <div class="o-block__cell  u-width-100p _u-width-100p">
+        <div class="o-block__cell">
+          <table class="c-table c-table--bordered u-bg-main">
+            <thead class="font-header">
+              <tr>
+                <th>Lights</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-if="store.type == 'device'" data-ng-repeat="store in responseData">
+                <td>{{store.name}}</td>
+                <td ng-if="store.attrib_info.POWER == 1">ON</td>
+                 <td ng-if="store.attrib_info.POWER == 0">OFF</td>  
+                     <td ng-if="store.attrib_info.POWER !=0 && store.attrib_info.POWER !=1 ">--</td>   
+                      <td ng-show="isObjectEmpty(store.attrib_info)">--</td>         
+                 <td><span id="{{store.id}}" class="c-status u-mr-mini" ng-style="getColor(store.attrib_info.COLOR,store.id,store.attrib_info.MODE);"></span></td>
+                 
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </div>
+
+            </div><div ng-activity-indicator="SpinnerWhite"></div>
+            
+                 <div class="o-grid__cell" style="padding: 2% 0;">
+              
+                 <h5 style="margin: 2% 0;">Real Time Update</h5>
+        <div class="c-portlet u-bg-main u-shadow-mini">
+         
+          <div class="c-portlet__content u-p-small" >
+            
+            <div id="line-chart" style="height: 250px;cursor:auto;" flot="data" click="plotclick">
+            
+            
+            </div>
+          </div>
+        </div>
+      </div>
+            
+          </div>
+          
+          
+          
+        </div>
+      
+ <style>
+ .flot-text {
+    font-weight: bold !important;
+    color: #fff !important;
+}
+ td {
+  font-weight: normal;
+color: #fff;
+}
+.grp-icon
+{
+border-radius : 10% !important;
+}
+.font-header
+{
+font-weight: bold !important;
+color: #fff !important;
+}
+.count-font
+{
+font-size:40px;
+font-weight:bold;
+line-height: 1.8;
+}
+.ai-white-parent > * {
+    background: #e91e63 !important;
+}
+.ai-spinner.ai-indicator.ai-white-parent {
+	margin: 0 43% !important;
+	z-index: 9999999999999999999999999999999999 !important;
+}
+ </style>     

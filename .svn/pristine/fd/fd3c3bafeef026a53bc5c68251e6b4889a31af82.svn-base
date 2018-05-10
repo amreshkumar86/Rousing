@@ -1,0 +1,108 @@
+.o-grid__cell
+  .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-accent-2.u-color-white-900
+    .c-portlet__header.o-stack.o-stack--center.o-stack--splitted.u-px-small.u-py-mini
+      .o-stack__cell
+        h5.u-color-white-900 Quick Stats
+      .o-stack__cell
+        .o-stack.o-stack--center.o-stack--nowrap.o-stack--tinyGap.u-font-small
+          .o-stack__cell.u-relative
+            a(href='javascript:void(0)' class='c-icon c-icon--main u-color-white-900 u-opacity-80p') refresh
+          .o-stack__cell.u-relative( dropdown='' )
+            .fn-dropdownTrigger
+              a(href='javascript:void(0)' class='c-icon c-icon--main u-color-white-900 u-opacity-80p') settings
+
+            ul.c-menu.c-menu--dropdown.u-r-none
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Projects
+              li.c-menu__separator
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Tasks
+                  span.c-badge.c-menu__badge(data-badge="15")
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Calendar
+              li.c-menu__separator
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Lock
+          .o-stack__cell.u-relative
+            a(href='javascript:void(0)' class='c-icon c-icon--main u-color-white-900 u-opacity-80p') clear
+    .c-portlet__content.u-pt-small
+      .o-stack.o-stack--center._u-px-small
+        .o-stack__cell.u-border-right.u-border-main
+          h5.u-color-white-900 Today Sales
+          span.u-font-small.u-lh-normal.u-opacity-80p 1,300
+        .o-stack__cell.u-border-right.u-border-main
+          h5.u-color-white-900 Visits
+          span.u-font-small.u-lh-normal.u-opacity-80p 15K+
+        .o-stack__cell.u-border-right.u-border-main
+          h5.u-color-white-900 Registrations
+          span.u-font-small.u-lh-normal.u-opacity-80p 100
+        .o-stack__cell
+          h5.u-color-white-900 Tickets
+          span.u-font-small.u-lh-normal.u-opacity-80p 35
+
+
+      .u-p-small
+        .c-progressLine.c-progressLine--light.u-mb-tiny
+          .c-progressLine__percent.u-bg-white-900(style='width: 50%')
+        span.u-font-small.u-lh-normal.u-opacity-80p Last Week Rise by 50%
+
+
+
+
+
+
+.o-grid__cell
+  .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-primary.u-color-white-900
+    .c-portlet__header.o-stack.o-stack--center.o-stack--splitted.u-px-small.u-py-mini
+      .o-stack__cell
+        h5.u-color-white-900 Quick Stats
+      .o-stack__cell
+        .o-stack.o-stack--center.o-stack--nowrap.o-stack--tinyGap.u-font-small
+          .o-stack__cell.u-relative
+            a(href='javascript:void(0)' class='c-icon c-icon--main u-color-white-900 u-opacity-80p') refresh
+          .o-stack__cell.u-relative( dropdown='' )
+            .fn-dropdownTrigger
+              a(href='javascript:void(0)' class='c-icon c-icon--main u-color-white-900 u-opacity-80p') settings
+
+            ul.c-menu.c-menu--dropdown.u-r-none
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Projects
+              li.c-menu__separator
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Tasks
+                  span.c-badge.c-menu__badge(data-badge="15")
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Calendar
+              li.c-menu__separator
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Lock
+          .o-stack__cell.u-relative
+            a(href='javascript:void(0)' class='c-icon c-icon--main u-color-white-900 u-opacity-80p') clear
+    .c-portlet__content.u-pt-small
+      .o-stack.o-stack--center._u-px-small
+        .o-stack__cell.u-border-right.u-border-main
+          h5.u-color-white-900 Today Sales
+          span.u-font-small.u-lh-normal.u-opacity-80p 1,500
+        .o-stack__cell.u-border-right.u-border-main
+          h5.u-color-white-900 Visits
+          span.u-font-small.u-lh-normal.u-opacity-80p 35k+
+        .o-stack__cell.u-border-right.u-border-main
+          h5.u-color-white-900 Registrations
+          span.u-font-small.u-lh-normal.u-opacity-80p 200
+        .o-stack__cell
+          h5.u-color-white-900 Tickets
+          span.u-font-small.u-lh-normal.u-opacity-80p 99+
+
+
+      .u-p-small
+        .c-progressLine.c-progressLine--light.u-mb-tiny
+          .c-progressLine__percent.u-bg-white-900(style='width: 75%')
+        span.u-font-small.u-lh-normal.u-opacity-80p Last Week Rise by 75%

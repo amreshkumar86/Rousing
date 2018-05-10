@@ -1,0 +1,19 @@
+[ui-view]
+  position: relative
+  transition: transform 0.28s ease, opacity 0.28s ease
+
+[ui-view].ng-enter
+  z-index: 1000000
+  opacity: 0
+  transform: translate3d(0, 10em, 0)
+
+[ui-view].ng-enter-active
+  z-index: 1000000
+  opacity: 1
+  transform: translate3d(0, 0, 0)
+
+[ui-view].ng-leave
+[ui-view].ng-leave-active
+  display: none !important
+  z-index: -10
+

@@ -1,0 +1,14 @@
+
+<div class="o-stack o-stack--center o-stack--distributed u-p-medium">
+  <div class="o-stack__cell">
+    <h3 class="u-lh-normal">Dashboard</h3>
+    <p class="u-mt-mini">Welcome To Oen Dashboard</p>
+  </div>
+  <div class="o-stack__cell u-text-center u-hide@lg-">
+    <div class="o-stack o-stack--center o-stack--nowrap u-flexJustifyCenter">
+      
+    
+    </div>
+  </div>
+ 
+</div>

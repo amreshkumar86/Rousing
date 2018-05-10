@@ -1,0 +1,52 @@
+.c-chatDialog__inner.o-block.u-width-100p._u-width-100p.u-height-100p
+  .o-block__cell.u-p-small.u-border-bottom
+    .o-stack.o-stack--center.o-stack--splitted
+      .o-stack__cell
+        .o-stack.o-stack--center.o-stack--nowrap
+          .o-stack__cell.u-mr-tiny
+            .c-avatar
+              a(href='javascript:void(0)')
+                img( ng-src='{{ vm.chat.content[activity.item].avatar }}' alt='{{ vm.chat.content[activity.item].name }}' )
+          .o-stack__cell
+            a(href='javascript:void(0)' class='u-text-bare u-color-major' u-lh-normal) {{ vm.chat.content[activity.item].name }}
+            span.u-block.u-lh-normal.u-font-small.u-color-omitted {{ vm.chat.content[activity.item].job }}
+
+      .o-stack__cell
+        .o-stack.o-stack--center.o-stack--nowrap
+          .o-stack__cell
+            a(href='javascript:void(0)' class='c-button c-button--icon c-button--transparent') videocam
+          .o-stack__cell
+            a(href='javascript:void(0)' class='c-button c-button--icon c-button--transparent') call
+          .o-stack__cell
+            a(href='javascript:void(0)' class='c-button c-button--icon c-button--transparent') more_vert
+          .o-stack__cell(class='u-hide@lg+')
+            a(href='javascript:void(0)' class='c-button c-button--primary c-button--icon' id='chatSidebarToggle') menu
+
+  .o-block__cell.u-flexGrow-1.u-overflow-auto.u-relative(perfect-scrollbar='')
+    .o-block.o-block--start.u-width-100p._u-width-100p.u-p-small.u-collapse._u-mt-medium( ng-repeat='conv in vm.conversation' )
+
+
+      .o-block__cell( ng-class="{ 'c-chatBubblesBox--alt': conv.me }" )
+        .o-stack.o-stack--nowrap.o-stack--end
+          .o-stack__cell.u-mr-tiny( ng-if="!conv.me" )
+            .c-avatar
+              a(href='javascript:void(0)')
+                img( ng-src='{{ vm.chat.content[activity.item].avatar }}' alt='{{ vm.chat.content[activity.item].name }}' )
+          .o-stack__cell.o-stack__cell--expanded
+            .c-chatBubbleBox( ng-repeat='message in conv.messages' )
+              .c-chatBubble.c-chatBubble( tooltip='{{ message.date | relativeTime }}' ng-attr-direction="{{ conv.me ? 'left' : 'right' }}" )
+                p {{ message.text }}
+
+
+  .o-block__cell.u-p-small.u-border-top
+    .o-stack.o-stack--center.o-stack--splitted
+      .o-stack__cell.o-stack__cell--expanded
+        form(ng-submit='vm.send( vm.userMessage )')
+          input(type='text' name= 'msg' placeholder='Type Some...' class='u-block u-p-tiny u-border-all u-width-100p ' ng-model='vm.userMessage')
+
+
+      .o-stack__cell._u-ml-tiny
+        a(href='javascript:void(0)' class='c-button c-button--icon c-button--warning') insert_emoticon
+        a(href='javascript:void(0)' class='c-button c-button--icon c-button--error') attachment
+        a(href='' class='c-button c-button--icon' ng-click='vm.send( vm.userMessage )') send
+

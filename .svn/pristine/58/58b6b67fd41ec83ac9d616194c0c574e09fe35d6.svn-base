@@ -1,0 +1,117 @@
+// ---------------------------------------------------------
+// @Text Level Elements
+// ---------------------------------------------------------
+
+small
+  // Typography
+  font-size: 80%
+
+
+
+
+/**
+ * Add a bordered underline effect in all browsers
+ */
+
+abbr[title]
+  border-bottom: 1px dotted
+  text-decoration: none
+
+
+
+
+/**
+ * [1] : Remove the gray background on active links in IE 10.
+ * [2] : Remove gaps in links underline in iOS 8+ and Safari 8+.
+ * [3] : Remove the outline when hovering in all browsers.
+ */
+
+a
+  // Theme
+  background-color: transparent         // [1]
+
+  // Easing
+  transition: $default-transition
+
+  // Vendor Specific
+  -webkit-text-decoration-skip: objects // [2]
+
+
+
+  &:active,
+  &:hover
+    // Styles
+    outline-width: 0                     // [3]
+    opacity: 1 !important
+
+
+
+
+/**
+ * Correct style set to `bold` in Edge 12+, Safari 6.2+, and Chrome 18+.
+ */
+
+b,
+strong
+  // Typography
+  font-weight: bolder
+
+
+
+
+sub,
+sup
+  // Typography
+  font-size: 75%
+  line-height: 0
+
+  // Layout
+  position: relative
+  vertical-align: baseline
+
+
+
+
+sub
+  // Layout
+  bottom: -0.25em
+
+
+
+
+sup
+  // Layout
+  top: -0.5em
+
+
+
+
+
+code,
+kbd,
+samp
+  // Typography
+  font-family: monospace, monospace
+
+
+
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+
+dfn
+  // Typography
+  font-style: italic
+
+
+
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+
+mark
+  // Theme
+  color: #000
+  background-color: #ff0

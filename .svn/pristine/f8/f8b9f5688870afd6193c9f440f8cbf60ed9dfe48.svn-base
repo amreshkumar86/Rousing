@@ -1,0 +1,207 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Typography Variables
+ *     - #Layout Variables
+ *     - #Styles Variables
+ *     - #Color Variables
+ *
+ *
+ * + @Blockquote
+ *     - #Blockquote Structure
+ *     - #Blockquote Modifiers
+ *
+ *
+ * + @Blockquote Text
+ *     - #Blockquote Text Structure
+ *
+ *
+ * + @Blockquote Cite
+ *     - #Blockquote Cite Structure
+ *
+ *
+ * + @Blockquote Cite Line
+ *     - #Blockquote Cite Line Structure
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Typography Variables
+// -------------------------------------
+
+$blockquote-font-family    = $font-stack-serif
+$blockquote-font-size      = $font-size-medium
+$blockquote-cite-font-size = 0.8 * $blockquote-font-size
+
+
+
+
+
+
+
+// #Layout Variables
+// -------------------------------------
+
+$blockquote-spacing        = 1.3rem
+$blockquote-padding        = 1.5em 3em
+
+
+
+
+
+
+
+// #Styles Variables
+// -------------------------------------
+
+$blockquote-border-base    = 0.3em solid
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$blockquote-border-color   = $color-variant-primary
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Blockquote
+// ---------------------------------------------------------
+
+// #Blockquote Structure
+// -------------------------------------
+
+.c-blockquote
+  // Typography
+  font-family: $blockquote-font-family
+  font-style: italic
+  font-size: $blockquote-font-size
+  text-align: left
+
+  // Layout
+  padding: $blockquote-padding
+  margin-left: 0
+  margin-right: 0
+
+  // Styles
+  border-left: $blockquote-border-base
+
+  // Theme
+  border-color: $blockquote-border-color
+
+
+
+  // === Mixins
+
+  collapse()
+
+
+
+
+
+
+
+// #Blockquote Modifiers
+// -------------------------------------
+
+.c-blockquote--reversed
+  // Typography
+  text-align: right
+
+  // Styles
+  border-left: 0
+  border-right: $blockquote-border-base
+
+  // Theme
+  border-color: $blockquote-border-color
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Blockquote Text
+// ---------------------------------------------------------
+
+// #Blockquote Text Structure
+// -------------------------------------
+
+.c-blockquote
+  > p
+    // Layout
+    margin-bottom: $blockquote-spacing
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Blockquote Cite
+// ---------------------------------------------------------
+
+// #Blockquote Cite Structure
+// -------------------------------------
+
+.c-blockquote
+  > cite
+    // Typography
+    font-size: $blockquote-cite-font-size
+    font-weight: bold
+    font-style: normal
+    text-transform: capitalize
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Blockquote Cite Line
+// ---------------------------------------------------------
+
+// #Blockquote Cite Line Structure
+// -------------------------------------
+
+.c-blockquote > cite::before
+  // Layout
+  display: inline-flex
+  width: 2em
+  height: 1px
+  margin-right: 1.3em
+  vertical-align: middle
+
+  // Theme
+  background-color: $blockquote-border-color
+
+  // Extra
+  content: ''

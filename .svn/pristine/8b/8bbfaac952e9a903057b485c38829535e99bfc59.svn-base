@@ -1,0 +1,61 @@
+.o-grid__cell
+  .c-portlet.u-bg-main.u-shadow-mini
+    .c-portlet__header.o-stack.o-stack--center.o-stack--splitted.u-border-bottom.u-px-small.u-py-mini
+      .o-stack__cell
+        h5 Sales Chart
+      .o-stack__cell
+        .o-stack.o-stack--center.o-stack--nowrap.o-stack--tinyGap.u-font-small
+          .o-stack__cell.u-relative
+            a(href='javascript:void(0)' class='c-icon c-icon--main u-color-minor u-opacity-50p') refresh
+          .o-stack__cell.u-relative( dropdown='' )
+            .fn-dropdownTrigger
+              a(href='javascript:void(0)' class='c-icon c-icon--main u-color-minor u-opacity-50p') settings
+
+            ul.c-menu.c-menu--dropdown.u-r-none
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Projects
+              li.c-menu__separator
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Tasks
+                  span.c-badge.c-menu__badge(data-badge="15")
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Calendar
+              li.c-menu__separator
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Lock
+          .o-stack__cell.u-relative
+            a(href='javascript:void(0)' class='c-icon c-icon--main u-color-minor u-opacity-50p') clear
+
+    .c-portlet__content.u-p-small
+      .o-stack.o-stack--distributed._u-mb-small
+        .o-stack__cell
+          .o-stack.o-stack--center.o-stack--nowrap
+            .o-stack__cell.u-mr-tiny
+              span(class='c-button c-button--success c-button--icon u-radius-circle') attach_money
+            .o-stack__cell.u-lh-normal
+              h4 Sales
+              span.u-font-small $50.000
+
+        .o-stack__cell
+          .o-stack.o-stack--center.o-stack--nowrap
+            .o-stack__cell.u-mr-tiny
+              span(class='c-button c-button--error c-button--icon u-radius-circle') trending_down
+            .o-stack__cell.u-lh-normal
+              h4 Revenue
+              span.u-font-small $0.99
+
+        .o-stack__cell
+          .o-stack.o-stack--center.o-stack--nowrap
+            .o-stack__cell.u-mr-tiny
+              span(class='c-button c-button--icon u-radius-circle') trending_up
+            .o-stack__cell.u-lh-normal
+              h4 Loses
+              span.u-font-small $30.000
+
+      #line-chart(style="height: 250px;" flot='' flot-resize='true' flot-data-url='views/scenes/charts/data/flot/line.json')
+
+

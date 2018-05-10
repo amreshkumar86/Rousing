@@ -1,0 +1,39 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ * + @Flex Direction
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+$flex-direction-prop-values  = 'row' 'row-reverse' 'column' 'column-reverse'
+$flex-direction-prop-classes = '.u-flexRow' '.u-flexRowReverse' '.u-flexColumn' '.u-flexColumnReverse'
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Flex Direction
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate regular/responsive classes for `flex-direction`.
+ */
+
+-generate-rules('flex-direction', $flex-direction-prop-values, $flex-direction-prop-classes)

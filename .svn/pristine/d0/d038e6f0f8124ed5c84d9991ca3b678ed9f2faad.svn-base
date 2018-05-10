@@ -1,0 +1,12 @@
+// ---------------------------------------------------------
+// @Font Smoothing Mixin
+// ---------------------------------------------------------
+
+/**
+ * Mixin used to do font optimization cross browsers.
+ */
+
+antialiase()
+  text-rendering: optimizeLegibility
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased

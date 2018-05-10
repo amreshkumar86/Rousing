@@ -1,0 +1,592 @@
+
+<div class="c-main o-stack o-stack--nowrap u-relative">
+  <div class="o-block u-width-100p u-p-small">
+    <div class="u-width-100p">
+      <div class="c-Masonry u-relative o-grid o-grid--smallGap _u-6/12@md+ _u-width-100p@md- _u-4/12@hd+" masonry="{ itemSelector: '.o-grid__cell', columnWidth: '.c-Masonry__sizer', percentPosition: true }">
+        <div class="c-Masonry__sizer u-absolute"></div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <div class="o-stack o-stack--center o-stack--splitted">
+                <div class="o-stack__cell">
+                  <h5>Messages</h5>
+                </div>
+                <div class="o-stack__cell">
+                  <div class="c-badge c-badge--error" data-badge="3"></div>
+                </div>
+              </div>
+            </div>
+            <div class="c-portlet__content o-block__cell">
+              <ul class="c-block u-list-bare _u-px-small _u-py-small">
+                <li class="u-border-bottom">
+                  <div class="o-stack o-stack--nowrap">
+                    <div class="o-stack__cell u-mr-tiny">
+                      <div class="c-avatar"><img src="resources/images/avatars/avatar-small-1.jpg" alt="avatar"/></div>
+                    </div>
+                    <div class="o-stack__cell--expanded">
+                      <div class="o-stack o-stack--center o-stack--nowrap o-stack--splitted u-width-100p u-mb-mini">
+                        <div class="o-stack__cell o-stack__cell--expanded"><a class="c-link" href="javascript:void(0)">Jessy Doe</a></div>
+                        <div class="o-stack__cell"><span class="u-font-small">01:00 PM</span></div>
+                      </div>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry...</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="u-border-bottom">
+                  <div class="o-stack o-stack--nowrap">
+                    <div class="o-stack__cell u-mr-tiny">
+                      <div class="c-avatar"><img src="resources/images/avatars/avatar-small-2.jpg" alt="avatar"/></div>
+                    </div>
+                    <div class="o-stack__cell--expanded">
+                      <div class="o-stack o-stack--center o-stack--nowrap o-stack--splitted u-width-100p u-mb-mini">
+                        <div class="o-stack__cell o-stack__cell--expanded"><a class="c-link" href="javascript:void(0)">Mo Doe</a></div>
+                        <div class="o-stack__cell"><span class="u-font-small">11:00 AM</span></div>
+                      </div>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry...</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="o-stack o-stack--nowrap">
+                    <div class="o-stack__cell u-mr-tiny">
+                      <div class="c-avatar"><img src="resources/images/avatars/avatar-small-3.jpg" alt="avatar"/></div>
+                    </div>
+                    <div class="o-stack__cell--expanded">
+                      <div class="o-stack o-stack--center o-stack--nowrap o-stack--splitted u-width-100p u-mb-mini">
+                        <div class="o-stack__cell o-stack__cell--expanded"><a class="c-link" href="javascript:void(0)">Flika Doe</a></div>
+                        <div class="o-stack__cell"><span class="u-font-small">10:00 AM</span></div>
+                      </div>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry...</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <div class="o-stack o-stack--center o-stack--splitted">
+                <div class="o-stack__cell">
+                  <h5>Group Of Links</h5>
+                </div>
+                <div class="o-stack__cell">
+                  <div class="u-relative">
+                    <div class="fn-dropdownTrigger"><a class="c-icon c-icon--main u-color-minor u-opacity-50p" href="javascript:void(0)">more_vert</a></div>
+                    <ul class="c-menu c-menu--dropdown u-r-none">
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Projects</span></a></li>
+                      <li class="c-menu__separator"></li>
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Tasks</span><span class="c-badge c-menu__badge" data-badge="15"></span></a></li>
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Calendar</span></a></li>
+                      <li class="c-menu__separator"></li>
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Lock</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="c-portlet__content o-block__cell">
+              <ul class="c-menu c-menu--loose">
+                <li class="c-menu__item is-current"><a class="c-menu__link" href="javascript:void(0)"><i class="c-icon c-icon--main c-menu__icon">inbox</i><span class="c-menu__text">inbox</span><span class="c-badge c-menu__badge" data-badge="100"></span></a></li>
+                <li class="c-menu__item is-active"><a class="c-menu__link" href="javascript:void(0)"><i class="c-icon c-icon--main c-menu__icon">show_chart</i><span class="c-menu__text">visits</span><span class="c-badge c-menu__badge" data-badge="100000+"></span></a></li>
+                <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><i class="c-icon c-icon--main c-menu__icon">call</i><span class="c-menu__text">calls</span><span class="c-badge c-menu__badge" data-badge="30"></span></a></li>
+                <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><i class="c-icon c-icon--main c-menu__icon">sms</i><span class="c-menu__text">SMS</span><span class="c-badge c-menu__badge" data-badge="13"></span></a></li>
+                <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><i class="c-icon c-icon--main c-menu__icon">message</i><span class="c-menu__text">Messages</span><span class="c-badge c-menu__badge" data-badge="14"></span></a></li>
+                <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><i class="c-icon c-icon--main c-menu__icon">bookmark</i><span class="c-menu__text">Bookmarks</span><span class="c-badge c-menu__badge" data-badge="5"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-profileCard o-block__cell">
+            <div class="o-block u-width-100p _u-width-100p u-bg-main u-shadow-medium">
+              <div class="o-block__cell u-px-small u-py-tiny u-border-bottom">
+                <div class="o-stack o-stack--center o-stack--splitted">
+                  <div class="o-stack__cell">
+                    <div class="o-stack o-stack--center">
+                      <div class="o-stack__cell u-mr-tiny">
+                        <div class="c-avatar"><a href="javascript:void(0)"><img src="resources/images/avatars/avatar-small-3.jpg" alt="#"/></a></div>
+                      </div>
+                      <div class="o-stack__cell"><a class="c-link" href="javascript:void(0)">Mo Doe</a><small class="u-block u-lh-normal">1 minute ago</small></div>
+                    </div>
+                  </div>
+                  <div class="o-stack__cell u-relative">
+                    <div class="fn-dropdownTrigger"><a class="u-block u-text-bare u-color-minor u-opacity-70p" href="javascript:void(0)"><i class="c-icon c-icon--main">more_horiz</i></a></div>
+                    <ul class="c-menu c-menu--dropdown u-r-none">
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Action 1</span></a></li>
+                      <li class="c-menu__separator"></li>
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Action 2</span></a></li>
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Action 3</span></a></li>
+                      <li class="c-menu__separator"></li>
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Action 4</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="o-block__cell u-p-small _u-mb-small u-collapse"><img src="resources/images/backgrounds/cover.jpg" alt="#"/>
+                <div class="c-blockquote u-font-medium u-font-default u-px-medium u-py-none">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+                </div>
+              </div>
+              <div class="o-block__cell u-border-top u-px-small u-py-tiny">
+                <div class="o-stack o-stack--center o-stack--splitted">
+                  <div class="o-stack__cell">
+                    <div class="o-stack o-stack--center o-stack--nowrap u-text-capitalize o-stack--tinyGap">
+                      <div class="o-stack__cell"><a class="u-block u-text-bare u-color-minor" href="javascript:void(0)"><i class="c-icon c-icon--main u-mr-mini">favorite</i><span>10 likes</span></a></div>
+                      <div class="o-stack__cell"><a class="u-block u-text-bare u-color-minor" href="javascript:void(0)"><i class="c-icon c-icon--main u-mr-mini">comment</i><span>15 comments</span></a></div>
+                    </div>
+                  </div>
+                  <div class="o-stack__cell">
+                    <div class="o-stack o-stack--center o-stack--nowrap u-text-capitalize o-stack--smallGap">
+                      <div class="o-stack__cell"><a class="u-block u-text-bare u-color-minor" href="javascript:void(0)"><i class="c-icon c-icon--main u-mr-mini">reply</i></a></div>
+                      <div class="o-stack__cell"><a class="u-block u-text-bare u-color-minor" href="javascript:void(0)"><i class="c-icon c-icon--main u-mr-mini">favorite</i></a></div>
+                      <div class="o-stack__cell"><a class="u-block u-text-bare u-color-minor" href="javascript:void(0)"><i class="c-icon c-icon--main u-mr-mini">flag</i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="o-block__cell u-p-small u-border-top">
+                <div class="o-stack o-stack--nowrap">
+                  <div class="o-stack__cell u-mr-tiny">
+                    <div class="c-avatar"><img src="resources/images/avatars/avatar-small-4.jpg" alt="avatar"/></div>
+                  </div>
+                  <div class="o-stack__cell--expanded">
+                    <div class="o-stack o-stack--center o-stack--nowrap o-stack--splitted u-width-100p">
+                      <div class="o-stack__cell o-stack__cell--expanded"><a class="c-link" href="javascript:void(0)">Jessy Doe</a><span class="u-mx-tiny">•</span><span class="u-font-small">01:00 PM</span></div>
+                      <div class="o-stack__cell"></div>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+                  </div>
+                </div>
+              </div>
+              <div class="o-block__cell u-p-small u-border-top">
+                <div class="o-stack o-stack--center o-stack--nowrap">
+                  <div class="o-stack__cell o-stack__cell--expanded u-mr-tiny">
+                    <form action="./" method="POST">
+                      <input class="u-block u-p-tiny u-border-all u-width-100p " type="text" name="comment" placeholder="Leave a Comment..."/>
+                    </form>
+                  </div>
+                  <div class="o-stack__cell">
+                    <div class="o-stack o-stack--center o-stack--nowrap _u-ml-tiny">
+                      <div class="o-stack__cell"><a class="u-block u-text-bare u-color-minor" href="javascript:void(0)"><i class="c-icon c-icon--main u-mr-mini">photo</i></a></div>
+                      <div class="o-stack__cell"><a class="u-block u-text-bare u-color-minor" href="javascript:void(0)"><i class="c-icon c-icon--main u-mr-mini">videocam</i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <div class="o-stack o-stack--center o-stack--splitted">
+                <div class="o-stack__cell">
+                  <h5>Notifications</h5>
+                </div>
+                <div class="o-stack__cell">
+                  <div class="u-relative">
+                    <div class="fn-dropdownTrigger"><a class="c-icon c-icon--main u-color-minor u-opacity-50p" href="javascript:void(0)">more_vert</a></div>
+                    <ul class="c-menu c-menu--dropdown u-r-none">
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Projects</span></a></li>
+                      <li class="c-menu__separator"></li>
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Tasks</span><span class="c-badge c-menu__badge" data-badge="15"></span></a></li>
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Calendar</span></a></li>
+                      <li class="c-menu__separator"></li>
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Lock</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="c-portlet__content o-block__cell u-p-small">
+              <div class="c-notifications _u-pb-small">
+                <div class="o-stack o-stack--nowrap u-border-left">
+                  <div class="o-stack__cell u-mr-small u-lh-normal"><a class="c-status c-status--error u-lh-normal" href="javascript:void(0)"></a></div>
+                  <div class="o-stack__cell--expanded">
+                    <div class="o-stack o-stack--nowrap o-stack--center o-stack--splitted u-width-100p u-mb-mini">
+                      <div class="o-stack__cell o-stack__cell--expanded u-lh-normal"><span class="u-block u-lh-normal u-font-small u-color-omitted">1 Minute Ago</span></div>
+                      <div class="o-stack__cell u-lh-normal"><span class="c-label c-label--error">server</span></div>
+                    </div>
+                    <p><a class="c-link" href="javascript:void(0)">Lorem</a>&nbsp; Ipsum is simply dummy text of the printing...</p>
+                  </div>
+                </div>
+                <div class="o-stack o-stack--nowrap u-border-left">
+                  <div class="o-stack__cell u-mr-small u-lh-normal"><a class="c-status c-status--success u-lh-normal" href="javascript:void(0)"></a></div>
+                  <div class="o-stack__cell--expanded">
+                    <div class="o-stack o-stack--nowrap o-stack--center o-stack--splitted u-width-100p u-mb-mini">
+                      <div class="o-stack__cell o-stack__cell--expanded u-lh-normal"><span class="u-block u-lh-normal u-font-small u-color-omitted">1 Hour Ago</span></div>
+                      <div class="o-stack__cell u-lh-normal"><span class="c-label c-label--success">Customers</span></div>
+                    </div>
+                    <p><a class="c-link" href="javascript:void(0)">Lorem</a>&nbsp; Ipsum is simply dummy text of the printing...</p>
+                  </div>
+                </div>
+                <div class="o-stack o-stack--nowrap u-border-left">
+                  <div class="o-stack__cell u-mr-small u-lh-normal"><a class="c-status c-status--warning u-lh-normal" href="javascript:void(0)"></a></div>
+                  <div class="o-stack__cell--expanded">
+                    <div class="o-stack o-stack--nowrap o-stack--center o-stack--splitted u-width-100p u-mb-mini">
+                      <div class="o-stack__cell o-stack__cell--expanded u-lh-normal"><span class="u-block u-lh-normal u-font-small u-color-omitted">2 Hours Ago</span></div>
+                      <div class="o-stack__cell u-lh-normal"><span class="c-label c-label--warning">Sales</span></div>
+                    </div>
+                    <p><a class="c-link" href="javascript:void(0)">Lorem</a>&nbsp; Ipsum is simply dummy.</p>
+                  </div>
+                </div>
+                <div class="o-stack o-stack--nowrap u-border-left">
+                  <div class="o-stack__cell u-mr-small u-lh-normal"><a class="c-status c-status--error u-lh-normal" href="javascript:void(0)"></a></div>
+                  <div class="o-stack__cell--expanded">
+                    <div class="o-stack o-stack--nowrap o-stack--center o-stack--splitted u-width-100p u-mb-mini">
+                      <div class="o-stack__cell o-stack__cell--expanded u-lh-normal"><span class="u-block u-lh-normal u-font-small u-color-omitted">1 Minute Ago</span></div>
+                      <div class="o-stack__cell u-lh-normal"><span class="c-label c-label--error">server</span></div>
+                    </div>
+                    <p><a class="c-link" href="javascript:void(0)">Lorem</a>&nbsp; Ipsum is simply dummy text of the printing...</p>
+                  </div>
+                </div>
+                <div class="o-stack o-stack--nowrap u-border-left">
+                  <div class="o-stack__cell u-mr-small u-lh-normal"><a class="c-status c-status--success u-lh-normal" href="javascript:void(0)"></a></div>
+                  <div class="o-stack__cell--expanded">
+                    <div class="o-stack o-stack--nowrap o-stack--center o-stack--splitted u-width-100p u-mb-mini">
+                      <div class="o-stack__cell o-stack__cell--expanded u-lh-normal"><span class="u-block u-lh-normal u-font-small u-color-omitted">1 Hour Ago</span></div>
+                      <div class="o-stack__cell u-lh-normal"><span class="c-label c-label--success">Customers</span></div>
+                    </div>
+                    <p><a class="c-link" href="javascript:void(0)">Lorem</a>&nbsp; Ipsum is simply dummy text of the printing...</p>
+                  </div>
+                </div>
+                <div class="o-stack o-stack--nowrap u-border-left">
+                  <div class="o-stack__cell u-mr-small u-lh-normal"><a class="c-status c-status--warning u-lh-normal" href="javascript:void(0)"></a></div>
+                  <div class="o-stack__cell--expanded">
+                    <div class="o-stack o-stack--nowrap o-stack--center o-stack--splitted u-width-100p u-mb-mini">
+                      <div class="o-stack__cell o-stack__cell--expanded u-lh-normal"><span class="u-block u-lh-normal u-font-small u-color-omitted">2 Hours Ago</span></div>
+                      <div class="o-stack__cell u-lh-normal"><span class="c-label c-label--warning">Sales</span></div>
+                    </div>
+                    <p><a class="c-link" href="javascript:void(0)">Lorem</a>&nbsp; Ipsum is simply dummy.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <div class="o-stack o-stack--center o-stack--splitted">
+                <div class="o-stack__cell">
+                  <h5>Users</h5>
+                </div>
+                <div class="o-stack__cell">
+                  <div class="u-relative">
+                    <div class="fn-dropdownTrigger"><a class="c-icon c-icon--main u-color-minor u-opacity-50p" href="javascript:void(0)">more_vert</a></div>
+                    <ul class="c-menu c-menu--dropdown u-r-none">
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Projects</span></a></li>
+                      <li class="c-menu__separator"></li>
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Tasks</span><span class="c-badge c-menu__badge" data-badge="15"></span></a></li>
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Calendar</span></a></li>
+                      <li class="c-menu__separator"></li>
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Lock</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="c-portlet__content o-block__cell _u-px-small">
+              <div class="o-stack o-stack--nowrap o-stack--center u-border-bottom u-py-tiny">
+                <div class="o-stack__cell u-mr-tiny">
+                  <div class="c-avatar"><a href="javascript:void(0)"><img src="resources/images/avatars/avatar-small-5.jpg" alt="avatar"/></a></div>
+                </div>
+                <div class="o-stack__cell--expanded">
+                  <div class="o-stack o-stack--center o-stack--nowrap o-stack--splitted u-width-100p u-mb-mini">
+                    <div class="o-stack__cell o-stack__cell--expanded"><a class="u-text-bare u-color-major" href="javascript:void(0)" u-lh-normal="u-lh-normal">Jessy Doe</a><span class="u-block u-lh-normal u-font-small u-color-omitted">Web Designer</span></div>
+                    <div class="o-stack__cell"><span class="c-badge c-badge--success" data-badge=""></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="o-stack o-stack--nowrap o-stack--center u-border-bottom u-py-tiny">
+                <div class="o-stack__cell u-mr-tiny">
+                  <div class="c-avatar"><a href="javascript:void(0)"><img src="resources/images/avatars/avatar-small-1.jpg" alt="avatar"/></a></div>
+                </div>
+                <div class="o-stack__cell--expanded">
+                  <div class="o-stack o-stack--center o-stack--nowrap o-stack--splitted u-width-100p u-mb-mini">
+                    <div class="o-stack__cell o-stack__cell--expanded"><a class="u-text-bare u-color-major" href="javascript:void(0)" u-lh-normal="u-lh-normal">Mo Doe</a><span class="u-block u-lh-normal u-font-small u-color-omitted">Web Developer</span></div>
+                    <div class="o-stack__cell"><span class="c-badge c-badge--error" data-badge=""></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="o-stack o-stack--nowrap o-stack--center u-border-bottom u-py-tiny">
+                <div class="o-stack__cell u-mr-tiny">
+                  <div class="c-avatar"><a href="javascript:void(0)"><img src="resources/images/avatars/avatar-small-1.jpg" alt="avatar"/></a></div>
+                </div>
+                <div class="o-stack__cell--expanded">
+                  <div class="o-stack o-stack--center o-stack--nowrap o-stack--splitted u-width-100p u-mb-mini">
+                    <div class="o-stack__cell o-stack__cell--expanded"><a class="u-text-bare u-color-major" href="javascript:void(0)" u-lh-normal="u-lh-normal">Andy Doe</a><span class="u-block u-lh-normal u-font-small u-color-omitted">Homeless</span></div>
+                    <div class="o-stack__cell"><span class="c-badge c-badge--warning" data-badge=""></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="o-stack o-stack--nowrap o-stack--center u-py-tiny">
+                <div class="o-stack__cell u-mr-tiny">
+                  <div class="c-avatar"><a href="javascript:void(0)"><img src="resources/images/avatars/avatar-small-2.jpg" alt="avatar"/></a></div>
+                </div>
+                <div class="o-stack__cell--expanded">
+                  <div class="o-stack o-stack--center o-stack--nowrap o-stack--splitted u-width-100p u-mb-mini">
+                    <div class="o-stack__cell o-stack__cell--expanded"><a class="u-text-bare u-color-major" href="javascript:void(0)" u-lh-normal="u-lh-normal">Gandy Doe</a><span class="u-block u-lh-normal u-font-small u-color-omitted">Jobless</span></div>
+                    <div class="o-stack__cell"><span class="c-badge c-badge--success" data-badge=""></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <div class="o-stack o-stack--center o-stack--splitted">
+                <div class="o-stack__cell">
+                  <h5>Who To Follow</h5>
+                </div>
+                <div class="o-stack__cell">
+                  <div class="u-relative">
+                    <div class="fn-dropdownTrigger"><a class="c-icon c-icon--main u-color-minor u-opacity-50p" href="javascript:void(0)">more_vert</a></div>
+                    <ul class="c-menu c-menu--dropdown u-r-none">
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Projects</span></a></li>
+                      <li class="c-menu__separator"></li>
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Tasks</span><span class="c-badge c-menu__badge" data-badge="15"></span></a></li>
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Calendar</span></a></li>
+                      <li class="c-menu__separator"></li>
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Lock</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="c-portlet__content o-block__cell _u-px-small">
+              <div class="o-stack o-stack--nowrap o-stack--center u-border-bottom u-py-tiny">
+                <div class="o-stack__cell u-mr-tiny">
+                  <div class="c-avatar"><a href="javascript:void(0)"><img src="resources/images/avatars/avatar-small-3.jpg" alt="avatar"/></a></div>
+                </div>
+                <div class="o-stack__cell--expanded">
+                  <div class="o-stack o-stack--center o-stack--nowrap o-stack--splitted u-width-100p u-mb-mini">
+                    <div class="o-stack__cell o-stack__cell--expanded"><a class="u-text-bare u-color-major" href="javascript:void(0)" u-lh-normal="u-lh-normal">Jessy Doe</a><span class="u-block u-lh-normal u-font-small u-color-omitted">Web Designer</span></div>
+                    <div class="o-stack__cell"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="o-stack o-stack--nowrap o-stack--center u-border-bottom u-py-tiny">
+                <div class="o-stack__cell u-mr-tiny">
+                  <div class="c-avatar"><a href="javascript:void(0)"><img src="resources/images/avatars/avatar-small-4.jpg" alt="avatar"/></a></div>
+                </div>
+                <div class="o-stack__cell--expanded">
+                  <div class="o-stack o-stack--center o-stack--nowrap o-stack--splitted u-width-100p u-mb-mini">
+                    <div class="o-stack__cell o-stack__cell--expanded"><a class="u-text-bare u-color-major" href="javascript:void(0)" u-lh-normal="u-lh-normal">Mo Doe</a><span class="u-block u-lh-normal u-font-small u-color-omitted">Web Developer</span></div>
+                    <div class="o-stack__cell"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="o-stack o-stack--nowrap o-stack--center u-border-bottom u-py-tiny">
+                <div class="o-stack__cell u-mr-tiny">
+                  <div class="c-avatar"><a href="javascript:void(0)"><img src="resources/images/avatars/avatar-small-5.jpg" alt="avatar"/></a></div>
+                </div>
+                <div class="o-stack__cell--expanded">
+                  <div class="o-stack o-stack--center o-stack--nowrap o-stack--splitted u-width-100p u-mb-mini">
+                    <div class="o-stack__cell o-stack__cell--expanded"><a class="u-text-bare u-color-major" href="javascript:void(0)" u-lh-normal="u-lh-normal">Andy Doe</a><span class="u-block u-lh-normal u-font-small u-color-omitted">Homeless</span></div>
+                    <div class="o-stack__cell"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="o-stack o-stack--nowrap o-stack--center u-py-tiny">
+                <div class="o-stack__cell u-mr-tiny">
+                  <div class="c-avatar"><a href="javascript:void(0)"><img src="resources/images/avatars/avatar-small-1.jpg" alt="avatar"/></a></div>
+                </div>
+                <div class="o-stack__cell--expanded">
+                  <div class="o-stack o-stack--center o-stack--nowrap o-stack--splitted u-width-100p u-mb-mini">
+                    <div class="o-stack__cell o-stack__cell--expanded"><a class="u-text-bare u-color-major" href="javascript:void(0)" u-lh-normal="u-lh-normal">Gandy Doe</a><span class="u-block u-lh-normal u-font-small u-color-omitted">Jobless</span></div>
+                    <div class="o-stack__cell"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="o-block u-width-100p _u-width-100p u-bg-main">
+            <div class="o-block__cell u-flex u-flexJustifyEnd u-p-small">
+              <div class="u-relative">
+                <div class="fn-dropdownTrigger"><a class="c-icon c-icon--main u-color-minor u-opacity-50p" href="javascript:void(0)">more_vert</a></div>
+                <ul class="c-menu c-menu--dropdown u-r-none">
+                  <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Projects</span></a></li>
+                  <li class="c-menu__separator"></li>
+                  <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Tasks</span><span class="c-badge c-menu__badge" data-badge="15"></span></a></li>
+                  <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Calendar</span></a></li>
+                  <li class="c-menu__separator"></li>
+                  <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Lock</span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="o-block__cell u-text-center u-collapse _u-mb-mini u-mb-medium u-p-small">
+              <div class="c-avatar c-avatar--medium"><a href="javascript:void(0)"><img src="resources/images/avatars/avatar-small-1.jpg" alt="avatar"/></a></div>
+              <h4 class="u-font-regular">Albert Brenamen</h4>
+              <p>London, UK</p><a class="c-button c-button--hollow c-button--primary u-radius-rounded" href="javascript:void(0)">Follow</a>
+            </div>
+            <div class="o-block__cell u-border-top">
+              <div class="o-stack o-stack--distributed u-text-center u-bg-primary"><a class="o-stack__cell u-p-small  u-text-bare u-color-white-900  u-border-right u-border-white-100" href="javascript:void(0)">
+                  <p class="u-font-medium u-font-bold">100</p><span>Friends</span></a><a class="o-stack__cell u-p-small  u-text-bare u-color-white-900 u-border-right u-border-white-100" href="javascript:void(0)">
+                  <p class="u-font-medium u-font-bold">220</p><span>Followers</span></a><a class="o-stack__cell u-p-small u-text-bare u-color-white-900" href="javascript:void(0)">
+                  <p class="u-font-medium u-font-bold">878</p><span>Lovers</span></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <div class="o-stack o-stack--center o-stack--splitted">
+                <div class="o-stack__cell">
+                  <h5>Review Box</h5>
+                </div>
+                <div class="o-stack__cell">
+                  <div class="u-relative">
+                    <div class="fn-dropdownTrigger"><a class="c-icon c-icon--main u-color-minor u-opacity-50p" href="javascript:void(0)">more_vert</a></div>
+                    <ul class="c-menu c-menu--dropdown u-r-none">
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Projects</span></a></li>
+                      <li class="c-menu__separator"></li>
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Tasks</span><span class="c-badge c-menu__badge" data-badge="15"></span></a></li>
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Calendar</span></a></li>
+                      <li class="c-menu__separator"></li>
+                      <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Lock</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="c-portlet__content o-block__cell">
+              <div class="o-block u-width-100p _u-width-100p u-p-small u-border-bottom">
+                <div class="o-block__cell">
+                  <div class="o-stack o-stack--center o-stack--splitted">
+                    <div class="o-stack__cell">
+                      <h4>John Doe</h4><span class="u-color-omitted">Feb 01, 3030</span>
+                    </div>
+                    <div class="o-stack__cell u-mt-mini">
+                      <form>
+                        <fieldset class="c-rating u-ml-mini">
+                          <input class="c-rating__input" id="rating-005" type="radio" name="rating" value="5" checked="checked"/>
+                          <label class="c-rating__star" for="rating-005" title="Awesome">5 stars</label>
+                          <input class="c-rating__input" id="rating-004" type="radio" name="rating" value="4"/>
+                          <label class="c-rating__star" for="rating-004" title="Pretty Good">4 stars</label>
+                          <input class="c-rating__input" id="rating-003" type="radio" name="rating" value="3"/>
+                          <label class="c-rating__star" for="rating-003" title="Good">3 stars</label>
+                          <input class="c-rating__input" id="rating-002" type="radio" name="rating" value="2"/>
+                          <label class="c-rating__star" for="rating-002" title="Bad">2 stars</label>
+                          <input class="c-rating__input" id="rating-001" type="radio" name="rating" value="1"/>
+                          <label class="c-rating__star" for="rating-001" title="Sucks">1 star</label>
+                        </fieldset>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="o-block__cell">
+                  <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+                </div>
+              </div>
+              <div class="o-block u-width-100p _u-width-100p u-p-small u-border-bottom">
+                <div class="o-block__cell">
+                  <div class="o-stack o-stack--center o-stack--splitted">
+                    <div class="o-stack__cell">
+                      <h4>John Doe</h4><span class="u-color-omitted">Feb 01, 3030</span>
+                    </div>
+                    <div class="o-stack__cell u-mt-mini">
+                      <form>
+                        <fieldset class="c-rating u-ml-mini">
+                          <input class="c-rating__input" id="rating-05" type="radio" name="rating" value="5"/>
+                          <label class="c-rating__star" for="rating-05" title="Awesome">5 stars</label>
+                          <input class="c-rating__input" id="rating-04" type="radio" name="rating" value="4"/>
+                          <label class="c-rating__star" for="rating-04" title="Pretty Good">4 stars</label>
+                          <input class="c-rating__input" id="rating-03" type="radio" name="rating" value="3" checked="checked"/>
+                          <label class="c-rating__star" for="rating-03" title="Good">3 stars</label>
+                          <input class="c-rating__input" id="rating-02" type="radio" name="rating" value="2"/>
+                          <label class="c-rating__star" for="rating-02" title="Bad">2 stars</label>
+                          <input class="c-rating__input" id="rating-01" type="radio" name="rating" value="1"/>
+                          <label class="c-rating__star" for="rating-01" title="Sucks">1 star</label>
+                        </fieldset>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="o-block__cell">
+                  <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+                </div>
+              </div>
+              <div class="o-block u-width-100p _u-width-100p u-p-small">
+                <div class="o-block__cell">
+                  <div class="o-stack o-stack--center o-stack--splitted">
+                    <div class="o-stack__cell">
+                      <h4>John Doe</h4><span class="u-color-omitted">Feb 01, 3030</span>
+                    </div>
+                    <div class="o-stack__cell u-mt-mini">
+                      <form>
+                        <fieldset class="c-rating u-ml-mini">
+                          <input class="c-rating__input" id="rating-5" type="radio" name="rating" value="5"/>
+                          <label class="c-rating__star" for="rating-5" title="Awesome">5 stars</label>
+                          <input class="c-rating__input" id="rating-4" type="radio" name="rating" value="4"/>
+                          <label class="c-rating__star" for="rating-4" title="Pretty Good">4 stars</label>
+                          <input class="c-rating__input" id="rating-3" type="radio" name="rating" value="3" checked="checked"/>
+                          <label class="c-rating__star" for="rating-3" title="Good">3 stars</label>
+                          <input class="c-rating__input" id="rating-2" type="radio" name="rating" value="2"/>
+                          <label class="c-rating__star" for="rating-2" title="Bad">2 stars</label>
+                          <input class="c-rating__input" id="rating-1" type="radio" name="rating" value="1"/>
+                          <label class="c-rating__star" for="rating-1" title="Sucks">1 star</label>
+                        </fieldset>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="o-block__cell">
+                  <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main u-radius-tiny">
+            <div class="c-portlet__content">
+              <div class="o-stack o-stack--center o-stack--splitted u-p-small">
+                <div class="o-stack__cell">
+                  <h3>43%</h3>
+                  <p class="u-color-omitted">Server Up Time</p>
+                </div>
+                <div class="o-stack__cell"><a class="c-button c-button--icon c-button--primary u-radius-circle" href="javascript:void(0)">done</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main u-radius-tiny">
+            <div class="c-portlet__content">
+              <div class="o-stack o-stack--center o-stack--splitted u-p-small">
+                <div class="o-stack__cell">
+                  <h3>100%</h3>
+                  <p class="u-color-omitted">Booking</p>
+                </div>
+                <div class="o-stack__cell"><a class="c-button c-button--icon c-button--error u-radius-circle" href="javascript:void(0)">notifications</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main u-radius-tiny">
+            <div class="c-portlet__content">
+              <div class="o-stack o-stack--center o-stack--splitted u-p-small">
+                <div class="o-stack__cell">
+                  <h3>60%</h3>
+                  <p class="u-color-omitted">Sales</p>
+                </div>
+                <div class="o-stack__cell"><a class="c-button c-button--icon c-button--success u-radius-circle" href="javascript:void(0)">attach_money</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

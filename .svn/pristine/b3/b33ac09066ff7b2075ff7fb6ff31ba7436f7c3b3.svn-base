@@ -1,0 +1,27 @@
+
+<div class="o-block u-width-100p _u-width-100p u-bg-main">
+  <div class="o-block__cell u-flex u-flexJustifyEnd u-p-small">
+    <div class="u-relative" dropdown="">
+      <div class="fn-dropdownTrigger"><a class="c-icon c-icon--main u-color-minor u-opacity-50p" href="javascript:void(0)">more_vert</a></div>
+      <ul class="c-menu c-menu--dropdown u-r-none">
+        <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Projects</span></a></li>
+        <li class="c-menu__separator"></li>
+        <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Tasks</span><span class="c-badge c-menu__badge" data-badge="15"></span></a></li>
+        <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Calendar</span></a></li>
+        <li class="c-menu__separator"></li>
+        <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Lock</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="o-block__cell u-text-center u-collapse _u-mb-mini u-mb-medium u-p-small">
+    <div class="c-avatar c-avatar--medium"><a href="javascript:void(0)"><img src="resources/images/avatars/avatar-small-1.jpg" alt="avatar"/></a></div>
+    <h4 class="u-font-regular">Albert Brenamen</h4>
+    <p>London, UK</p><a class="c-button c-button--hollow c-button--primary u-radius-rounded" href="javascript:void(0)">Follow</a>
+  </div>
+  <div class="o-block__cell u-border-top">
+    <div class="o-stack o-stack--distributed u-text-center u-bg-primary"><a class="o-stack__cell u-p-small  u-text-bare u-color-white-900  u-border-right u-border-white-100" href="javascript:void(0)">
+        <p class="u-font-medium u-font-bold">100</p><span>Friends</span></a><a class="o-stack__cell u-p-small  u-text-bare u-color-white-900 u-border-right u-border-white-100" href="javascript:void(0)">
+        <p class="u-font-medium u-font-bold">220</p><span>Followers</span></a><a class="o-stack__cell u-p-small u-text-bare u-color-white-900" href="javascript:void(0)">
+        <p class="u-font-medium u-font-bold">878</p><span>Lovers</span></a></div>
+  </div>
+</div>

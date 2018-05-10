@@ -1,0 +1,112 @@
+{
+  "options": {
+    "colors": ["colors.orange[500]", "colors.red[500]"],
+
+
+    "legend": {
+      "backgroundOpacity": 0,
+      "position": "ne",
+      "noColumns": 2
+    },
+
+    "xaxis": {
+      "font": {
+        "color": "colors.palette.grey.minor"
+      },
+
+      "ticks": [
+        [0, "January"],
+        [1, "February"],
+        [2, "March"],
+        [3, "April"],
+        [4, "May"],
+        [5, "June"]
+      ],
+
+      "tickColor": "colors.palette.grey.muted"
+    },
+
+    "yaxis": {
+      "font": {
+        "color": "colors.palette.grey.minor"
+      },
+
+      "tickColor": "colors.palette.grey.muted"
+    },
+
+    "grid": {
+      "borderWidth": {
+        "top": 1,
+        "right": 1,
+        "bottom": 1,
+        "left": 1
+      },
+
+      "borderColor": "colors.palette.grey.muted",
+      "margin": 0,
+      "minBorderMargin": 0,
+      "labelMargin": 14,
+      "hoverable": true,
+      "clickable": true,
+      "mouseActiveRadius": 6
+    },
+
+    "tooltip": true,
+    "tooltipOpts": {
+      "content": "Usage is %y%",
+      "defaultTheme": false,
+      "shifts": {
+        "x": 0,
+        "y": 20
+      }
+    }
+  },
+  "data": [{
+    "data": [
+      [0, 10],
+      [1, 8],
+      [2, 16],
+      [3, 8],
+      [4, 10],
+      [5, 6]
+    ],
+
+    "label": "Chrome",
+
+    "points": {
+      "show": true,
+      "radius": 1
+    },
+
+    "splines": {
+      "show": true,
+      "tension": 0.45,
+      "lineWidth": 1,
+      "fill": 0.8
+    }
+  },
+  {
+    "data": [
+      [0, 6],
+      [1, 4],
+      [2, 12],
+      [3, 4],
+      [4, 6],
+      [5, 2]
+    ],
+
+    "label": "Firefox",
+
+    "points": {
+      "show": true,
+      "radius": 1
+    },
+
+    "splines": {
+      "show": true,
+      "tension": 0.45,
+      "lineWidth": 1,
+      "fill": 0.8
+    }
+  }]
+}

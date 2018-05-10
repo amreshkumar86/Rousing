@@ -1,0 +1,11 @@
+#ACTIVATE DEV CONFIGURATIONS
+#spring.profiles.active=global,dev
+
+#ACTIVATE STAGING CONFIGURATIONS
+#spring.profiles.active=global,staging
+
+#ACTIVATE PRODUCTION CONFIGURATIONS
+#spring.profiles.active=global,prod
+
+#ACTIVATE LOCAL CONFIGURATIONS
+#spring.profiles.active=global,local

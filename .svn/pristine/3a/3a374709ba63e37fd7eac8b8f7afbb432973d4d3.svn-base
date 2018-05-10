@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.niveus.oen"
+        minSdkVersion 17
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "armeabi-v7a","x86"
+        }
+
+        gradle
+        repositories {
+            flatDir {
+                dirs 'libs'
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+
+    testCompile 'junit:junit:4.12'
+
+    //animations
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.easing:library:1.0.1@aar'
+    compile 'com.daimajia.androidanimations:library:1.1.3@aar'
+
+    //graph
+    compile 'com.jjoe64:graphview:4.2.1'
+
+    //wheel
+    compile 'com.github.lukedeighton:wheelview:0.4.1'
+
+    //network
+    compile 'com.mcxiaoke.volley:library-aar:1.0.0'
+    compile files('libs/httpclient-4.0.3.jar')
+    compile files('libs/httpmime-4.2.1.jar')
+    compile files('libs/apache-httpcomponents-httpcore.jar')
+
+    //loaders
+    compile 'com.tuyenmonkey:mkloader:1.2.0'
+    compile 'com.crystal:crystalpreloaders:1.0.0'
+    compile 'com.github.ybq:Android-SpinKit:1.1.0'
+
+    //facebook stetho
+    compile 'com.facebook.stetho:stetho:1.4.1'
+
+    //view pager
+    compile 'com.andraskindler.parallaxviewpager:parallaxviewpager:0.3.1'
+
+    //card view
+    compile 'com.android.support:cardview-v7:25.3.1'
+
+    //tuya SDK
+    compile(name: 'tuyasmart-1.5', ext: 'aar')
+
+    //HTTP connection
+    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.2.0'
+
+    //time picker
+    compile ('com.wdullaer:materialdatetimepicker:3.3.0') {
+        exclude group: 'com.android.support'
+    }
+}

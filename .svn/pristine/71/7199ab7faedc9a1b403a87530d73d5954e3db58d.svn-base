@@ -1,0 +1,33 @@
+.o-stack.o-stack--center.o-stack--distributed.u-p-medium
+  .o-stack__cell
+    h3.u-lh-normal Dashboard
+    p.u-mt-mini Welcome To Alicorn Dashboard
+
+
+  .o-stack__cell.u-text-center(class='u-hide@lg-')
+    .o-stack.o-stack--center.o-stack--nowrap.u-flexJustifyCenter
+      .o-stack__cell
+        div
+          span 1500 Sales
+          #sparkline-inline-1( sparkline='' sparkline-data-url='views/scenes/charts/data/sparkline/sparkline-inline-1.json' )
+      .o-stack__cell.u-ml-small
+        div
+          span $0.99 Revenue
+          #sparkline-inline-2( sparkline='' sparkline-data-url='views/scenes/charts/data/sparkline/sparkline-inline-2.json' )
+
+
+
+  .o-stack__cell(class='u-hide@sm-')
+    .o-stack.o-stack--center.o-stack--nowrap.u-flexJustifyEnd
+      .o-stack__cell.u-text-center.u-text-capitalize
+        a(href='javascript:void(0)' class='u-text-bare u-block u-color-pivotal u-opacity-70p')
+          i.c-icon.c-icon--main.u-font-large.u-color-secondary schedule
+          p schedule
+      .o-stack__cell.u-text-center.u-text-capitalize.u-ml-medium
+        a(href='javascript:void(0)' class='u-text-bare u-block u-color-pivotal u-opacity-70p')
+          i.c-icon.c-icon--main.u-font-large.u-color-secondary done
+          p tasks
+      .o-stack__cell.u-text-center.u-text-capitalize.u-ml-medium
+        a(href='javascript:void(0)' class='u-text-bare u-block u-color-pivotal u-opacity-70p')
+          i.c-icon.c-icon--main.u-font-large.u-color-secondary attach_money
+          p invoices

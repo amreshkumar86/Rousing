@@ -1,0 +1,16 @@
+.nav {
+  width: 250px;
+  text-align: right
+}
+
+
+.content {
+  position: relative
+  width: calc(100% - 250px);
+  margin-left: 250px;
+}
+
+
+.c-code__body {
+  max-height: 100vh;
+}

@@ -1,0 +1,11 @@
+doctype html
+html(lang='en' ng-app='ponut' data-toggle-switch-watch='')
+  head
+    title(ng-bind='title')
+    include ../metadata/metadata.meta-tags.pug
+    include ../metadata/metadata.favicons.pug
+    include ../metadata/metadata.stylesheets.pug
+  body
+    block page
+    settings
+    include ../metadata/metadata.scripts.pug

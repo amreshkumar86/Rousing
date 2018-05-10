@@ -1,0 +1,53 @@
+// ---------------------------------------------------------
+// @Triangle Mixin
+// ---------------------------------------------------------
+
+/**
+ * Mixin used to make arrows/pointers.
+ */
+
+triangle($height, $width, $color = 'inherit', $direction)
+  width: 0
+  height: 0
+  border-style: solid
+  transform: rotate(360deg)
+
+  // Top
+  if $direction == 'top'
+    border-width: '%s %s %s %s' % (0 ($width/2) $height ($width/2))
+    border-color: '%s %s %s %s' % (transparent transparent $color transparent)
+
+  // Right
+  if $direction == 'right'
+    border-width: '%s %s %s %s' % (($height/2) 0 ($height/2) $width)
+    border-color: '%s %s %s %s' % (transparent transparent transparent $color)
+
+  // Bottom
+  if $direction == 'bottom'
+    border-width: '%s %s %s %s' % ($height ($width/2) 0 ($width/2))
+    border-color: '%s %s %s %s' % ($color transparent transparent transparent)
+
+  // Left
+  if $direction == 'left'
+    border-width: '%s %s %s %s' % (($height/2) $width ($height/2) 0)
+    border-color: '%s %s %s %s' % (transparent $color transparent transparent)
+
+  // Top Right
+  if $direction == 'top right'
+    border-width: '%s %s %s %s' % (0 $width $height 0)
+    border-color: '%s %s %s %s' % (transparent $color transparent transparent)
+
+  // Bottom Right
+  if $direction == 'bottom right'
+    border-width: '%s %s %s %s' % (0 0 $height $width)
+    border-color: '%s %s %s %s' % (transparent transparent $color transparent)
+
+  // Top Left
+  if $direction == 'top left'
+    border-width: '%s %s %s %s' % ($height $width 0 0)
+    border-color: '%s %s %s %s' % ($color transparent transparent transparent)
+
+  // Bottom Left
+  if $direction == 'bottom left'
+    border-width: '%s %s %s %s' % ($height 0 0 $width)
+    border-color: '%s %s %s %s' % (transparent transparent transparent $color)

@@ -1,0 +1,3 @@
+.c-main--email
+  +to($viewport-lg)
+    flex-direction: column

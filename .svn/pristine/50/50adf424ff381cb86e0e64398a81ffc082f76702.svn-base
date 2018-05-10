@@ -1,0 +1,34 @@
+.c-content
+  // Layout
+  display: flex
+  flex-flow: column nowrap
+  position: relative
+  z-index: $over-content
+  min-height: 100vh
+  padding-top: 4em
+  padding-left: 250px
+
+  // Theme
+  background: $color-main-dimmed
+
+
+  .js-offcanvas--collapsed &
+    padding-left: 52px
+
+  .js-offcanvas--out &
+    padding-left: 0
+
+
+.c-content--tight
+  height: calc(100vh - 4em)
+
+.js-sidebar-open .c-content
+  // Extra
+  transform: translate3d(-280px, 0, 0)
+
+
+
+
+.js-offcanvas--open .c-content
+  // Extra
+  transform: translate3d(250px, 0, 0)

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="oval">
+            <gradient
+                android:centerColor="#59F5F6CE"
+                android:endColor="#00F5F6CE"
+                android:gradientRadius="@dimen/dash_circle_gradient_radius"
+                android:startColor="#FFF5F6CE"
+                android:type="radial" >
+            </gradient>
+            <!--shadow Color-->
+        </shape>
+    </item>
+
+    <item
+        android:left="40dp"
+        android:right="40dp"
+        android:top="40dp"
+        android:bottom="40dp">
+        <shape android:shape="oval">
+            <size android:width="@dimen/dash_circle_dimen" android:height="@dimen/dash_circle_dimen"></size>
+            <solid android:color="#033399"/>
+        </shape>
+    </item>
+</layer-list>

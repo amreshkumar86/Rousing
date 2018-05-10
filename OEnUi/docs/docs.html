@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="css/cascader.min.css">
+  <link rel="stylesheet" href="css/docs.css">
+</head>
+<body>
+  <div class="nav u-fixed u-l-none u-t-none u-heigh-100p u-border-right u-p-medium">
+    <ul class='u-list-bare u-font-small u-text-uppercase'>
+      <li class='u-mb-large'>
+        <h3>ponut Docs</h3>
+      </li>
+      <li>
+        <a href="#thanks" title="" class='c-link u-color-pivotal'>Thanks</a>
+      </li>
+      <li>
+        <a href="#overview" title="" class='c-link u-color-pivotal'>Overview</a>
+      </li>
+      <li>
+        <a href="#structure" title="" class='c-link u-color-pivotal'>Directory Structure</a>
+      </li>
+      <li
+        <a href="#auto" title="" class='c-link u-color-pivotal'>Automation with Grunt</a>
+      </li>
+      <li>
+        <a href="#head" title="" class='c-link u-color-pivotal'>Head Contents</a>
+      </li>
+      <li>
+        <a href="#topbar" title="" class='c-link u-color-pivotal'>Top Menu</a>
+      </li>
+      <li>
+        <a href="#offcanvas" title="" class='c-link u-color-pivotal'>Offcanvas</a>
+      </li>
+      <li>
+        <a href="#header" title="" class='c-link u-color-pivotal'>Page Header</a>
+      </li>
+      <li>
+        <a href="#sidebar" title="" class='c-link u-color-pivotal'>Right Sidebar</a>
+      </li>
+      <li>
+        <a href="#scripts" title="" class='c-link u-color-pivotal'>Page Scripts</a>
+      </li>
+      <li>
+        <a href="#blank" title="" class='c-link u-color-pivotal'>New Page</a>
+      </li>
+      <li>
+        <a href="#css" title="" class='c-link u-color-pivotal'>CSS / Stylus</a>
+      </li>
+      <li>
+        <a href="#themeing" title="" class='c-link u-color-pivotal'>Themeing</a>
+      </li>
+      <li>
+        <a href="#fonts" title="" class='c-link u-color-pivotal'>Fonts</a>
+      </li>
+      <li>
+        <a href="#js" title="" class='c-link u-color-pivotal'>Javascript</a>
+      </li>
+      <li>
+        <a href="#credits" title="" class='c-link u-color-pivotal'>Sources & Credits</a>
+      </li>
+      <li>
+        <a href="#support" title="" class='c-link u-color-pivotal'>Support Needed?</a>
+      </li>
+      <li>
+        <a href="http://themeforest.net/downloads" title="Rate Here" class='c-link u-color-success'>Rate it, if you like it</a>
+      </li>
+    </ul>
+  </div>
+  <div class="content u-p-medium _u-mb-big u-collapse">
+
+
+
+
+
+
+
+
+    <div id="thanks" class="u-collapse _u-mb-medium">
+      <div class='u-text-capitalize'>
+        <h4>Thanks</h4>
+        <hr class='c-divider c-divider--line u-mt-tiny'>
+      </div>
+      <div class="u-collapse _u-mb-small">
+        <p>
+          Thank you for purchasing. If you have any questions that are beyond the scope of this documentation, please feel free to contact me via my ThemeForest profile page. <br><br>
+          <a href="http://themeforest.net/downloads" title="Rate Here" class='c-link u-color-success'>Rate it, if you like it</a>.
+        </p>
+      </div>
+    </div>
+
+
+    <div id="overview" class="u-collapse _u-mb-medium">
+      <div class='u-text-capitalize'>
+        <h4>Overview</h4>
+        <hr class='c-divider c-divider--line u-mt-tiny'>
+      </div>
+      <div class="u-collapse _u-mb-small">
+        <p>
+          <b>ponut</b> is a fully featured premium admin template built on top of awesome <a class='c-link' href="http://cascader.codeguru.io/" title="Cascader Framework">Cascader</a> UI Framework, modern web technology AngularJS 1.X, HTML5, CSS3 and jQuery. It has many ready to use hand crafted components. The template is fully responsive and easy to customize. The code is super easy to understand and gives power to any developer to turn this template into real web application.
+        </p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="structure" class="u-collapse _u-mb-medium">
+      <div class='u-text-capitalize'>
+        <h4>Directory Structure</h4>
+        <hr class='c-divider c-divider--line u-mt-tiny'>
+      </div>
+      <div class="u-collapse _u-mb-small">
+        <p>
+          I have tried to follow the standards and modular structure while developing the item. Within the package you'll find the following folder structure. Once downloaded, unzip package file and you'll see the following structure:
+        </p>
+        <p>
+          <div class="c-code">
+            <div class="c-code__header">
+              <h5 class="c-code__header-title">Folder Structure</h5>
+            </div>
+            <div class="c-code__body"><pre>
+build                        # Contains compiled files from src folder and ready for local testing.
+dist                         # Contains files similar to the build folder but optimized for online usage.
+grunt                        # Contains all grunt tasks and configurations.
+src                          #
+└── resources                #
+│    └──  fonts              # Template custom fonts
+│    └──  images             # App Images.
+│    └──  favicons           # Contains files necessary for showing favicons across all platforms.
+│                            #
+└── scaffolding              #
+│    └── scripts             # Core JS files for the App.
+│      └── custom            # Custom written JS files
+│      └── vendor            # Contains JavaScript Libs and plugins.
+│                            #
+│    └── styles              #
+│      └── components        # Common components styles.
+│      └── generic           # Scaffolding styles, tag selector styles.
+│      └── settings          # Intial app settings variables.
+│      └── tools             #
+│        └── mixins          # App shortcuts for reapeated styles.
+│        └── functions       # Core functions for generating proper styles.
+│                            #
+│      └── utilities         # Helpers classes.
+│      └── vendor            # Contains styles for plugins.
+│                            #
+└── views                    #
+│    └── components          # Shared components between app different app screens like sidebar & topbar.
+│    └── scaffolding         #
+│        └── layouts         # App screens layouts.
+│        └── metadata        # App meta tags, link tags and scripts
+│                            #
+│    └── scenes              # Different app screens.
+│                            #
+└── *.js                     # Main app JS files.
+└── *.pug                    # Main app PUG files.
+.csscombrc                   #
+.editorconfig                #
+.jsbeautifyrc                #
+.prettifyrc                  #
+browserslist                 #
+Gruntfile.js                 #
+package.json                 #
+
+</pre></div></div>
+        </p>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div id="auto" class="u-collapse _u-mb-medium">
+      <div class='u-text-capitalize'>
+        <h4>Automation with Grunt</h4>
+        <hr class='c-divider c-divider--line u-mt-tiny'>
+      </div>
+      <div class="u-collapse _u-mb-small">
+        <h5>Intro</h5>
+        <p>
+          Grunt is a JavaScript task runner (Automation), save yourself from repetitive tasks.
+          It's probably a bit complex to you if it's your first time using Grunt. However, you'll fail in love with it once you get up and running, it saves you from repetitive tasks. Projects like jQuery, Bootstrap and many more use it as their automation tool. By the way, be sure to check out this <a href="https://gruntjs.com/getting-started" target="_blank" title="">Getting Started guide</a>, it will help you get up and running.
+        </p>
+        <h5>Prerequisites</h5>
+        <p>
+          <b class='u-color-secondary u-font-small'>Node.js</b><br>
+          To be able to use ponut, you will need <a href="https://nodejs.org/en/" target="_blank">Node.js</a>
+          installed to your computer. I won't get into too much detail about Node.js as it's out of the scope
+          of this documentation. Also you won't need to actually use Node.js, it's only required for the
+          development process.
+        </p>
+        <p>
+          <b class='u-color-secondary u-font-small'>Grunt</b><br>
+          Grunt is required for ponut to work properly. Although there are ways to develop with ponut without using Grunt or Node.js, I strongly recommend you to use them in order to take advantage of the true power of the ponut.
+        </p>
+        <h5>Explanation</h5>
+        <p>
+          <code>Gruntfile.js</code> : is the configure file of Grunt. It is used to configure or define tasks and load Grunt plugins. <br>
+          <code>package.json</code> : is the JSON file of NPM. This file is used by npm to store metadata for projects published as npm modules. Inside package.json file, you'll see all the plugins that help to automate the tasks.
+          And all the plugins are configured in <b>Gruntfile.js</b> and <b>Grunt folder</b>.
+        </p>
+                  <div class="c-code">
+                    <div class="c-code__header">
+                      <h5 class="c-code__header-title">Package.Json</h5>
+                    </div>
+                    <div class="c-code__body"><pre>"devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "css-mqpacker": "^5.0.1",
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-cache-bust": "^1.5.1",
+    "grunt-concurrent": "^2.3.1",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-htmlmin": "^2.3.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-stylus": "^1.2.0",
+    "grunt-contrib-uglify": "^2.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-csscomb": "^3.1.1",
+    "grunt-csso": "^2.2.0",
+    "grunt-prettify": "^0.4.0",
+    "grunt-processhtml": "^0.4.1",
+    "grunt-replace": "^1.0.1",
+    "grunt-sync": "^0.6.2",
+    "grunt-uncss": "^0.6.1",
+    "jit-grunt": "^0.10.0",
+    "load-grunt-config": "^0.19.2",
+    "postcss": "^5.2.16",
+    "postcss-cssnext": "^2.10.0",
+    "postcss-flexbugs-fixes": "^2.1.0",
+    "postcss-font-family-system-ui": "^1.0.2",
+    "postcss-font-magician": "^1.6.1",
+    "postcss-responsive-font": "^1.0.3",
+    "poststylus": "^0.2.3",
+    "rucksack": "^2.1.2",
+    "rucksack-css": "^0.9.1"
+}</pre></div></div>
+
+        <h5>Installation</h5>
+        <p>
+          After installing the prerequisites, go to the package root folder and run this command.
+          <div class="c-code">
+            <div class="c-code__body"><pre>npm install</pre></div>
+          </div>
+        </p>
+
+        <h5>Grunt Default Task</h5>
+        <p>
+          Use this task for intial local development, simply it compiles pug, stylus, run local server and watch files for any changes to compile files again and refresh your browser for instant view of the results. In this task the produced code will not be formatted, means no extra spaces will be removed, erros of indentation will remain as is but that is OK you just need it for local testing.
+          <div class="c-code">
+            <div class="c-code__body"><pre>grunt</pre></div>
+          </div>
+        </p>
+
+        <h5>Grunt Build Task</h5>
+        <p>
+          Use this task for before delivering for a client, simply it does the same as default task + formatting the code.
+          <div class="c-code">
+            <div class="c-code__body"><pre>grunt build</pre></div>
+          </div>
+        </p>
+
+        <h5>Grunt Dist Task</h5>
+        <p>
+          Use this task before publishing online for code optimizing means concatinating files, minifing CSS and JS and so on.
+          <div class="c-code">
+            <div class="c-code__body"><pre>grunt dist</pre></div>
+          </div>
+        </p>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="head" class="u-collapse _u-mb-medium">
+      <div class='u-text-capitalize'>
+        <h4>Head Contents</h4>
+        <hr class='c-divider c-divider--line u-mt-tiny'>
+      </div>
+      <div class="u-collapse _u-mb-small">
+        <p>All meta tags, favicons and stylesheets that goes on the head tag.</p>
+        <div class="c-code">
+          <div class="c-code__header">
+            <h5 class="c-code__header-title">PUG</h5>
+          </div>
+          <div class="c-code__body">
+            <pre>
+//- Basic HTML Meta Tags
+meta(charset='UTF-8')
+meta(name='keywords', content='angularjs, admin, dashboard')
+meta(name='description', content='Angular admin dashboard')
+meta(name='copyright', content='Mo Ali. All rights reserved')
+meta(name='robots', content='index, follow')
+meta(name='author', content='Mo Ali, hello@codeguru.io')
+meta(name='designer', content='Mo Ali')
+
+//- Service Meta Tags
+meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+
+//- IE Tags
+meta(content='IE=edge', http-equiv='X-UA-Compatible')
+
+//- Favicons
+link(rel='apple-touch-icon', sizes='180x180', href='resources/favicons/apple-touch-icon.png')
+link(rel='icon', type='image/png', href='resources/favicons/favicon-32x32.png', sizes='32x32')
+link(rel='icon', type='image/png', href='resources/favicons/favicon-16x16.png', sizes='16x16')
+link(rel='manifest', href='resources/favicons/manifest.json')
+link(rel='mask-icon', href='resources/favicons/safari-pinned-tab.svg', color='#5bbad5')
+link(rel='shortcut icon', href='resources/favicons/favicon.ico')
+meta(name='msapplication-config', content='resources/favicons/browserconfig.xml')
+meta(name='theme-color', content='#ffffff')
+
+//- Material Design Icon Font
+link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+
+//- Main App CSS File
+link(rel='stylesheet' href="app.dark.css")
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="topbar" class="u-collapse _u-mb-medium">
+      <div class='u-text-capitalize'>
+        <h4>Top Menu</h4>
+        <hr class='c-divider c-divider--line u-mt-tiny'>
+      </div>
+      <div class="u-collapse _u-mb-small">
+        <p>Top navigation menus fixed acrocss all app screens</p>
+        <div class="c-code">
+          <div class="c-code__header">
+            <h5 class="c-code__header-title">PUG</h5>
+          </div>
+          <div class="c-code__body">
+            <pre>
+.c-topbar
+
+  //- Left Side
+  .c-topbar__aside
+    .o-stack
+      .o-stack__cell
+        a.c-icon(href="#") menu
+      .c-topbar__asideLogoBox
+        a(href='#' class='c-logo')
+          svg(class='c-logo__img u-fill-light')
+      .c-topbar__asideActionsBox
+        .c-button-group
+          a.c-actionButton.c-button.c-button--icon.c-icon(href="#") lock
+          a.c-actionButton.c-button.c-button--icon.c-icon(href="#") power_settings_new
+      .o-stack__cell
+        a.c-icon(href="#") chat
+
+
+
+  //- #Right Side
+  //- ------------------------------------
+
+  .c-topbar__main
+    .o-stack
+      .o-stack__cell
+        .c-topbar__mainListBox
+          .c-topbar__mainLogoBox
+            a(href='#' class='c-logo')
+              svg(class='c-logo__img u-fill-light')
+
+          .c-topbar__toggleBox
+            a(href='#')
+              span.c-icon menu
+
+
+          //- Dropdown Menu
+
+          .c-topbar__mainList( dropdown='' )
+            ul.o-stack
+              li.has-dropdown
+                .fn-dropdownTrigger
+                  a(href='#' class='c-menu__link c-topbar__mainLink')
+                    span Dropdown Menu
+                    span.c-icon expand_more
+
+                ul.c-menu.c-menu--dropdown
+                  li.c-menu__item
+                    a.c-menu__link(href="#")
+                      span.c-menu__text Projects
+                  li.c-menu__separator
+                  li.c-menu__item
+                    a.c-menu__link(href="#")
+                      span.c-menu__text Tasks
+                      span.c-badge.c-menu__badge(data-badge="15")
+                  li.c-menu__item
+                    a.c-menu__link(href="#")
+                      span.c-menu__text Calendar
+                  li.c-menu__separator
+                  li.c-menu__item
+                    a.c-menu__link(href="#")
+                      span.c-menu__text Lock
+
+
+      //- Search
+
+      .o-stack__cell
+        .c-topbar__searchBox
+          form(action='./' method='POST')
+            .c-control
+              span.c-icon search
+              .c-control__input-box
+                input.c-control__input.u-pr-small(type='search', name='search' placeholder='Search Here...')
+
+
+      //- Main Right Part
+
+      .o-stack__cell
+        .c-topbar__sideListBox
+
+          //- ====== %Avatar Area
+
+          .o-stack__cell
+            .c-topbar__avatarBox
+              span.o-stack__cell good morning Emma.
+              .c-avatar.o-stack__cell
+                img(src='resources/images/avatars/avatar-small-1.jpg' alt='avatar')
+
+
+          //- ====== %Action Bar Icons
+
+          .o-stack__cell
+            ul.c-topbar__sideList
+
+              //- &Messages Area
+              li.has-dropdown( dropdown='' )
+                .fn-dropdownTrigger
+                  a(href='#' class='c-menu__link')
+                    span.c-icon email
+
+                ul.c-listExtended
+                  li.c-listExtended__header
+                    .c-menu__header
+                      .c-menu__title
+                        h5 Messages
+                      ul.c-menu__actionBar
+                        li
+                          a(href='#' class='c-menu__link u-p-none u-height-auto u-overflow-visible')
+                            span.c-icon(tooltip='Mark All As Read' direction='left') done_all
+
+                  li.c-listExtended__body
+                    ul.c-block
+                      li.u-border-bottom
+                        //- message content
+
+
+              //- &Notifications Area
+              li.has-dropdown( dropdown='' )
+                .fn-dropdownTrigger
+                  a(href='#' class='c-menu__link')
+                    span.c-icon notifications
+
+                ul.c-listExtended
+                  li.c-listExtended__header
+                    .c-menu__header
+                      .c-menu__title
+                        h5 Notifications
+                      ul.c-menu__actionBar
+                        li
+                          a(href='#')
+                            span.c-icon(tooltip='Mark All As Read' direction='left') done_all
+
+                  li.c-listExtended__body
+                    ul.c-block
+                      li
+                        //- Notification
+
+
+              //- &Settings Area
+              li.has-dropdown( dropdown='' )
+                .fn-dropdownTrigger
+                  a(href='#' class='c-menu__link')
+                    span.c-icon settings
+
+
+                ul#topbar__settingsMenu
+                  li.c-listExtended__header
+                    h5 Settings
+
+                  li.c-listExtended__body
+                    ul.c-block
+                      li
+                        //- Settings
+
+              //- &Chat Area
+              li
+                a(href='#' class='c-menu__link fn-sidebarTrigger')
+                  span.c-icon menu
+
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="offcanvas" class="u-collapse _u-mb-medium">
+      <div class='u-text-capitalize'>
+        <h4>Offcanvas</h4>
+        <hr class='c-divider c-divider--line u-mt-tiny'>
+      </div>
+      <div class="u-collapse _u-mb-small">
+        <p>Left sidebar fixed menu</p>
+        <div class="c-code">
+          <div class="c-code__header">
+            <h5 class="c-code__header-title">PUG</h5>
+          </div>
+          <div class="c-code__body">
+            <pre>
+.c-offcanvas
+  .u-relative
+      .o-stack.o-stack--center.o-stack--nowrap.u-px-small.u-py-medium.c-miniProfile
+        .o-stack__cell.c-miniProfile__img
+          .c-avatar.c-avatar--small
+            img(src='resources/images/avatars/avatar-small-1.jpg' alt='#')
+
+        .o-stack__cell.o-stack__cell--expanded.u-pl-small.c-miniProfile__info
+          span.u-block Welcome
+          h4 John Doe
+
+        .o-stack__cell.u-relative( dropdown='' )
+          .fn-dropdownTrigger
+            a(href='javascript:void(0)' class='c-icon c-icon--main u-color-white-900 u-opacity-80p') settings
+
+          ul.c-menu.c-menu--dropdown.u-r-none
+            li.c-menu__item
+              a.c-menu__link(href='javascript:void(0)')
+                span.c-menu__text Projects
+            li.c-menu__separator
+            li.c-menu__item
+              a.c-menu__link(href='javascript:void(0)')
+                span.c-menu__text Tasks
+                span.c-badge.c-menu__badge(data-badge="15")
+            li.c-menu__item
+              a.c-menu__link(href='javascript:void(0)')
+                span.c-menu__text Calendar
+            li.c-menu__separator
+            li.c-menu__item
+              a.c-menu__link(href='javascript:void(0)')
+                span.c-menu__text Lock
+
+
+      //- ===== %Main Gategory Content
+
+      .c-offcanvas__categoryTitle
+        div(tooltip='Main Pages' direction='right')
+          span.c-icon more_horiz
+        h6.u-text-uppercase
+          | Main Pages
+      ul.c-menu.c-menu--borderless.c-menu--expanded
+        li.c-menu__item
+          a.c-menu__link(href="./")
+            i.c-icon home
+            span.c-menu__text dashboard
+            span.c-label hot
+        li.c-menu__item
+          a.c-menu__link(href="email.html")
+            i.c-icon email
+            span.c-menu__text email
+            span.c-badge.c-menu__badge(data-badge="+99")
+        li.c-menu__item
+          a.c-menu__link(href="compose.html")
+            i.c-icon send
+            span.c-menu__text compose
+        li.c-menu__item
+          a.c-menu__link(href="profile.html")
+            i.c-icon person
+            span.c-menu__text profile
+            span.c-label offer
+        li.c-menu__item
+          a.c-menu__link(href="blank.html")
+            i.c-icon insert_drive_file
+            span.c-menu__text blank
+        li.c-menu__item
+          a.c-menu__link(href="blank-with-secondary-navbar.html")
+            i.c-icon insert_drive_file
+            span.c-menu__text blank side navbar
+        li.c-menu__item
+          a.c-menu__link(href="invoice.html")
+            i.c-icon attach_money
+            span.c-menu__text invoice
+        li.c-menu__item
+          a.c-menu__link(href="chat.html")
+            i.c-icon chat
+            span.c-menu__text chat
+            i.c-icon.u-color-warning star
+
+
+      //- ===== %Components Gategory Content
+
+      ul.c-menu.c-menu--borderless.c-menu--expanded.u-shadow-none
+        li.c-menu__item
+          a.c-menu__link(ui-sref="###"  ui-sref-active='is-active')
+            i.c-icon.c-icon--main.c-menu__icon ###
+            span.c-menu__text ###
+            span.c-label.c-label--error ####
+        ...
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="header" class="u-collapse _u-mb-medium">
+      <div class='u-text-capitalize'>
+        <h4>Page Header</h4>
+        <hr class='c-divider c-divider--line u-mt-tiny'>
+      </div>
+      <div class="u-collapse _u-mb-small">
+        <p>Top page header containing page title, quick stats & quick links</p>
+        <div class="c-code">
+          <div class="c-code__header">
+            <h5 class="c-code__header-title">PUG</h5>
+          </div>
+          <div class="c-code__body">
+            <pre>
+.c-pageHeader
+  .o-stack
+    .o-stack__cell
+      h3.u-lh-normal Dashboard
+      p.u-mt-mini Welcome To ponut Dashboard
+
+    .o-stack__cell
+      .o-stack
+        .o-stack__cell
+          div
+            span 1500 Sales
+            #sparkline-inline-1
+        .o-stack__cell
+          div
+            span $0.99 Revenue
+            #sparkline-inline-2
+
+    .o-stack__cell
+      .o-stack
+        .o-stack__cell
+          a(href='#')
+            i.c-icon schedule
+            p schedule
+        .o-stack__cell
+          a(href='#' class='u-text-bare u-block u-color-pivotal u-opacity-70p')
+            i.c-icon done
+            p tasks
+        .o-stack__cell
+          a(href='#' class='u-text-bare u-block u-color-pivotal u-opacity-70p')
+            i.c-icon attach_money
+            p invoices
+
+  .c-pageHeader__aside
+    .o-stack__cell
+      ul.c-breadcrumb
+        li.c-breadcrumb__item
+          a.c-breadcrumb__link(href="#")
+            i.c-icon home
+            | Home
+        li.c-breadcrumb__item
+          a.c-breadcrumb__link.c-icon(href="#") favorite
+        li.c-breadcrumb__item
+          a.c-breadcrumb__link(href="#") Page
+        li.c-breadcrumb__item
+          a.c-breadcrumb__link.c-breadcrumb__link--current(href="#") Current
+
+    .o-stack__cell
+      .o-stack.o-stack--center.o-stack--nowrap.o-stack--mediumGap
+        .o-stack__cell
+          a(href='#')
+            i.c-icon add
+            span.u-ml-mini Add
+        .o-stack__cell
+          a(href='#')
+            i.c-icon settings
+            span.u-ml-mini Settings
+
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="sidebar" class="u-collapse _u-mb-medium">
+      <div class='u-text-capitalize'>
+        <h4>Sidebar</h4>
+        <hr class='c-divider c-divider--line u-mt-tiny'>
+      </div>
+      <div class="u-collapse _u-mb-small">
+        <p>Page right sidear menu</p>
+        <div class="c-code">
+          <div class="c-code__header">
+            <h5 class="c-code__header-title">PUG</h5>
+          </div>
+          <div class="c-code__body">
+            <pre>
+.c-sidebar
+  .u-relative
+
+    //- Sidebar Nav
+
+    div
+      .c-sidebar__nav
+        .o-stack__cell
+          a(href='#sidebar__chat' class='is-active' data-tab data-tab-env='sidebarTabs') Chat
+        .o-stack__cell
+          a(href='#sidebar_notifications' data-tab data-tab-env='sidebarTabs') Notifications
+        .o-stack__cell
+          a(href='#sidebar__settings' data-tab data-tab-env='sidebarTabs') Settings
+
+
+    //- #Sidebar Main Content
+    //- ------------------------------------
+
+    .o-stack
+
+      //- ---------- $Chat ---------- -//
+
+      #sidebar__chat
+        //- Section Header
+        .o-stack
+          .o-stack__cell.o-stack__cell--expanded
+            h5.u-text-uppercase Chat Room
+          .o-stack__cell
+            .o-stack
+              .o-stack__cell
+                a(href='#')
+                  span.c-icon refresh
+              .o-stack__cell
+                a(href='#')
+                  span.c-icon settings
+              .o-stack__cell
+                a(href='#')
+                  span.c-icon more_horiz
+        .u-mt-small
+          .c-topbar__searchBox
+            form(action='./' method='POST')
+              .c-control
+                span.c-icon search
+                .c-control__input-box
+                  input.c-control__input.u-pr-small(type='search', name='search' placeholder='Search Here...')
+
+
+        //- Stuff
+        .u-mt-medium._u-mb-tiny
+          div
+            h5 Stuff
+          div
+            div
+              .o-stack
+                .o-stack__cell
+                  .c-avatar
+                    a(href='#')
+                      img(src='resources/images/avatars/avatar-small-1.jpg' alt='avatar')
+                .o-stack__cell--expanded
+                  .o-stack
+                    .o-stack__cell.o-stack__cell--expanded
+                      a(href='#') Jessy Doe
+                      span Web Designer
+                    .o-stack__cell
+                      span.c-badge.c-badge--success(data-badge='')
+
+            //- Full Block Button
+            div.u-mt-mini
+              a(href='#' class='c-button c-button--primary c-button--block') All Stuff Members
+
+
+      //- ---------- $Notifications ---------- -//
+
+      #sidebar_notifications
+        //- Section Header
+        .o-stack
+          .o-stack__cell
+            h5.u-text-uppercase Notifications
+          .o-stack__cell
+            .o-stack
+              .o-stack__cell
+                a(href='#')
+                  span.c-icon done_all
+              .o-stack__cell
+                a(href='#')
+                  span.c-icon more_horiz
+
+        //- Content
+        .c-notifications
+          .o-stack
+            .o-stack__cell
+              a(href='#')
+            .o-stack__cell--expanded
+              .o-stack
+                .o-stack__cell
+                  span 1 Minute Ago
+                .o-stack__cell
+                  span server
+              p
+                a(href='#' class='c-link') Lorem
+                | &nbsp; Ipsum is simply dummy text of the printing...
+
+          .u-mt-small
+            a(href='#' class='c-button c-button--block') View All Notifications
+
+
+      //- ---------- $Settings ---------- -//
+
+      #sidebar__settings
+        //- Section Header
+        .o-stack
+          .o-stack__cell
+            h5.u-text-uppercase General
+          .o-stack__cell
+            .o-stack
+              .o-stack__cell
+                a(href='#')
+                  span.c-icon more_horiz
+
+        //- Content
+        ._u-py-tiny
+          .o-stack.o-stack--nowrap.o-stack--splitted.u-border-bottom
+            .o-stack__cell--expanded
+              span Allow Tracking
+            .o-stack__cell
+              .c-switch
+                input#switch_side1.c-switch__input(type='checkbox' checked)
+                label.c-switch__rail(for='switch_side1')
+                  span.c-switch__button
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="scripts" class="u-collapse _u-mb-medium">
+      <div class='u-text-capitalize'>
+        <h4>Scripts</h4>
+        <hr class='c-divider c-divider--line u-mt-tiny'>
+      </div>
+      <div class="u-collapse _u-mb-small">
+        <p>App javascript files goes at the bottom of the body. ِAll scripts below just for local testing. All of them are concatenated in the production version into just one file which is <code>app.min.js</code></p>
+        <div class="c-code">
+          <div class="c-code__header">
+            <h5 class="c-code__header-title">PUG</h5>
+          </div>
+          <div class="c-code__body">
+            <pre>
+
+//- ----------------------------------------------
+//- $Table of Contents
+//- ----------------------------------------------
+
+//-
+  + $Preloader
+  + $Vendor Scripts
+  + $Blank View Scripts
+  + $Helpers View Scripts
+  + $Icons View Scripts
+  + $Dashboard View Scripts
+  + $Invoice View Scripts
+  + $Maps View Scripts
+  + $Portlets View Scripts
+  + $Profile View Scripts
+  + $Sliders View Scripts
+  + $Tables View Scripts
+  + $Widgets View Scripts
+  + $Buttons View Scripts
+  + $Calendar View Scripts
+  + $Chat View Scripts
+  + $Todo View Scripts
+  + $Email View Scripts
+  + $Charts View Scripts
+  + $Forms View Scripts
+  + $Grid View Scripts
+  + $App Core Scripts
+  + $Shared Components Scripts
+
+//- ----------------------------------------------
+//- $Colors
+//- ----------------------------------------------
+
+//- script(src='app.colors-dark-black.js' type='text/javascript')
+script(src='app.colors-dark.js' type='text/javascript')
+//- script(src='app.colors-light.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $Preloader
+//- ----------------------------------------------
+
+// build:js app.min.js
+
+script(src='scaffolding/scripts/vendor/please-wait.min.js' type='text/javascript')
+script(src='scaffolding/scripts/custom/loader.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $Vendor Scripts
+//- ----------------------------------------------
+
+script(src='scaffolding/scripts/vendor/jquery-1.12.4.min.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/angular.min.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/angular-animate.min.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/angular-ui-router.min.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/angular-notify.min.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/angular-local-storage.min.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/jquery-ui.min.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/masonry.pkgd.min.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/moment.min.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/fullcalendar.min.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/ion.rangeSlider.min.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/perfect-scrollbar.jquery.min.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/toggles-switches.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/jquery.dataTables.min.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/wysihtml5/wysihtml5.rules.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/wysihtml5/wysihtml5-0.4.0pre.min.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/jqvmap/jquery.vmap.min.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/jqvmap/maps/jquery.vmap.world.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/jqvmap/maps/jquery.vmap.usa.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/jqvmap/maps/jquery.vmap.canada.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/jqvmap/maps/jquery.vmap.sampledata.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/jqvmap/maps/continents/jquery.vmap.australia.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/jqvmap/maps/continents/jquery.vmap.europe.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/flot/jquery.flot.min.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/flot/jquery.flot.pie.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/flot/jquery.flot.tooltip.min.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/flot/jquery.flot.tickrotor.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/flot/jquery.flot.orderBars.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/flot/jquery.flot.spline.min.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/jquery.easypiechart.min.js' type='text/javascript')
+script(src='scaffolding/scripts/vendor/jquery.sparkline.retina.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $Blank View Scripts
+//- ----------------------------------------------
+
+script(src='views/scenes/blank/blank.module.js' type='text/javascript')
+script(src='views/scenes/blank/blank.config.js' type='text/javascript')
+script(src='views/scenes/blank/blank.controller.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $Helpers View Scripts
+//- ----------------------------------------------
+
+script(src='views/scenes/helpers/helpers.module.js' type='text/javascript')
+script(src='views/scenes/helpers/helpers.config.js' type='text/javascript')
+script(src='views/scenes/helpers/helpers.controller.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $Icons View Scripts
+//- ----------------------------------------------
+
+script(src='views/scenes/icons/icons.module.js' type='text/javascript')
+script(src='views/scenes/icons/icons.config.js' type='text/javascript')
+script(src='views/scenes/icons/icons.controller.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $Dashboard View Scripts
+//- ----------------------------------------------
+
+script(src='views/scenes/dashboard/dashboard.module.js' type='text/javascript')
+script(src='views/scenes/dashboard/dashboard.config.js' type='text/javascript')
+script(src='views/scenes/dashboard/dashboard.controller.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $Invoice View Scripts
+//- ----------------------------------------------
+
+script(src='views/scenes/invoice/invoice.module.js' type='text/javascript')
+script(src='views/scenes/invoice/invoice.config.js' type='text/javascript')
+script(src='views/scenes/invoice/invoice.controller.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $Maps View Scripts
+//- ----------------------------------------------
+
+script(src='views/scenes/maps/maps.module.js' type='text/javascript')
+script(src='views/scenes/maps/maps.config.js' type='text/javascript')
+script(src='views/scenes/maps/maps.controller.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $Portlets View Scripts
+//- ----------------------------------------------
+
+script(src='views/scenes/portlets/portlets.module.js' type='text/javascript')
+script(src='views/scenes/portlets/portlets.config.js' type='text/javascript')
+script(src='views/scenes/portlets/portlets.controller.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $Profile View Scripts
+//- ----------------------------------------------
+
+script(src='views/scenes/profile/profile.module.js' type='text/javascript')
+script(src='views/scenes/profile/profile.config.js' type='text/javascript')
+script(src='views/scenes/profile/profile.controller.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $Sliders View Scripts
+//- ----------------------------------------------
+
+script(src='views/scenes/sliders/sliders.module.js' type='text/javascript')
+script(src='views/scenes/sliders/sliders.config.js' type='text/javascript')
+script(src='views/scenes/sliders/sliders.controller.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $Tables View Scripts
+//- ----------------------------------------------
+
+script(src='views/scenes/tables/tables.module.js' type='text/javascript')
+script(src='views/scenes/tables/tables.config.js' type='text/javascript')
+script(src='views/scenes/tables/tables.controller.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $Widgets View Scripts
+//- ----------------------------------------------
+
+script(src='views/scenes/widgets/widgets.module.js' type='text/javascript')
+script(src='views/scenes/widgets/widgets.config.js' type='text/javascript')
+script(src='views/scenes/widgets/widgets.controller.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $Buttons View Scripts
+//- ----------------------------------------------
+
+script(src='views/scenes/buttons/buttons.module.js' type='text/javascript')
+script(src='views/scenes/buttons/buttons.config.js' type='text/javascript')
+script(src='views/scenes/buttons/buttons.controller.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $Calendar View Scripts
+//- ----------------------------------------------
+
+script(src='views/scenes/calendar/calendar.module.js' type='text/javascript')
+script(src='views/scenes/calendar/calendar.config.js' type='text/javascript')
+script(src='views/scenes/calendar/calendar.controller.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $Chat View Scripts
+//- ----------------------------------------------
+
+script(src='views/scenes/chat/chat.module.js' type='text/javascript')
+script(src='views/scenes/chat/chat.config.js' type='text/javascript')
+script(src='views/scenes/chat/chat.controller.js' type='text/javascript')
+script(src='views/scenes/chat/components/persons/persons.controller.js' type='text/javascript')
+script(src='views/scenes/chat/components/conversation/conversation.controller.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $Todo View Scripts
+//- ----------------------------------------------
+
+script(src='views/scenes/todo/todo.module.js' type='text/javascript')
+script(src='views/scenes/todo/todo.config.js' type='text/javascript')
+script(src='views/scenes/todo/todo.factory.js' type='text/javascript')
+script(src='views/scenes/todo/todo.directive.js' type='text/javascript')
+script(src='views/scenes/todo/todo.controller.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $Email View Scripts
+//- ----------------------------------------------
+
+script(src='views/scenes/email/email.module.js' type='text/javascript')
+script(src='views/scenes/email/email.config.js' type='text/javascript')
+script(src='views/scenes/email/email.controller.js' type='text/javascript')
+script(src='views/scenes/email/components/navbar/navbar.controller.js' type='text/javascript')
+script(src='views/scenes/email/components/compose/compose.config.js' type='text/javascript')
+script(src='views/scenes/email/components/compose/compose.controller.js' type='text/javascript')
+script(src='views/scenes/email/components/inbox/inbox.config.js' type='text/javascript')
+script(src='views/scenes/email/components/inbox/inbox.controller.js' type='text/javascript')
+script(src='views/scenes/email/components/message/message.config.js' type='text/javascript')
+script(src='views/scenes/email/components/message/message.controller.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $Charts View Scripts
+//- ----------------------------------------------
+
+script(src='views/scenes/charts/charts.module.js' type='text/javascript')
+script(src='views/scenes/charts/charts.config.js' type='text/javascript')
+script(src='views/scenes/charts/charts.controller.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $Forms View Scripts
+//- ----------------------------------------------
+
+script(src='views/scenes/forms/forms.module.js' type='text/javascript')
+script(src='views/scenes/forms/forms.config.js' type='text/javascript')
+script(src='views/scenes/forms/forms.controller.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $Grid View Scripts
+//- ----------------------------------------------
+
+script(src='views/scenes/grid/grid.module.js' type='text/javascript')
+script(src='views/scenes/grid/grid.config.js' type='text/javascript')
+script(src='views/scenes/grid/grid.controller.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $App Core Scripts
+//- ----------------------------------------------
+
+script(src='scaffolding/scripts/custom/core.module.js' type='text/javascript')
+script(src='scaffolding/scripts/custom/factories/factory.isMobile.js' type='text/javascript')
+script(src='scaffolding/scripts/custom/factories/factory.store.js' type='text/javascript')
+script(src='scaffolding/scripts/custom/filters/filter.highlight.js' type='text/javascript')
+script(src='scaffolding/scripts/custom/filters/filter.search.js' type='text/javascript')
+script(src='scaffolding/scripts/custom/filters/filter.relativeTime.js' type='text/javascript')
+script(src='app.module.js' type='text/javascript')
+script(src='app.constant.js' type='text/javascript')
+script(src='app.config.js' type='text/javascript')
+script(src='scaffolding/scripts/custom/directives/directive.datatables.js' type='text/javascript')
+script(src='scaffolding/scripts/custom/directives/directive.easypie.js' type='text/javascript')
+script(src='scaffolding/scripts/custom/directives/directive.flot.js' type='text/javascript')
+script(src='scaffolding/scripts/custom/directives/directive.fullcalendar.js' type='text/javascript')
+script(src='scaffolding/scripts/custom/directives/directive.maps.js' type='text/javascript')
+script(src='scaffolding/scripts/custom/directives/directive.masonry.js' type='text/javascript')
+script(src='scaffolding/scripts/custom/directives/directive.slider.js' type='text/javascript')
+script(src='scaffolding/scripts/custom/directives/directive.sortable.js' type='text/javascript')
+script(src='scaffolding/scripts/custom/directives/directive.sparkline.js' type='text/javascript')
+script(src='scaffolding/scripts/custom/directives/directive.wysihtml5.js' type='text/javascript')
+script(src='scaffolding/scripts/custom/directives/directive.scrollbar.js' type='text/javascript')
+script(src='scaffolding/scripts/custom/directives/directive.dropdown.js' type='text/javascript')
+script(src='scaffolding/scripts/custom/directives/directive.tabs.js' type='text/javascript')
+script(src='scaffolding/scripts/custom/directives/directive.tuck.js' type='text/javascript')
+
+//- ----------------------------------------------
+//- $Shared Components Scripts
+//- ----------------------------------------------
+
+script(src='views/components/offcanvas/offcanvas.directive.js' type='text/javascript')
+script(src='views/components/offcanvas/offcanvas.controller.js' type='text/javascript')
+script(src='views/components/notifications/notifications.controller.js' type='text/javascript')
+script(src='views/components/content/content.directive.js' type='text/javascript')
+script(src='views/components/content/content.controller.js' type='text/javascript')
+script(src='views/components/sidebar/sidebar.directive.js' type='text/javascript')
+script(src='views/components/sidebar/sidebar.controller.js' type='text/javascript')
+script(src='views/components/page-header/header.directive.js' type='text/javascript')
+script(src='views/components/page-header/header.controller.js' type='text/javascript')
+script(src='views/components/topbar/topbar.directive.js' type='text/javascript')
+script(src='views/components/topbar/topbar.controller.js' type='text/javascript')
+
+// /build
+
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="blank" class="u-collapse _u-mb-medium">
+      <div class='u-text-capitalize'>
+        <h4>New Page</h4>
+        <hr class='c-divider c-divider--line u-mt-tiny'>
+      </div>
+      <div class="u-collapse _u-mb-small">
+        <p>
+          To create a new page, you can use <code>blank</code> directory in scenes folder which provides basic page layout which you can extend and modify further.
+        </p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="css" class="u-collapse _u-mb-medium">
+      <div class='u-text-capitalize'>
+        <h4>CSS / Stylus</h4>
+        <hr class='c-divider c-divider--line u-mt-tiny'>
+      </div>
+      <div class="u-collapse _u-mb-small">
+        <p>This item uses Stylus and PostCSS as base Preprocessors beside Cascader UI framework. All items parts are decomposed for small parts for modularity. The item comes with a lot of CSS Class utilities for rapid prototyping just take some time to get familir with them. you can view full list of vailble class <a href="http://cascader.codeguru.io/utilities.html" title="">here</a></p>
+        <p>
+          The entry point to all stylus files are <code>app.[Theme Color].styl</code> file which imports all the necessary files for the app. so obiuosly the result is only a single CSS file for the whole app.
+        </p>
+        <p>
+          when you are using <code>grunt dist</code> task for publishing your app online, all unused CSS inside the produced <code>app.css</code> files will be removed.
+        </p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="themeing" class="u-collapse _u-mb-medium">
+      <div class='u-text-capitalize'>
+        <h4>Theming</h4>
+        <hr class='c-divider c-divider--line u-mt-tiny'>
+      </div>
+      <div class="u-collapse _u-mb-small">
+        <p>
+          To choose a different theme you need to load two files <code>app.[THEME COLOR].css</code> and <code>app.[THEME COLOR].js</code> and that is it.
+        </p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="fonts" class="u-collapse _u-mb-medium">
+      <div class='u-text-capitalize'>
+        <h4>Fonts</h4>
+        <hr class='c-divider c-divider--line u-mt-tiny'>
+      </div>
+      <div class="u-collapse _u-mb-small">
+        <p>
+          This template uses <b>Source Sans Pro</b> font as main font, <b>Roboto Slab</b> as serif font & <b>Fira Mono</b> as mono font. ponut also uses Material Icons as icon font.
+        </p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="js" class="u-collapse _u-mb-medium">
+      <div class='u-text-capitalize'>
+        <h4>Javascript</h4>
+        <hr class='c-divider c-divider--line u-mt-tiny'>
+      </div>
+      <div class="u-collapse _u-mb-small">
+        <p>
+          This item rely on Angular, jQuery, jQuery UI libs beside other 3rd party plugins to achieve its functionality. and here is explanation of custom written files:
+        </p>
+        <p>
+          First, note that all scripts are decomposed to small ones and each specific has it own functionality, for each component or page you will find separate script files for controller, directives, modules and routing
+        </p>
+        <p>
+          <b>directives</b><br>
+          Found in custom scripts folder and it has simple usage which is handle jquery plugins like flot charts
+        </p>
+        <p>
+          <b>factories</b><br>
+          <code>factory.isMobile.js</code> used to check for mobile devices. <br>
+          <code>factory.store.js</code> used to store data between diffrerent isolated scopes.
+        </p>
+        <p>
+          <b>filters</b><br>
+          <code>filter.highlight.js</code> used to highlight searched keywords. <br>
+          <code>filter.relativeTime.js</code> used to display time in <code>ago</code> format. <br>
+          <code>filter.search.js</code> advanced search filter for searching specific properties in array of objects.
+        </p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="credits" class="u-collapse _u-mb-medium">
+      <div class='u-text-capitalize'>
+        <h4>Sources & Credits</h4>
+        <hr class='c-divider c-divider--line u-mt-tiny'>
+      </div>
+      <div class="u-collapse _u-mb-small">
+        <table class='c-table c-table--bordered u-text-lowercase'>
+          <thead>
+            <tr>
+              <th class='u-4/12'>Name</th>
+              <th class='u-8/12'>URL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cascader</td>
+              <td><a href="http://cascader.codeguru.io/" target='_blank'>http://cascader.codeguru.io/</a></td>
+            </tr>
+            <tr>
+              <td>jquery.dataTables.min.js</td>
+              <td><a href="https://datatables.net/" target='_blank'>https://datatables.net/</a></td>
+            </tr>
+            <tr>
+              <td>jquery.easypiechart.min.js</td>
+              <td><a href="https://rendro.github.io/easy-pie-chart/" target='_blank'>https://rendro.github.io/easy-pie-chart/</a></td>
+            </tr>
+            <tr>
+              <td>jquery.sparkline.retina.js</td>
+              <td><a href="http://omnipotent.net/jquery.sparkline/#s-about" target='_blank'>http://omnipotent.net/jquery.sparkline/#s-about</a></td>
+            </tr>
+            <tr>
+              <td>jquery-1.11.3.min.js</td>
+              <td><a href="https://jquery.com/" target='_blank'>https://jquery.com/</a></td>
+            </tr>
+            <tr>
+              <td>jquery-ui.min.js</td>
+              <td><a href="https://jqueryui.com/" target='_blank'>https://jqueryui.com/</a></td>
+            </tr>
+            <tr>
+              <td>masonry.pkgd.min.js</td>
+              <td><a href="masonry.desandro.com/" target='_blank'>masonry.desandro.com/</a></td>
+            </tr>
+            <tr>
+              <td>moment.min.js</td>
+              <td><a href="https://momentjs.com/" target='_blank'>https://momentjs.com/</a></td>
+            </tr>
+            <tr>
+              <td>perfect-scrollbar.jquery.min.js</td>
+              <td><a href="https://github.com/noraesae/perfect-scrollbar" target='_blank'>https://github.com/noraesae/perfect-scrollbar</a></td>
+            </tr>
+            <tr>
+              <td>sticky-kit.min.js</td>
+              <td><a href="http://leafo.net/sticky-kit/" target='_blank'>http://leafo.net/sticky-kit/</a></td>
+            </tr>
+            <tr>
+              <td>toggles-switches.js</td>
+              <td><a href="https://github.com/digitalsurgeons/toggles-switches" target='_blank'>https://github.com/digitalsurgeons/toggles-switches</a></td>
+            </tr>
+            <tr>
+              <td>flot</td>
+              <td><a href="http://www.flotcharts.org/" target='_blank'>http://www.flotcharts.org/</a></td>
+            </tr>
+            <tr>
+              <td>jqvmap</td>
+              <td><a href="https://jqvmap.com/" target='_blank'>https://jqvmap.com/</a></td>
+            </tr>
+            <tr>
+              <td>wysihtml5</td>
+              <td><a href="http://xing.github.io/wysihtml5/" target='_blank'>http://xing.github.io/wysihtml5/</a></td>
+            </tr>
+            <tr>
+              <td>autosize.min.js</td>
+              <td><a href="http://www.jacklmoore.com/autosize/" target='_blank'>http://www.jacklmoore.com/autosize/</a></td>
+            </tr>
+            <tr>
+              <td>fullcalendar.min.js</td>
+              <td><a href="https://fullcalendar.io/" target='_blank'>https://fullcalendar.io/</a></td>
+            </tr>
+            <tr>
+              <td>ion.rangeSlider.min.js</td>
+              <td><a href="ion.rangeSlider" target='_blank'>ion.rangeSlider</a></td>
+            </tr>
+            <tr>
+              <td>isMobile.min.js</td>
+              <td><a href="https://github.com/kaimallea/isMobile" target='_blank'>https://github.com/kaimallea/isMobile</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="support" class="u-collapse _u-mb-medium">
+      <div class='u-text-capitalize'>
+        <h4>Support Needed?</h4>
+        <hr class='c-divider c-divider--line u-mt-tiny'>
+      </div>
+      <div class="u-collapse _u-mb-small">
+        <p>
+           Once again thank you for your purchase. I'll be happy to answer the the questions you have related to the item. In case if you have any suggestion or feature, request please feel free to contact me, I'll try to implement it and will release as part of future updates.
+        </p>
+      </div>
+    </div>
+
+
+  </div>
+  <script src="js/docs.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>

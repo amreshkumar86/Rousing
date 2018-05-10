@@ -1,0 +1,32 @@
+.u-height-100p.u-bg-main.u-border-x.u-overflow-auto.u-relative(perfect-scrollbar='' tuck='{ from: "1024px" }')
+  .o-block.u-p-small.u-width-100p._u-width-100p
+
+
+    .o-block__cell.u-my-tiny
+      .o-stack.o-stack--center.o-stack--nowrap
+        .o-stack__cell.o-stack__cell--expanded
+          .c-topbar__searchBox
+            form(action='./' method='POST')
+              .c-chatSearchControl.c-control.c-control--boxed.c-control--searchBG.u-border-none.u-radius-rounded.u-pl-small.u-width-100p
+                span.c-icon.c-icon--main search
+                .c-control__input-box
+                  input.c-control__input.u-pr-small(type='search', name='search' placeholder='Search Here...' ng-model='$parent.query')
+        .o-stack__cell(class='u-hide@lg+ u-ml-tiny')
+          a(href='javascript:void(0)' class='c-button c-button--error c-button--icon' id='chatSidebarClear') clear
+
+
+    .c-chatList.o-block__cell( ng-repeat='person in vm.chat | search : ["name", "job"] : $parent.query' )
+      .o-stack.o-stack--nowrap.o-stack--center.u-border-bottom.u-py-tiny.u-cursor-pointer( ng-click='vm.switchConversation( $index ); activity.item = $index' ng-class="{ 'is-active': activity.item === $index }" )
+        .o-stack__cell.u-mr-tiny
+          .c-avatar
+            img( ng-src='{{ person.avatar }}' alt='{{ person.name }}' )
+        .o-stack__cell--expanded
+          .o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted.u-width-100p.u-mb-mini
+            .o-stack__cell.o-stack__cell--expanded
+              p {{ person.name }}
+              span.u-block.u-lh-normal.u-font-small.u-color-omitted {{ person.job }}
+            .o-stack__cell
+              span.c-badge.c-badge--success(data-badge='')
+
+    .o-block__cell
+      a(href='javascript:void(0)' class='u-block u-p-tiny u-color-omitted u-text-bare c-icon c-icon--main u-text-center' tooltip='View More') refresh

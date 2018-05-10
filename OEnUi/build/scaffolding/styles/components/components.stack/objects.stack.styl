@@ -1,0 +1,204 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Stack
+ *     - #Stack Structure
+ *     - #Stack Modifiers
+ *
+ *
+ * + @Stack Cell
+ *     - #Stack Cell Structure
+ *     - #Stack Modifiers
+ *     - #Stack Context
+ *
+ *
+ * + @Stack Cell Decendants
+ *     - #Stack Cell Decendants Structure
+ */
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Stack
+// ---------------------------------------------------------
+
+// #Stack Structure
+// -------------------------------------
+
+.o-stack
+  // Layout
+  box-sizing: border-box
+  display: flex
+  align-items: flex-start
+  justify-content: flex-start
+  flex-flow: row wrap
+  max-width: 100%
+  margin: 0
+  padding: 0
+
+
+
+
+
+
+
+// #Stack Modifiers
+// -------------------------------------
+
+.o-stack--center
+  // Layout
+  align-items: center
+
+
+
+
+.o-stack--end
+  // Layout
+  align-items: flex-end
+
+
+
+
+.o-stack--splitted
+  // Layout
+  justify-content: space-between
+
+
+
+
+.o-stack--nowrap
+  // Layout
+  flex-flow: row nowrap
+
+
+
+
+.o-stack--miniGap
+  // Layout
+  margin-left: -1 * $spacing-unit-mini
+  margin-bottom: -1 * $spacing-unit-mini
+
+
+
+
+.o-stack--tinyGap
+  // Layout
+  margin-left: -1 * $spacing-unit-tiny
+  margin-bottom: -1 * $spacing-unit-tiny
+
+
+
+
+.o-stack--smallGap
+  // Layout
+  margin-left: -1 * $spacing-unit-small
+  margin-bottom: -1 * $spacing-unit-small
+
+
+
+
+.o-stack--mediumGap
+  // Layout
+  margin-left: -1 * $spacing-unit-medium
+  margin-bottom: -1 * $spacing-unit-medium
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Stack Cell
+// ---------------------------------------------------------
+
+// #Stack Cell Structure
+// -------------------------------------
+
+.o-stack__cell
+  // Layout
+  display: block
+  flex: 0 0 auto
+
+
+
+
+
+
+
+// #Stack Modifiers
+// -------------------------------------
+
+.o-stack__cell--expanded
+  // Layout
+  flex: 1 1 0
+  max-width: 100%
+
+
+
+
+
+
+
+// #Stack Context
+// -------------------------------------
+
+.o-stack__cell
+  .o-stack--distributed > &
+    // Layout
+    flex: 1 1 0
+
+
+  .o-stack--miniGap > &
+    // Layout
+    margin-left: $spacing-unit-mini
+    margin-bottom: $spacing-unit-mini
+
+
+  .o-stack--tinyGap > &
+    // Layout
+    margin-left: $spacing-unit-tiny
+    margin-bottom: $spacing-unit-tiny
+
+
+  .o-stack--smallGap > &
+    // Layout
+    margin-left: $spacing-unit-small
+    margin-bottom: $spacing-unit-small
+
+
+  .o-stack--mediumGap > &
+    // Layout
+    margin-left: $spacing-unit-medium
+    margin-bottom: $spacing-unit-medium
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Stack Cell Decendants
+// ---------------------------------------------------------
+
+// #Stack Cell Decendants Structure
+// -------------------------------------
+
+img
+  .o-stack__cell > &
+    // Layout
+    max-width: none
+
+
+  .o-stack__cell--expanded > &
+    // Layout
+    max-width: 100%

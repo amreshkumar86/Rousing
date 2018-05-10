@@ -1,0 +1,189 @@
+.c-topbar
+  // Layout
+  height: 4em
+  position: relative
+  z-index: $over-control
+  width: 100%
+  top: 0
+  left: 0
+
+  // Theme
+  background-color: $color-main
+
+
+
+
+.js-sidebar-open .c-topbar
+  // Extra
+  transform: translate3d(-280px, 0, 0)
+
+
+
+
+.js-offcanvas--open .c-topbar
+  // Extra
+  transform: translate3d(250px, 0, 0)
+
+
+
+
+
+.c-topbar__main .c-icon
+  // Typography
+  font-size: 18px
+
+
+
+.c-topbar__aside
+  // Layout
+  width: 250px
+  background-color: $color-variant-secondary
+  border-bottom: 1px solid $clr-white-100
+
+
+
+.js-offcanvas--collapsed .c-topbar__aside
+  // Layout
+  margin-left: -250px
+
+
+
+
+.c-logo
+  // Styles
+  opacity: 0.94
+
+  // Transition
+  transition: $default-transition
+
+
+
+
+.c-logo:hover
+  // Styles
+  opacity: 1
+
+
+
+
+.c-actionButton
+  // Typography
+  line-height: 2em
+
+  // Layout
+  width: 2em
+
+  // Styles
+  border-right: 1px solid $clr-white-100
+
+  // Theme
+  background: $clr-white-100
+  color: $clr-white-900
+
+
+
+
+.c-actionButton:last-child
+  // Styles
+  border-right: 0
+
+
+
+
+.c-actionButton::before
+  // Layout
+  display: none !important
+
+
+
+
+.c-actionButton:hover
+  // Theme
+  background: $clr-white-200
+  color: $clr-white-900
+
+
+
+
+.c-topbar__main
+  // Layout
+  padding-top: 0.5em
+  padding-bottom: 0.5em
+
+  .js-offcanvas--collapsed &
+    // Layout
+    padding-bottom: 0 !important
+    padding-top: 0 !important
+    padding-left: 0 !important
+
+
+
+
+.c-topbar__mainLink:hover
+  // Theme
+  color: $color-variant-primary
+
+
+
+
+.c-topbar__mainLogoBox
+  // Layout
+  display: none
+
+
+
+
+.js-offcanvas--collapsed .c-topbar__mainLogoBox
+  // Layout
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 4em
+  align-self: stretch
+
+  // Theme
+  background: $color-variant-secondary
+
+
+
+
+.js-offcanvas--collapsed .c-topbar__toggleBox
+  // Layout
+  padding-top: 0.5em
+  padding-bottom: 0.5em
+
+
+
+
+.c-listExtended
+  // Layout
+  width: 25em
+  margin-top: 0.5em
+
+  // Styles
+  list-style: none
+
+  // Theme
+  background: $color-main
+
+
+
+
+.c-listExtended__body
+  // Layout
+  max-height: 20em
+  overflow-y: auto
+
+
+
+
+.c-topbar__sideList .c-menu__link
+  // Theme
+  color: $color-grey-minor
+
+
+
+
+.c-topbar__sideList .c-menu__link:hover
+  // Theme
+  color: $color-variant-primary

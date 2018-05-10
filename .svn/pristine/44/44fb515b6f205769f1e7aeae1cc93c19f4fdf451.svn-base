@@ -1,0 +1,30 @@
+.o-block__cell
+  ul.c-menu.c-menu--borderless.c-menu--profile.c-menu--expanded.u-shadow-medium.u-bg-main
+    li.c-menu__item.is-current
+      a.c-menu__link(href='javascript:void(0)')
+        i.c-icon.c-icon--main.c-menu__icon home
+        span.c-menu__text My profile
+    li.c-menu__item.is-active
+      a.c-menu__link(href='javascript:void(0)')
+        i.c-icon.c-icon--main.c-menu__icon attach_money
+        span.c-menu__text Balance
+        span.c-label.c-label--error hot
+    li.c-menu__item
+      a.c-menu__link(href='javascript:void(0)')
+        i.c-icon.c-icon--main.c-menu__icon call
+        span.c-menu__text Connections
+    li.c-menu__item
+      a.c-menu__link(href='javascript:void(0)')
+        i.c-icon.c-icon--main.c-menu__icon person
+        span.c-menu__text Friends
+        span.c-badge.c-menu__badge(data-badge="3")
+    li.c-divider.c-divider--line.u-my-mini
+    li.c-menu__item
+      a.c-menu__link(href='javascript:void(0)')
+        i.c-icon.c-icon--main.c-menu__icon schedule
+        span.c-menu__text Events
+    li.c-menu__item
+      a.c-menu__link(href='javascript:void(0)')
+        i.c-icon.c-icon--main.c-menu__icon settings
+        span.c-menu__text Account settings
+
