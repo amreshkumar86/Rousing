@@ -1,0 +1,113 @@
+.c-mailboxMessages__header.o-stack.o-stack--center.o-stack--splitted.u-height-auto.u-border-bottom
+
+  .c-mailboxMessages__searchBox.o-stack__cell.u-p-small.u-border-bottom.u-width-100p(class='u-width-auto@hd- u-width-100p@md-')
+    form(action='./' method='POST')
+      .c-control.c-control--searchBG.u-border-none.u-radius-rounded.u-pl-small.u-width-100p(class='u-width-auto@hd- u-width-100p@md-')
+        span.c-icon.c-icon--main search
+        .c-control__input-box
+          input.c-control__input.u-pr-small(type='search', name='search' placeholder='Search Here...' ng-model='vm.query' )
+
+
+  .o-stack__cell.u-width-100p.u-text-center(class='u-width-auto@hd- u-width-100p@md-')
+    .c-mailboxMessages__actionBar.o-stack.o-stack--center.o-stack--nowrap.o-stack--distributed.u-font-large
+      .o-stack__cell.u-flex.u-flexJustifyCenter
+        label.c-checkable
+          input.c-checkable__input.c-checkable__input--checkbox(type='checkbox', name='', value='' ng-model='vm.selectAll' ng-click='vm.checkAll()')
+          span.c-checkable__mask.c-checkable__mask--major.c-checkable__mask--checkbox.u-mr-none
+      .o-stack__cell.u-relative
+        a(href='javascript:void(0)' class='c-button c-button--transparent c-button--icon u-square') refresh
+
+      .o-stack__cell.u-relative( dropdown='' )
+        a(href='javascript:void(0)' class='c-button c-button--transparent c-button--icon u-square fn-dropdownTrigger') folder
+        ul.c-menu.c-menu--dropdown.u-font-tiny.u-r-none.u-text-left
+          li.c-menu__item
+            a.c-menu__link(href='javascript:void(0)')
+              span.c-menu__text work
+          li.c-menu__item
+            a.c-menu__link(href='javascript:void(0)')
+              span.c-menu__text Family
+          li.c-menu__item
+            a.c-menu__link(href='javascript:void(0)')
+              span.c-menu__text Private
+          li.c-menu__item
+            a.c-menu__link(href='javascript:void(0)')
+              span.c-menu__text Friends
+          li.c-menu__separator
+          li.c-menu__item
+            a.c-menu__link(href='javascript:void(0)')
+              span.c-menu__text Trash
+          li.c-menu__separator
+          li.c-menu__item
+            a.c-menu__link(href='javascript:void(0)')
+              span.c-menu__text Spam
+
+      .o-stack__cell.u-relative( dropdown='' )
+        a(href='javascript:void(0)' class='c-button c-button--transparent c-button--icon u-square fn-dropdownTrigger') label
+        ul.c-menu.c-menu--dropdown.u-font-tiny.u-r-none.u-text-left
+          li.c-menu__item
+            a.c-menu__link(href='javascript:void(0)')
+              span.c-menu__text work
+          li.c-menu__item
+            a.c-menu__link(href='javascript:void(0)')
+              span.c-menu__text Family
+          li.c-menu__item
+            a.c-menu__link(href='javascript:void(0)')
+              span.c-menu__text Private
+          li.c-menu__item
+            a.c-menu__link(href='javascript:void(0)')
+              span.c-menu__text Friends
+
+      .o-stack__cell.u-relative( dropdown='' )
+        a(href='javascript:void(0)' class='c-button c-button--transparent c-button--icon u-square fn-dropdownTrigger') filter_list
+        ul.c-menu.c-menu--dropdown.u-font-tiny.u-r-none.u-text-left
+          li.c-menu__item
+            a.c-menu__link(href='javascript:void(0)')
+              span.c-menu__text all
+          li.c-menu__item
+            a.c-menu__link(href='javascript:void(0)')
+              span.c-menu__text read
+          li.c-menu__item
+            a.c-menu__link(href='javascript:void(0)')
+              span.c-menu__text unread
+          li.c-menu__separator
+          li.c-menu__item
+            a.c-menu__link(href='javascript:void(0)')
+              span.c-menu__text starred
+          li.c-menu__item
+            a.c-menu__link(href='javascript:void(0)')
+              span.c-menu__text unstarred
+
+.c-mailbox__messages
+  //- .c-mailbox__messageBrief.o-stack.o-stack--nowrap.u-p-small.u-border-bottom( ng-repeat='email in vm.emails | search : [ "name", "title" ] : vm.query' ng-class="{ 'is-active': $state.params().id === ($index + 1) }")
+  .c-mailbox__messageBrief.o-stack.o-stack--nowrap.u-p-small.u-border-bottom( ng-repeat='email in vm.emails | search : [ "name", "title" ] : vm.query' ng-class="{ 'is-active': email.selected || $state.params.id == ($index + 1) }")
+    .o-stack__cell.u-mr-tiny
+      .o-block._u-mb-mini.u-collapse
+        .o-block__cell
+          .c-avatar
+            a(href='')
+              img( ng-src='{{ email.avatar }}' alt='{{ email.name }}' )
+        .o-block__cell
+          label.c-checkable
+            input.c-checkable__input.c-checkable__input--checkbox(type='checkbox', name='', value='{{$index}}' ng-model='email.selected')
+            span.c-checkable__mask.c-checkable__mask--small.c-checkable__mask--omitted.c-checkable__mask--checkbox.u-mr-none
+        .o-block__cell
+          a(href='' class='c-icon c-icon--main u-color-minor u-opacity-50p') star
+
+    .o-stack__cell--expanded
+      .o-stack.o-stack--center.o-stack--splitted
+        .o-stack__cell
+          a(href='' class='c-link') {{ email.name }}
+        .o-stack__cell.u-opacity-50p
+          i.c-icon.c-icon--main( ng-if='email.attachments' ) attachment
+          i.u-ml-small {{ email.receieved | relativeTime }}
+      .o-stack__cell.u-mt-mini
+        a(href='' ui-sref='email.inbox.message({ id: email.id })' class='u-text-capitalize u-block u-text-bare c-mailbox__briefTitle')
+          h4 {{ email.title }}
+        p {{ email.content }}
+
+
+
+
+.u-border-top.u-text-center
+  a(href='javascript:void(0)' class='u-block c-icon c-icon--main u-color-pivotal u-opacity-50p u-p-tiny' tooltip='Reload More') refresh
+

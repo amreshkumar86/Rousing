@@ -1,0 +1,6 @@
+#s-landing .c-navbar
+  height: auto
+  background: #fff
+
+  +from( $viewport-lg )
+    height: 4em

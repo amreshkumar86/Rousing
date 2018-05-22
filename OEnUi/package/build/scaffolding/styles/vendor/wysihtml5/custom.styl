@@ -1,0 +1,72 @@
+
+[data-wysihtml5-command]
+  //
+  text-align: center
+  justify-content: center
+  font-size: 16px
+  text-decoration: none
+  color: $color-grey-minor
+  border: 1px solid $color-grey-muted
+  margin-right: -1px
+  padding: 1em 0.5em
+  line-height: 1
+  align-self: stretch
+
+  &:hover,
+  &.wysihtml5-command-active
+    color: $color-main
+    background: $color-variant-primary
+    border-color: $color-variant-primary
+    border-left-color: hsla(0, 0%, 100%, 0.12)
+
+[data-wysihtml5-dialog]
+  //
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-bottom: -1px
+
+[data-wysihtml5-dialog] > *
+  //
+  align-self: stretch
+
+[data-wysihtml5-dialog] label:first-child
+  //
+  flex: 1 1 0
+
+[data-wysihtml5-dialog-field]
+  //-
+  line-height: 3em
+  border-bottom: 1px solid $color-grey-muted
+
+input[data-wysihtml5-dialog-field]
+  //
+  width: 100%
+  display: block
+  padding: 0 2em
+  border-left: 1px solid $color-grey-muted
+
+select[data-wysihtml5-dialog-field]
+  //
+  padding: 0 1em
+  border-color: $color-grey-muted
+  border-top: 0
+  background: transparent
+
+[data-wysihtml5-dialog-action]
+  //
+  border-radius: 0 !important
+
+
+.wysihtml5-sandbox
+  background: transparent !important
+
+.wysihtml5-sandbox html
+  height: auto
+.wysihtml5-sandbox body
+  padding: 1.5em
+
+body.wysihtml5-editor
+  background: transparent !important
+  color: inherit

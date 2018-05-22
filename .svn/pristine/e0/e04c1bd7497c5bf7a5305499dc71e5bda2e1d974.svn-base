@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<item android:drawable="@drawable/thumb_brightness"
+        android:width="30dp"
+        android:height="30dp">
+    </item>-->
+
+    <item>
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="#FFc2c2c2"
+                android:centerColor="#99c2c2c2"
+                android:endColor="#00c2c2c2"
+                android:gradientRadius="@dimen/brightness_thumb_shadow_radius"
+                android:type="radial">
+            </gradient>
+
+        </shape>
+    </item>
+
+    <item
+        android:left="15dp">
+        <shape android:shape="oval">
+            <size android:width="30dp" android:height="30dp"></size>
+            <solid android:color="#EFFF04"/>
+        </shape>
+    </item>
+</layer-list>

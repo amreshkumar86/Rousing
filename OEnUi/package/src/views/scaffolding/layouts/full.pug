@@ -1,0 +1,23 @@
+extends default.pug
+
+block page
+  //- Top bar
+  .c-topbar.o-stack.o-stack--nowrap.o-stack--center.u-shadow-mini.u-fixed( topbar )
+
+  //- All views content
+  .c-page.o-stack.o-stack--nowrap._u-flexSelfStretch
+
+    //- Offcanvas
+    .c-offcanvas.js-sticky.u-bg-main.u-fixed( offcanvas )
+
+    //- Main view content
+    .c-content.o-stack__cell.o-stack__cell--expanded( content )
+
+      //- Page header
+      .c-pageHeader.u-bg-main( page-header )
+
+      //- Views holder
+      div(ui-view)
+
+  //- Page right fixed sidebar
+  .c-sidebar( sidebar )

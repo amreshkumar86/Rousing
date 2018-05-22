@@ -1,0 +1,84 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Base
+ * + @Factors
+ * + @Units
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Base
+// ---------------------------------------------------------
+
+/**
+ * Spacing values are determined based on your
+ * base line height to achieve vertical rhythem.
+ */
+
+$base-rem-value    := 1.414rem
+$base-spacing-unit := $base-rem-value
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Factors
+// ---------------------------------------------------------
+
+/**
+ * Multiples of base spacing unit to determine how larger or
+ * smaller the spacing will be.
+ */
+
+$spacing-unit-factor-base       := (1 / 3)
+$spacing-unit-factor-multiplier := 1.618
+
+$spacing-unit-factor-mini       := $spacing-unit-factor-base
+$spacing-unit-factor-tiny       := $spacing-unit-factor-multiplier * $spacing-unit-factor-mini
+$spacing-unit-factor-small      := $spacing-unit-factor-multiplier * $spacing-unit-factor-tiny
+$spacing-unit-factor-medium     := $spacing-unit-factor-multiplier * $spacing-unit-factor-small
+$spacing-unit-factor-large      := $spacing-unit-factor-multiplier * $spacing-unit-factor-medium
+$spacing-unit-factor-big        := $spacing-unit-factor-multiplier * $spacing-unit-factor-large
+$spacing-unit-factor-huge       := $spacing-unit-factor-multiplier * $spacing-unit-factor-big
+$spacing-unit-factor-massive    := $spacing-unit-factor-multiplier * $spacing-unit-factor-huge
+$spacing-unit-factor-gigantic   := $spacing-unit-factor-multiplier * $spacing-unit-factor-massive
+$spacing-unit-factor-divine     := $spacing-unit-factor-multiplier * $spacing-unit-factor-gigantic
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Units
+// ---------------------------------------------------------
+
+/**
+ * Acutal spacing values.
+ */
+
+$spacing-unit-mini     := $base-spacing-unit * $spacing-unit-factor-mini
+$spacing-unit-tiny     := $base-spacing-unit * $spacing-unit-factor-tiny
+$spacing-unit-small    := $base-spacing-unit * $spacing-unit-factor-small
+$spacing-unit-medium   := $base-spacing-unit * $spacing-unit-factor-medium
+$spacing-unit-large    := $base-spacing-unit * $spacing-unit-factor-large
+$spacing-unit-big      := $base-spacing-unit * $spacing-unit-factor-big
+$spacing-unit-huge     := $base-spacing-unit * $spacing-unit-factor-huge
+$spacing-unit-massive  := $base-spacing-unit * $spacing-unit-factor-massive
+$spacing-unit-gigantic := $base-spacing-unit * $spacing-unit-factor-gigantic
+$spacing-unit-divine   := $base-spacing-unit * $spacing-unit-factor-divine

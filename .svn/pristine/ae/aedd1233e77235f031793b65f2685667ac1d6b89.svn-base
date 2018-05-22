@@ -1,0 +1,75 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Definition List
+ *     - #Definition List Structure
+ *
+ *
+ * + @Definition List Term
+ *     - #Definition List Term Structure
+ *
+ *
+ * + @Definition List Data
+ *     - #Definition List Data Structure
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Definition List
+// ---------------------------------------------------------
+
+// #Definition List Structure
+// -------------------------------------
+
+dl
+  // === Mixins
+  collapse()
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Definition List Term
+// ---------------------------------------------------------
+
+// #Definition List Term Structure
+// -------------------------------------
+
+dt
+  // Typography
+  font-weight: bold
+  text-transform: capitalize
+
+  // Layout
+  margin-bottom: $spacing-unit-mini
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Definition List Data
+// ---------------------------------------------------------
+
+// #Definition List Data Structure
+// -------------------------------------
+
+dd
+  // Layout
+  margin-left: $spacing-unit-small
+  margin-bottom: $spacing-unit-tiny

@@ -1,0 +1,86 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @HTML
+ *      - #HTML Structure
+ *
+ *
+ * + @Body
+ *      - #Body Structure
+ *
+ *
+ * + @Selection
+ *      - #Selection Structure
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @HTML
+// ---------------------------------------------------------
+
+// #HTML Structure
+// -------------------------------------
+
+/**
+ * [1] : Setting this by `vw` unit to allow liquid spacing e.g. margins and
+ *       paddings change relative to viewport width.
+ */
+
+html
+  // Typography
+  font-size: responsive 10px 16px
+  font-range: $viewport-xs $viewport-hd
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Body
+// ---------------------------------------------------------
+
+// #Body Structure
+// -------------------------------------
+
+body
+  // Typography
+  line-height: $base-line-height
+  font-family: $font-stack-sans
+  font-size: responsive 13px 14px
+  font-range: $viewport-xs $viewport-hd
+
+  // Layout
+  overflow: hidden
+
+  // Colors
+  color: $color-grey-minor
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Selection
+// ---------------------------------------------------------
+
+// #Selection Structure
+// -------------------------------------
+
+::selection
+  // Theme
+  background-color: lightness($color-variant-primary, 95%)
+  color: $color-grey-pivotal

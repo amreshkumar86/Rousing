@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ponut" data-toggle-switch-watch="">
+<head>
+<title ng-bind="title"></title>
+<meta charset="UTF-8">
+<meta name="keywords" content="angularjs, admin, dashboard">
+<meta name="description" content="Angular admin dashboard">
+<meta name="copyright" content="Mo Ali. All rights reserved">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Mo Ali, hello@codeguru.io">
+<meta name="designer" content="Mo Ali">
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<link rel="apple-touch-icon" sizes="180x180"
+	href="resources/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png"
+	href="resources/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png"
+	href="resources/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="resources/favicons/manifest.json">
+<link rel="mask-icon" href="resources/favicons/safari-pinned-tab.svg"
+	color="#5bbad5">
+<link rel="shortcut icon" href="resources/favicons/favicon.ico">
+<meta name="msapplication-config"
+	content="resources/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<link rel="stylesheet" href="app.dark.css">
+</head>
+<body>
+	<div
+		class="c-topbar o-stack o-stack--nowrap o-stack--center u-shadow-mini u-fixed"
+		topbar></div>
+	<div class="c-page o-stack o-stack--nowrap _u-flexSelfStretch">
+		<div class="c-offcanvas js-sticky u-bg-main u-fixed" offcanvas></div>
+		<div class="c-content o-stack__cell o-stack__cell--expanded" content>
+			<div class="c-pageHeader u-bg-main" page-header></div>
+			<div ui-view></div>
+		</div>
+	</div>
+	<div class="c-sidebar" sidebar></div>
+	<settings></settings>
+	<script src="app.colors-dark.js" type="text/javascript"></script>
+	<script src="app.min.js"></script>
+</body>
+</html>

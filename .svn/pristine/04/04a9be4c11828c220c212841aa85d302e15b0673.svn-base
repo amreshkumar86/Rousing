@@ -1,0 +1,132 @@
+
+
+.u-absolute.u-width-100p.u-height-100p.u-text-center.u-flex.u-flexColumn.u-flexJustifyCenter( ng-if="vm.mailView.defaultStatus" ng-bind-html="vm.message")
+
+.c-emailMsgWrapper__inner( ng-if="!vm.mailView.defaultStatus" )
+  .o-stack.o-stack--center.o-stack--nowrap.o-stack--distributed.u-font-large.u-height-auto.u-border-bottom.u-text-center
+    .o-stack__cell.u-relative(class='u-hide@hd+')
+      a(ui-sref='email.inbox' class='c-button c-button--transparent c-button--icon u-square fn-messagesRevealer') keyboard_backspace
+
+    .o-stack__cell.u-relative
+      a(href='javascript:void(0)' class='c-button c-button--transparent c-button--icon u-square') reply
+
+    .o-stack__cell.u-relative
+      a(href='javascript:void(0)' class='c-button c-button--transparent c-button--icon u-square') forward
+
+    .o-stack__cell.u-relative
+      a(href='javascript:void(0)' class='c-button c-button--transparent c-button--icon u-square') archive
+
+    .o-stack__cell.u-relative
+      a(href='javascript:void(0)' class='c-button c-button--transparent c-button--icon u-square fn') error
+
+    .o-stack__cell.u-relative
+      a(href='javascript:void(0)' class='c-button c-button--transparent c-button--icon u-square') delete
+
+    .o-stack__cell.u-relative( dropdown='' )
+      a(href='javascript:void(0)' class='c-button c-button--transparent c-button--icon u-square fn-dropdownTrigger') folder
+      ul.c-menu.c-menu--dropdown.u-font-tiny.u-r-none.u-text-left
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            span.c-menu__text work
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            span.c-menu__text Family
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            span.c-menu__text Private
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            span.c-menu__text Friends
+        li.c-menu__separator
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            span.c-menu__text Trash
+        li.c-menu__separator
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            span.c-menu__text Spam
+
+    .o-stack__cell.u-relative( dropdown='' )
+      a(href='javascript:void(0)' class='c-button c-button--transparent c-button--icon u-square fn-dropdownTrigger') label
+      ul.c-menu.c-menu--dropdown.u-font-tiny.u-r-none.u-text-left
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            span.c-menu__text Important
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            span.c-menu__text Business
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            span.c-menu__text Private
+
+    .o-stack__cell.u-relative( dropdown='' )
+      a(href='javascript:void(0)' class='c-button c-button--transparent c-button--icon u-square fn-dropdownTrigger') more_vert
+      ul.c-menu.c-menu--dropdown.u-font-tiny.u-r-none.u-text-left
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            span.c-menu__text Mark as reaad
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            span.c-menu__text mark as unread
+        li.c-menu__separator
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            span.c-menu__text other
+
+
+  div.u-p-medium._u-mt-medium.u-collapse
+    h3 {{ vm.mailView.content.title }}.
+    .o-stack.o-stack--center.o-stack--splitted
+      .o-stack__cell
+        .o-stack.o-stack--nowrap
+          .o-stack__cell.u-mr-small
+            .c-avatar
+              a(href='javascript:void(0)')
+                img(ng-src='{{ vm.mailView.content.avatar }}' alt='{{ vm.mailView.content.name }}')
+          .o-stack__cell
+            a(href='javascript:void(0)' class='u-inlineBlock u-text-bare')
+              h4 {{ vm.mailView.content.name }}
+            div
+              span From:
+              a(href='javascript:void(0)' class='u-ml-tiny c-link') {{ vm.mailView.content.from }}
+            div
+              span to:
+              a(href='javascript:void(0)' class='u-ml-tiny c-link') {{ vm.mailView.content.to }}
+
+      .o-stack__cell.u-text-capitalize
+        p.u-mb-mini {{ vm.mailView.content.received | relativeTime }}
+        p
+          span.c-badge.c-badge--error(datat-badge)
+          span.u-ml-tiny work
+
+    div(ng-bind-html='vm.message')
+  div.u-p-medium
+    form
+      #toolbar(style='display: none; flex: 0 0 auto' class='o-stack o-stack--center o-stack--distributed')
+        a(class='o-stack__cell c-icon c-icon--main' data-wysihtml5-command='bold' title='CTRL+B') format_bold
+        a(class='o-stack__cell c-icon c-icon--main' data-wysihtml5-command='italic' title='CTRL+I') format_italic
+        a(class='o-stack__cell c-icon c-icon--main' data-wysihtml5-command='createLink') insert_link
+        a(class='o-stack__cell c-icon c-icon--main' data-wysihtml5-command='insertImage') insert_photo
+        a(class='o-stack__cell u-font-bold' data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h1') H1
+        a(class='o-stack__cell u-font-bold' data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h2') H2
+        a(class='o-stack__cell c-icon c-icon--main' data-wysihtml5-command='insertUnorderedList') format_list_bulleted
+        a(class='o-stack__cell c-icon c-icon--main' data-wysihtml5-command='insertOrderedList') format_list_numbered
+        div(data-wysihtml5-dialog='createLink' style='display: none;')
+          label
+            input(data-wysihtml5-dialog-field='href', placeholder='Put URL Here')
+          a(data-wysihtml5-dialog-action='save' class='c-button') OK
+          a(data-wysihtml5-dialog-action='cancel' class='c-button c-button--error') Cancel
+        div(data-wysihtml5-dialog='insertImage', style='display: none;')
+          label
+            input(data-wysihtml5-dialog-field='src', placeholder='Image URL')
+          label
+            select(data-wysihtml5-dialog-field='className')
+              option(value='0' selected) default
+              option(value='wysiwyg-float-left') left
+              option(value='wysiwyg-float-right') right
+          a(data-wysihtml5-dialog-action='save' class='c-button') OK
+          a(data-wysihtml5-dialog-action='cancel' class='c-button c-button--error') Cancel
+      textarea#textarea(placeholder='Write Message' class='u-width-100p u-border-muted u-p-tiny')
+      .u-mt-small
+        input(type='submit' value='reply' class='c-button c-button--secondary')
+

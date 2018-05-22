@@ -1,0 +1,63 @@
+.o-grid__cell
+  .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-main
+    .c-portlet__header.o-block__cell.u-px-small.u-py-tiny.u-border-bottom
+      .o-stack.o-stack--center.o-stack--splitted
+        .o-stack__cell
+          h5 Group Of Links
+        .o-stack__cell
+          .u-relative( dropdown='' )
+            .fn-dropdownTrigger
+              a(href='javascript:void(0)' class='c-icon c-icon--main u-color-minor u-opacity-50p') more_vert
+
+            ul.c-menu.c-menu--dropdown.u-r-none
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Projects
+              li.c-menu__separator
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Tasks
+                  span.c-badge.c-menu__badge(data-badge="15")
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Calendar
+              li.c-menu__separator
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Lock
+
+
+    .c-portlet__content.o-block__cell
+      ul.c-menu(style='max-width: none')
+        li.c-menu__item.is-current
+          a.c-menu__link(href='javascript:void(0)')
+            i.c-icon.c-icon--main.c-menu__icon inbox
+            span.c-menu__text inbox
+            span.c-badge.c-menu__badge(data-badge="100")
+        li.c-menu__item.is-active
+          a.c-menu__link(href='javascript:void(0)')
+            i.c-icon.c-icon--main.c-menu__icon show_chart
+            span.c-menu__text visits
+            span.c-badge.c-menu__badge(data-badge="100000+")
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            i.c-icon.c-icon--main.c-menu__icon call
+            span.c-menu__text calls
+            span.c-badge.c-menu__badge(data-badge="30")
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            i.c-icon.c-icon--main.c-menu__icon sms
+            span.c-menu__text SMS
+            span.c-badge.c-menu__badge(data-badge="13")
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            i.c-icon.c-icon--main.c-menu__icon message
+            span.c-menu__text Messages
+            span.c-badge.c-menu__badge(data-badge="14")
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            i.c-icon.c-icon--main.c-menu__icon bookmark
+            span.c-menu__text Bookmarks
+            span.c-badge.c-menu__badge(data-badge="5")
+
+

@@ -1,0 +1,33 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Screen Reader
+ */
+
+
+
+
+// ---------------------------------------------------------
+// @Screen Reader
+// ---------------------------------------------------------
+
+.u-sr-only
+  border: 0
+  clip: rect(0, 0, 0, 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+
+  &--focusable:active,
+  &--focusable:focus
+    position: static
+    width: auto
+    height: auto
+    margin: 0
+    overflow: visible
+    clip: auto

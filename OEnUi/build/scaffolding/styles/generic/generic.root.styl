@@ -1,0 +1,97 @@
+// ---------------------------------------------------------
+// @Root Elements
+// ---------------------------------------------------------
+
+/**
+ * Reset `padding` and `margin` of all elements.
+ */
+
+*
+  // Layout
+  padding: 0
+  margin: 0
+
+  // Styles
+  outline: 0
+
+
+  &:focus
+    // Styles
+    outline: 0
+
+
+
+
+*,
+::before,
+::after
+  // Layout
+  box-sizing: inherit
+
+  // Theme
+  background-repeat: no-repeat
+
+
+
+
+/**
+ * [1] : Add text decoration inheritance in all browsers.
+ * [2] : Add vertical alignment inheritence in all browsers.
+ */
+
+::before,
+::after
+  // Typography
+  text-decoration: inherit // [1]
+
+  // Layout
+  vertical-align: inherit  // [2]
+
+
+
+
+::selection
+  // Styles
+  text-shadow: none
+
+
+
+
+::placeholder
+  // Styles
+  opacity: 0.6
+  color: $color-grey-minor
+
+
+
+
+[hidden]
+  // Layout
+  display: none
+
+
+
+
+/**
+ * [1] : Prevent adjustments of font size after orientation
+ *       changes in IE on Windows Phone and in iOS.
+ * [2] : Ensure the page always fills at least the entire height of the
+ *       viewport.
+ * [3] : Used for text smoothing
+ *
+ */
+
+html
+  // Typography
+  text-size-adjust: 100% // [1]
+
+  // Layout
+  box-sizing: border-box
+  overflow-y: scroll
+  min-height: 100vh      // [2]
+
+
+
+  // === Mixins
+
+  antialiase()           // [3]

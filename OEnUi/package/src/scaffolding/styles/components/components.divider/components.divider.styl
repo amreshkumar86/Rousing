@@ -1,0 +1,443 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Layout Variables
+ *     - #Styles Variables
+ *     - #Color Variables
+ *
+ *
+ * + @Divider
+ *     - #Divider Structure
+ *
+ *     - #Divider Modifiers
+ *         > $Line Divider
+ *         > $Double Divider
+ *         > $Dashed Divider
+ *         > $Dotted Divider
+ *         > $Slashed Divider
+ *         > $Faded Edges Divider
+ *         > $Splitted Divider
+ *         > $Croped Shadow Divider
+ *         > $Triangle Divider
+ *         > $Multi Triangles Divider
+ *         > $Multi Triangles Divider
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Layout Variables
+// -------------------------------------
+
+$divider-triangle-size            = 2em
+$divider-triangles-size           = 2em
+
+
+
+
+
+
+
+// #Styles Variables
+// -------------------------------------
+
+$divider-rounded-split-radius     = 3em
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$divider-default-background-color = $color-grey-muted
+$divider-faded-background         = $color-grey-omitted
+$divider-shadow-color             = $color-grey-muted
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Divider
+// ---------------------------------------------------------
+
+// #Divider Structure
+// -------------------------------------
+
+.c-divider
+  // Layout
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: visible
+  height: 0
+  border: 0
+  position: relative
+
+  // Styles
+  border-top-width: 1px
+
+  // Theme
+  border-color: $divider-default-background-color
+
+
+
+  // === Pseudo Elements
+
+  &::before,
+  &::after
+    // Extra
+    content: ''
+
+
+
+
+
+
+
+// #Divider Modifiers
+// -------------------------------------
+
+
+/**
+ * ===== $Line Divider
+ */
+
+.c-divider--line
+  // Styles
+  border-style: solid
+
+
+
+
+
+
+/**
+ * ===== $Double Divider
+ */
+
+.c-divider--double
+  // Styles
+  border-style: double
+  border-top-width: 3px
+
+
+
+
+
+
+/**
+ * ===== $Dashed Divider
+ */
+
+.c-divider--dashed
+  // Styles
+  border-style: dashed
+
+
+
+
+
+
+/**
+ * ===== $Dotted Divider
+ */
+
+.c-divider--dotted
+  // Styles
+  border-style: dotted
+
+
+
+
+
+
+/**
+ * ===== $Slashed Divider
+ */
+
+.c-divider--slashed
+  // Layout
+  height: 0.5em
+
+  // Styles
+  opacity: 0.4
+
+  // Theme
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAALElEQVQYV2NkwAKa+2Y+Y0QXBwnWFqVLoUjABEGK4RLIgnAJdEGwBDZBkAQANlsWl4ksNLgAAAAASUVORK5CYII=') repeat
+
+
+
+
+
+
+/**
+ * ===== $Faded Edges Divider
+ */
+
+.c-divider--faded
+  // Styles
+  border-style: none
+
+
+
+  // === Pseudo Elements
+
+  &::before
+    // Layout
+    display: block
+    width: 100%
+    height: 1px
+    position: absolute
+    top: 0
+    left: 0
+
+    // Theme
+    background-image: linear-gradient(to right, transparent, $divider-faded-background, transparent)
+
+    // Extra
+    content: ''
+
+
+
+
+
+
+/**
+ * ===== $Splitted Divider
+ */
+
+.c-divider--iconSeparated,
+.c-divider--textSeparated
+  // Typography
+  text-align: center
+
+
+
+  // === Pseudo Elements
+
+  &::after
+    // Typography
+    line-height: 1
+
+    // Layout
+    margin-top: -2px
+    padding: 1em
+    position: relative
+    z-index: $over-content
+
+    // Theme
+    background: $color-main
+
+    // Extra
+    content: attr(data-content)
+
+
+
+
+.c-divider--iconSeparated::after
+  // Typography
+  font-family: $font-icon
+  font-weight: normal
+  text-transform: none
+  font-style: normal
+
+
+
+
+
+
+/**
+ * ===== $Croped Shadow Divider
+ */
+
+.c-divider--shadow
+  // Layout
+  height: 1em
+  overflow: hidden
+
+  &::before
+    // Layout
+    width: 100%
+    display: block
+    height: inherit
+    position: relative
+    bottom: 100%
+
+    // Styles
+    border-radius: 100%
+    box-shadow: 0 0 0.5em $divider-shadow-color
+
+    // Extra
+    content: ''
+
+
+
+
+
+
+/**
+ * ===== $Triangle Divider
+ */
+
+.c-divider--triangleUp,
+.c-divider--triangleDown
+  // Layout
+  height: $divider-triangle-size
+
+  // Theme
+  background: currentColor
+
+
+
+
+.c-divider--triangleUp::before,
+.c-divider--triangleDown::after
+  // Layout
+  display: block
+  width: $divider-triangle-size
+  height: $divider-triangle-size
+  position: absolute
+  left: 50%
+  margin-left: -(0.5 * $divider-triangle-size)
+
+  // Extra
+  transform: rotate(45deg)
+
+
+
+
+.c-divider--triangleUp::before
+  // Layout
+  bottom: 0.48 * $divider-triangle-size
+
+  // Theme
+  background: currentColor
+
+
+
+
+.c-divider--triangleDown::after
+  // Layout
+  z-index: $over-content
+  top: 0.48 * $divider-triangle-size
+
+  // Theme
+  background: currentColor
+
+
+
+
+
+
+/**
+ * ===== $Multi Triangles Divider
+ */
+
+.c-divider--trianglesUp,
+.c-divider--trianglesDown
+  // Layout
+  height: $divider-triangles-size
+
+  // Theme
+  background: currentColor
+
+
+
+
+.c-divider--trianglesUp::before,
+.c-divider--trianglesDown::after
+  // Layout
+  display: block
+  width: $divider-triangles-size
+  height: $divider-triangles-size
+  position: absolute
+  left: 50%
+  margin-left: -(0.5 * $divider-triangle-size)
+
+  // Extra
+  transform: rotate(45deg)
+
+
+
+
+.c-divider--trianglesUp::before
+  // Layout
+  bottom: 0.48 * $divider-triangles-size
+
+  // Styles
+  box-shadow: -($divider-triangles-size) ($divider-triangles-size) 0 currentColor, ($divider-triangles-size) (-($divider-triangles-size)) 0 currentColor
+
+  // Theme
+  background: currentColor
+  color: inherit
+
+
+
+
+.c-divider--trianglesDown::after
+  // Layout
+  top: 0.5 * ($divider-triangles-size)
+  z-index: $over-content
+
+  // Styles
+  box-shadow: -($divider-triangles-size) ($divider-triangles-size) 0 currentColor, ($divider-triangles-size) (-($divider-triangles-size)) 0 currentColor
+
+  // Theme
+  background: currentColor
+  color: inherit
+
+
+
+
+
+
+/**
+ * ===== $Multi Triangles Divider
+ */
+
+.c-divider--roundedSplit
+  // Styles
+  border-radius: 0 0 $divider-rounded-split-radius $divider-rounded-split-radius
+
+
+
+  // === Pseudo Elements
+
+  &::before,
+  &::after
+    // Layout
+    display: block
+    width: 50%
+    height: $divider-rounded-split-radius
+    z-index: $over-content
+
+    // Theme
+    background: currentColor
+
+
+  &::before
+    // Styles
+    border-radius: 0 $divider-rounded-split-radius 0 0
+
+
+  &::after
+    // Styles
+    border-radius: $divider-rounded-split-radius 0 0 0

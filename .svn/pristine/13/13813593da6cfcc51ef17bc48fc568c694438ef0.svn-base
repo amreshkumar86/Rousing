@@ -1,0 +1,207 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Typography Variables
+ *     - #Layout Variables
+ *     - #Styles Variables
+ *     - #Color Variables
+ *     - #Easing Variables
+ *
+ *
+ * + @Tag
+ *     - #Tag Structure
+ *     - #Tag Modifiers
+ *     - #Tag States
+ *
+ *
+ * + @Element Name
+ *     - #Element Name Structure
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Typography Variables
+// -------------------------------------
+
+$tag-font-size        = 0.8em
+$tag-label-font-size  = 1.33em
+
+
+
+
+
+
+
+// #Layout Variables
+// -------------------------------------
+
+$tag-height           = 2.6em
+$tag-padding          = 1em
+$tag-label-spacing    = 0.5em
+
+
+
+
+
+
+
+// #Styles Variables
+// -------------------------------------
+
+$tag-border-radius    = $base-border-radius
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$tag-color            = $color-grey-pivotal
+$tag-background-color = $color-grey-muted
+$tag-hover-background = $color-grey-pivotal
+$tag-hover-color      = $color-main
+
+
+
+
+
+
+
+// #Easing Variables
+// -------------------------------------
+
+$tag-transition       = $default-transition
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Tag
+// ---------------------------------------------------------
+
+// #Tag Structure
+// -------------------------------------
+
+.c-tag
+  // Typography
+  font-size: $tag-font-size
+  text-transform: capitalize
+  line-height: $tag-height
+  white-space: nowrap
+
+  // Layout
+  display: inline-flex
+  align-items: center
+  padding-right: $tag-padding
+  padding-left: $tag-padding
+  overflow: visible
+  vertical-align: middle
+
+  // Styles
+  text-decoration: none
+  border-radius: $tag-border-radius
+
+  // Theme
+  color: $tag-color
+  background-color: $tag-background-color
+
+  // Easing
+  transition: $tag-transition
+
+  // Extra
+  transform: translate3d(0, 0, 0)
+  cursor: pointer
+
+
+
+  // === Mixins
+
+  selectable(none)
+  undragable()
+
+
+
+
+
+
+
+// #Tag Modifiers
+// -------------------------------------
+
+.c-tag--labeled
+  &::before
+    // Typography
+    font-size: $tag-label-font-size
+    font-family: $font-icon
+    font-weight: normal
+    font-style: normal
+    text-transform: none
+    font-feature-settings: 'liga'
+
+
+    // Layout
+    margin-right: $tag-label-spacing
+
+    // Extra
+    content: 'label'
+
+
+
+
+
+
+
+// #Tag States
+// -------------------------------------
+
+.c-tag:hover
+  // Theme
+  background: $tag-hover-background
+  color: $tag-hover-color
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Element Name
+// ---------------------------------------------------------
+
+// #Element Name Structure
+// -------------------------------------
+
+.c-tag__dismiss
+  // Typography
+  font-size: 1em
+  text-align: center
+
+  // Layout
+  display: block
+  margin-left: 0.5em
+  position: relative
+  z-index: 10
+
+  // Extra
+  cursor: pointer

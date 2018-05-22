@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_plain">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nick_name_et"
+        android:layout_margin="25dp"
+        android:textColor="#FB27D3"
+        android:textColorHint="#FEBCCA"
+        android:hint="Enter nick name"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nick_name_et"
+        android:layout_margin="25dp"
+        android:textSize="16sp"
+        android:text="DONE"
+        android:id="@+id/done_btn_tv"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="@drawable/button_bg"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"/>
+
+</RelativeLayout>

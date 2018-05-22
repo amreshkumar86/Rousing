@@ -1,0 +1,54 @@
+.c-offcanvas
+  // Layout
+  width: 250px
+  height: calc(100vh - 4em)
+  top: 4em
+  left: 0
+  z-index: $over-page
+  flex-shrink: 0
+
+  // Styles
+  box-shadow: 4px 0 6px -3px rgba(0, 0, 0, 0.12)
+
+  background: $color-main
+
+  .c-menu,
+  .c-menu .c-menu__link,
+  .c-menu .c-menu__icon
+    border-color: $color-grey-muted
+    color: $color-grey-minor
+
+
+  .js-offcanvas--collapsed &
+    // Layout
+    width: 4em;
+    min-height: 100vh
+
+
+  .js-offcanvas--out &
+    // Layout
+    position: fixed
+    height: 100vh
+    top: 0
+    left: 0
+    overflow-y: auto
+
+  .c-badge::after
+    border: 0
+
+
+
+
+.js-sidebar-open .c-offcanvas
+  // Extra
+  transform: translate3d(-280px, 0, 0)
+
+
+
+
+.js-offcanvas--out .c-offcanvas
+  // Layout
+  z-index: 0
+
+  // Styles
+  box-shadow: -4px 0 6px -2px rgba(0, 0, 0, 0.04)

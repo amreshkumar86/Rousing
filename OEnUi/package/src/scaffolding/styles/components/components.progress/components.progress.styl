@@ -1,0 +1,232 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Styles Variables
+ *     - #Color Variables
+ *
+ *
+ * + @Progress
+ *     - #Progress Structure
+ *     - #Progress Modifiers
+ */
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Styles Variables
+// -------------------------------------
+
+$progress-spinner-border-width       = 3px
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$progress-flipper-background         = $color-variant-primary
+$progress-spinner-light-border-color = $color-grey-muted
+$progress-spinner-border-color       = $color-variant-secondary
+$progress-striped-strips-color       = $color-variant-accent
+$progress-striped-background         = $color-grey-muted
+$progress-flat-background            = $color-grey-muted
+$progress-flat-progress-background   = $color-aside-error
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Progress
+// ---------------------------------------------------------
+
+// #Progress Structure
+// -------------------------------------
+
+.c-progress
+  // Layout
+  width: 100%
+  height: 1em
+  position: relative
+
+  // Styles
+  border: none
+
+  // Extra
+  -moz-appearance: none
+  -webkit-appearance: none
+  appearance: none
+
+
+
+  // === Coupling
+
+  &::-webkit-progress-bar
+    // Theme
+    background: transparent
+
+
+
+
+
+
+
+// #Progress Modifiers
+// -------------------------------------
+
+
+/**
+ * ===== $Flipper Progerss
+ */
+
+.c-progress--flipper
+  // Layout
+  width: 3em
+  height: 3em
+
+  // Theme
+  background: $progress-flipper-background
+  color: $progress-flipper-background
+
+  // Easing
+  animation: flip 1.2s infinite ease-in-out
+
+
+
+  // === Coupling
+
+  &::-webkit-progress-value
+    // Theme
+    background: transparent
+
+
+  &::-moz-progress-bar
+    // Theme
+    background: $progress-flipper-background
+
+
+
+
+
+
+/**
+ * ===== $Spinner Progerss
+ */
+
+.c-progress--spinner
+  // Layout
+  display: block
+  width: 2em
+  height: 2em
+
+  // Styles
+  border: $progress-spinner-border-width solid $progress-spinner-light-border-color
+  border-left: $progress-spinner-border-width solid $progress-spinner-border-color
+  border-radius: 100%
+
+  // Theme
+  background: transparent
+  color: transparent
+
+  // Easing
+  animation: spin 0.6s linear infinite
+
+
+
+  // === Coupling
+
+  &::-webkit-progress-value
+    // Theme
+    background: transparent
+
+
+  &::-moz-progress-bar
+    // Theme
+    background: transparent
+
+
+
+
+
+
+/**
+ * ===== $Striped Progerss
+ */
+
+$progress-striped-shared =
+  background: linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.08) 33%, rgba(0, 0, 0, 0.08) 66%, transparent 66%)
+  background-color: $progress-striped-strips-color
+  background-size: 2em 1em
+
+
+.c-progress--striped
+  // Layout
+  overflow: hidden
+
+  // Styles
+  border-radius: 10em
+
+  // Theme
+  background: $progress-striped-background
+  color: $progress-striped-strips-color
+
+
+
+  // === Coupling
+
+  &::-webkit-progress-value
+    {$progress-striped-shared}
+
+
+  &::-moz-progress-bar
+    {$progress-striped-shared}
+
+
+
+
+
+
+/**
+ * ===== $Flat Progerss
+ */
+
+.c-progress--flat
+  // Layout
+  overflow: hidden
+
+  // Styles
+  border-radius: 10em
+
+  // Theme
+  background: $progress-flat-background
+  color: $progress-flat-progress-background
+
+
+
+
+  // === Coupling
+
+
+  &::-webkit-progress-value
+    // Theme
+    background: $progress-flat-progress-background
+
+
+  &::-moz-progress-bar
+    // Theme
+    background: $progress-flat-progress-background

@@ -1,0 +1,388 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/*
+ * + @Settings
+ *     - #Typography Variables
+ *     - #Layout Variables
+ *     - #Styles Variables
+ *     - #Color Variables
+ *
+ *
+ * + @Notification
+ *     - #Notification Structure
+ *     - #Notification Modifiers
+ *
+ *
+ * + @Notification Descendants
+ *     - #Notification Descendants Structure
+ *
+ * + @Notification Message
+ *     - #Notification Message Structure
+ *     - #Notification Message Modifiers
+ *     - #Notification Message States
+ *
+ *
+ * + @Message Descendants
+ *     - #Message Descendants Structure
+ *
+ *
+ * + @Message Body
+ *     - #Message Body Structure
+ *
+ *
+ * + @Message Close
+ *     - #Message Close Structure
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Typography Variables
+// -------------------------------------
+
+$notification-text-size            = 0.875em
+
+
+
+
+
+
+
+// #Layout Variables
+// -------------------------------------
+
+$notification-width                = 20em
+$notification-padding              = 0.5em 1em
+
+
+
+
+
+
+
+// #Styles Variables
+// -------------------------------------
+
+$notification-shadow               = $shadow-tiny
+$notification-radius               = $base-border-radius
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$notification-background           = $color-grey-pivotal
+$notification-color                = $clr-white-900
+$notification-primary-background   = $color-variant-primary
+$notification-secondary-background = $color-variant-secondary
+$notification-accent-background    = $color-variant-accent
+$notification-info-background      = $color-aside-info
+$notification-warning-background   = $color-aside-warning
+$notification-error-background     = $color-aside-error
+$notification-success-background   = $color-aside-success
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Notification
+// ---------------------------------------------------------
+
+// #Notification Structure
+// -------------------------------------
+
+.c-notification
+  // Layout
+  display: flex
+  flex-flow: column nowrap
+  justify-content: center
+  align-items: center
+  padding: 1em
+  position: fixed
+  top: 0
+  right: 0
+  z-index: $over-screen
+
+
+
+  // === Mixins
+
+  collapse()
+
+
+
+
+
+
+
+// #Notification Modifiers
+// -------------------------------------
+
+.c-notification--topLeft
+  // Layout
+  right: auto
+  left: 0
+
+
+
+
+.c-notification--topCenter
+  // Typography
+  // Layout
+  right: auto
+  left: 50%
+
+  // Extra
+  transform: translate3d(-50%, 0, 0)
+
+
+
+
+.c-notification--bottomRight
+  // Layout
+  top: auto
+  bottom: 0
+
+
+
+
+.c-notification--bottomCenter
+  // Layout
+  top: auto
+  right: auto
+  bottom: 0
+  left: 50%
+
+  // Extra
+  transform: translate3d(-50%, 0, 0)
+
+
+
+
+.c-notification--bottomLeft
+  // Layout
+  top: auto
+  right: auto
+  bottom: 0
+  left: 0
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Notification Descendants
+// ---------------------------------------------------------
+
+// #Notification Descendants Structure
+// -------------------------------------
+
+*
+  .c-notification > &
+    // Layout
+    margin-bottom: 0.5em
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Notification Message
+// ---------------------------------------------------------
+
+// #Notification Message Structure
+// -------------------------------------
+
+.c-notification__message
+  // Layout
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  width: $notification-width
+  padding: $notification-padding
+  position: relative
+  // visibility: hidden
+
+  // Styles
+  box-shadow: $notification-shadow
+  border-radius: $notification-radius
+  // opacity: 0
+
+  // Theme
+  background: $notification-background
+  color: $notification-color
+
+  // Easing
+  transition: $default-transition
+
+  // Extra
+  // transform: translateY(-1em)
+
+
+
+  // === Mixins
+
+  collapse('horizontal')
+
+
+
+
+
+
+
+// #Notification Message Modifiers
+// -------------------------------------
+
+.c-notification__message--primary
+  // Theme
+  background-color: $notification-primary-background
+
+
+
+
+.c-notification__message--secondary
+  // Theme
+  background-color: $notification-secondary-background
+
+
+
+
+.c-notification__message--accent
+  // Theme
+  background-color: $notification-accent-background
+
+
+
+
+.c-notification__message--info
+  // Theme
+  background-color: $notification-info-background
+
+
+
+
+.c-notification__message--warning
+  // Theme
+  background-color: $notification-warning-background
+
+
+
+
+.c-notification__message--error
+  // Theme
+  background-color: $notification-error-background
+
+
+
+
+.c-notification__message--success
+  // Theme
+  background-color: $notification-success-background
+
+
+
+
+
+
+
+// #Notification Message States
+// -------------------------------------
+
+.c-notification__message
+  &.is-visible
+    // Layout
+    visibility: visible
+
+    // Styles
+    opacity: 1
+
+    // Extra
+    transform: translateY(0)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Message Descendants
+// ---------------------------------------------------------
+
+// #Message Descendants Structure
+// -------------------------------------
+
+*
+  .c-notification__message > &
+    // Typography
+    line-height: inherit
+
+    // Layout
+    margin-left: 1em
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Message Body
+// ---------------------------------------------------------
+
+// #Message Body Structure
+// -------------------------------------
+
+.c-notification__body
+  // Typography
+  font-size: $notification-text-size
+
+  // Layout
+  flex: 1 1 0
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Message Close
+// ---------------------------------------------------------
+
+// #Message Close Structure
+// -------------------------------------
+
+.c-notification__close
+  // Layout
+  padding: 0 0.25em
+
+  // Extra
+  cursor: pointer

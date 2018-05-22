@@ -1,0 +1,348 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *   - #Color Variables
+ *   - #Easing Variables
+ *
+ *
+ * + @Accordion
+ *     - #Accordion Structure
+ *
+ *
+ * + @Accordion Trigger
+ *     - #Accordion Trigger Structure
+ *     - #Accordion Trigger States
+ *
+ *
+ * + @Accordion Trigger Decendants
+ *     - #Accordion Trigger Decendants Structure
+ *
+ *
+ * + @Accordion Trigger Text
+ *     - #Accordion Trigger Text Structure
+ *
+ *
+ * + @Accordion Panel
+ *     - #Accordion Panel Structure
+ *     - #Accordion Panel States
+ *
+ *
+ * + @Accordion Panel Content
+ *     - #Accordion Panel Content Structure
+ *
+ *
+ * + @Accordion State Indicator
+ *     - #Accordion State Indicator Structure
+ *     - #Accordion State Indicator Context
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Color Variables
+// -------------------------------------
+
+$accordion-trigger-background     = $color-main
+$accordion-trigger-color          = $color-grey-pivotal
+$accordion-trigger-border-color   = $color-grey-muted
+$accordion-trigger-active-color   = $color-variant-primary
+$accordion-panel-background       = $color-main
+$accordion-indicator-color        = $color-grey-omitted
+$accordion-indicator-active-color = $color-variant-primary
+
+
+
+
+
+
+
+// #Easing Variables
+// -------------------------------------
+
+$accordion-animation-duration     = 0.28s
+
+
+
+
+// ---------------------------------------------------------
+// @Accordion
+// ---------------------------------------------------------
+
+// #Accordion Structure
+// -------------------------------------
+
+.c-accordion
+  // Layout
+  position: relative
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Accordion Trigger
+// ---------------------------------------------------------
+
+// #Accordion Trigger Structure
+// -------------------------------------
+
+.c-accordion__trigger
+  // Typography
+  text-transform: capitalize
+  font-weight: bold
+
+  // Layout
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 1em 1.5em
+  margin-bottom: -1px
+
+  // Styles
+  border-width: 1px 0
+  border-style: solid
+
+  // Theme
+  background-color: $accordion-trigger-background
+  border-color: $accordion-trigger-border-color
+
+  // Easing
+  transition: $default-transition
+  transition-duration: $accordion-animation-duration
+
+  // Extra
+  cursor: pointer
+
+
+
+  // === Mixins
+
+  collapse('horizontal')
+
+
+
+
+
+
+
+// #Accordion Trigger States
+// -------------------------------------
+
+.c-accordion__trigger
+  &.is-expanded
+    color: $accordion-trigger-active-color
+
+
+  &:hover
+    color: $accordion-trigger-active-color
+
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Accordion Trigger Decendants
+// ---------------------------------------------------------
+
+// #Accordion Trigger Decendants Structure
+// -------------------------------------
+
+*
+  .c-accordion__trigger > &
+    // Layout
+    margin-left: 1em
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Accordion Trigger Text
+// ---------------------------------------------------------
+
+// #Accordion Trigger Text Structure
+// -------------------------------------
+
+.c-accordion__triggerText
+  // Layout
+  display: block
+  flex-grow: 1
+  flex-shrink: 1
+  flex-basis: 0
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Accordion Panel
+// ---------------------------------------------------------
+
+// #Accordion Panel Structure
+// -------------------------------------
+
+.c-accordion__panel
+  // Typography
+  font-size: inherit
+
+  // Layout
+  height: auto
+  max-height: 50em
+  overflow: hidden
+
+  // Theme
+  background-color: $accordion-panel-background
+
+  // Easing
+  transition: $default-transition
+  transition-duration: $accordion-animation-duration
+
+
+
+  // === Breakpoints
+
+  +from($viewport-md)
+    // Layout
+    max-height: 15em
+
+
+
+
+
+
+
+// #Accordion Panel States
+// -------------------------------------
+
+.c-accordion__panel
+  &.is-collapsed
+    // Layout
+    max-height: 0
+
+    // Easing
+    animation: scaleOut $accordion-animation-duration alternate ease-in-out both 1
+
+
+  .no-js &.is-collapsed
+    // Layout
+    max-height:  auto
+
+
+  &.is-expanded
+    // Easing
+    animation: scaleIn $accordion-animation-duration normal ease-in-out both 1
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Accordion Panel Content
+// ---------------------------------------------------------
+
+// #Accordion Panel Content Structure
+// -------------------------------------
+
+.c-accordion__content
+  // Layout
+  padding: 2em
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Accordion State Indicator
+// ---------------------------------------------------------
+
+// #Accordion State Indicator Structure
+// -------------------------------------
+
+.c-accordion__indicator
+  // Layout
+  display: block
+  position: relative
+  width: 9px
+  height: 1px
+
+  // Theme
+  background-color: $accordion-indicator-color
+
+  // Easing
+  transition: $default-transition
+  transition-duration: $accordion-animation-duration
+
+
+
+  // === Pseudo Elements
+
+  &::before
+    // Layout
+    display: block
+    position: absolute
+    width: 1px
+    height: 9px
+    top: 0
+    margin-left: 4px
+    margin-top: -4px
+
+    // Theme
+    background: inherit
+
+    // Easing
+    transition: $default-transition
+    transition-duration: $accordion-animation-duration
+
+    // Extra
+    content: ''
+    transform: scaleY(1)
+
+
+
+
+
+
+
+// #Accordion State Indicator Context
+// -------------------------------------
+
+.c-accordion__indicator
+  .is-expanded > &,
+  .c-accordion__trigger:hover > &
+    // Theme
+    background-color: $accordion-trigger-active-color
+
+
+  .is-expanded > &::before
+    // Extra
+    transform: scaleY(0)

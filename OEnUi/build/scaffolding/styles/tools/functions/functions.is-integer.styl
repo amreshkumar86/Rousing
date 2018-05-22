@@ -1,0 +1,14 @@
+// ---------------------------------------------------------
+// @Integer Checker Function
+// ---------------------------------------------------------
+
+/**
+ * Function used to check if the provided
+ * parameter is integer.
+ */
+
+-is-integer($value)
+  if typeof($value) == 'unit' && unit($value) == ''
+    return true
+
+  return false

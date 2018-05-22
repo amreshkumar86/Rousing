@@ -1,0 +1,84 @@
+{
+  "bars": true,
+  "options": {
+
+    "series": {
+      "lines": {
+        "fill": false
+      },
+
+      "points": { "show": false },
+
+      "bars": {
+        "show": true,
+        "barWidth": 0.5,
+        "lineWidth": 1,
+        "fill": 1,
+        "align": "center"
+      }
+    },
+
+    "xaxis": {
+      "tickLength": 0,
+
+      "font": {
+        "color": "colors.palette.grey.minor"
+      },
+
+      "position": "bottom",
+
+      "ticks": [
+        [1, "Direct"],
+        [2, "Links"],
+        [3, "Search"],
+        [4, "Social"],
+        [5, "Mail"],
+        [6, "Display"]
+      ]
+    },
+
+    "yaxis": {
+      "tickColor": "colors.palette.grey.muted",
+
+      "font": {
+        "color": "colors.palette.grey.minor"
+      }
+    },
+
+    "grid": {
+      "borderWidth": {
+        "top": 1,
+        "right": 1,
+        "bottom": 1,
+        "left": 1
+      },
+
+      "borderColor": "colors.palette.grey.muted",
+      "margin": 0,
+      "minBorderMargin": 0,
+      "labelMargin": 14,
+      "hoverable": true,
+      "clickable": true,
+      "mouseActiveRadius": 6
+    },
+
+    "tooltip": true,
+
+    "tooltipOpts": {
+      "content": "%y",
+      "defaultTheme": false,
+      "shifts": {
+        "x": 0,
+        "y": 20
+      }
+    }
+  },
+  "data": [
+    { "data": [[1, 20]], "color": "#2196f3" },
+    { "data": [[2, 40]], "color": "#f44336" },
+    { "data": [[3, 60]], "color": "#3f51b5" },
+    { "data": [[4, 60]], "color": "#ffc107" },
+    { "data": [[5, 40]], "color": "#e91e63" },
+    { "data": [[6, 20]], "color": "#4caf50" }
+  ]
+}

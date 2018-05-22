@@ -1,0 +1,28 @@
+#demos
+  .o-container.u-py-big.u-collapse.u-text-center._u-mb-big
+    .o-block
+      .o-block__cell.u-text-capitalize
+        span.u-color-secondary professional looking themes
+        h1 ponut  demos
+
+    .o-grid(class='_u-4/12@md+ _u-width-100p@md-')
+      .o-grid__cell
+        img(src='views/scenes/landing/resources/images/dark.png' alt='#' class='u-shadow-medium')
+
+        a.c-button.c-button--secondary.u-mt-small.u-radius-rounded(href="http://ponut.codeguru.io/dark/" target='_blank')
+          span view demo
+
+
+      .o-grid__cell
+        img(src='views/scenes/landing/resources/images/black.png' alt='#' class='u-shadow-medium')
+
+        a.c-button.c-button--secondary.u-mt-small.u-radius-rounded(href="http://ponut.codeguru.io/black/" target='_blank')
+          span view demo
+
+
+
+      .o-grid__cell
+        img(src='views/scenes/landing/resources/images/light.png' alt='#' class='u-shadow-medium')
+
+        a.c-button.c-button--secondary.u-mt-small.u-radius-rounded(href="http://ponut.codeguru.io/light/" target='_blank')
+          span view demo

@@ -1,0 +1,5 @@
+.o-block._u-width-100p.u-p-small.u-collapse._u-mb-small(class='u-8/12 u-width-100p@lg-')
+  include post-main/index.pug
+  include post-image/index.pug
+  include post-text/index.pug
+  include post-quote/index.pug

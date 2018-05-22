@@ -1,0 +1,39 @@
+//- Hero Section
+#intro.c-hero.u-border-bottom
+
+  //- Content Wrapper
+  .o-container.c-hero__wrapper.c-hero__wrapper--home
+
+    //- Hero Main Content
+    .c-hero__content.u-py-massive.u-collapse._u-mb-medium
+
+      //- Hero Social Menu
+      h1(class='u-8/12@lg+ u-10/12@md+')
+        span.u-color-secondary Ponut
+        | &nbsp;
+        span.u-color-white-900 Professional Angular Admin Dashboard
+
+      //- Social Sharing
+      ul.o-stack.c-socialMenu._u-ml-medium(class='_u-ml-small@sm-')
+        li.o-stack__cell
+          a(href='https://twitter.com/intent/tweet?text=Ponut%20Angular%20Admin%20Dashboard.&url=http://ponut.codeguru.io/landing.html&via=mohaalym' class='c-icon c-icon--social u-font-medium u-color-white-900' tooltip='Share on Twitter' target='_blank' direction='down') twitter
+        li.o-stack__cell
+          a(href='https://pinterest.com/pin/create/button/?url=http%3A//ponut.codeguru.io/&media=http%3A//ponut.codeguru.io/resources/assets/preview/dark.png&description=Ponut%20Premium%20Angular%20Admin%20Dashboard%20Template%20(Only%2020$).' class='c-icon c-icon--social u-font-medium u-color-white-900' tooltip='Share on Pinterest' target='_blank' direction='down') pinterest
+        li.o-stack__cell
+          a(href='https://www.facebook.com/sharer.php?u=ponut.codeguru.io/landing.html' class='c-icon c-icon--social u-font-medium u-color-white-900' tooltip='Share on Facebook' target='_blank' direction='down') facebook
+        li.o-stack__cell
+          a(href='https://plus.google.com/share?url=ponut.codeguru.io/landing.html' class='c-icon c-icon--social u-font-medium u-color-white-900' tooltip='Share on Google Plus' target='_blank' direction='down') gplus
+
+      //- Hero Buttons
+      .c-hero__buttons
+        a.c-button.c-button--primary.u-mr-tiny(data-scroll href="#demos")
+          span Demos
+
+        a.c-button.c-button--secondary(href="javascript:void(0)")
+          span Buy Item
+
+
+
+    //- Hero Footer
+    .c-hero__footer.u-py-small
+      span.c-icon.c-icon--main.u-font-large keyboard_arrow_down

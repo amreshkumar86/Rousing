@@ -1,0 +1,184 @@
+#features.u-bg-muted
+  .o-container.u-py-big.u-collapse._u-mb-big
+    .o-block.u-text-center
+      .o-block__cell.u-text-capitalize
+        span.u-color-secondary packed with a lot of features
+        h1 ponut  features
+
+    .o-grid.o-grid--mediumGap(class='_u-4/12@lg+ _u-6/12@md+ _u-width-100p@md-')
+      .o-grid__cell
+        .o-stack.o-stack--nowrap
+          .o-stack__cell.u-mr-small
+            //- Icon
+            i.c-icon.c-icon--main.u-font-massive.u-color-secondary star
+          .o-stack__cell.o-stack__cell--expanded
+
+            //- Title
+            h3.u-text-capitalize.u-mb-tiny Clean & Simple Code
+
+            //- Description
+            p By professionals for professionals
+
+
+      .o-grid__cell
+        .o-stack.o-stack--nowrap
+          .o-stack__cell.u-mr-small
+            //- Icon
+            i.c-icon.c-icon--main.u-font-massive.u-color-secondary star
+          .o-stack__cell.o-stack__cell--expanded
+
+            //- Title
+            h3.u-text-capitalize.u-mb-tiny Easy Customizable
+
+            //- Description
+            p Well documented and isolated framework code
+
+
+
+      .o-grid__cell
+        .o-stack.o-stack--nowrap
+          .o-stack__cell.u-mr-small
+            //- Icon
+            i.c-icon.c-icon--main.u-font-massive.u-color-secondary star
+          .o-stack__cell.o-stack__cell--expanded
+
+            //- Title
+            h3.u-text-capitalize.u-mb-tiny Modern Design
+
+            //- Description
+            p On trend-following, well look and feel
+
+
+
+      .o-grid__cell
+        .o-stack.o-stack--nowrap
+          .o-stack__cell.u-mr-small
+            //- Icon
+            i.c-icon.c-icon--main.u-font-massive.u-color-secondary star
+          .o-stack__cell.o-stack__cell--expanded
+
+            //- Title
+            h3.u-text-capitalize.u-mb-tiny Premium Support
+
+            //- Description
+            p Response time can be up to 1 business day
+
+
+
+      .o-grid__cell
+        .o-stack.o-stack--nowrap
+          .o-stack__cell.u-mr-small
+            //- Icon
+            i.c-icon.c-icon--main.u-font-massive.u-color-secondary star
+          .o-stack__cell.o-stack__cell--expanded
+
+            //- Title
+            h3.u-text-capitalize.u-mb-tiny Premium Quality
+
+            //- Description
+            p 4+ years experience of creating Web UI
+
+
+
+      .o-grid__cell
+        .o-stack.o-stack--nowrap
+          .o-stack__cell.u-mr-small
+            //- Icon
+            i.c-icon.c-icon--main.u-font-massive.u-color-secondary star
+          .o-stack__cell.o-stack__cell--expanded
+
+            //- Title
+            h3.u-text-capitalize.u-mb-tiny 3 Color Schemes
+
+            //- Description
+            p Packed with 3 pre-defined color schemes.
+
+
+
+      .o-grid__cell
+        .o-stack.o-stack--nowrap
+          .o-stack__cell.u-mr-small
+            //- Icon
+            i.c-icon.c-icon--main.u-font-massive.u-color-secondary star
+          .o-stack__cell.o-stack__cell--expanded
+
+            //- Title
+            h3.u-text-capitalize.u-mb-tiny UI Components
+
+            //- Description
+            p 60+ UI Components being given with Ponut Admin Pack.
+
+
+
+      .o-grid__cell
+        .o-stack.o-stack--nowrap
+          .o-stack__cell.u-mr-small
+            //- Icon
+            i.c-icon.c-icon--main.u-font-massive.u-color-secondary star
+          .o-stack__cell.o-stack__cell--expanded
+
+            //- Title
+            h3.u-text-capitalize.u-mb-tiny 1000+ Font Icons
+
+            //- Description
+            p Packed with Material Design & Zocial icon font.
+
+
+
+      .o-grid__cell
+        .o-stack.o-stack--nowrap
+          .o-stack__cell.u-mr-small
+            //- Icon
+            i.c-icon.c-icon--main.u-font-massive.u-color-secondary star
+          .o-stack__cell.o-stack__cell--expanded
+
+            //- Title
+            h3.u-text-capitalize.u-mb-tiny Fully Responsive
+
+            //- Description
+            p All the layout of Ponut Admin is Fully Responsive and widely tested.
+
+
+
+      .o-grid__cell
+        .o-stack.o-stack--nowrap
+          .o-stack__cell.u-mr-small
+            //- Icon
+            i.c-icon.c-icon--main.u-font-massive.u-color-secondary star
+          .o-stack__cell.o-stack__cell--expanded
+
+            //- Title
+            h3.u-text-capitalize.u-mb-tiny Stylus & PostCSS
+
+            //- Description
+            p Our Css is written in Stylus & PostCSS make your life easier.
+
+
+
+      .o-grid__cell
+        .o-stack.o-stack--nowrap
+          .o-stack__cell.u-mr-small
+            //- Icon
+            i.c-icon.c-icon--main.u-font-massive.u-color-secondary star
+          .o-stack__cell.o-stack__cell--expanded
+
+            //- Title
+            h3.u-text-capitalize.u-mb-tiny Lots of Chart Options
+
+            //- Description
+            p Yes lots of variations for Charts.
+
+
+
+      .o-grid__cell
+        .o-stack.o-stack--nowrap
+          .o-stack__cell.u-mr-small
+            //- Icon
+            i.c-icon.c-icon--main.u-font-massive.u-color-secondary star
+          .o-stack__cell.o-stack__cell--expanded
+
+            //- Title
+            h3.u-text-capitalize.u-mb-tiny AnuglarJS
+
+            //- Description
+            p Starter Kit that make developer's life easier.

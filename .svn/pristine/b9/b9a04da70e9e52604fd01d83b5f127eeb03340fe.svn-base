@@ -1,0 +1,567 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Layout Variables
+ *     - #Styles Variables
+ *     - #Color Variables
+ *
+ *
+ * + @Checkable
+ *     - #Checkable Structure
+ *
+ *
+ * + @Checkable Input
+ *     - #Checkable Input Structure
+ *
+ *
+ * + @Checkable Mask
+ *     - #Checkable Mask Structure
+ *     - #Checkable Mask Modifiers
+ *
+ *
+ * + @Checkable Mask All Marks
+ *     - #Checkable Mask All Marks Structure
+ *
+ *
+ * + @Checkable Checkbox Mark
+ *     - #Checkable Checkbox Mark Structure
+ *     - #Checkable Checkbox Mark Context
+ *
+ *
+ * + @Checkable Radio Mark
+ *     - #Checkable Radio Mark Structure
+ *     - #Checkable Radio Mark Context
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Layout Variables
+// -------------------------------------
+
+$checkable-mask-width           = 20px
+$checkable-mask-height          = 20px
+$checkable-check-mark-width     = 50%
+$checkable-check-mark-height    = 30%
+$checkable-dot-width            = 40%
+$checkable-dot-height           = 40%
+
+
+
+
+
+
+
+
+// #Styles Variables
+// -------------------------------------
+
+$checkable-mask-border          = 2px
+$checkable-check-mark-thickness = 2px
+
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$checkable-mask-background      = $color-main
+$checkable-mask-border-color    = $color-variant-primary
+$checkable-check-mark-color     = $color-variant-primary
+
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Checkable
+// ---------------------------------------------------------
+
+// #Checkable Structure
+// -------------------------------------
+
+.c-checkable
+  // Layout
+  display: flex
+  align-items: center
+
+  // Extra
+  cursor: pointer
+
+
+
+  // === Mixins
+
+  selectable(none)
+
+
+
+
+// ---------------------------------------------------------
+// @Checkable Input
+// ---------------------------------------------------------
+
+// #Checkable Input Structure
+// -------------------------------------
+
+.c-checkable__input
+  // Layout
+  flex: 0 0 0
+
+  // Styles
+  opacity: 0
+
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Checkable Mask
+// ---------------------------------------------------------
+
+// #Checkable Mask Structure
+// -------------------------------------
+
+.c-checkable__mask
+  // Layout
+  display: flex
+  order: -1
+  align-items: center
+  flex: 0 0 auto
+  position: relative
+  margin-right: 1em
+  width: $checkable-mask-width
+  height: $checkable-mask-height
+
+  // Styles
+  border: $checkable-mask-border solid
+
+  // Theme
+  background: $checkable-mask-background
+  border-color: $checkable-mask-border-color
+
+  // Extra
+  cursor: pointer
+
+
+
+
+
+
+
+// #Checkable Mask Modifiers
+// -------------------------------------
+
+.c-checkable__mask--small
+  // Layout
+  width: 0.8 * $checkable-mask-width
+  height: 0.8 * $checkable-mask-height
+
+
+
+
+.c-checkable__mask--radio
+  // Styles
+  border-radius: 50%
+
+
+
+
+.c-checkable__mask--pivotal
+  // Theme
+  border-color: $color-grey-pivotal
+
+
+
+
+.c-checkable__mask--major
+  // Theme
+  border-color: $color-grey-major
+
+
+
+
+.c-checkable__mask--minor
+  // Theme
+  border-color: $color-grey-minor
+
+
+
+
+.c-checkable__mask--omitted
+  // Theme
+  border-color: $color-grey-omitted
+
+
+
+
+.c-checkable__mask--muted
+  // Theme
+  border-color: $color-grey-muted
+
+
+
+
+.c-checkable__mask--primary
+  // Theme
+  border-color: $color-variant-primary
+
+
+
+
+.c-checkable__mask--secondary
+  // Theme
+  border-color: $color-variant-secondary
+
+
+
+
+.c-checkable__mask--accent
+  // Theme
+  border-color: $color-variant-accent
+
+
+
+
+.c-checkable__mask--error
+  // Theme
+  border-color: $color-aside-error
+
+
+
+
+.c-checkable__mask--warning
+  // Theme
+  border-color: $color-aside-warning
+
+
+
+
+.c-checkable__mask--success
+  // Theme
+  border-color: $color-aside-success
+
+
+
+
+.c-checkable__mask--info
+  // Theme
+  border-color: $color-aside-info
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Checkable Mask All Marks
+// ---------------------------------------------------------
+
+// #Checkable Mask All Marks Structure
+// -------------------------------------
+
+.c-checkable__mask::before
+  // Layout
+  display: block
+  margin: auto
+
+  // Easing
+  transition: transform 0.28s cubic-bezier(0.45, 1.8, 0.5, 0.75)
+
+  // Extra
+  content: ''
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Checkable Checkbox Mark
+// ---------------------------------------------------------
+
+// #Checkable Checkbox Mark Structure
+// -------------------------------------
+
+.c-checkable__mask--checkbox::before
+  // Layout
+  width: $checkable-check-mark-width
+  height: $checkable-check-mark-height
+  position: relative
+
+  // Styles
+  border: $checkable-check-mark-thickness solid
+  border-top-width: 0
+  border-right-width: 0
+
+  // Theme
+  border-color: $checkable-check-mark-color
+
+  // Extra
+  transform: rotate(-45deg) scale(0, 0)
+
+
+
+
+
+
+
+
+// #Checkable Checkbox Mark Modifiers
+// -------------------------------------
+
+.c-checkable__mask--pivotal.c-checkable__mask--checkbox::before
+  // Theme
+  border-color: $color-grey-pivotal
+
+
+
+
+.c-checkable__mask--major.c-checkable__mask--checkbox::before
+  // Theme
+  border-color: $color-grey-major
+
+
+
+
+.c-checkable__mask--minor.c-checkable__mask--checkbox::before
+  // Theme
+  border-color: $color-grey-minor
+
+
+
+
+.c-checkable__mask--omitted.c-checkable__mask--checkbox::before
+  // Theme
+  border-color: $color-grey-omitted
+
+
+
+
+.c-checkable__mask--muted.c-checkable__mask--checkbox::before
+  // Theme
+  border-color: $color-grey-muted
+
+
+
+
+.c-checkable__mask--primary.c-checkable__mask--checkbox::before
+  // Theme
+  border-color: $color-variant-primary
+
+
+
+
+.c-checkable__mask--secondary.c-checkable__mask--checkbox::before
+  // Theme
+  border-color: $color-variant-secondary
+
+
+
+
+.c-checkable__mask--accent.c-checkable__mask--checkbox::before
+  // Theme
+  border-color: $color-variant-accent
+
+
+
+
+.c-checkable__mask--error.c-checkable__mask--checkbox::before
+  // Theme
+  border-color: $color-aside-error
+
+
+
+
+.c-checkable__mask--warning.c-checkable__mask--checkbox::before
+  // Theme
+  border-color: $color-aside-warning
+
+
+
+
+.c-checkable__mask--success.c-checkable__mask--checkbox::before
+  // Theme
+  border-color: $color-aside-success
+
+
+
+
+.c-checkable__mask--info.c-checkable__mask--checkbox::before
+  // Theme
+  border-color: $color-aside-info
+
+
+
+
+
+
+
+// #Checkable Checkbox Mark Context
+// -------------------------------------
+
+.c-checkable__input:checked
+  + .c-checkable__mask--checkbox::before
+    // Extra
+    transform: rotate(-45deg) scale(1, 1)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Checkable Radio Mark
+// ---------------------------------------------------------
+
+// #Checkable Radio Mark Structure
+// -------------------------------------
+
+.c-checkable__mask--radio::before
+  // Layout
+  width: $checkable-dot-width
+  height: $checkable-dot-height
+  z-index: $over-control
+
+  // Styles
+  border-radius: 50%
+
+  // Theme
+  background: $color-variant-primary
+
+  // Extra
+  transform: scale(0, 0)
+
+
+
+
+
+
+
+
+// #Checkable Radio Mark Modifiers
+// -------------------------------------
+
+.c-checkable__mask--pivotal.c-checkable__mask--radio::before
+  // Theme
+  background: $color-grey-pivotal
+
+
+
+
+.c-checkable__mask--major.c-checkable__mask--radio::before
+  // Theme
+  background: $color-grey-major
+
+
+
+
+.c-checkable__mask--minor.c-checkable__mask--radio::before
+  // Theme
+  background: $color-grey-minor
+
+
+
+
+.c-checkable__mask--omitted.c-checkable__mask--radio::before
+  // Theme
+  background: $color-grey-omitted
+
+
+
+
+.c-checkable__mask--muted.c-checkable__mask--radio::before
+  // Theme
+  background: $color-grey-muted
+
+
+
+
+.c-checkable__mask--primary.c-checkable__mask--radio::before
+  // Theme
+  background: $color-variant-primary
+
+
+
+
+.c-checkable__mask--secondary.c-checkable__mask--radio::before
+  // Theme
+  background: $color-variant-secondary
+
+
+
+
+.c-checkable__mask--accent.c-checkable__mask--radio::before
+  // Theme
+  background: $color-variant-accent
+
+
+
+
+.c-checkable__mask--error.c-checkable__mask--radio::before
+  // Theme
+  background: $color-aside-error
+
+
+
+
+.c-checkable__mask--warning.c-checkable__mask--radio::before
+  // Theme
+  background: $color-aside-warning
+
+
+
+
+.c-checkable__mask--success.c-checkable__mask--radio::before
+  // Theme
+  background: $color-aside-success
+
+
+
+
+.c-checkable__mask--info.c-checkable__mask--radio::before
+  // Theme
+  background: $color-aside-info
+
+
+
+
+
+
+
+// #Checkable Radio Mark Context
+// -------------------------------------
+
+.c-checkable__input:checked
+  + .c-checkable__mask--radio::before
+    // Extra
+    transform: scale(1, 1)

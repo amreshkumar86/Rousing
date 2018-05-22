@@ -1,0 +1,36 @@
+form.u-bg-main.o-block.u-mx-auto.u-height-100p
+  #toolbar(style='display: none; flex: 0 0 auto' class='o-stack o-stack--center o-stack--distributed u-height-auto u-width-100p')
+    a(class='o-stack__cell c-icon c-icon--main' data-wysihtml5-command='bold' title='CTRL+B') format_bold
+    a(class='o-stack__cell c-icon c-icon--main' data-wysihtml5-command='italic' title='CTRL+I') format_italic
+    a(class='o-stack__cell c-icon c-icon--main' data-wysihtml5-command='createLink') insert_link
+    a(class='o-stack__cell c-icon c-icon--main' data-wysihtml5-command='insertImage') insert_photo
+    a(class='o-stack__cell u-font-bold' data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h1') H1
+    a(class='o-stack__cell u-font-bold' data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h2') H2
+    a(class='o-stack__cell c-icon c-icon--main' data-wysihtml5-command='insertUnorderedList') format_list_bulleted
+    a(class='o-stack__cell c-icon c-icon--main' data-wysihtml5-command='insertOrderedList') format_list_numbered
+    div(data-wysihtml5-dialog='createLink' style='display: none;')
+      label
+        input(data-wysihtml5-dialog-field='href', placeholder='Put URL Here')
+      a(data-wysihtml5-dialog-action='save' class='c-button') OK
+      a(data-wysihtml5-dialog-action='cancel' class='c-button c-button--error') Cancel
+    div(data-wysihtml5-dialog='insertImage', style='display: none;')
+      label
+        input(data-wysihtml5-dialog-field='src', placeholder='Image URL')
+      label
+        select(data-wysihtml5-dialog-field='className')
+          option(value='0' selected) default
+          option(value='wysiwyg-float-left') left
+          option(value='wysiwyg-float-right') right
+      a(data-wysihtml5-dialog-action='save' class='c-button') OK
+      a(data-wysihtml5-dialog-action='cancel' class='c-button c-button--error') Cancel
+  .u-width-100p
+    .o-stack.o-stack--center.c-compose__emails
+      .o-stack__cell(class='u-6/12@lg+ u-width-100p@lg- u-border-left-none')
+        input(type='email' name='to' placeholder='Recepient Email' class='u-width-100p u-p-tiny u-border-left-none' style='border-left:0')
+      .o-stack__cell(class='u-6/12@lg+ u-width-100p@lg-')
+        input(type='email' name='cc' placeholder='CC Email' class='u-width-100p u-p-tiny')
+      .o-stack__cell.u-width-100p
+        input(type='text' name='subject' placeholder='Email Subject...' class='u-width-100p u-p-tiny u-border-left-none' style='border-left:0')
+  textarea#textarea(placeholder='Write Message' class='u-width-100p u-border-muted u-p-tiny u-flexGrow-1' wysihtml5-toolbar='toolbar' wysihtml5-editor='')
+  .u-p-small.u-width-100p
+    input(type='submit' value='compose new message' class='c-button c-button--secondary c-button--block')

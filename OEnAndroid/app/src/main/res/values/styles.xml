@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/button_color</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/button_color</item>
+        <item name="android:actionBarSize">40dp</item>
+    </style>
+
+    <style name="Theme.MyTheme.TimePicker" parent="android:Widget.Material.Light.TimePicker">
+        <item name="android:timePickerMode">clock</item>
+        <item name="android:headerBackground">@android:color/transparent</item>
+        <item name="android:numbersTextColor">#033399</item>
+        <item name="android:numbersInnerTextColor">#033399</item>
+        <item name="android:numbersSelectorColor">#FF01F9</item>
+        <item name="android:numbersBackgroundColor">#FFBACC</item>
+        <item name="android:amPmTextColor">@color/white</item>
+    </style>
+
+</resources>

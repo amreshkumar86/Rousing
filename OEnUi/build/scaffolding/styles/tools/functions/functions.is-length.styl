@@ -1,0 +1,14 @@
+// ---------------------------------------------------------
+// @Length Checker Function
+// ---------------------------------------------------------
+
+/**
+ * Function used to check if the provided
+ * parameter is a CSS length.
+ */
+
+-is-length($value)
+  if typeof($value) == 'unit' && unit($value) != '' || $value == 0
+    return true
+
+  return false

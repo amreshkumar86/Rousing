@@ -1,0 +1,502 @@
+//- ----------------------------------------------
+//- @Table of Contents
+//- ----------------------------------------------
+
+//-
+  + @Sidebar
+      - #Sidebar Navabr
+      - #Sidebar Main Content
+          > $Chat
+          > $Notifications
+          > $Settings
+
+
+
+
+
+
+
+
+
+
+//- ----------------------------------------------
+//- @Sidebar
+//- ----------------------------------------------
+
+.u-relative.u-height-100p.u-width-100p(perfect-scrollbar='')
+
+  //- #Sidebar Navabr
+  //- ------------------------------------
+
+  div
+    .c-sidebar__nav.o-stack.o-stack--center.o-stack--nowrap._u-flexGrow-1.u-text-center.u-border-bottom
+      .o-stack__cell
+        a(href='#sidebar__chat' class='is-active' data-tab data-tab-env='sidebarTabs') Chat
+      .o-stack__cell
+        a(href='#sidebar_notifications' data-tab data-tab-env='sidebarTabs') Notifications
+      .o-stack__cell
+        a(href='#sidebar__settings' data-tab data-tab-env='sidebarTabs') Settings
+
+
+
+
+
+
+
+
+    //- #Sidebar Main Content
+    //- ------------------------------------
+
+  .o-stack.o-stack--nowrap
+
+    //- ---------- $Chat ---------- -//
+
+    #sidebar__chat.o-block.u-p-medium.u-width-100p._u-width-100p
+      //- Section Header
+      .o-stack.o-stack--center.o-stack--nowrap
+        .o-stack__cell.o-stack__cell--expanded
+          h5.u-text-uppercase Chat Room
+        .o-stack__cell
+          .o-stack.o-stack--center.o-stack--nowrap
+            .o-stack__cell
+              a(href='javascript:void(0)' class='u-block u-text-bare u-p-mini u-color-minor u-font-small u-opacity-50p')
+                span.c-icon.c-icon--main refresh
+            .o-stack__cell
+              a(href='javascript:void(0)' class='u-block u-text-bare u-p-mini u-color-minor u-font-small u-opacity-50p')
+                span.c-icon.c-icon--main settings
+            .o-stack__cell
+              a(href='javascript:void(0)' class='u-block u-text-bare u-p-mini u-color-minor u-font-small u-opacity-50p')
+                span.c-icon.c-icon--main more_horiz
+      .u-mt-small
+        .c-topbar__searchBox
+          form(action='./' method='POST')
+            .c-control.c-control--boxed.c-control--searchBG.u-border-none.u-radius-rounded.u-pl-small.u-width-100p
+              span.c-icon.c-icon--main search
+              .c-control__input-box
+                input.c-control__input.u-pr-small(type='search', name='search' placeholder='Search Here...')
+
+
+      //- Stuff
+      .u-mt-medium._u-mb-tiny
+        div
+          h5 Stuff
+        div
+          div
+            .o-stack.o-stack--nowrap.o-stack--center.u-border-bottom.u-py-tiny
+              .o-stack__cell.u-mr-tiny
+                .c-avatar
+                  a(href='javascript:void(0)')
+                    img(src='resources/images/avatars/avatar-small-1.jpg' alt='avatar')
+              .o-stack__cell--expanded
+                .o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted.u-width-100p.u-mb-mini
+                  .o-stack__cell.o-stack__cell--expanded
+                    a(href='javascript:void(0)' class='u-text-bare u-color-major' u-lh-normal) Jessy Doe
+                    span.u-block.u-lh-normal.u-font-small.u-color-omitted Web Designer
+                  .o-stack__cell
+                    span.c-badge.c-badge--success(data-badge='')
+
+
+            .o-stack.o-stack--nowrap.o-stack--center.u-border-bottom.u-py-tiny
+              .o-stack__cell.u-mr-tiny
+                .c-avatar
+                  a(href='javascript:void(0)')
+                    img(src='resources/images/avatars/avatar-small-2.jpg' alt='avatar')
+              .o-stack__cell--expanded
+                .o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted.u-width-100p.u-mb-mini
+                  .o-stack__cell.o-stack__cell--expanded
+                    a(href='javascript:void(0)' class='u-text-bare u-color-major' u-lh-normal) Mo Doe
+                    span.u-block.u-lh-normal.u-font-small.u-color-omitted Web Developer
+                  .o-stack__cell
+                    span.c-badge.c-badge--error(data-badge='')
+
+
+            .o-stack.o-stack--nowrap.o-stack--center.u-border-bottom.u-py-tiny
+              .o-stack__cell.u-mr-tiny
+                .c-avatar
+                  a(href='javascript:void(0)')
+                    img(src='resources/images/avatars/avatar-small-3.jpg' alt='avatar')
+              .o-stack__cell--expanded
+                .o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted.u-width-100p.u-mb-mini
+                  .o-stack__cell.o-stack__cell--expanded
+                    a(href='javascript:void(0)' class='u-text-bare u-color-major' u-lh-normal) Andy Doe
+                    span.u-block.u-lh-normal.u-font-small.u-color-omitted Homeless
+                  .o-stack__cell
+                    span.c-badge.c-badge--warning(data-badge='')
+
+
+            .o-stack.o-stack--nowrap.o-stack--center.u-py-tiny
+              .o-stack__cell.u-mr-tiny
+                .c-avatar
+                  a(href='javascript:void(0)')
+                    img(src='resources/images/avatars/avatar-small-4.jpg' alt='avatar')
+              .o-stack__cell--expanded
+                .o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted.u-width-100p.u-mb-mini
+                  .o-stack__cell.o-stack__cell--expanded
+                    a(href='javascript:void(0)' class='u-text-bare u-color-major' u-lh-normal) Gandy Doe
+                    span.u-block.u-lh-normal.u-font-small.u-color-omitted Jobless
+                  .o-stack__cell
+                    span.c-badge.c-badge--success(data-badge='')
+
+          //- Full Block Button
+          div.u-mt-mini
+            a(href='javascript:void(0)' class='c-button c-button--primary c-button--block') All Stuff Members
+
+
+      //- Customers
+      .u-mt-medium._u-mb-tiny
+        div
+          h5 Customers
+        div
+          div
+            .o-stack.o-stack--nowrap.o-stack--center.u-border-bottom.u-py-tiny
+              .o-stack__cell.u-mr-tiny
+                .c-avatar
+                  a(href='javascript:void(0)')
+                    img(src='resources/images/avatars/avatar-small-5.jpg' alt='avatar')
+              .o-stack__cell--expanded
+                .o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted.u-width-100p.u-mb-mini
+                  .o-stack__cell.o-stack__cell--expanded
+                    a(href='javascript:void(0)' class='u-text-bare u-color-major' u-lh-normal) Jessy Doe
+                    span.u-block.u-lh-normal.u-font-small.u-color-omitted Web Designer
+                  .o-stack__cell
+                    span.c-badge.c-badge--success(data-badge='')
+
+
+            .o-stack.o-stack--nowrap.o-stack--center.u-border-bottom.u-py-tiny
+              .o-stack__cell.u-mr-tiny
+                .c-avatar
+                  a(href='javascript:void(0)')
+                    img(src='resources/images/avatars/avatar-small-1.jpg' alt='avatar')
+              .o-stack__cell--expanded
+                .o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted.u-width-100p.u-mb-mini
+                  .o-stack__cell.o-stack__cell--expanded
+                    a(href='javascript:void(0)' class='u-text-bare u-color-major' u-lh-normal) Mo Doe
+                    span.u-block.u-lh-normal.u-font-small.u-color-omitted Web Developer
+                  .o-stack__cell
+                    span.c-badge.c-badge--error(data-badge='')
+
+
+            .o-stack.o-stack--nowrap.o-stack--center.u-border-bottom.u-py-tiny
+              .o-stack__cell.u-mr-tiny
+                .c-avatar
+                  a(href='javascript:void(0)')
+                    img(src='resources/images/avatars/avatar-small-1.jpg' alt='avatar')
+              .o-stack__cell--expanded
+                .o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted.u-width-100p.u-mb-mini
+                  .o-stack__cell.o-stack__cell--expanded
+                    a(href='javascript:void(0)' class='u-text-bare u-color-major' u-lh-normal) Andy Doe
+                    span.u-block.u-lh-normal.u-font-small.u-color-omitted Homeless
+                  .o-stack__cell
+                    span.c-badge.c-badge--warning(data-badge='')
+
+
+            .o-stack.o-stack--nowrap.o-stack--center.u-py-tiny
+              .o-stack__cell.u-mr-tiny
+                .c-avatar
+                  a(href='javascript:void(0)')
+                    img(src='resources/images/avatars/avatar-small-1.jpg' alt='avatar')
+              .o-stack__cell--expanded
+                .o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted.u-width-100p.u-mb-mini
+                  .o-stack__cell.o-stack__cell--expanded
+                    a(href='javascript:void(0)' class='u-text-bare u-color-major' u-lh-normal) Gandy Doe
+                    span.u-block.u-lh-normal.u-font-small.u-color-omitted Jobless
+                  .o-stack__cell
+                    span.c-badge.c-badge--success(data-badge='')
+
+          //- Full Block Button
+          div.u-mt-mini
+            a(href='javascript:void(0)' class='c-button c-button--secondary c-button--block') All customers
+
+
+
+
+
+
+
+
+
+
+
+
+    //- ---------- $Notifications ---------- -//
+
+    #sidebar_notifications.o-block.u-hide.u-p-medium._u-mb-small.u-collapse.u-width-100p._u-width-100p
+      //- Section Header
+      .o-stack.o-stack--center.o-stack--nowrap
+        .o-stack__cell.o-stack__cell--expanded
+          h5.u-text-uppercase Notifications
+        .o-stack__cell
+          .o-stack.o-stack--center.o-stack--nowrap
+            .o-stack__cell
+              a(href='javascript:void(0)' class='u-block u-text-bare u-p-mini u-color-minor u-font-small u-opacity-50p')
+                span.c-icon.c-icon--main done_all
+            .o-stack__cell
+              a(href='javascript:void(0)' class='u-block u-text-bare u-p-mini u-color-minor u-font-small u-opacity-50p')
+                span.c-icon.c-icon--main more_horiz
+
+      //- Content
+      .c-notifications._u-pb-small
+        .o-stack.o-stack--nowrap.u-border-left
+          .o-stack__cell.u-mr-small.u-lh-normal
+            a(href='javascript:void(0)' class='c-status c-status--error u-lh-normal')
+          .o-stack__cell--expanded
+            .o-stack.o-stack--nowrap.o-stack--center.o-stack--splitted.u-width-100p.u-mb-mini
+              .o-stack__cell.o-stack__cell--expanded.u-lh-normal
+                span.u-block.u-lh-normal.u-font-small.u-color-omitted 1 Minute Ago
+              .o-stack__cell.u-lh-normal
+                span.c-label.c-label--error server
+            p
+              a(href='javascript:void(0)' class='c-link') Lorem
+              | &nbsp; Ipsum is simply dummy text of the printing...
+
+        .o-stack.o-stack--nowrap.u-border-left
+          .o-stack__cell.u-mr-small.u-lh-normal
+            a(href='javascript:void(0)' class='c-status c-status--success u-lh-normal')
+          .o-stack__cell--expanded
+            .o-stack.o-stack--nowrap.o-stack--center.o-stack--splitted.u-width-100p.u-mb-mini
+              .o-stack__cell.o-stack__cell--expanded.u-lh-normal
+                span.u-block.u-lh-normal.u-font-small.u-color-omitted 1 Hour Ago
+              .o-stack__cell.u-lh-normal
+                span.c-label.c-label--success Customers
+            p
+              a(href='javascript:void(0)' class='c-link') Lorem
+              | &nbsp; Ipsum is simply dummy text of the printing...
+
+
+        .o-stack.o-stack--nowrap.u-border-left
+          .o-stack__cell.u-mr-small.u-lh-normal
+            a(href='javascript:void(0)' class='c-status c-status--warning u-lh-normal')
+          .o-stack__cell--expanded
+            .o-stack.o-stack--nowrap.o-stack--center.o-stack--splitted.u-width-100p.u-mb-mini
+              .o-stack__cell.o-stack__cell--expanded.u-lh-normal
+                span.u-block.u-lh-normal.u-font-small.u-color-omitted 2 Hours Ago
+              .o-stack__cell.u-lh-normal
+                span.c-label.c-label--warning Sales
+            p
+              a(href='javascript:void(0)' class='c-link') Lorem
+              | &nbsp; Ipsum is simply dummy.
+
+
+        .o-stack.o-stack--nowrap.u-border-left
+          .o-stack__cell.u-mr-small.u-lh-normal
+            a(href='javascript:void(0)' class='c-status c-status--primary u-lh-normal')
+          .o-stack__cell--expanded
+            .o-stack.o-stack--nowrap.o-stack--center.o-stack--splitted.u-width-100p.u-mb-mini
+              .o-stack__cell.o-stack__cell--expanded.u-lh-normal
+                span.u-block.u-lh-normal.u-font-small.u-color-omitted 3 Hours Ago
+              .o-stack__cell.u-lh-normal
+                span.c-label.c-label--primary Me
+            p
+              a(href='javascript:void(0)' class='c-link') Lorem
+              | &nbsp; Ipsum is simply dummy text.
+
+
+        .o-stack.o-stack--nowrap.u-border-left
+          .o-stack__cell.u-mr-small.u-lh-normal
+            a(href='javascript:void(0)' class='c-status u-lh-normal')
+          .o-stack__cell--expanded
+            .o-stack.o-stack--nowrap.o-stack--center.o-stack--splitted.u-width-100p.u-mb-mini
+              .o-stack__cell.o-stack__cell--expanded.u-lh-normal
+                span.u-block.u-lh-normal.u-font-small.u-color-omitted 1 Day Ago
+              .o-stack__cell.u-lh-normal
+                span.c-label Other
+            p
+              a(href='javascript:void(0)' class='c-link') Lorem
+              | &nbsp; Ipsum is simply dummy text.
+
+        .o-stack.o-stack--nowrap.u-border-left
+          .o-stack__cell.u-mr-small.u-lh-normal
+            a(href='javascript:void(0)' class='c-status c-status--error u-lh-normal')
+          .o-stack__cell--expanded
+            .o-stack.o-stack--nowrap.o-stack--center.o-stack--splitted.u-width-100p.u-mb-mini
+              .o-stack__cell.o-stack__cell--expanded.u-lh-normal
+                span.u-block.u-lh-normal.u-font-small.u-color-omitted 1 Minute Ago
+              .o-stack__cell.u-lh-normal
+                span.c-label.c-label--error server
+            p
+              a(href='javascript:void(0)' class='c-link') Lorem
+              | &nbsp; Ipsum is simply dummy text of the printing...
+
+        .o-stack.o-stack--nowrap.u-border-left
+          .o-stack__cell.u-mr-small.u-lh-normal
+            a(href='javascript:void(0)' class='c-status c-status--success u-lh-normal')
+          .o-stack__cell--expanded
+            .o-stack.o-stack--nowrap.o-stack--center.o-stack--splitted.u-width-100p.u-mb-mini
+              .o-stack__cell.o-stack__cell--expanded.u-lh-normal
+                span.u-block.u-lh-normal.u-font-small.u-color-omitted 1 Hour Ago
+              .o-stack__cell.u-lh-normal
+                span.c-label.c-label--success Customers
+            p
+              a(href='javascript:void(0)' class='c-link') Lorem
+              | &nbsp; Ipsum is simply dummy text of the printing...
+
+
+        .o-stack.o-stack--nowrap.u-border-left
+          .o-stack__cell.u-mr-small.u-lh-normal
+            a(href='javascript:void(0)' class='c-status c-status--warning u-lh-normal')
+          .o-stack__cell--expanded
+            .o-stack.o-stack--nowrap.o-stack--center.o-stack--splitted.u-width-100p.u-mb-mini
+              .o-stack__cell.o-stack__cell--expanded.u-lh-normal
+                span.u-block.u-lh-normal.u-font-small.u-color-omitted 2 Hours Ago
+              .o-stack__cell.u-lh-normal
+                span.c-label.c-label--warning Sales
+            p
+              a(href='javascript:void(0)' class='c-link') Lorem
+              | &nbsp; Ipsum is simply dummy.
+
+
+        .o-stack.o-stack--nowrap.u-border-left
+          .o-stack__cell.u-mr-small.u-lh-normal
+            a(href='javascript:void(0)' class='c-status c-status--primary u-lh-normal')
+          .o-stack__cell--expanded
+            .o-stack.o-stack--nowrap.o-stack--center.o-stack--splitted.u-width-100p.u-mb-mini
+              .o-stack__cell.o-stack__cell--expanded.u-lh-normal
+                span.u-block.u-lh-normal.u-font-small.u-color-omitted 3 Hours Ago
+              .o-stack__cell.u-lh-normal
+                span.c-label.c-label--primary Me
+            p
+              a(href='javascript:void(0)' class='c-link') Lorem
+              | &nbsp; Ipsum is simply dummy text.
+
+
+        .o-stack.o-stack--nowrap.u-border-left.u-pb-none
+          .o-stack__cell.u-mr-small.u-lh-normal
+            a(href='javascript:void(0)' class='c-status u-lh-normal')
+          .o-stack__cell--expanded
+            .o-stack.o-stack--nowrap.o-stack--center.o-stack--splitted.u-width-100p.u-mb-mini
+              .o-stack__cell.o-stack__cell--expanded.u-lh-normal
+                span.u-block.u-lh-normal.u-font-small.u-color-omitted 1 Day Ago
+              .o-stack__cell.u-lh-normal
+                span.c-label Other
+            p
+              a(href='javascript:void(0)' class='c-link') Lorem
+              | &nbsp; Ipsum is simply dummy text.
+
+        .u-mt-small
+          a(href='javascript:void(0)' class='c-button c-button--block') View All Notifications
+
+
+
+
+
+
+
+
+
+    //- ---------- $Settings ---------- -//
+
+    #sidebar__settings.o-block.u-hide.u-p-medium.u-collapse.u-width-100p._u-width-100p
+      //- Section Header
+      .o-stack.o-stack--center.o-stack--nowrap
+        .o-stack__cell.o-stack__cell--expanded
+          h5.u-text-uppercase General
+        .o-stack__cell
+          .o-stack.o-stack--center.o-stack--nowrap
+            .o-stack__cell
+              a(href='javascript:void(0)' class='u-block u-text-bare u-p-mini u-color-minor u-font-small u-opacity-50p')
+                span.c-icon.c-icon--main more_horiz
+
+      //- Content
+      ._u-py-tiny
+        .o-stack.o-stack--nowrap.o-stack--splitted.u-border-bottom
+          .o-stack__cell--expanded
+            span Allow Tracking
+          .o-stack__cell
+            .c-switch
+              input#switch_side1.c-switch__input(type='checkbox' checked)
+              label.c-switch__rail(for='switch_side1')
+                span.c-switch__button
+
+        .o-stack.o-stack--nowrap.o-stack--splitted.u-border-bottom
+          .o-stack__cell--expanded
+            span Auto Sumbit
+          .o-stack__cell
+            .c-switch
+              input#switch_side2.c-switch__input(type='checkbox')
+              label.c-switch__rail(for='switch_side2')
+                span.c-switch__button
+
+        .o-stack.o-stack--nowrap.o-stack--splitted.u-border-bottom
+          .o-stack__cell--expanded
+            span Log Errors
+          .o-stack__cell
+            .c-switch
+              input#switch_side3.c-switch__input(type='checkbox' checked)
+              label.c-switch__rail(for='switch_side3')
+                span.c-switch__button
+
+        .o-stack.o-stack--nowrap.o-stack--splitted.u-border-bottom
+          .o-stack__cell--expanded
+            span SMS Alerts
+          .o-stack__cell
+            .c-switch
+              input#switch_side4.c-switch__input(type='checkbox')
+              label.c-switch__rail(for='switch_side4')
+                span.c-switch__button
+
+        .o-stack.o-stack--nowrap.o-stack--splitted
+          .o-stack__cell--expanded
+            span Failed Emails
+          .o-stack__cell
+            .c-switch
+              input#switch_side5.c-switch__input(type='checkbox' checked)
+              label.c-switch__rail(for='switch_side5')
+                span.c-switch__button
+
+      //- Section Header
+      .o-stack.o-stack--center.o-stack--nowrap
+        .o-stack__cell.o-stack__cell--expanded
+          h5.u-text-uppercase System
+        .o-stack__cell
+          .o-stack.o-stack--center.o-stack--nowrap
+            .o-stack__cell
+              a(href='javascript:void(0)' class='u-block u-text-bare u-p-mini u-color-minor u-font-small u-opacity-50p')
+                span.c-icon.c-icon--main more_horiz
+
+      //- Content
+      ._u-py-tiny
+        .o-stack.o-stack--nowrap.o-stack--splitted.u-border-bottom
+          .o-stack__cell--expanded
+            span Log Errors
+          .o-stack__cell
+            .c-switch
+              input#switch_side6.c-switch__input(type='checkbox' checked)
+              label.c-switch__rail(for='switch_side6')
+                span.c-switch__button
+
+        .o-stack.o-stack--nowrap.o-stack--splitted.u-border-bottom
+          .o-stack__cell--expanded
+            span System Error
+          .o-stack__cell
+            .c-switch
+              input#switch_side7.c-switch__input(type='checkbox' checked)
+              label.c-switch__rail(for='switch_side7')
+                span.c-switch__button
+
+        .o-stack.o-stack--nowrap.o-stack--splitted.u-border-bottom
+          .o-stack__cell--expanded
+            span Security
+          .o-stack__cell
+            .c-switch
+              input#switch_side8.c-switch__input(type='checkbox')
+              label.c-switch__rail(for='switch_side8')
+                span.c-switch__button
+
+        .o-stack.o-stack--nowrap.o-stack--splitted.u-border-bottom
+          .o-stack__cell--expanded
+            span System Settings
+          .o-stack__cell
+            .c-switch
+              input#switch_side9.c-switch__input(type='checkbox')
+              label.c-switch__rail(for='switch_side9')
+                span.c-switch__button
+
+        .o-stack.o-stack--nowrap.o-stack--splitted
+          .o-stack__cell--expanded
+            span Allow Tracking
+          .o-stack__cell
+            .c-switch
+              input#switch_side10.c-switch__input(type='checkbox' checked)
+              label.c-switch__rail(for='switch_side10')
+                span.c-switch__button
+

@@ -1,0 +1,14 @@
+
+<footer class="u-bg-pivotal">
+  <div class="o-container u-py-big u-text-center">
+    <div class="o-block u-mb-medium">
+      <ul class="o-stack c-socialMenu _u-ml-medium _u-ml-small@sm-">
+        <li class="o-stack__cell"><a class="c-icon c-icon--social u-font-medium u-color-white-900" href="https://twitter.com/intent/tweet?text=Ponut%20Angular%20Admin%20Dashboard.&amp;url=http://ponut.codeguru.io/landing.html&amp;via=mohaalym" tooltip="Share on Twitter" target="_blank" direction="down">twitter</a></li>
+        <li class="o-stack__cell"><a class="c-icon c-icon--social u-font-medium u-color-white-900" href="https://pinterest.com/pin/create/button/?url=http%3A//ponut.codeguru.io/&amp;media=http%3A//ponut.codeguru.io/resources/assets/preview/dark.png&amp;description=Ponut%20Premium%20Angular%20Admin%20Dashboard%20Template%20(Only%2020$)." tooltip="Share on Pinterest" target="_blank" direction="down">pinterest</a></li>
+        <li class="o-stack__cell"><a class="c-icon c-icon--social u-font-medium u-color-white-900" href="https://www.facebook.com/sharer.php?u=ponut.codeguru.io/landing.html" tooltip="Share on Facebook" target="_blank" direction="down">facebook</a></li>
+        <li class="o-stack__cell"><a class="c-icon c-icon--social u-font-medium u-color-white-900" href="https://plus.google.com/share?url=ponut.codeguru.io/landing.html" tooltip="Share on Google Plus" target="_blank" direction="down">gplus</a></li>
+      </ul>
+    </div>
+    <p>Copyright &#169; All Rights Reserved.</p>
+  </div>
+</footer>

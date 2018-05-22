@@ -1,0 +1,91 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Layout Variables
+ *
+ *
+ * + @Container
+ *     - #Container Structure
+ *     - #Container Modifiers
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Layout Variables
+// -------------------------------------
+
+$container-max-width                = 1280px
+$container-intial-width             = 100%
+$container-above-breakpoint-width   = 90%
+$container-padding                  = 6%
+$container-above-breakpoint-padding = 3em
+$container-switch-breakpoint        = $viewport-md
+$container-fluid-switch-breakpoint  = $viewport-hd
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Container
+// ---------------------------------------------------------
+
+// #Container Structure
+// -------------------------------------
+
+.o-container
+  // Layout
+  box-sizing: border-box
+  width: $container-intial-width
+  max-width: $container-max-width
+  padding-right: $container-padding
+  padding-left:  $container-padding
+  margin-right: auto
+  margin-left:  auto
+  position: relative
+
+
+
+  // === Breakpoints
+
+  +from($container-switch-breakpoint)
+    // Layout
+    width: $container-above-breakpoint-width
+    padding-right: $container-above-breakpoint-padding
+    padding-left:  $container-above-breakpoint-padding
+
+
+
+
+
+
+
+// #Container Modifiers
+// -------------------------------------
+
+.o-container--fluid
+  // Layout
+  max-width: none
+
+
+
+  // === Breakpoints
+
+  +from($container-fluid-switch-breakpoint)
+    padding-right: $container-padding
+    padding-left:  $container-padding

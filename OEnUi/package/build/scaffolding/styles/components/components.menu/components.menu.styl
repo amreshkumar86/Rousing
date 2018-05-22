@@ -1,0 +1,833 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Typography Variables
+ *     - #Layout Variables
+ *     - #Styles Variables
+ *     - #Color Variables
+ *
+ *
+ * + @Menu
+ *     - #Menu Structure
+ *
+ *     - #Menu Modifiers
+ *         > $Horizontal Menu Modifier
+ *         > $Dropdown Menu Modifier
+ *
+ *     - #Menu States
+ *
+ *     - #Menu Context
+ *         > $Vertical Menu Context
+ *         > $Horizontal Menu Item Context
+ *         > $Menu Item States Context
+ *
+ *
+ * + @Menu Item
+ *     - #Menu Item Structure
+ *     - #Menu Item States
+ *
+ *     - #Menu Item Context
+ *         > $Any Menu Context
+ *         > $Horizontal Menu Context
+ *         > $Dropdown Menu Context
+ *
+ *
+ * + @Menu Separator
+ *     - #Menu Separator Structure
+ *
+ *
+ * + @Menu Link
+ *     - #Menu Link Structure
+ *
+ *     - #Menu Link Context
+ *         > $Horizontal Menu Context
+ *         > $Dropdown Menu Context
+ *         > $Menu Item Context
+ *         > $Menu Item State Context
+ *
+ *
+ * + @Menu Link Desendants
+ *     - #Menu Desendants Structure
+ *
+ *
+ * + @Menu Icon
+ *     - #Menu Icon Structure
+ *
+ *     - #Menu Icons Context
+ *         > $Menu Item States Context
+ *
+ *
+ * + @Menu Link Text
+ *     - #Menu Link Text Structure
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Typography Variables
+// -------------------------------------
+
+$menu-horizontal-divider-glyph           = '•'
+$dropdown-link-font-size                 = 0.875em
+
+
+
+
+
+
+
+// #Layout Variables
+// -------------------------------------
+
+$menu-vertical-max-width                 = 16em
+$menu-vertical-min-width                 = 12em
+$menu-vertical-link-height               = 3em
+$menu-vertical-link-padding              = 1em
+$menu-horizontal-divider-spacing         = 0.5em
+$menu-horizontal-link-padding            = 2em
+$menu-vaertical-items-gap                = 1em
+$dropdown-link-height                    = 1em
+
+
+
+
+
+
+
+// #Styles Variables
+// -------------------------------------
+
+$menu-vertical-border                    = 1px solid
+$menu-horizontal-divider-opacity         = 0.3
+$dropdown-border-radius                  = 4px
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$menu-vertical-background                = $color-main
+$menu-vertical-border-color              = $base-border-color
+$menu-vertical-border-color              = $color-grey-muted
+$menu-vertical-item-hover-background     = alpha($color-grey-muted 0.2)
+$menu-vertical-item-active-background    = alpha($color-grey-muted 0.2)
+$menu-vertical-link-color                = $color-grey-major
+$menu-link-active-color                  = $color-variant-primary
+$menu-link-active-color                  = $color-variant-primary
+$menu-link-active-bottom-line-background = $color-variant-primary
+$menu-icon-color                         = $color-grey-minor
+$menu-icon-hover-color                   = $color-variant-primary
+$menu-icon-active-color                  = $color-variant-primary
+$dropdown-link-state-background          = $color-variant-primary
+$dropdown-link-state-color               = $color-main
+$dropdown-icon-hover-color               = $color-main
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Menu
+// ---------------------------------------------------------
+
+// #Menu Structure
+// -------------------------------------
+
+.c-menu
+  // Layout
+  position: relative
+  max-width: $menu-vertical-max-width
+  min-width: $menu-vertical-min-width
+  margin: 0
+  padding: 0
+  overflow: visible
+  z-index: $over-page
+
+  // Styles
+  list-style: none
+  box-shadow: $shadow-mini
+
+
+
+
+
+
+
+// #Menu Modifiers
+// -------------------------------------
+
+/**
+ * ===== $Horizontal Menu Modifier
+ */
+
+.c-menu--horizontal
+  +from($viewport-lg)
+    // Layout
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    justify-content: center
+    max-width: none
+
+    // Styles
+    box-shadow: none
+
+
+
+
+
+
+/**
+ * ===== $Expanded Vertical Menu Modifier
+ */
+
+.c-menu--expanded
+  // Layout
+  width: 100%
+  max-width: none
+
+
+
+
+
+
+/**
+ * ===== $Dropdown Menu Modifier
+ */
+
+.c-menu--dropdown
+  // Layout
+  width: 12em
+  overflow: hidden
+  position: absolute
+  margin-top: 3px
+  visibility: hidden
+  z-index: $over-all
+
+  // Styles
+  opacity: 0
+  border-radius: $dropdown-border-radius
+  box-shadow: $shadow-medium
+
+  // Theme
+  background-color: $color-main
+
+  // Easing
+  transition: $default-transition
+
+  // Extra
+  transform: translate3d(0, 2em, 0)
+
+
+
+
+
+
+
+
+// #Menu States
+// -------------------------------------
+
+.is-visible
+  .c-menu--dropdown&
+    // Layout
+    visibility: visible
+
+    // Styles
+    opacity: 1
+
+    // Extra
+    transform: translate3d(0, 0, 0)
+
+
+
+
+
+
+
+// #Menu Context
+// -------------------------------------
+
+/**
+ * ===== $Vertical Menu Context
+ */
+
+.c-menu .c-menu
+  // Layout
+  width: 100%
+  visibility: hidden
+  position: absolute
+  top: 0
+  left: 100%
+  z-index: $over-content
+
+  // Styles
+  opacity: 0
+
+  // Easing
+  transition: $default-transition
+
+  // Extra
+  transform: translate3d(5%, 0, 0)
+
+
+
+  // === Breakpoints
+
+  +to($viewport-lg)
+    &:not(.c-menu--floated)
+      // Layout
+      visibility: visible
+      position: relative
+      left: 0
+      max-height: 0
+
+      // Styles
+      border-top: $menu-vertical-border
+      box-shadow: none
+
+      // Theme
+      border-color: $menu-vertical-border-color
+
+      // Easing
+      transition: $default-transition
+
+
+
+
+
+
+/**
+ * ===== $Horizontal Menu Item Context
+ */
+
+.c-menu
+  .c-menu--horizontal > .c-menu__item > &
+    +from($viewport-lg)
+      // Layout
+      width: auto
+      visibility: hidden
+      position: absolute
+      top: 100%
+      left: 0
+
+      // Extra
+      transform: translate3d(0, 5%, 0)
+
+
+
+
+
+
+/**
+ * ===== $Menu Item States Context
+ */
+
+.c-menu
+  .c-menu__item:hover > &
+  .c-menu__item.is-tapped > &.c-menu--floated
+    // Layout
+    visibility: visible
+
+    // Styles
+    opacity: 1
+
+    // Extra
+    transform: translate3d(0, 0, 0)
+
+
+  .c-menu__item.is-active > &:not(.c-menu--floated)
+    +to($viewport-lg)
+      // Layout
+      visibility: visible
+      max-height: 30em
+
+      // Styles
+      opacity: 1
+
+      // Extra
+      transform: translate3d(0, 0, 0)
+
+
+
+
+
+
+/**
+ * ===== $Expanded Menu Context
+ */
+
+.c-menu
+  .c-menu--expanded &
+    // Layout
+    width: 100%
+    max-width: none
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Menu Item
+// ---------------------------------------------------------
+
+// #Menu Item Structure
+// -------------------------------------
+
+.c-menu__item
+  // Layout
+  position: relative
+  width: auto
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  // Styles
+  border-bottom:  $menu-vertical-border
+
+  // Theme
+  border-color: $menu-vertical-border-color
+
+  // Easing
+  transition: $default-transition
+
+
+
+  // === Pseudo Elements
+
+  &:last-child
+    border-bottom: 0
+
+
+
+  // === Breakpoints
+
+  +to($viewport-lg)
+    // Layout
+    flex-flow: column nowrap
+    justify-content: center
+    overflow: hidden
+
+    &.is-tapped
+      overflow: visible
+
+
+
+
+
+
+
+// #Menu Item States
+// -------------------------------------
+
+.c-menu__item
+  &:hover
+    +from($viewport-lg)
+      // Theme
+      background-color: $menu-vertical-item-hover-background
+
+
+  &.is-active
+    +to($viewport-lg)
+      // Theme
+      background-color: $menu-vertical-item-active-background
+
+
+  &.is-current
+    // Theme
+    background-color: $menu-vertical-item-active-background
+
+
+
+
+
+
+
+// #Menu Item Context
+// -------------------------------------
+
+/**
+ * ===== $Any Menu Context
+ */
+
+.c-menu__item
+  .c-menu__item
+    // Breakpoints
+    +to($viewport-lg)
+      // Theme
+      background-color: transparent
+
+
+
+
+
+
+/**
+ * ===== $Horizontal Menu Context
+ */
+
+.c-menu__item
+  .c-menu--horizontal > &
+    +from($viewport-lg)
+      // Styles
+      border-bottom: 0
+
+      // Theme
+      background-color: transparent
+
+
+  .c-menu--horizontal.c-menu--divided > &
+    +from($viewport-lg)
+      &::after
+        // Typography
+        font-size: 0.8em
+        line-height: 1
+        text-transform: none
+        font-style: normal
+        font-weight: normal
+
+        // Layout
+        margin: 0 $menu-horizontal-divider-spacing
+
+        // Styles
+        opacity: $menu-horizontal-divider-opacity
+
+        // Extra
+        content: $menu-horizontal-divider-glyph
+
+
+      &:last-child::after
+        // Layout
+        display: none
+
+
+
+
+
+
+/**
+ * ===== $Dropdown Menu Context
+ */
+
+.c-menu__item
+  .c-menu--dropdown &
+    // Styles
+    border: 0
+
+
+
+
+
+
+/**
+ * ===== $Dropdown Menu Context
+ */
+
+.c-menu__item
+  .c-menu--borderless &
+    // Styles
+    border: 0
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Menu Separator
+// ---------------------------------------------------------
+
+// #Menu Separator Structure
+// -------------------------------------
+
+.c-menu__separator
+  // Layout
+  margin: 0.5em 0
+
+  // Styles
+  border-top: 1px solid $color-grey-muted
+
+  // Theme
+  border-color: $color-grey-muted
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Menu Link
+// ---------------------------------------------------------
+
+// #Menu Link Structure
+// -------------------------------------
+
+.c-menu__link
+  // Typography
+  text-decoration: none
+  text-transform: capitalize
+  line-height: 1
+
+  // Layout
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-between
+  align-items: center
+  overflow: hidden
+  width: 100%
+  height: $menu-vertical-link-height
+  padding: $menu-vertical-link-padding
+  position: relative
+
+  // Theme
+  color:  $menu-vertical-link-color
+
+  // Easing
+  transition: $default-transition
+
+
+
+  // === Mixins
+
+  collapse('horizontal')
+
+
+
+  // === Pseudo Elements
+
+  &::after
+    // Easing
+    transition: $default-transition
+
+    // Extra
+    content: ''
+    transform: translate3d(0, 2px, 0)
+
+
+
+
+
+
+
+// #Menu Link Context
+// -------------------------------------
+
+/**
+ * ===== $Horizontal Menu Context
+ */
+
+.c-menu__link
+  .c-menu--horizontal > .c-menu__item > &
+    +from($viewport-lg)
+      // Layout
+      padding-top:  $menu-horizontal-link-padding
+      padding-bottom:  $menu-horizontal-link-padding
+
+
+
+
+
+
+/**
+ * ===== $Dropdown Menu Context
+ */
+
+.c-menu__link
+  .c-menu--dropdown &
+    // Typography
+    font-size: $dropdown-link-font-size
+
+    // Layout
+    height: $dropdown-link-height
+
+    // Theme
+    background-color: $color-main
+    color: $color-grey-major
+
+
+
+
+
+
+
+/**
+ * ===== $Menu Item Context
+ */
+
+.c-menu__link
+  // Breakpoints
+  +to($viewport-lg)
+    .c-menu__item .c-menu__item &
+      // Layout
+      padding-left: 1.5em
+
+
+    .c-menu__item .c-menu__item .c-menu__item &
+      // Layout
+      padding-left: 3em
+
+
+
+
+
+
+/**
+ * ===== $Menu Item State Context
+ */
+
+.c-menu__link
+  .c-menu__item:hover > &
+    +from($viewport-lg)
+      // Theme
+      color:  $menu-link-active-color
+
+
+  .c-menu__item.is-active > &
+    +to($viewport-lg)
+      // Theme
+      color:  $menu-link-active-color
+
+
+  .c-menu__item.is-current > &
+    // Theme
+    color:  $menu-link-active-color
+
+
+  .c-menu--horizontal > .c-menu__item.is-current > &::after
+    +from($viewport-lg)
+      // Layout
+      display: block
+      width: 100%
+      height: 2px
+      position: absolute
+      bottom: 0
+      left: 0
+
+      // Theme
+      background-color: $menu-link-active-bottom-line-background
+
+      // Extra
+      transform: translate3d(0, 0, 0)
+
+  .c-menu--dropdown .c-menu__item:hover > &
+  .c-menu--dropdown .c-menu__item.is-active > &
+    // Theme
+    background: $dropdown-link-state-background
+    color: $dropdown-link-state-color
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Menu Link Desendants
+// ---------------------------------------------------------
+
+// #Menu Desendants Structure
+// -------------------------------------
+
+*
+  .c-menu__link > &
+    // Layout
+    margin-left: $menu-vaertical-items-gap
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Menu Icon
+// ---------------------------------------------------------
+
+// #Menu Icon Structure
+// -------------------------------------
+
+.c-menu__icon
+  // Theme
+  color: $menu-icon-color
+
+  // Easing
+  transition: $default-transition
+
+
+
+
+
+
+
+// #Menu Icons Context
+// -------------------------------------
+
+/**
+ * ===== $Menu Item States Context
+ */
+
+.c-menu__icon
+  .c-menu__item:hover > .c-menu__link > &
+    +from($viewport-lg)
+      // Theme
+      color: $menu-icon-hover-color
+
+
+  .c-menu__item.is-current > .c-menu__link > &
+    // Theme
+    color: $menu-icon-hover-color
+
+
+  .c-menu__item.is-active > .c-menu__link > &
+    +to($viewport-lg)
+      // Theme
+      color: $menu-icon-active-color
+
+
+  .c-menu--dropdown .c-menu__item:hover .c-menu__link &,
+  .c-menu--dropdown .c-menu__item.is-active  &
+    // Theme
+    color: $dropdown-icon-hover-color
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Menu Link Text
+// ---------------------------------------------------------
+
+// #Menu Link Text Structure
+// -------------------------------------
+
+.c-menu__text
+  // Layout
+  flex: 1 1 auto

@@ -1,0 +1,8 @@
+
+.c-main.o-stack.o-stack--nowrap.u-relative( email='' ng-class="{ 'c-main--email': $state.includes('email.inbox') }" class='u-flexColumn@lg-' )
+  .c-secondaryNav.o-stack__cell.u-border-top.u-bg-main.u-border-right.u-overflow-auto(class='u-width-100p@lg- u-height-100p@lg+' perfect-scrollbar='' ui-view='emailNavbar' tuck='{ from: "1024px" }')
+  .c-mailboxMessages.o-stack__cell.o-stack__cell--expanded.u-border-top.u-border-right.u-bg-main( tuck="{ from: '1024px' }" ui-view='emailsList' perfect-scrollbar="" ng-if="($state.includes('email.inbox') && !$state.params.id) || ($state.includes('email.inbox') && !breakpoint)" )
+
+  .c-emailMsgWrapper.o-stack__cell.o-stack__cell--expanded.u-border-top.u-bg-main.u-width-100p.u-height-100p.u-overflow-auto( class='u-relative@hd+' perfect-scrollbar='' tuck="{ from: '1024px' }" ui-view='messageBox' ng-if="$state.params.id || !breakpoint" )
+
+  div#compose.u-width-100p.u-height-100p( tuck="{ from: '1024px' }" ng-if="$state.is('email.compose')" ui-view='compose' )

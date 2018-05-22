@@ -1,0 +1,372 @@
+//- ----------------------------------------------
+//- @Table of Contents
+//- ----------------------------------------------
+
+//-
+  + @Top Header
+      - #Aside ( Left ) Part
+      - #Main ( Main Menus ) Part
+          > $Main Left Part
+              → %Offcanvas Toggle
+              → %Dropdown Menu
+          > $Main Center Part
+          > $Main Right Part
+              → %Avatar Area
+              → %Action Bar Icons
+                  » &Messages Area
+                  » &Notifications Area
+                  » &Settings Area
+                  » &Chat Area
+
+
+
+
+
+
+
+
+
+
+//- ----------------------------------------------
+//- @Top Header
+//- ----------------------------------------------
+
+//- .c-topbar.o-stack.o-stack--nowrap.o-stack--center.u-shadow-mini
+
+//- #Aside ( Left ) Part
+//- ------------------------------------
+
+.c-topbar__aside.o-stack__cell.u-px-small.u-flexSelfStretch(class='u-width-100p@md- u-py-mini@md-')
+  .o-stack.o-stack--nowrap.o-stack--center.o-stack--splitted.u-height-100p
+    .o-stack__cell(class='u-hide@md+')
+      a.c-icon.c-icon--main.c-menu__link.u-color-white-900.fn-offcanvasShow(href='javascript:void(0)') menu
+    .c-topbar__asideLogoBox.o-stack__cell
+      a(href='javascript:void(0)' class='c-logo')
+        svg(xmlns='http://www.w3.org/2000/svg', width='32', height='32', viewbox='0 0 56 56' class='c-logo__img u-fill-white-900')
+          path.cls-1(d='M28,56H0V28A28,28,0,1,1,28,56ZM28.215,9.908A18.305,18.305,0,0,0,9.913,28H9.908V38.769H0v7.754H9.908V56h6.462V46.523H28V46.518c0.072,0,.143.005,0.215,0.005A18.308,18.308,0,0,0,28.215,9.908ZM28,39.2H16.8V28A11.2,11.2,0,1,1,28,39.2Z')
+    .c-topbar__asideActionsBox.o-stack__cell(class='u-hide@md-')
+      .c-button-group
+        a.c-actionButton.c-button.c-button--icon.c-icon(href='javascript:void(0)') lock
+        a.c-actionButton.c-button.c-button--icon.c-icon(href='javascript:void(0)') power_settings_new
+    .o-stack__cell(class='u-hide@md+')
+      a.c-icon.c-icon--main.c-menu__link.u-color-white-900(href='javascript:void(0)' class='fn-sidebarTrigger') chat
+
+
+
+
+
+
+
+
+//- #Main ( Main Menus ) Part
+//- ------------------------------------
+
+.c-topbar__main.o-stack__cell.o-stack__cell--expanded.u-px-small(class='u-hide@md-')
+  .o-stack.o-stack--nowrap.o-stack--center.o-stack--splitted
+
+    //- ---------- $Main Left Part ---------- -//
+
+    .o-stack__cell
+      .c-topbar__mainListBox.o-stack.o-stack--nowrap.o-stack--center
+
+        //- ====== %Offcanvas Collapsed Logo
+
+        .c-topbar__mainLogoBox.o-stack__cell.u-mr-small
+          a(href='javascript:void(0)' class='c-logo')
+            svg(xmlns='http://www.w3.org/2000/svg', width='32', height='32', viewbox='0 0 56 56' class='c-logo__img u-fill-main')
+              path.cls-1(d='M28,56H0V28A28,28,0,1,1,28,56ZM28.215,9.908A18.305,18.305,0,0,0,9.913,28H9.908V38.769H0v7.754H9.908V56h6.462V46.523H28V46.518c0.072,0,.143.005,0.215,0.005A18.308,18.308,0,0,0,28.215,9.908ZM28,39.2H16.8V28A11.2,11.2,0,1,1,28,39.2Z')
+
+
+
+
+
+
+
+        //- ====== %Offcanvas Toggle
+
+        .c-topbar__toggleBox.o-stack__cell
+          a(href='javascript:void(0)' class='c-menu__link c-topbar__mainLink fn-offcanvasCollapse')
+            span.c-icon.c-icon--main menu
+
+
+
+
+
+
+        //- ====== %Dropdown Menu
+
+        .c-topbar__mainList.o-stack__cell
+          ul.o-stack.o-stack--center.o-stack--nowrap.u-list-bare
+            li.has-dropdown( dropdown )
+              .fn-dropdownTrigger
+                a(href='javascript:void(0)' class='c-menu__link c-topbar__mainLink')
+                  span Dropdown Menu
+                  span.c-icon.c-icon--main expand_more
+
+              ul.c-menu.c-menu--dropdown
+                li.c-menu__item
+                  a.c-menu__link(href='javascript:void(0)')
+                    span.c-menu__text Projects
+                li.c-menu__separator
+                li.c-menu__item
+                  a.c-menu__link(href='javascript:void(0)')
+                    span.c-menu__text Tasks
+                    span.c-badge.c-menu__badge(data-badge="15")
+                li.c-menu__item
+                  a.c-menu__link(href='javascript:void(0)')
+                    span.c-menu__text Calendar
+                li.c-menu__separator
+                li.c-menu__item
+                  a.c-menu__link(href='javascript:void(0)')
+                    span.c-menu__text Lock
+
+
+
+
+
+
+
+
+    //- ---------- $Main Center Part ---------- -//
+
+    .o-stack__cell.u-pl-medium(class='u-hide@lg-')
+      .c-topbar__searchBox
+        form(action='./' method='POST')
+          .c-control.c-control--boxed.c-control--searchBG.u-border-none.u-radius-rounded.u-pl-small
+            span.c-icon.c-icon--main search
+            .c-control__input-box
+              input.c-control__input.u-pr-small(type='search', name='search' placeholder='Search Here...')
+
+
+
+
+
+
+
+
+    //- ---------- $Main Right Part ---------- -//
+
+    .o-stack__cell.u-pl-medium
+      .c-topbar__sideListBox.o-stack.o-stack--nowrap.o-stack--center.o-stack--smallGap
+
+        //- ====== %Avatar Area
+
+        .o-stack__cell(class='u-hide@xlg-')
+          .c-topbar__avatarBox.o-stack.o-stack--center.o-stack--nowrap.o-stack--tinyGap
+            span.o-stack__cell.u-text-capitalize.u-ws-nowrap good morning Emma.
+            .c-avatar.o-stack__cell
+              img(src='resources/images/avatars/avatar-small-1.jpg' alt='avatar')
+
+
+
+
+
+        //- ====== %Action Bar Icons
+
+        .o-stack__cell
+          ul.c-topbar__sideList.o-stack.o-stack--center.o-stack--nowrap.u-list-bare
+
+            //- &Messages Area
+            li.has-dropdown( dropdown )
+              .fn-dropdownTrigger
+                a(href='javascript:void(0)' class='c-menu__link')
+                  span.c-icon.c-icon--main email
+
+              ul.c-listExtended.c-block.u-absolute.u-shadow-medium.u-r-none.c-menu--dropdown
+                li.c-listExtended__header.u-px-small.u-py-small.u-border-bottom
+                  .c-menu__header.o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted.u-width-100p
+                    .c-menu__title.o-stack__cell
+                      h5 Messages
+                    ul.c-menu__actionBar.u-list-bare.o-stack__cell
+                      li
+                        a(href='javascript:void(0)' class='c-menu__link u-p-none u-height-auto u-overflow-visible')
+                          span.c-icon.c-icon--main(tooltip='Mark All As Read' direction='left') done_all
+
+                li.c-listExtended__body.u-relative(perfect-scrollbar='')
+                  ul.c-block.u-list-bare._u-px-small._u-py-small
+                    li.u-border-bottom
+                      .o-stack.o-stack--nowrap
+                        .o-stack__cell.u-mr-tiny
+                          .c-avatar
+                            img(src='resources/images/avatars/avatar-small-1.jpg' alt='avatar')
+                        .o-stack__cell--expanded
+                          .o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted.u-width-100p.u-mb-mini
+                            .o-stack__cell.o-stack__cell--expanded
+                              a(href='javascript:void(0)' class='c-link') Jessy Doe
+                            .o-stack__cell
+                              span.u-font-small 01:00 PM
+                          p
+                            | Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+
+                    li.u-border-bottom
+                      .o-stack.o-stack--nowrap
+                        .o-stack__cell.u-mr-tiny
+                          .c-avatar
+                            img(src='resources/images/avatars/avatar-small-2.jpg' alt='avatar')
+                        .o-stack__cell--expanded
+                          .o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted.u-width-100p.u-mb-mini
+                            .o-stack__cell.o-stack__cell--expanded
+                              a(href='javascript:void(0)' class='c-link') Mo Doe
+                            .o-stack__cell
+                              span.u-font-small 11:00 AM
+                          p
+                            | Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+
+
+                    li.u-border-bottom
+                      .o-stack.o-stack--nowrap
+                        .o-stack__cell.u-mr-tiny
+                          .c-avatar
+                            img(src='resources/images/avatars/avatar-small-3.jpg' alt='avatar')
+                        .o-stack__cell--expanded
+                          .o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted.u-width-100p.u-mb-mini
+                            .o-stack__cell.o-stack__cell--expanded
+                              a(href='javascript:void(0)' class='c-link') Flika Doe
+                            .o-stack__cell
+                              span.u-font-small 10:00 AM
+                          p
+                            | Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+
+
+                li.c-listExtended__footer.u-text-center.u-border-top
+                  a.u-block.u-p-tiny(href='javascript:void(0)' class='c-menu__link u-overflow-visible' style='height:auto' tooltip='View All Messages')
+                    span.c-icon.c-icon--main more_horiz
+
+
+
+
+            //- &Notifications Area
+            li.has-dropdown( dropdown )
+              .fn-dropdownTrigger
+                a(href='javascript:void(0)' class='c-menu__link')
+                  span.c-icon.c-icon--main.c-badge.c-badge--error.c-badge--overlap(data-badge='') notifications
+
+              ul.c-listExtended.c-block.u-absolute.u-shadow-medium.u-r-none.c-menu--dropdown
+                li.c-listExtended__header.u-px-small.u-py-small.u-border-bottom
+                  .c-menu__header.o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted.u-width-100p
+                    .c-menu__title.o-stack__cell
+                      h5 Notifications
+                    ul.c-menu__actionBar.u-list-bare.o-stack__cell
+                      li
+                        a(href='javascript:void(0)' class='c-menu__link u-p-none u-height-auto u-overflow-visible')
+                          span.c-icon.c-icon--main(tooltip='Mark All As Read' direction='left') done_all
+
+                li.c-listExtended__body.u-relative(perfect-scrollbar='')
+                  ul.c-block.u-list-bare._u-px-small._u-py-small
+                    li.u-border-bottom
+                      .o-stack.o-stack--nowrap
+                        .o-stack__cell.u-mr-tiny
+                          a.c-button.c-button--icon.c-button--primary.u-radius-circle(href='javascript:void(0)') done
+                        .o-stack__cell--expanded
+                          p
+                            a(href='javascript:void(0)' class='c-link') John Doe
+                            | &nbsp; Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+                          span.u-mt-tiny.u-font-small 1 Minute Ago
+
+                    li.u-border-bottom
+                      .o-stack.o-stack--nowrap
+                        .o-stack__cell.u-mr-tiny
+                          a.c-button.c-button--icon.c-button--error.u-radius-circle(href='javascript:void(0)') mail
+                        .o-stack__cell--expanded
+                          p
+                            a(href='javascript:void(0)' class='c-link') John Doe
+                            | &nbsp; Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+                          span.u-mt-tiny.u-font-small 2 Hours Ago
+
+                    li.u-border-bottom
+                      .o-stack.o-stack--nowrap
+                        .o-stack__cell.u-mr-tiny
+                          a.c-button.c-button--icon.c-button--success.u-radius-circle(href='javascript:void(0)') notifications
+                        .o-stack__cell--expanded
+                          p
+                            a(href='javascript:void(0)' class='c-link') John Doe
+                            | &nbsp; Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+                          span.u-mt-tiny.u-font-small 01:00 PM
+
+                    li.u-border-bottom
+                      .o-stack.o-stack--nowrap
+                        .o-stack__cell.u-mr-tiny
+                          a.c-button.c-button--icon.c-button--warning.u-radius-circle(href='javascript:void(0)') chat
+                        .o-stack__cell--expanded
+                          p
+                            a(href='javascript:void(0)' class='c-link') John Doe
+                            | &nbsp; Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+                          span.u-mt-tiny.u-font-small 01:00 PM
+
+                li.c-listExtended__footer.u-text-center.u-border-top
+                  a.u-block.u-p-tiny(href='javascript:void(0)' class='c-menu__link u-overflow-visible' style='height:auto' tooltip='View All Messages')
+                    span.c-icon.c-icon--main more_horiz
+
+
+
+
+            //- &Settings Area
+            li.has-dropdown( dropdown )
+              .fn-dropdownTrigger
+                a(href='javascript:void(0)' class='c-menu__link')
+                  span.c-icon.c-icon--main settings
+
+
+              ul#topbar__settingsMenu.c-listExtended.c-block.u-absolute.u-shadow-medium.u-r-none.c-menu--dropdown
+                li.c-listExtended__header.u-px-small.u-py-tiny.u-border-bottom
+                  h5 Settings
+
+                li.c-listExtended__body.scrollbar-inner.u-text-capitalize
+                  ul.c-block.u-list-bare._u-px-small._u-py-mini
+                    li.u-border-bottom
+                      .o-stack.o-stack--nowrap.o-stack--splitted
+                        .o-stack__cell--expanded
+                          span Enable Notifications
+                        .o-stack__cell
+                          .c-switch
+                            input#switch.c-switch__input(type='checkbox')
+                            label.c-switch__rail(for='switch')
+                              span.c-switch__button
+
+                    li.u-border-bottom
+                      .o-stack.o-stack--nowrap.o-stack--splitted
+                        .o-stack__cell--expanded
+                          span Allow Tracking
+                        .o-stack__cell
+                          .c-switch
+                            input#switch1.c-switch__input(type='checkbox' checked)
+                            label.c-switch__rail(for='switch1')
+                              span.c-switch__button
+
+                    li.u-border-bottom
+                      .o-stack.o-stack--nowrap.o-stack--splitted
+                        .o-stack__cell--expanded
+                          span Log Errors
+                        .o-stack__cell
+                          .c-switch
+                            input#switch2.c-switch__input(type='checkbox')
+                            label.c-switch__rail(for='switch2')
+                              span.c-switch__button
+
+                    li.u-border-bottom
+                      .o-stack.o-stack--nowrap.o-stack--splitted
+                        .o-stack__cell--expanded
+                          span Auto Renewal
+                        .o-stack__cell
+                          .c-switch
+                            input#switch3.c-switch__input(type='checkbox' checked)
+                            label.c-switch__rail(for='switch3')
+                              span.c-switch__button
+
+                    li
+                      .o-stack.o-stack--nowrap.o-stack--splitted
+                        .o-stack__cell--expanded
+                          span Enable SMS Alerts
+                        .o-stack__cell
+                          .c-switch
+                            input#switch4.c-switch__input(type='checkbox' checked)
+                            label.c-switch__rail(for='switch4')
+                              span.c-switch__button
+
+
+
+
+            //- &Chat Area
+            li
+              a(href='javascript:void(0)' class='c-menu__link fn-sidebarTrigger')
+                span.c-icon.c-icon--main menu

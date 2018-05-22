@@ -1,0 +1,148 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Font Sizes Settings
+ *     - #Line Heights Settings
+ *     - #Colors Settings
+ *
+ *
+ * + @Shared
+ *     - #Shared Structure
+ *
+ *
+ * + @Headings Sizes
+ *     - #Headings Structure
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Font Sizes Settings
+// -------------------------------------
+
+$font-size-h1 = $font-size-huge
+$font-size-h2 = $font-size-big
+$font-size-h3 = $font-size-large
+$font-size-h4 = $font-size-medium
+$font-size-h5 = $font-size-small
+$font-size-h6 = $font-size-tiny
+
+
+
+
+
+
+
+// #Line Heights Settings
+// -------------------------------------
+
+$line-height-h1 = 1.125
+$line-height-h2 = 1.25
+$line-height-h3 = 1.333
+$line-height-h4 = 1.414
+$line-height-h5 = 1.414
+$line-height-h6 = 1.414
+
+
+
+
+
+
+
+// #Colors Settings
+// -------------------------------------
+
+$headings-color = $color-grey-pivotal
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Shared
+// ---------------------------------------------------------
+
+// #Shared Structure
+// -------------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  // Theme
+  color: $headings-color
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Headings
+// ---------------------------------------------------------
+
+// #Headings Structure
+// -------------------------------------
+
+h1
+  // Typography
+  font-size: $font-size-h1
+  line-height: $line-height-h1
+
+
+
+
+h2
+  // Typography
+  font-size: $font-size-h2
+  line-height: $line-height-h2
+
+
+
+
+h3
+  // Typography
+  font-size: $font-size-h3
+  line-height: $line-height-h3
+
+
+
+
+h4
+  // Typography
+  font-size: $font-size-h4
+  line-height: $line-height-h4
+
+
+
+
+h5
+  // Typography
+  font-size: $font-size-h5
+  line-height: $line-height-h5
+
+
+
+
+h6
+  // Typography
+  font-size: $font-size-h6
+  line-height: $line-height-h6

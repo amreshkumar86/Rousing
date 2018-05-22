@@ -1,0 +1,47 @@
+.c-chatDialog__inner
+  min-height: 320px
+
+
+.c-chatBubblesBox--alt
+  direction: rtl
+
+
+.c-chatBubble
+  display: inline-block
+  vertical-align: middle
+  background: alpha($color-grey-muted, 0.2)
+  padding: 1em
+  line-height: 1.414em
+  border-radius: 2px 1.707em 1.707em 2px
+  margin-top: 0.33em
+  +from($viewport-sm)
+    max-width: 50%
+
+  .c-chatBubblesBox--alt &
+    background: $color-variant-primary
+    color: $color-main
+
+  .c-chatBubblesBox--alt &
+    border-radius: 1.707em 2px 2px 1.707em
+
+
+
+.c-chatBubbleBox:first-child .c-chatBubble
+  border-top-left-radius: 1.707em
+  margin-top: 0
+
+  .c-chatBubblesBox--alt &
+    border-top-right-radius: 1.707em
+
+
+
+.c-chatBubbleBox:last-child .c-chatBubble
+  border-bottom-left-radius: 1.707em
+
+  .c-chatBubblesBox--alt &
+    border-bottom-right-radius: 1.707em
+
+
+
+.c-chatRoomBlock
+  max-height: 320px

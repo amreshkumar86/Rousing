@@ -1,0 +1,5 @@
+#intro
+  background-image: url('views/scenes/landing/resources/images/bg.png')
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover

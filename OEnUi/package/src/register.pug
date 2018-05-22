@@ -1,0 +1,41 @@
+//- Home Layout
+extends views/scaffolding/layouts/non-app.pug
+
+block vars
+  - var pageTitle = "Register";
+
+
+block page
+  .o-block.u-text-center.u-fullscreen.u-overflow-auto.u-bg-muted
+    .o-block__cell.u-flex.u-flexGrow-1.u-mb-medium.u-p-big
+      .u-m-auto
+        .c-formCard.o-block.u-collapse.u-bg-main.u-shadow-medium.u-p-medium.u-pt-none._u-width-100p._u-mb-small
+          .o-block__cell
+            span(class='c-formCard__icon c-button c-button c-button--big c-button--icon u-radius-circle u-font-huge') star
+
+          .o-block__cell
+            h2.u-font-regular Create Account
+
+          .o-block__cell
+            .c-control.u-width-100p
+              .c-control__input-box
+                input.c-control__input(type="email", name="search", value="" placeholder='Your Email')
+              span.c-icon.c-icon--main email
+
+          .o-block__cell
+            .c-control.u-width-100p
+              .c-control__input-box
+                input.c-control__input(type="password", name="search", value="" placeholder='Password')
+              span.c-icon.c-icon--main lock
+
+          .o-block__cell
+            .c-control.u-width-100p
+              .c-control__input-box
+                input.c-control__input(type="password", name="search", value="" placeholder='Repeat Password')
+              span.c-icon.c-icon--main lock
+
+          .o-block__cell
+            a(href='#' class='c-button c-button--block') Create Account
+
+          .o-block__cell
+            a(href='login.html' class='c-button c-button--secondary c-button--block') Login

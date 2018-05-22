@@ -1,0 +1,186 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Navbar
+ *     - #Navbar Structure
+ *
+ *
+ * + @Navbar Logo
+ *     - #Navbar Logo Structure
+ *
+ *
+ * + @Navbar Logo Link
+ *     - #Navbar Logo Link Structure
+ *
+ *
+ * + @Navbar Logo Image
+ *     - #Navbar Logo Image Structure
+ *
+ *
+ * + @Navbar Menu Wrapper
+ *     - #Navbar Menu Wrapper Structure
+ *     - #Navbar Menu Wrapper Scaffolding
+ *
+ *
+ * + @Navbar Menu
+ *     - #Navbar Menu Structure
+ *     - #Navbar Menu States
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Navbar
+// ---------------------------------------------------------
+
+// #Navbar Structure
+// -------------------------------------
+
+.c-navbar
+  // Layout
+  display: flex
+  justify-content: space-between
+  align-items: center
+  position: relative
+
+
+
+  // === Breakpoints
+
+  +to($viewport-lg)
+    // Layout
+    padding: 1em 0
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Navbar Logo
+// ---------------------------------------------------------
+
+// #Navbar Logo Structure
+// -------------------------------------
+
+.c-navbar__logo
+  // Typography
+  line-height: 1
+  font-size: 1em
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Navbar Logo Link
+// ---------------------------------------------------------
+
+// #Navbar Logo Link Structure
+// -------------------------------------
+
+.c-navbar__logoLink
+  // Layout
+  display: block
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Navbar Logo Image
+// ---------------------------------------------------------
+
+// #Navbar Logo Image Structure
+// -------------------------------------
+
+.c-navbar__logoImage
+  // Layout
+  vertical-align: middle
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Navbar Menu Wrapper
+// ---------------------------------------------------------
+
+// #Navbar Menu Wrapper Structure
+// -------------------------------------
+
+.c-navbar__menu
+  +to($viewport-lg)
+    // Layout
+    position: absolute
+    width: 100%
+    top: 100%
+    left: 0
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Navbar Menu
+// ---------------------------------------------------------
+
+// #Navbar Menu Structure
+// -------------------------------------
+
+.c-navbar__menu
+  .c-menu
+    // Layout
+    max-width: none
+    width: 100%
+
+    // Easing
+    transition: $default-transition
+    transform: translate3d(0, 0, 0)
+
+
+
+  // === Breakpoints
+
+  +to($viewport-lg)
+    > .c-menu
+      // Layout
+      max-height: 0
+      overflow: hidden
+
+
+
+
+
+
+
+// #Navbar Menu States
+// -------------------------------------
+
+.c-navbar__menu
+  +to($viewport-lg)
+    > .c-menu.is-visible
+      // Layout
+      max-height: 80vh
+      overflow-y: scroll

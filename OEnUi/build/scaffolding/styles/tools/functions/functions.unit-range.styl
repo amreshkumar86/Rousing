@@ -1,0 +1,18 @@
+// ---------------------------------------------------------
+// @Unit Range Function
+// ---------------------------------------------------------
+
+/**
+ * Function used to change unit from max value
+ * to min value on viewport resize i.e. responsive Typography.
+ */
+
+-range($property = 'font-size', $min-value = $font-size-base-min, $max-value = $font-size-base-max, $lowest-boundary = $viewport-xs, $highest-boundary = $viewport-hd)
+  +to($lowest-boundary)
+    {$property}: $min-value
+
+  +between($lowest-boundary, $highest-boundary)
+    {$property}: 'calc(%s + (%s - %s) * ((100vw - %s) / (%s - %s)))' % ($min-value -strip($max-value) -strip($min-value) $lowest-boundary -strip($highest-boundary) -strip($lowest-boundary))
+
+  +from($highest-boundary)
+    {$property}: $max-value

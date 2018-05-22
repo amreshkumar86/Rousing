@@ -1,0 +1,380 @@
+
+<div class="c-main o-stack o-stack--nowrap u-relative">
+  <div class="o-block u-p-small u-width-100p">
+    <div class="u-width-100p">
+      <div class="c-Masonry u-relative o-grid o-grid--smallGap _u-3/12@hd+ _u-4/12@lg+ _u-6/12@md+ _u-width-100p@md-" masonry="{ itemSelector: '.o-grid__cell', columnWidth: '.c-Masonry__sizer', percentPosition: true }">
+        <div class="c-Masonry__sizer u-absolute"></div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <h5>Slider Demo 01</h5>
+            </div>
+            <div class="c-portlet__content o-block__cell u-p-small u-collapse _u-mb-small">
+              <p>Start without params.</p>
+              <input id="range_01" ion-range-slider=""/>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <h5>Slider Demo 02</h5>
+            </div>
+            <div class="c-portlet__content o-block__cell u-p-small u-collapse _u-mb-small">
+              <p>Set min value, max value and start point.</p>
+              <input id="range_02" ion-range-slider="{
+                min: 100,
+                max: 1000,
+                from: 550
+              }"/>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <h5>Slider Demo 03</h5>
+            </div>
+            <div class="c-portlet__content o-block__cell u-p-small u-collapse _u-mb-small">
+              <p>Set type to double and specify range, also showing grid and a.</p>
+              <input id="range_03" ion-range-slider="{
+                type: &quot;double&quot;,
+                grid: true,
+                min: 0,
+                max: 1000,
+                from: 200,
+                to: 800,
+                prefix: &quot;$&quot;
+              }"/>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <h5>Slider Demo 04</h5>
+            </div>
+            <div class="c-portlet__content o-block__cell u-p-small u-collapse _u-mb-small">
+              <p>Set up range with negative values.</p>
+              <input id="range_04" ion-range-slider="{
+                type: &quot;double&quot;,
+                grid: true,
+                min: -1000,
+                max: 1000,
+                from: -500,
+                to: 500
+              }"/>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <h5>Slider Demo 05</h5>
+            </div>
+            <div class="c-portlet__content o-block__cell u-p-small u-collapse _u-mb-small">
+              <p>Using step 250.</p>
+              <input id="range_05" ion-range-slider="{
+                type: &quot;double&quot;,
+                grid: true,
+                min: -1000,
+                max: 1000,
+                from: -500,
+                to: 500,
+                step: 250
+              }"/>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <h5>Slider Demo 06</h5>
+            </div>
+            <div class="c-portlet__content o-block__cell u-p-small u-collapse _u-mb-small">
+              <p>Set up range with fractional values, using fractional step.</p>
+              <input id="range_06" ion-range-slider="{
+                type: &quot;double&quot;,
+                grid: true,
+                min: -12.8,
+                max: 12.8,
+                from: -3.2,
+                to: 3.2,
+                step: 0.1
+              }"/>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <h5>Slider Demo 07</h5>
+            </div>
+            <div class="c-portlet__content o-block__cell u-p-small u-collapse _u-mb-small">
+              <p>Set up you own numbers.</p>
+              <input id="range_07" ion-range-slider="{
+                type: &quot;double&quot;,
+                grid: true,
+                from: 1,
+                to: 5,
+                values: [0, 10, 100, 1000, 10000, 100000, 1000000]
+              }"/>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <h5>Slider Demo 08</h5>
+            </div>
+            <div class="c-portlet__content o-block__cell u-p-small u-collapse _u-mb-small">
+              <p>Using any strings as your values.</p>
+              <input id="range_08" ion-range-slider="{
+                grid: true,
+                from: 5,
+                values: [
+                  &quot;zero&quot;, &quot;one&quot;,
+                  &quot;two&quot;, &quot;three&quot;,
+                  &quot;four&quot;, &quot;five&quot;,
+                  &quot;six&quot;, &quot;seven&quot;,
+                  &quot;eight&quot;, &quot;nine&quot;,
+                  &quot;ten&quot;
+                ]
+              }"/>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <h5>Slider Demo 09</h5>
+            </div>
+            <div class="c-portlet__content o-block__cell u-p-small u-collapse _u-mb-small">
+              <p>One more example with strings.</p>
+              <input id="range_09" ion-range-slider="{
+                grid: true,
+                from: 3,
+                values: [
+                  &quot;January&quot;, &quot;February&quot;, &quot;March&quot;,
+                  &quot;April&quot;, &quot;May&quot;, &quot;June&quot;,
+                  &quot;July&quot;, &quot;August&quot;, &quot;September&quot;,
+                  &quot;October&quot;, &quot;November&quot;, &quot;December&quot;
+                ]
+              }"/>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <h5>Slider Demo 10</h5>
+            </div>
+            <div class="c-portlet__content o-block__cell u-p-small u-collapse _u-mb-small">
+              <p>No prettify. Big numbers are ugly and unreadable.</p>
+              <input id="range_10" ion-range-slider="{
+                grid: true,
+                min: 1000,
+                max: 1000000,
+                from: 100000,
+                step: 1000,
+                prettify_enabled: false
+              }"/>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <h5>Slider Demo 11</h5>
+            </div>
+            <div class="c-portlet__content o-block__cell u-p-small u-collapse _u-mb-small">
+              <p>Prettify enabled. Much better!.</p>
+              <input id="range_11" ion-range-slider="{
+                grid: true,
+                min: 1000,
+                max: 1000000,
+                from: 200000,
+                step: 1000,
+                prettify_enabled: true
+              }"/>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <h5>Slider Demo 12</h5>
+            </div>
+            <div class="c-portlet__content o-block__cell u-p-small u-collapse _u-mb-small">
+              <p>Don't like space as separator? Use anything you like!.</p>
+              <input id="range_12" ion-range-slider="{
+                grid: true,
+                min: 1000,
+                max: 1000000,
+                from: 300000,
+                step: 1000,
+                prettify_enabled: true,
+                prettify_separator: &quot;.&quot;
+              }"/>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <h5>Slider Demo 14</h5>
+            </div>
+            <div class="c-portlet__content o-block__cell u-p-small u-collapse _u-mb-small">
+              <p>Using prefixes.</p>
+              <input id="range_14" ion-range-slider="{
+                type: &quot;double&quot;,
+                grid: true,
+                min: 0,
+                max: 10000,
+                from: 1000,
+                step: 9000,
+                prefix: &quot;$&quot;
+              }"/>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <h5>Slider Demo 15</h5>
+            </div>
+            <div class="c-portlet__content o-block__cell u-p-small u-collapse _u-mb-small">
+              <p>Using postfixes.</p>
+              <input id="range_15" ion-range-slider="{
+                type: &quot;single&quot;,
+                grid: true,
+                min: -90,
+                max: 90,
+                from: 0,
+                postfix: &quot;°&quot;
+              }"/>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <h5>Slider Demo 16</h5>
+            </div>
+            <div class="c-portlet__content o-block__cell u-p-small u-collapse _u-mb-small">
+              <p>Want to show that max number is not the biggest one?.</p>
+              <input id="range_16" ion-range-slider="{
+                grid: true,
+                min: 18,
+                max: 70,
+                from: 30,
+                prefix: &quot;Age &quot;,
+                max_postfix: &quot;+&quot;
+              }"/>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <h5>Slider Demo 17</h5>
+            </div>
+            <div class="c-portlet__content o-block__cell u-p-small u-collapse _u-mb-small">
+              <p>Taking care about how from and to values connect? U.</p>
+              <input id="range_17" ion-range-slider="{
+                type: &quot;double&quot;,
+                min: 100,
+                max: 200,
+                from: 145,
+                to: 155,
+                prefix: &quot;Weight: &quot;,
+                postfix: &quot; million pounds&quot;,
+                decorate_both: true
+              }"/>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <h5>Slider Demo 18</h5>
+            </div>
+            <div class="c-portlet__content o-block__cell u-p-small u-collapse _u-mb-small">
+              <p>Remove double decoration.</p>
+              <input id="range_18" ion-range-slider="{
+                type: &quot;double&quot;,
+                min: 100,
+                max: 200,
+                from: 145,
+                to: 155,
+                prefix: &quot;Weight: &quot;,
+                postfix: &quot; million pounds&quot;,
+                decorate_both: false
+              }"/>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <h5>Slider Demo 19</h5>
+            </div>
+            <div class="c-portlet__content o-block__cell u-p-small u-collapse _u-mb-small">
+              <p>Use your own separator symbol with <b>values_separator</b> →.</p>
+              <input id="range_19" ion-range-slider="{
+                type: &quot;double&quot;,
+                min: 100,
+                max: 200,
+                from: 148,
+                to: 152,
+                prefix: &quot;Weight: &quot;,
+                postfix: &quot; million pounds&quot;,
+                values_separator: &quot; &amp;rarr; &quot;
+              }"/>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <h5>Slider Demo 20</h5>
+            </div>
+            <div class="c-portlet__content o-block__cell u-p-small u-collapse _u-mb-small">
+              <p>You can disable all the sliders visual details, if you wish..</p>
+              <input id="range_21" ion-range-slider="{
+                type: &quot;double&quot;,
+                min: 1000,
+                max: 2000,
+                from: 1200,
+                to: 1800,
+                hide_min_max: true,
+                hide_from_to: true,
+                grid: false
+              }"/>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell">
+          <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-main">
+            <div class="c-portlet__header o-block__cell u-px-small u-py-tiny u-border-bottom">
+              <h5>Slider Demo 21</h5>
+            </div>
+            <div class="c-portlet__content o-block__cell u-p-small u-collapse _u-mb-small">
+              <p>You can hide any part you wish.</p>
+              <input id="range_22" ion-range-slider="{
+                type: &quot;double&quot;,
+                min: 1000,
+                max: 2000,
+                from: 1200,
+                to: 1800,
+                hide_min_max: true,
+                hide_from_to: true,
+                grid: true
+              }"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

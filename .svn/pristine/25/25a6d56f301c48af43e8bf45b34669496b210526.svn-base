@@ -1,0 +1,163 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Typography Variables
+ *     - #Layout Variables
+ *     - #Styles Variables
+ *     - #Color Variables
+ *
+ *
+ * + @Label
+ *     - #Label Structure
+ *     - #Label Modifiers
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Typography Variables
+// -------------------------------------
+
+$label-font-size          = 0.75em
+
+
+
+
+
+
+
+// #Layout Variables
+// -------------------------------------
+
+$label-padding            = 0.25em
+
+
+
+
+
+
+
+// #Styles Variables
+// -------------------------------------
+
+$label-border-radius      = $base-border-radius
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$label-background           = $color-grey-muted
+$label-color                = $color-grey-pivotal
+$label-primary-background   = $color-variant-primary
+$label-primary-color        = $clr-white-900
+$label-secondary-background = $color-variant-secondary
+$label-secondary-color      = $clr-white-900
+$label-accent-background    = $color-variant-accent
+$label-accent-color         = $clr-white-900
+$label-success-background   = $color-aside-success
+$label-success-color        = $clr-white-900
+$label-warning-background   = $clr-yellow-900
+$label-warning-color        = $clr-white-900
+$label-error-background     = $color-aside-error
+$label-error-color          = $clr-white-900
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Label
+// ---------------------------------------------------------
+
+// #Label Structure
+// -------------------------------------
+
+.c-label
+  // Typography
+  font-size: $label-font-size
+  line-height: 1
+  white-space: nowrap
+  text-transform: capitalize
+
+  // Layout
+  padding: $label-padding (3 * $label-padding)
+
+  // Style
+  border-radius: $label-border-radius
+
+  // Theme
+  background: $label-background
+  color: $label-color
+
+
+
+
+
+
+
+// #Label Modifiers
+// -------------------------------------
+
+.c-label--primary
+  // Theme
+  background-color: $label-primary-background
+  color: $label-primary-color
+
+
+
+
+.c-label--secondary
+  // Theme
+  background-color: $label-secondary-background
+  color: $label-secondary-color
+
+
+
+
+.c-label--accent
+  // Theme
+  background-color: $label-accent-background
+  color: $label-accent-color
+
+
+
+
+.c-label--success
+  // Theme
+  background-color: $label-success-background
+  color: $label-success-color
+
+
+
+
+.c-label--warning
+  // Theme
+  background-color: $label-warning-background
+  color: $label-warning-color
+
+
+
+
+.c-label--error
+  // Theme
+  background-color: $label-error-background
+  color: $label-error-color

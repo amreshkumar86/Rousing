@@ -1,0 +1,22 @@
+
+.c-main.o-stack.o-stack--nowrap.u-relative
+  .u-p-small.u-width-100p
+    .c-Masonry.u-relative.o-grid.o-grid--smallGap(class='_u-6/12@lg+ _u-width-100p@lg- _u-4/12@hd+' masonry="{ itemSelector: '.o-grid__cell', columnWidth: '.c-Masonry__sizer', percentPosition: true }")
+      .c-Masonry__sizer.u-absolute
+
+      include components/widget.quick-stats.pug
+      include components/widget.world-map.pug
+      include components/widget.quick-stats-light.pug
+      include components/widget.browser-stats.pug
+      include components/widget.traffic-resources.pug
+      include components/widget.sales-chart.pug
+      include components/widget.orders-chart.pug
+      include components/widget.real-time-update-chart.pug
+      include components/widget.donut-chart.pug
+      include components/widget.easypie-chart.pug
+      include components/widget.messages.pug
+      include components/widget.links.pug
+      include components/widget.notifications.pug
+      include components/widget.users.pug
+      include components/widget.user-card.pug
+      include components/widget.review-box.pug

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@android:color/transparent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="@dimen/scene_item_padding"
+        android:paddingBottom="@dimen/scene_item_padding"
+        android:id="@+id/ll"
+        android:clickable="false"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GOOD MORNING"
+            android:textSize="@dimen/scene_name_font"
+            android:id="@+id/scene_name_tv"
+            android:gravity="center"
+            android:textColor="#012061"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center_vertical" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkbox"
+            android:src="@drawable/power_btn"
+            android:clickable="false"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

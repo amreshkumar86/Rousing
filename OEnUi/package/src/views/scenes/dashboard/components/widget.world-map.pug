@@ -1,0 +1,58 @@
+.o-grid__cell(class='u-width-100p@lg+ u-width-100p@xlg+ u-8/12@hd+')
+  .c-portlet.u-bg-main.u-shadow-mini
+    .c-portlet__header.o-stack.o-stack--center.o-stack--splitted.u-border-bottom.u-px-small.u-py-mini
+      .o-stack__cell
+        h5 World Map
+      .o-stack__cell
+        .o-stack.o-stack--center.o-stack--nowrap.o-stack--tinyGap.u-font-small
+          .o-stack__cell.u-relative
+            a(href='javascript:void(0)' class='c-icon c-icon--main u-color-minor u-opacity-50p') refresh
+          .o-stack__cell.u-relative( dropdown='' )
+            .fn-dropdownTrigger
+              a(href='javascript:void(0)' class='c-icon c-icon--main u-color-minor u-opacity-50p') settings
+
+            ul.c-menu.c-menu--dropdown.u-r-none
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Projects
+              li.c-menu__separator
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Tasks
+                  span.c-badge.c-menu__badge(data-badge="15")
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Calendar
+              li.c-menu__separator
+              li.c-menu__item
+                a.c-menu__link(href='javascript:void(0)')
+                  span.c-menu__text Lock
+          .o-stack__cell.u-relative
+            a(href='javascript:void(0)' class='c-icon c-icon--main u-color-minor u-opacity-50p') clear
+
+    .c-portlet__content
+      .o-stack.o-stack--nowrap.o-stack--center
+        .o-stack__cell.o-stack__cell--expanded.u-p-small.u-border-right
+          .o-ratio(class='o-ratio--2/1')
+            .o-ratio__content
+              #worldmap.c-map( vector-map="{  map: 'world_en', selectedRegions: ['US', 'AU', 'DE'] }" )
+
+        .o-stack__cell.u-p-small.u-collapse._u-mb-medium(class='u-3/12 u-hide@md-')
+          div
+            h5 Unique Visitors
+            span.u-font-small.u-lh-normal Last Week Rise by 75%
+            .c-progressLine.c-progressLine--dark.u-mt-tiny
+              .c-progressLine__percent.u-bg-primary(style='width: 75%')
+          div
+            h5 Registrations
+            span.u-font-small.u-lh-normal Last Week Rise by 50%
+            .c-progressLine.c-progressLine--dark.u-mt-tiny
+              .c-progressLine__percent.u-bg-error(style='width: 50%')
+          div
+            h5 Direct Sales
+            span.u-font-small.u-lh-normal Last Week Rise by 90%
+            .c-progressLine.c-progressLine--dark.u-mt-tiny
+              .c-progressLine__percent.u-bg-warning(style='width: 90%')
+
+
+

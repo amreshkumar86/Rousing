@@ -1,0 +1,46 @@
+// ---------------------------------------------------------
+// @Generate Rules Function
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate responsive css declarations for
+ * given property, classes list and property values.
+ */
+
+-generate-rules($prop = null, $prop-values = null, $prop-classes = null, $passed = true)
+  unless $prop == null && $prop-values == null && $prop-classes == null
+    for $shortcut in $prop-classes
+      $decendants-selector = replace('\.', '._', $shortcut) if $passed
+      $index = index($prop-classes, $shortcut)
+      $prop-value = $prop-values[$index]
+
+      if -is-string($prop-value)
+        $prop-value = unquote($prop-values[$index])
+
+      rule-set()
+        for $property in $prop
+          {$property}: $prop-value
+
+      {$shortcut},
+      {$decendants-selector} > *
+        rule-set()
+
+      for $mq in $mq-shortcuts
+        $index = index($mq-shortcuts, $mq)
+        $next-mq = $mq-shortcuts[$index + 1]
+
+        {$shortcut}\\\@{$mq}\\\+,
+        {$decendants-selector}\\\@{$mq}\\\+ > *
+          +from(lookup('$viewport-' + $mq))
+            rule-set()
+
+        {$shortcut}\\\@{$mq}-,
+        {$decendants-selector}\\\@{$mq}- > *
+          +to(lookup('$viewport-' + $mq))
+            rule-set()
+
+        if $next-mq != null
+          {$shortcut}\\\@{$mq},
+          {$decendants-selector}\\\@{$mq} > *
+            +between(lookup('$viewport-' + $mq), lookup('$viewport-' + $next-mq))
+              rule-set()

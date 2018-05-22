@@ -1,0 +1,20 @@
+.c-secondaryNav
+  flex-shrink: 0
+  position: relative
+  z-index: $over-content
+
+  .c-menu__link.is-active
+  .c-menu__link.is-active .c-menu__icon
+    background-color: $color-grey-muted
+    color: $color-variant-primary
+    pointer-events: none
+
+  +from($viewport-lg)
+    width: 250px
+
+
+
+.c-secondaryNav__header
+.c-secondaryNav__main
+  +to($viewport-lg)
+    border-bottom: 1px solid $color-grey-muted

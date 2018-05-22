@@ -1,0 +1,6 @@
+.c-notification.cg-notify-message( ng-class="[$classes, $position === 'center' ? '' : '', $position === 'left' ? 'c-notification--topLeft' : '', $position === 'c-notification--topCenter' ? 'cg-notify-message-right' : '']" )
+  .c-notification__message.c-notification__message--success
+    p.c-notification__body( ng-show="!$messageTemplate" ) {{$message}}
+    p.c-notification__body.cg-notify-message-template( ng-show="$messageTemplate" )
+    span.c-notification__close.c-icon.c-icon--main( ng-click="$close()"  ) clear
+

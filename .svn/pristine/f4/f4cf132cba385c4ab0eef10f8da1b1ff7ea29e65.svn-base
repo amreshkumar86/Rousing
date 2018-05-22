@@ -1,0 +1,38 @@
+
+.c-main.o-stack.o-stack--nowrap.u-relative
+  .u-p-small.u-width-100p
+    .o-grid.o-grid--smallGap
+      .o-grid__cell.u-width-100p
+        .u-p-small.u-bg-main.u-shadow-mini
+          h4.u-mb-small World Map
+          .o-ratio(class='o-ratio--4/3')
+            .o-ratio__content
+              #worldmap.c-map( vector-map="{  map: 'world_en', selectedRegions: ['US', 'AU', 'DE'] }" )
+
+      .o-grid__cell(class='u-6/12@lg+ u-width-100p@lg-')
+        .u-p-small.u-bg-main.u-shadow-mini
+          h4.u-mb-small USA Map
+          .o-ratio(class='o-ratio--4/3')
+            .o-ratio__content
+              #usamap.c-map( vector-map=`{ color: '#dddddd', map: 'usa_en', selectedRegions: ['MO', 'FL', 'OR'] }` )
+
+      .o-grid__cell(class='u-6/12@lg+ u-width-100p@lg-')
+        .u-p-small.u-bg-main.u-shadow-mini
+          h4.u-mb-small Canada Map
+          .o-ratio(class='o-ratio--4/3')
+            .o-ratio__content
+              #canadamap.c-map( vector-map="{  map: 'canada_en', color: '#dddddd' }" )
+
+      .o-grid__cell(class='u-6/12@lg+ u-width-100p@lg-')
+        .u-p-small.u-bg-main.u-shadow-mini
+          h4.u-mb-small Europe Map
+          .o-ratio(class='o-ratio--4/3')
+            .o-ratio__content
+              #europemap.c-map( vector-map="{  map: 'europe_en' }" )
+
+      .o-grid__cell(class='u-6/12@lg+ u-width-100p@lg-')
+        .u-p-small.u-bg-main.u-shadow-mini
+          h4.u-mb-small Australia Map
+          .o-ratio(class='o-ratio--4/3')
+            .o-ratio__content
+              #ausmap.c-map( vector-map="{  map: 'australia_en' }" )

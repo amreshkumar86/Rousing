@@ -1,0 +1,40 @@
+//- Home Layout
+extends views/scaffolding/layouts/non-app.pug
+
+block vars
+  - var pageTitle = "Locked!!";
+
+
+block page
+  .o-block.u-text-center.u-fullscreen.u-overflow-auto.u-bg-muted
+    .o-block__cell.u-flex.u-flexGrow-1.u-mb-medium.u-p-big
+      .u-m-auto
+        .c-formCard.o-block.u-collapse.u-bg-main.u-shadow-medium.u-p-medium.u-pt-none._u-width-100p._u-mb-small
+          .o-block__cell
+            span(class='c-formCard__icon c-button c-button c-button--big c-button--icon u-radius-circle u-font-huge') lock
+
+          .o-block__cell
+            h2.u-font-regular Unlock Account
+
+          .o-block__cell
+            .c-avatar.c-avatar--medium
+              a(href='#')
+                img(src='resources/images/avatars/avatar-small-1.jpg' alt='#')
+          .o-block__cell
+            h3.u-font-light.u-text-capitalize Jessy Doe
+          .o-block__cell
+            .c-control.u-width-100p
+              .c-control__input-box
+                input.c-control__input(type="password", name="search", value="" placeholder='Password Please...')
+              span.c-icon.c-icon--main lock
+          .o-block__cell
+            .o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted
+              .o-stack__cell
+                label.c-checkable
+                  input.c-checkable__input.c-checkable__input--checkbox(type='checkbox', name='', value='')
+                  |  Remember Me
+                  span.c-checkable__mask.c-checkable__mask--minor.c-checkable__mask--checkbox
+              .o-stack__cell
+                a(href='forgot.html' class='c-link u-color-error') Forgot Password ?
+          .o-block__cell.u-mt-small
+            a(href='#' class='c-button c-button--block') Unlock

@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent">
+    
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:clickable="false"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/switch_rl">
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:background="@drawable/switch_bg"
+            android:layout_centerInParent="true">
+        </RelativeLayout>
+
+        <View
+            android:visibility="gone"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ambient_circle_bg"
+            android:layout_centerVertical="true"
+            android:id="@+id/switch_v"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:elevation="10dp"/>
+
+    </RelativeLayout>
+
+    <SeekBar
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:thumb="@drawable/scenes_switch_thumb"
+        android:thumbOffset="0.3dp"
+        android:progress="0"
+        android:paddingBottom="10dp"
+        android:splitTrack="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:id="@+id/scene_seek_bar_switch"
+        android:progressDrawable="@drawable/scene_switch_track" />
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scene_seek_bar_switch"
+        android:layout_marginTop="-8dp"
+        android:layout_centerHorizontal="true">
+
+        <com.niveus.oen.Utils.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PRESETS"
+            android:id="@+id/presets_tv"
+            android:textColor="#FEBCCA"
+            android:textSize="10sp"
+            app:font="roboto_light"/>
+
+        <com.niveus.oen.Utils.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FAV"
+            android:textColor="#033399"
+            android:id="@+id/fav_tv"
+            android:textSize="10sp"
+            android:layout_alignParentRight="true"
+            app:font="roboto_light"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/scenes_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/scenes_list_divider"
+        android:background="@android:color/transparent"
+        android:dividerHeight="0.1dp"
+        android:layout_marginTop="10dp"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:layout_below="@id/scene_seek_bar_switch" />
+
+</RelativeLayout>

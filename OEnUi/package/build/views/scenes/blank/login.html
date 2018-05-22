@@ -1,0 +1,89 @@
+
+	<div
+		class="o-block u-text-center u-fullscreen u-overflow-auto u-bg-muted" ng-controller="blankCtrl as blank">
+		<div class="o-block__cell u-flex u-flexGrow-1 u-mb-medium u-p-big">
+			<div class="u-m-auto">
+			  
+			<form  name="form_signin" id="form_signin" ng-submit="submitForm();" autocomplete="off">
+				<div
+					class="c-formCard o-block u-collapse u-bg-main u-shadow-medium u-p-medium u-pt-none _u-width-100p _u-mb-small">
+					<div class="o-block__cell">
+						<span
+							class="c-formCard__icon c-button c-button c-button--big c-button--icon u-radius-circle u-font-huge">lock_open</span>
+					</div>
+					<div class="o-block__cell">
+						<h2 class="u-font-regular">Login</h2>
+					</div>
+					<div class="o-block__cell">
+						<div class="c-control u-width-100p">
+							<div class="c-control__input-box">
+								<input class="c-control__input" type="email"  ng-model="user.username"
+									 placeholder="Your Email" required>
+							</div>
+							<span class="c-icon c-icon--main">email</span>
+						</div>
+					</div>
+					<div class="o-block__cell">
+						<div class="c-control u-width-100p">
+							<div class="c-control__input-box">
+								<input class="c-control__input" type="password" ng-model="user.password" required
+								
+									placeholder="Password">
+							</div>
+							<span class="c-icon c-icon--main">lock</span>
+						</div>
+					</div>
+					<div class="o-block__cell">
+						<button  type="submit" class="c-button c-button--block">Login</button>
+					</div>
+					
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+<style>
+.u-relative
+{
+display:none;
+}
+.c-topbar__aside.o-stack__cell.u-px-small.u-flexSelfStretch.u-width-100p\@md-.u-py-mini\@md- {
+    display: none;
+}
+.c-topbar__main.o-stack__cell.o-stack__cell--expanded.u-px-small.u-hide\@md- {
+    display: none;
+}
+.c-offcanvas.js-sticky.u-bg-main.u-fixed {
+    display: none;
+}
+.c-pageHeader.u-bg-main {
+    display: none;
+}
+.c-topbar.o-stack.o-stack--nowrap.o-stack--center.u-shadow-mini.u-fixed {
+	background: #252b46 ;
+	z-index:0;
+}
+.c-content.o-stack__cell.o-stack__cell--expanded
+{
+background: #252b46 ;
+}
+.c-content {
+	background: #151828;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	min-height: 100vh;
+	padding-left: 0;
+	padding-top: 0; 
+	position: relative;
+	z-index:0;
+	-webkit-box-direction: normal;
+	-webkit-box-orient: vertical;
+	-webkit-flex-flow: column nowrap;
+	-ms-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+}
+
+
+</style>

@@ -1,0 +1,31 @@
+#compose
+  margin-top: -1px
+  overflow-y: auto
+  overflow-x: hidden
+
+
+#compose .wysihtml5-sandbox
+  // Layoout
+  flex-grow: 1
+
+  // Styles
+  border: 0 !important
+  border-bottom: 1px solid $color-grey-muted !important
+
+
+
+#compose #toolbar > [data-wysihtml5-command]:first-of-type
+  border-left: 0
+
+
+#compose #toolbar > [data-wysihtml5-command]:last-of-type
+  border-right: 0
+
+
+#compose form
+  max-width: 800px
+
+
+.c-compose__emails input
+  border-left: 1px solid $color-grey-muted
+  border-bottom: 1px solid $color-grey-muted

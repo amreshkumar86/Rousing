@@ -1,0 +1,14 @@
+//- Material Design Icon Font
+link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+
+//- link(rel='stylesheet' href="app.light.css")
+if lightTheme
+  //- Main App CSS File
+  link(rel='stylesheet' href="app.light.css")
+
+else
+  //- Main App CSS File
+  link(rel='stylesheet' href="app.dark.css")
+
+//- Main App CSS File
+//- link(rel='stylesheet' href="app.dark-black.css")

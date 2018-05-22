@@ -1,0 +1,67 @@
+.cg-notify-message
+  display: flex
+  align-items: center
+  position: fixed
+  top: 0px
+  z-index: 9999
+  max-width: 400px
+  background-color: rgba(0, 0, 0, 0.9)
+  color: #fff
+  padding: 1em
+  border-radius: 2px
+  transition: top 0.5s ease-out,opacity 0.2s ease-out
+  visibility: hidden
+  collapse('horizontal')
+
+  &:first-child
+    flex: 1 1 auto
+
+  & > *
+    margin-left: 1em
+
+.cg-notify-message-center
+  left: 50%
+
+.cg-notify-message-left
+  left: 1em
+
+.cg-notify-message-right
+  right: 1em
+
+.cg-notify-message a
+  font-weight: bold
+  color: inherit
+
+.cg-notify-message a:hover
+  color: inherit
+
+.cg-notify-close
+  -webkit-appearance: none
+  padding: 0
+  cursor: pointer
+  background: 0 0
+  border: 0
+  font-size: 21px
+  font-weight: 700
+  line-height: 1
+  color: #fff
+  opacity: 0.6
+  top: 0px
+  right: 3px
+  line-height: 1
+  transition: color 0.28s ease-out, opacity 0.28s ease-out
+
+.cg-notify-close:hover, .cg-notify-close:focus
+  text-decoration: none
+  cursor: pointer
+  opacity: 1
+
+.cg-notify-sr-only
+  position: absolute
+  width: 1px
+  height: 1px
+  padding: 0
+  margin: -1px
+  overflow: hidden
+  clip: rect(0,0,0,0)
+  border: 0

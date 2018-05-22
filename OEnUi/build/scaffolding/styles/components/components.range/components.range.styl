@@ -1,0 +1,292 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Layout Variables
+ *     - #Color Variables
+ *
+ *
+ * + @Range Input
+ *     - #Range Input Structure
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Layout Variables
+// -------------------------------------
+
+$range-track-height           = 0.125em
+$range-thumb-width            = 1.2em
+$range-thumb-height           = 1.2em
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$range-track-background       = $color-grey-muted
+$range-track-focus-background = $color-grey-muted
+$range-thumb-background       = $color-variant-secondary
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Range Input
+// ---------------------------------------------------------
+
+// #Range Input Structure
+// -------------------------------------
+
+.c-range
+  // Layout
+  width: 100%
+
+  // Extra
+  cursor: pointer
+
+
+  &:focus
+    // Styles
+    outline: none
+
+
+
+  /**
+   * Disable default focus on Firefox.
+   */
+
+  &::-moz-focus-outer
+    // Styles
+    border: 0
+
+
+
+  /**
+   * Hide the outline behind the border.
+   */
+
+  &:-moz-focusring
+    // Styles
+    outline: 1px solid white
+    outline-offset: -1px
+
+
+
+  /**
+   * Disable tooltip on IE.
+   */
+
+  &::-ms-tooltip
+    // Layout
+    display: none
+
+
+
+  /**
+   * ===== Range Track
+   */
+
+  &::-webkit-slider-runnable-track
+    // Layout
+    width: 100%
+    height: $range-track-height
+
+    // Styles
+    border: none
+    border-radius: 1em
+
+    // Theme
+    background: $range-track-background
+
+    // Easing
+    transition: $default-transition
+
+
+  &::-moz-range-track
+    // Layout
+    width: 100%
+    height: $range-track-height
+
+    // Styles
+    border: none
+    border-radius: 1em
+
+    // Theme
+    background: $range-track-background
+    transition: $default-transition
+
+
+
+  /**
+   * [1] : leave room for the larger thumb to overflow with a transparent border.
+   * [2] : Remove background from track, `ms-fill-lower` & `ms-fill-upper` will be used instead for background.
+   * [3] : Remove default tick marks.
+   */
+
+  &::-ms-track
+    // Layout
+    width: 100%
+    height: $range-track-height
+
+    // Styles
+    border-width: ($range-thumb-height / 2) 0  // [1]
+
+    // Theme
+    background: transparent                    // [2]
+    color: transparent                         // [3]
+    border-color: transparent
+
+    // Easing
+    transition: $default-transition
+
+
+
+  &::-ms-fill-lower
+    // Styles
+    border-radius: 1em
+
+    // Theme
+    background: $range-thumb-background
+
+
+
+  &::-ms-fill-upper
+    // Styles
+    border-radius: 1em
+
+    // Theme
+    background: $range-track-background
+
+
+
+
+  /**
+   * ===== Range Track Focus
+   */
+
+  &:focus::-webkit-slider-runnable-track
+    // Theme
+    background: $range-track-focus-background
+
+
+  &:focus::-moz-range-track
+    // Theme
+    background: $range-track-focus-background
+
+
+  &:focus::-ms-fill-lower
+    // Theme
+    background: $range-thumb-background
+
+
+  &:focus::-ms-fill-upper
+    // Theme
+    background: $range-track-background
+
+
+
+
+  /**
+   * ===== Range Thumb
+   */
+
+  &::-webkit-slider-thumb
+    // Layout
+    width: $range-thumb-width
+    height: $range-thumb-height
+    margin-top: -((@height - $range-track-height) / 2)
+
+    // Styles
+    border: none
+    border-radius: 50%
+
+    // Theme
+    background: $range-thumb-background
+
+    // Easing
+    transition: $default-transition
+
+    // Extra
+    -webkit-appearance: none
+    transform: scale(0.5)
+    transform-origin: 50% 50%
+
+
+  &::-moz-range-thumb
+    // Layout
+    width: $range-thumb-width
+    height: $range-thumb-height
+
+    // Styles
+    border: none
+    border-radius: 50%
+
+    // Theme
+    background: $range-thumb-background
+
+    // Easing
+    transition: $default-transition
+
+    // Extra
+    transform: scale(0.5)
+    transform-origin: 50% 50%
+
+
+  &::-ms-thumb
+    // Layout
+    width: $range-thumb-width
+    height: $range-thumb-height
+    margin-top: 1px
+
+    // Styles
+    border: none
+    border-radius: 50%
+
+    // Theme
+    background: $range-thumb-background
+
+    // Extra
+    transform: scale(0.5)
+    transition: $default-transition
+    transform-origin: 50% 50%
+
+
+
+
+  /**
+   * ===== Range Thumb Focus
+   */
+
+  &:active::-webkit-slider-thumb
+    // Extra
+    transform: scale(1)
+
+
+  &:active::-moz-range-thumb
+    // Extra
+    transform: scale(1)
+
+
+  &:active::-ms-thumb
+    // Extra
+    transform: scale(1)

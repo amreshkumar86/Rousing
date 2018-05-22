@@ -1,0 +1,175 @@
+//- ----------------------------------------------
+//- @Offcanvas
+//- ----------------------------------------------
+
+.u-relative.u-width-100p.u-height-100p.u-overflow-auto( perfect-scrollbar='' )
+
+  //- #User Mini Profile
+  //- ------------------------------------
+
+  .o-stack.o-stack--center.o-stack--nowrap.u-px-small.u-py-medium.c-miniProfile
+    .o-stack__cell.c-miniProfile__img
+      .c-avatar.c-avatar--small
+        img(src='resources/images/avatars/avatar-small-1.jpg' alt='#')
+
+    .o-stack__cell.o-stack__cell--expanded.u-pl-small.c-miniProfile__info
+      span.u-block Welcome
+      h4 John Doe
+
+    .o-stack__cell.u-relative( dropdown='' )
+      .fn-dropdownTrigger
+        a(href='javascript:void(0)' class='c-icon c-icon--main u-color-white-900 u-opacity-80p') settings
+
+      ul.c-menu.c-menu--dropdown.u-r-none
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            span.c-menu__text Projects
+        li.c-menu__separator
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            span.c-menu__text Tasks
+            span.c-badge.c-menu__badge(data-badge="15")
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            span.c-menu__text Calendar
+        li.c-menu__separator
+        li.c-menu__item
+          a.c-menu__link(href='javascript:void(0)')
+            span.c-menu__text Lock
+
+  //- #Categories
+  //- ------------------------------------
+
+  .c-offcanvas__categories
+    ul.c-menu.c-menu--borderless.c-menu--expanded.u-shadow-none
+      li.c-menu__item
+        a.c-menu__link(ui-sref="dashboard"  ui-sref-active='is-active')
+          i.c-icon.c-icon--main.c-menu__icon home
+          span.c-menu__text dashboard
+          span.c-label.c-label--error hot
+      li.c-menu__item
+        a.c-menu__link(ui-sref="email"  ui-sref-active='is-active')
+          i.c-icon.c-icon--main.c-menu__icon email
+          span.c-menu__text email
+          span.c-badge.c-menu__badge(data-badge="+99")
+      li.c-menu__item
+        a.c-menu__link(ui-sref="todo"  ui-sref-active='is-active')
+          i.c-icon.c-icon--main.c-menu__icon check
+          span.c-menu__text Todo
+      li.c-menu__item
+        a.c-menu__link(ui-sref="profile"  ui-sref-active='is-active')
+          i.c-icon.c-icon--main.c-menu__icon person
+          span.c-menu__text profile
+          span.c-label.c-label--primary offer
+      li.c-menu__item
+        a.c-menu__link(ui-sref="blank"  ui-sref-active='is-active')
+          i.c-icon.c-icon--main.c-menu__icon insert_drive_file
+          span.c-menu__text blank
+      li.c-menu__item
+        a.c-menu__link(ui-sref="invoice"  ui-sref-active='is-active')
+          i.c-icon.c-icon--main.c-menu__icon attach_money
+          span.c-menu__text invoice
+      li.c-menu__item
+        a.c-menu__link(ui-sref="chat"  ui-sref-active='is-active')
+          i.c-icon.c-icon--main.c-menu__icon chat
+          span.c-menu__text chat
+          i.c-icon.c-icon--main.u-color-warning star
+      li.c-menu__item
+        a.c-menu__link(ui-sref="forms"  ui-sref-active='is-active')
+          i.c-icon.c-icon--main.c-menu__icon input
+          span.c-menu__text forms
+          span.c-label.c-label--error hot
+      li.c-menu__item
+        a.c-menu__link(ui-sref="tables"  ui-sref-active='is-active')
+          i.c-icon.c-icon--main.c-menu__icon grid_on
+          span.c-menu__text tables
+      li.c-menu__item
+        a.c-menu__link(ui-sref="maps"  ui-sref-active='is-active')
+          i.c-icon.c-icon--main.c-menu__icon map
+          span.c-menu__text maps
+      li.c-menu__item
+        a.c-menu__link(ui-sref="charts"  ui-sref-active='is-active')
+          i.c-icon.c-icon--main.c-menu__icon trending_up
+          span.c-menu__text charts
+      li.c-menu__item
+        a.c-menu__link(ui-sref="portlets"  ui-sref-active='is-active')
+          i.c-icon.c-icon--main.c-menu__icon crop_square
+          span.c-menu__text portlet
+      li.c-menu__item
+        a.c-menu__link(ui-sref="grid"  ui-sref-active='is-active')
+          i.c-icon.c-icon--main.c-menu__icon view_column
+          span.c-menu__text grid
+          i.c-icon.c-icon--main.u-color-warning star
+      li.c-menu__item
+        a.c-menu__link(ui-sref="icons"  ui-sref-active='is-active')
+          i.c-icon.c-icon--main.c-menu__icon add
+          span.c-menu__text icons
+          span.c-label.c-label--warning extra
+      li.c-menu__item
+        a.c-menu__link(ui-sref="widgets"  ui-sref-active='is-active')
+          i.c-icon.c-icon--main.c-menu__icon widgets
+          span.c-menu__text widgets
+      li.c-menu__item
+        a.c-menu__link(ui-sref="sliders"  ui-sref-active='is-active')
+          i.c-icon.c-icon--main.c-menu__icon equalizer
+          span.c-menu__text sliders
+          i.c-icon.c-icon--main.u-color-warning star
+      li.c-menu__item
+        a.c-menu__link(ui-sref="calendar"  ui-sref-active='is-active')
+          i.c-icon.c-icon--main.c-menu__icon perm_contact_calendar
+          span.c-menu__text calendar
+          span.c-label.c-label--success new
+      li.c-menu__item
+        a.c-menu__link(ui-sref="buttons"  ui-sref-active='is-active')
+          i.c-icon.c-icon--main.c-menu__icon star
+          span.c-menu__text buttons
+      li.c-menu__item
+        a.c-menu__link(ui-sref="helpers"  ui-sref-active='is-active')
+          i.c-icon.c-icon--main.c-menu__icon insert_drive_file
+          span.c-menu__text helpers
+      li.c-menu__item.has-menu(data-toggle='' data-toggle-class='is-active' data-touch-alt)
+        a.c-menu__link(href='javascript:void(0)' data-toggle='#menu1' data-toggle-class='is-visible')
+          i.c-icon.c-icon--main.c-menu__icon favorite
+          span.c-menu__text Dropdown
+          i.c-icon.c-icon--main.c-menu__icon add
+        ul#menu1.c-menu.c-menu--pinned
+          li.c-menu__item
+            a.c-menu__link(href='javascript:void(0)')
+              i.c-icon.c-icon--main.c-menu__icon insert_link
+              span.c-menu__text Link 1
+          li.c-menu__item
+            a.c-menu__link(href='javascript:void(0)')
+              i.c-icon.c-icon--main.c-menu__icon insert_link
+              span.c-menu__text Link 2
+      li.c-menu__item
+        a.c-menu__link(href="403.html")
+          i.c-icon.c-icon--main.c-menu__icon insert_drive_file
+          span.c-menu__text 403
+      li.c-menu__item
+        a.c-menu__link(href="404.html")
+          i.c-icon.c-icon--main.c-menu__icon insert_drive_file
+          span.c-menu__text 404
+      li.c-menu__item
+        a.c-menu__link(href="500.html")
+          i.c-icon.c-icon--main.c-menu__icon insert_drive_file
+          span.c-menu__text 500
+      li.c-menu__item
+        a.c-menu__link(href="503.html")
+          i.c-icon.c-icon--main.c-menu__icon insert_drive_file
+          span.c-menu__text 503
+      li.c-menu__item
+        a.c-menu__link(href="forgot.html")
+          i.c-icon.c-icon--main.c-menu__icon insert_drive_file
+          span.c-menu__text forgot
+      li.c-menu__item
+        a.c-menu__link(href="login.html")
+          i.c-icon.c-icon--main.c-menu__icon insert_drive_file
+          span.c-menu__text login
+      li.c-menu__item
+        a.c-menu__link(href="register.html")
+          i.c-icon.c-icon--main.c-menu__icon insert_drive_file
+          span.c-menu__text register
+      li.c-menu__item
+        a.c-menu__link(href="lock.html")
+          i.c-icon.c-icon--main.c-menu__icon insert_drive_file
+          span.c-menu__text lock

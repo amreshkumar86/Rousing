@@ -1,0 +1,15 @@
+doctype html
+html(lang='en' data-toggle-switch-watch='')
+  block vars
+  head
+    title #{ pageTitle }
+    include ../metadata/metadata.meta-tags.pug
+    include ../metadata/metadata.favicons.pug
+    include ../metadata/metadata.stylesheets.pug
+
+  if scopeID
+    body( id=scopeID )
+      block page
+  else
+    body
+      block page

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_light">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="@drawable/toolbar_bg"
+        android:layout_height="40dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:id="@+id/view">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rel">
+
+            <ImageView
+                android:id="@+id/menu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/menu"
+                android:clickable="true"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/circle_rl"
+        android:layout_below="@+id/view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/conf_circle_margin_top">
+
+        <View
+            android:layout_width="@dimen/conf_circle_dimen"
+            android:layout_height="@dimen/conf_circle_dimen"
+            android:transitionName="circle"
+            android:background="@drawable/circle_bg"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configuring\n..."
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/conf_page_title_font"
+            android:id="@+id/page_title_tv"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Devices"
+        android:layout_below="@+id/circle_rl"
+        android:layout_marginTop="@dimen/conf_devices_top"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/devices_tv"
+        android:textSize="24sp"/>
+
+
+    //
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:id="@+id/configure_ll"
+        android:layout_marginBottom="@dimen/conf_details_margin_bottom"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Light 1"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"/>
+
+        //
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/credential_ll"
+            android:layout_marginTop="50dp">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/network_sp"
+                android:textColor="@color/disabled_color"
+                android:padding="20dp"
+                android:overlapAnchor="false"
+                android:background="@drawable/edit_text_bg"
+                android:inputType="textEmailAddress"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/password_et"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/disabled_color"
+                android:padding="20dp"
+                android:hint="Password"
+                android:background="@drawable/edit_text_bg"
+                android:inputType="textPassword"/>
+
+        </LinearLayout>
+
+        //
+        <ImageView
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:id="@+id/result_button"
+            android:src="@drawable/success"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center_horizontal"/>
+
+        //connect button
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="CONNECT"
+            android:id="@+id/connect_btn_tv"
+            android:gravity="center"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_bg"/>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,57 @@
+.o-grid__cell
+  .c-portlet.o-block.u-width-100p._u-width-100p.u-shadow-mini.u-bg-main
+    .c-portlet__header.o-block__cell.u-px-small.u-py-tiny.u-border-bottom
+      .o-stack.o-stack--center.o-stack--splitted
+        .o-stack__cell
+          h5 Messages
+        .o-stack__cell
+          .c-badge.c-badge--error(data-badge='3')
+
+
+    .c-portlet__content.o-block__cell
+      ul.c-block.u-list-bare._u-px-small._u-py-small
+        li.u-border-bottom
+          .o-stack.o-stack--nowrap
+            .o-stack__cell.u-mr-tiny
+              .c-avatar
+                img(src='resources/images/avatars/avatar-small-1.jpg' alt='avatar')
+            .o-stack__cell--expanded
+              .o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted.u-width-100p.u-mb-mini
+                .o-stack__cell.o-stack__cell--expanded
+                  a(href='javascript:void(0)' class='c-link') Jessy Doe
+                .o-stack__cell
+                  span.u-font-small 01:00 PM
+              p
+                | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry...
+
+        li.u-border-bottom
+          .o-stack.o-stack--nowrap
+            .o-stack__cell.u-mr-tiny
+              .c-avatar
+                img(src='resources/images/avatars/avatar-small-2.jpg' alt='avatar')
+            .o-stack__cell--expanded
+              .o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted.u-width-100p.u-mb-mini
+                .o-stack__cell.o-stack__cell--expanded
+                  a(href='javascript:void(0)' class='c-link') Mo Doe
+                .o-stack__cell
+                  span.u-font-small 11:00 AM
+              p
+                | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry...
+
+
+        li
+          .o-stack.o-stack--nowrap
+            .o-stack__cell.u-mr-tiny
+              .c-avatar
+                img(src='resources/images/avatars/avatar-small-3.jpg' alt='avatar')
+            .o-stack__cell--expanded
+              .o-stack.o-stack--center.o-stack--nowrap.o-stack--splitted.u-width-100p.u-mb-mini
+                .o-stack__cell.o-stack__cell--expanded
+                  a(href='javascript:void(0)' class='c-link') Flika Doe
+                .o-stack__cell
+                  span.u-font-small 10:00 AM
+              p
+                | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry...
+
+
+

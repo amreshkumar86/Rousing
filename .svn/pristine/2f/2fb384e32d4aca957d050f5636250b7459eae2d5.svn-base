@@ -1,0 +1,12 @@
+// ---------------------------------------------------------
+// @Text Truncate Mixin
+// ---------------------------------------------------------
+
+/**
+ * Mixin used to truncate text with ellipsis.
+ */
+
+truncate()
+  text-overflow: ellipsis
+  white-space: nowrap
+  overflow: hidden

@@ -1,0 +1,38 @@
+.c-sidebar__nav
+  & a
+    // Typography
+    text-decoration: none
+
+    // Layout
+    position: relative
+    display: block
+    padding: $spacing-unit-tiny
+
+    // Theme
+    color: $color-grey-minor
+
+
+    &.is-active
+      // Theme
+      color: $color-variant-primary
+
+
+    &::after
+      // Layout
+      display: none
+      position: absolute
+      width: 100%
+      height: 2px
+      bottom: -1px
+      left: 0
+
+      // Theme
+      background: $color-variant-primary
+
+      // Extra
+      content: ''
+
+
+    &.is-active::after
+      // Layout
+      display: block

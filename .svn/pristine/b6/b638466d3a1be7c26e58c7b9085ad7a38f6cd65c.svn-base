@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:bottom="-5dp"
+        android:left="0dp">
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="#FF757575"
+                android:centerColor="#99757575"
+                android:gradientRadius="@dimen/tiny_seek_bar_switch_grad_rad"
+                android:type="radial">
+            </gradient>
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="oval">
+            <size android:width="20dp" android:height="20dp"></size>
+            <solid android:color="#FEBCCA"/>
+        </shape>
+    </item>
+</layer-list>

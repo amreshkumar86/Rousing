@@ -1,0 +1,62 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ * + @Box Shadow
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+$box-shadow-mini   = $shadow-mini
+$box-shadow-tiny   = $shadow-tiny
+$box-shadow-small  = $shadow-small
+$box-shadow-medium = $shadow-medium
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Box Shadow
+// ---------------------------------------------------------
+
+.u-shadow-mini
+  box-shadow: $box-shadow-mini
+
+
+
+
+.u-shadow-tiny
+  box-shadow: $box-shadow-tiny
+
+
+
+
+.u-shadow-small
+  box-shadow: $box-shadow-small
+
+
+
+
+.u-shadow-medium
+  box-shadow: $box-shadow-medium
+
+
+
+
+.u-shadow-none
+  box-shadow: none

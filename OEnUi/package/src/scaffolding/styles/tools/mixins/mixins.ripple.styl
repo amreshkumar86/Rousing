@@ -1,0 +1,75 @@
+// ---------------------------------------------------------
+// @Ripple Mixin
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ * + @Mixin
+ */
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+$ripple-color              = $color-main
+$ripple-animation-duration = 0.28s
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Mixin
+// ---------------------------------------------------------
+
+/**
+ * Mixin used to generate ripple animation effect
+ * on the element it is applied to.
+ */
+
+ripple($color = $ripple-color, $duration = $ripple-animation-duration)
+  &::after
+    // Layout
+    display: block
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+
+    // Styles
+    background-repeat: no-repeat
+    background-position: 50%
+    opacity: 0
+
+    // Colors
+    background-image: radial-gradient(circle, $color 10%, transparent 10.01%)
+
+    // Easing
+    transition: transform $duration, opacity (2 * $duration)
+
+    // Extra
+    pointer-events: none
+    content: ''
+    transform: scale(10, 10)
+
+  &:focus
+    overflow: hidden
+
+  &:active::after
+    // Styles
+    opacity: 0.2
+
+    // Easing
+    transition: 0s
+
+    // Extra
+    transform: scale(0, 0)

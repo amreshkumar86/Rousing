@@ -1,0 +1,27 @@
+.c-sidebar
+  // Layout
+  width: 280px
+  height: 100%
+  position: fixed !important
+  top: 0
+  right: -280px
+  z-index: 0
+  height: 100vh
+  overflow-y: auto
+
+  // Styles
+  opacity: 0
+  box-shadow: inset 4px 0 4px -2px rgba(0, 0, 0, 0.04)
+
+  // Theme
+  background: $color-main
+
+
+
+
+.js-sidebar-open .c-sidebar
+  right: 0
+
+  // Styles
+  opacity: 1
+  z-index: $over-page

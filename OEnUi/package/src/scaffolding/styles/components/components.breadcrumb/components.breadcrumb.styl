@@ -1,0 +1,251 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Typography Variables
+ *     - #Layout Variables
+ *     - #Color Variables
+ *
+ *
+ * + @Breadcrumb
+ *     - #Breadcrumb Structure
+ *
+ *
+ * + @Breadcrumb Item
+ *     - #Breadcrumb Item Structure
+ *
+ *
+ * + @Breadcrumb Item Divider
+ *     - #Breadcrumb Item Divider Structure
+ *
+ *
+ * + @Breadcrumb Link
+ *     - #Breadcrumb Link Structure
+ *     - #Breadcrumb Link Modifiers
+ *     - #Breadcrumb Link States
+ *
+ *
+ * + @Breadcrumb Item Icon
+ *     - #Breadcrumb Item Icon Structure
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Typography Variables
+// -------------------------------------
+
+$breadcrumb-font-size          = 0.875em
+$breadcrumb-item-divider-icon  = '»'
+
+
+
+
+
+
+
+// #Layout Variables
+// -------------------------------------
+
+$breadcrumb-padding            = 1em
+$breadcrumb-item-spacing       = 0.5em
+$breadcrumb-link-height        = 3em
+$breadcrumb-link-padding       = 1em
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$breadcrumb-background         = alpha($color-grey-muted, 0.3)
+$breadcrumb-item-divider-color = $color-grey-omitted
+$breadcrumb-link-color         = $color-variant-primary
+$breadcrumb-link-current-color = $color-grey-pivotal
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Breadcrumb
+// ---------------------------------------------------------
+
+// #Breadcrumb Structure
+// -------------------------------------
+
+.c-breadcrumb
+  // Typography
+  font-size: $breadcrumb-font-size
+
+  // Layout
+  display: flex
+  flex-flow: row wrap
+  justify-content: flex-start
+  align-items: center
+  padding: 0 $breadcrumb-padding
+
+  // Styles
+  list-style: none
+  border-radius: $base-border-radius
+
+  // Theme
+  background-color: $breadcrumb-background alpha($color-grey-muted, 0.3)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Breadcrumb Item
+// ---------------------------------------------------------
+
+// #Breadcrumb Item Structure
+// -------------------------------------
+
+.c-breadcrumb__item
+  // Layout
+  display: flex
+  align-items: center
+  position: relative
+
+
+  // Pseudo Elements
+  &:not(:last-child)::after
+    // Layout
+    margin: 0 $breadcrumb-item-spacing
+    position: relative
+
+    // Theme
+    color: $breadcrumb-item-divider-color
+
+    // Extra
+    content: $breadcrumb-item-divider-icon
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Breadcrumb Item Divider
+// ---------------------------------------------------------
+
+// #Breadcrumb Item Divider Structure
+// -------------------------------------
+
+.c-breadcrumb__item:not(:last-child)::after
+  // Layout
+  margin: 0 $breadcrumb-item-spacing
+  position: relative
+
+  // Theme
+  color: $breadcrumb-item-divider-color
+
+  // Extra
+  content: $breadcrumb-item-divider-icon
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Breadcrumb Link
+// ---------------------------------------------------------
+
+// #Breadcrumb Link Structure
+// -------------------------------------
+
+.c-breadcrumb__link
+  // Typography
+  text-transform: capitalize
+  text-decoration: none
+  line-height: $breadcrumb-link-height
+
+  // Layout
+  padding: 0 $breadcrumb-link-padding
+  display: inline-flex
+  align-items: center
+
+  // Styles
+  opacity: 0.8
+
+  // Theme
+  color: $breadcrumb-link-color
+
+  // Easing
+  transition: $default-transition
+
+
+
+
+
+
+
+// #Breadcrumb Link Modifiers
+// -------------------------------------
+
+.c-breadcrumb__link--current
+  // Styles
+  opacity: 1
+
+  // Theme
+  color: $breadcrumb-link-current-color
+
+  // Extra
+  pointer-events: none
+
+
+
+
+
+
+
+// #Breadcrumb Link States
+// -------------------------------------
+
+.c-breadcrumb__link:hover
+  // Styles
+  opacity: 1
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Breadcrumb Item Icon
+// ---------------------------------------------------------
+
+// #Breadcrumb Item Icon Structure
+// -------------------------------------
+
+.c-icon
+  .c-breadcrumb__link > &
+    // Layout
+    margin-right: 0.5em
