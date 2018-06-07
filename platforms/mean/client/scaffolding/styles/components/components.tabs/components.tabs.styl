@@ -1,0 +1,356 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Layout Variables
+ *     - #Styles Variables
+ *     - #Color Variables
+ *
+ *
+ * + @Tabs Holder
+ *     - #Tabs Holder Structure
+ *
+ *
+ * + @Tabs Menu
+ *     - #Tabs Menu Structure
+ *
+ *
+ * + @Tabs Menu Item
+ *     - #Tabs Menu Item Structure
+ *     - #Tabs Menu Item States
+ *
+ *
+ * + @Tabs Menu Link
+ *     - #Tabs Menu Link Structure
+ *     - #Tabs Menu Link States
+ *     - #Tabs Menu Link Context
+ *
+ *
+ * + @Tabs Menu Link Decendants
+ *     - #Tabs Menu Link Decendants Structure
+ *
+ *
+ * + @Tabs Panels Holder
+ *     - #Tabs Panels Holder Structure
+ *
+ *
+ * + @Tabs Panel
+ *     - #Tabs Panel Structure
+ *
+ *
+ * + @Tabs Panel Decendants
+ *     - #Tabs Panel Decendants Structure
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Layout Variables
+// -------------------------------------
+
+$tabs-menu-link-padding             = 1em 2em
+$tabs-menu-link-children-spacing    = 0.5em
+$tabs-panel-padding                 = 2em
+$tabs-panel-children-spacing        = 1em
+
+
+
+
+
+
+
+// #Styles Variables
+// -------------------------------------
+
+$tabs-menu-item-border-width        = 1px
+$tabs-menu-active-item-border-width = 3px
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$tabs-menu-item-border-color        = $color-grey-muted
+$tabs-menu-link-color               = $color-grey-major
+$tabs-menu-active-item-border-color = $color-variant-primary
+$tabs-menu-link-hover-color         = $color-variant-primary
+$tabs-menu-link-active-color        = $color-variant-primary
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Tabs Holder
+// ---------------------------------------------------------
+
+// #Tabs Holder Structure
+// -------------------------------------
+
+.c-tabs
+  // Layout
+  display: block
+  width: 100%
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Tabs Menu
+// ---------------------------------------------------------
+
+// #Tabs Menu Structure
+// -------------------------------------
+
+.c-tabs__menu
+  // Layout
+  margin: 0
+  padding: 0
+
+  // Styles
+  list-style: none
+
+
+
+  // === Breakpoints
+
+  +from($viewport-sm)
+    // Layout
+    display: flex
+    flex-flow: row nowrap
+    align-items: flex-end
+    justify-content: flex-start
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Tabs Menu Item
+// ---------------------------------------------------------
+
+// #Tabs Menu Item Structure
+// -------------------------------------
+
+.c-tabs__menuItem
+  // Layout
+  width: 100%
+
+  // Styles
+  border: $tabs-menu-item-border-width solid
+
+  // Theme
+  border-color: $tabs-menu-item-border-color
+
+
+
+  // === Breakpoints
+
+  +to($viewport-sm)
+    margin-bottom: -($tabs-menu-item-border-width)
+
+  +from($viewport-sm)
+    // Layout
+    width: auto
+    flex: 0 0 auto
+    margin-right: -($tabs-menu-item-border-width)
+    position: relative
+
+    // Styles
+    border-bottom: 0
+
+
+
+
+
+
+
+// #Tabs Menu Item States
+// -------------------------------------
+
+.c-tabs__menuItem
+  +from($viewport-sm)
+    &.is-active
+      &::after
+        // Layout
+        display: block
+        position: absolute
+        width: 100%
+        height: $tabs-menu-item-border-width
+        bottom: -($tabs-menu-item-border-width)
+
+        // Theme
+        background: $color-main
+
+        // Extra
+        content: ''
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Tabs Menu Link
+// ---------------------------------------------------------
+
+// #Tabs Menu Link Structure
+// -------------------------------------
+
+.c-tabs__menuLink
+  // Typography
+  line-height: 1
+  text-decoration: none
+  text-transform: capitalize
+
+  // Layout
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: $tabs-menu-link-padding
+
+  // Theme
+  color: $tabs-menu-link-color
+
+  // Easing
+  transition: $default-transition
+
+
+
+
+
+
+
+// #Tabs Menu Link States
+// -------------------------------------
+
+.c-tabs__menuLink
+  &:hover
+    // Theme
+    color: $tabs-menu-link-hover-color
+
+
+
+
+
+
+
+// #Tabs Menu Link Context
+// -------------------------------------
+
+.c-tabs__menuLink
+  .c-tabs__menuItem.is-active > &
+    // Theme
+    color: $tabs-menu-link-active-color
+
+    +from($viewport-sm)
+      // Styles
+      border-top: $tabs-menu-active-item-border-width solid
+
+      // Theme
+      border-color: $tabs-menu-active-item-border-color
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Tabs Menu Link Decendants
+// ---------------------------------------------------------
+
+// #Tabs Menu Link Decendants Structure
+// -------------------------------------
+
+*
+  .c-tabs__menuLink > &
+    margin-left: $tabs-menu-link-children-spacing
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Tabs Panels Holder
+// ---------------------------------------------------------
+
+// #Tabs Panels Holder Structure
+// -------------------------------------
+
+.c-tabs__panels
+  // Layout
+  padding: $tabs-panel-padding
+
+  // Styles
+  border: $tabs-menu-item-border-width solid
+
+  // Theme
+  border-color: $tabs-menu-item-border-color
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Tabs Panel
+// ---------------------------------------------------------
+
+// #Tabs Panel Structure
+// -------------------------------------
+
+.c-tabs__panel
+  // Mixins
+  collapse()
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Tabs Panel Decendants
+// ---------------------------------------------------------
+
+// #Tabs Panel Decendants Structure
+// -------------------------------------
+
+*
+  .c-tabs__panel > &
+    // Layout
+    margin-top: $tabs-panel-children-spacing

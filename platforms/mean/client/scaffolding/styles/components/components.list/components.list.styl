@@ -1,0 +1,180 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Typography Variables
+ *     - #Layout Variables
+ *
+ *
+ * + @List
+ *     - #List Structure
+ *
+ *
+ * + @List Item
+ *     - #List Item Structure
+ *
+ *
+ * + @List Item Bullet
+ *     - #List Item Bullet Structure
+ *     - #List Item Bullet Context
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Typography Variables
+// -------------------------------------
+
+$bullet-font-size = 1em
+
+
+
+
+
+
+
+// #Layout Variables
+// -------------------------------------
+
+$bullet-spacing   = 2em
+$list-item-spacing = 0.5em 0
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @List
+// ---------------------------------------------------------
+
+// #List Structure
+// -------------------------------------
+
+.c-list
+  // Styles
+  list-style: none
+
+
+
+  // === Mixins
+
+  collapse()
+
+
+
+
+
+
+
+// #List Context
+// -------------------------------------
+
+.c-list
+  .c-list
+    // Layout
+    display: block
+    width: 100%
+    margin: 1em 0
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @List Item
+// ---------------------------------------------------------
+
+// #List Item Structure
+// -------------------------------------
+
+li
+  .c-list &
+    // Layout
+    margin: $list-item-spacing
+    padding-left: 'calc(1px + %s)' % $bullet-spacing
+    position: relative
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @List Item Bullet
+// ---------------------------------------------------------
+
+// #List Item Bullet Structure
+// -------------------------------------
+
+::before
+  .c-list > li&
+    // Typography
+    font-family: $font-icon
+    font-size: $bullet-font-size
+    font-weight: normal
+    font-style: normal
+    text-transform: none
+    font-feature-settings: 'liga'
+
+    // Layout
+    width: 1px
+    height: 1px
+    margin-right: $bullet-spacing
+    overflow: visible
+    position: absolute
+    top: 0
+    left: 0
+
+    // Extra
+    content: 'trending_flat'
+
+
+
+
+
+
+
+// #List Item Bullet Context
+// -------------------------------------
+
+::before
+  .c-list--checkLabeled > li&
+    // Extra
+    content: 'done'
+
+  .c-list--plusLabeled > li&
+    // Extra
+    content: 'add'
+
+  .c-list--minusLabeled > li&
+    // Extra
+    content: 'remove'
+
+  .c-list--angleLabeled > li&
+    // Extra
+    content: 'keyboard_arrow_right'
+
+  .c-list--folder > li&
+    // Extra
+    content: 'folder'
+
+  .c-list--file > li&
+    // Extra
+    content: 'insert_drive_file'

@@ -1,0 +1,51 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Image
+ *    - #Image Structure
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Image
+// ---------------------------------------------------------
+
+// #Image Structure
+// -------------------------------------
+
+/**
+ * [1] : Offset `alt` text from surrounding copy.
+ * [2] : Fluid images for responsive purposes.
+ * [3] : Setting `vertical-align` removes the whitespace that appears under
+ *       `img` elements when they are dropped into a page as-is. Safer
+ *       alternative to using `display: block`.
+ * [4] : If a `width` and/or `height` attribute have been explicitly defined, let’s
+ *       not make the image fluid.
+ */
+
+img
+  // Typography
+  font-style: italic      // [1]
+
+  // Layout
+  max-width: 100%         // [2]
+  vertical-align: middle  // [3]
+
+
+
+  // === Coupling
+
+  &[width],
+  &[height]
+    // Layout
+    max-width: none       // [4]
+
+

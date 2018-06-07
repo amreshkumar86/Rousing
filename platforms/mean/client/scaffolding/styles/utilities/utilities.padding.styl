@@ -1,0 +1,155 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ * + @Padding
+ * + @Padding Horizontal
+ * + @Padding Vertical
+ * + @Padding Top
+ * + @Padding Right
+ * + @Padding Bottom
+ * + @Padding Left
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+$padding-prop-values         = $spacing-unit-mini $spacing-unit-tiny $spacing-unit-small $spacing-unit-medium $spacing-unit-large $spacing-unit-big $spacing-unit-huge $spacing-unit-massive $spacing-unit-gigantic $spacing-unit-divine '0'
+$padding-prop-classes        = '.u-p-mini' '.u-p-tiny' '.u-p-small' '.u-p-medium' '.u-p-large' '.u-p-big' '.u-p-huge' '.u-p-massive' '.u-p-gigantic' '.u-p-divine' '.u-p-none'
+$padding-x-prop-classes      = '.u-px-mini' '.u-px-tiny' '.u-px-small' '.u-px-medium' '.u-px-large' '.u-px-big' '.u-px-huge' '.u-px-massive' '.u-px-gigantic' '.u-px-divine' '.u-px-none'
+$padding-y-prop-classes      = '.u-py-mini' '.u-py-tiny' '.u-py-small' '.u-py-medium' '.u-py-large' '.u-py-big' '.u-py-huge' '.u-py-massive' '.u-py-gigantic' '.u-py-divine' '.u-py-none'
+$padding-top-prop-classes    = '.u-pt-mini' '.u-pt-tiny' '.u-pt-small' '.u-pt-medium' '.u-pt-large' '.u-pt-big' '.u-pt-huge' '.u-pt-massive' '.u-pt-gigantic' '.u-pt-divine' '.u-pt-none'
+$padding-right-prop-classes  = '.u-pr-mini' '.u-pr-tiny' '.u-pr-small' '.u-pr-medium' '.u-pr-large' '.u-pr-big' '.u-pr-huge' '.u-pr-massive' '.u-pr-gigantic' '.u-pr-divine' '.u-pr-none'
+$padding-bottom-prop-classes = '.u-pb-mini' '.u-pb-tiny' '.u-pb-small' '.u-pb-medium' '.u-pb-large' '.u-pb-big' '.u-pb-huge' '.u-pb-massive' '.u-pb-gigantic' '.u-pb-divine' '.u-pb-none'
+$padding-left-prop-classes   = '.u-pl-mini' '.u-pl-tiny' '.u-pl-small' '.u-pl-medium' '.u-pl-large' '.u-pl-big' '.u-pl-huge' '.u-pl-massive' '.u-pl-gigantic' '.u-pl-divine' '.u-pl-none'
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Padding
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate regular/responsive classes for `padding`.
+ */
+
+-generate-rules('padding', $padding-prop-values, $padding-prop-classes)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Padding Horizontal
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate regular/responsive classes
+ * for `padding-right` & `padding-left`.
+ */
+
+-generate-rules('padding-right' 'padding-left', $padding-prop-values, $padding-x-prop-classes)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Padding Vertical
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate regular/responsive classes
+ * for `padding-top` & `padding-bottom`.
+ */
+
+-generate-rules('padding-top' 'padding-bottom', $padding-prop-values, $padding-y-prop-classes)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Padding Top
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate regular/responsive classes for `padding-top`.
+ */
+
+-generate-rules('padding-top', $padding-prop-values, $padding-top-prop-classes)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Padding Right
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate regular/responsive classes for `padding-right`.
+ */
+
+-generate-rules('padding-right', $padding-prop-values, $padding-right-prop-classes)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Padding Bottom
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate regular/responsive classes for `padding-bottom`.
+ */
+
+-generate-rules('padding-bottom', $padding-prop-values, $padding-bottom-prop-classes)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Padding Left
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate regular/responsive classes for `padding-left`.
+ */
+
+-generate-rules('padding-left', $padding-prop-values, $padding-left-prop-classes)

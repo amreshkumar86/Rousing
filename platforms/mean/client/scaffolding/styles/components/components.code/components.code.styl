@@ -1,0 +1,258 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Typography Variables
+// -------------------------------------
+
+$code-font-family               = $font-stack-mono
+$code-font-size                 = 0.75em
+$code-icons-size                = 1em
+
+
+
+
+
+
+
+// #Layout Variables
+// -------------------------------------
+
+$code-header-padding            = 0.5em 1.5em
+$code-body-padding              = 1.5em
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$code-header-default-background = $color-variant-primary
+$code-header-default-color      = $color-main
+$code-icons-color               = $color-main
+$code-background-color          = $color-grey-muted
+$code-color                     = $color-grey-major
+$code-border-color              = $color-grey-muted
+$code-dark-background-color     = $color-grey-major
+$code-dark-color                = $color-grey-muted
+$code-dark-border-color         = $color-grey-minor
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Code Wrapper
+// ---------------------------------------------------------
+
+// #Code Wrapper Structure
+// -------------------------------------
+
+.c-code
+  // Typography
+  font-size: 1em
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Code Header
+// ---------------------------------------------------------
+
+// #Code Header Structure
+// -------------------------------------
+
+.c-code__header
+  // Layout
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: $code-header-padding
+  position: relative
+  z-index: $over-content
+
+  // Theme
+  background-color: $code-header-default-background
+
+
+
+  // === Mixins
+
+  selectable(none)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Code Header Title
+// ---------------------------------------------------------
+
+// #Code Header Title Structure
+// -------------------------------------
+
+.c-code__header-title
+  // Typography
+  text-transform: uppercase
+
+  // Theme
+  color: $code-header-default-color
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Code Action Bar
+// ---------------------------------------------------------
+
+// #Code Action Bar Structure
+// -------------------------------------
+
+.c-code__action-bar
+  // Typography
+  font-size: $code-icons-size
+
+  // Layout
+  display: flex
+  align-items: center
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Code Action Bar Icon
+// ---------------------------------------------------------
+
+// #Code Action Bar Icon Structure
+// -------------------------------------
+
+.c-code__action-icon
+  // Typography
+  font-size: $code-icons-size
+
+  // Extra
+  cursor: pointer
+
+  // Layout
+  padding: 0.5em 0
+  margin-left: 0.5em
+
+  // Styles
+  opacity: 0.75
+
+  // Theme
+  color: $code-icons-color
+
+  // Easing
+  transition: $default-transition
+
+  // Extra
+  transform: translate3d(0, 0, 0)
+
+
+
+
+
+
+
+// #Code Action Bar Icon States
+// -------------------------------------
+
+.c-code__action-icon:hover
+  // Styles
+  opacity: 1
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Code Body
+// ---------------------------------------------------------
+
+// #Code Body Structure
+// -------------------------------------
+
+.c-code__body
+  // Typography
+  line-height: 1.414em
+
+  // Layout
+  overflow: auto
+  max-height: 50vh
+  padding: $code-body-padding
+  margin-top: -($base-border-width)
+
+  // Styles
+  border: $base-border
+
+  // Theme
+  background-color: alpha($code-background-color, 0.2)
+  color: $code-color
+  border-color: $code-border-color
+
+
+
+
+
+
+
+// #Code Body Context
+// -------------------------------------
+
+.c-code__body
+  .c-code--dark &
+    // Theme
+    background-color: $code-dark-background-color
+    color: $code-dark-color
+    border-color: $code-dark-border-color
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Code Content
+// ---------------------------------------------------------
+
+// #Code Content Structure
+// -------------------------------------
+
+.c-code__body pre
+  // Typography
+  font-family: $code-font-family
+  font-size: $code-font-size

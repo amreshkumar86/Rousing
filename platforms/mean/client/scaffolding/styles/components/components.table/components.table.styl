@@ -1,0 +1,207 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/*
+ * + @Settings
+ *     - #Layout Variables
+ *
+ *
+ * + @Table
+ *     - #Table Structure
+ *     - #Table Modifiers
+ *
+ *
+ * + @Table Decendants
+ *     - #Table Decendants Structure
+ *
+ *
+ * + @Table Caption
+ *     - #Table Caption Structure
+ *
+ *
+ * + @Table Cells
+ *     - #Table Cells Context
+ *
+ *
+ * + @Table Rows
+ *     - #Table Rows Context
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Layout Variables
+// -------------------------------------
+
+$table-padding-mini   = 0.5em
+$table-padding-tiny   = 0.75em
+$table-padding-small  = 1em
+$table-padding-medium = 1.5em
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Table
+// ---------------------------------------------------------
+
+// #Table Structure
+// -------------------------------------
+
+.c-table
+  // Typography
+  text-align: left
+  text-transform: capitalize
+
+  // Layout
+  width: 100%
+
+
+
+
+
+
+
+// #Table Modifiers
+// -------------------------------------
+
+.c-table--fixed
+  // Layout
+  table-layout: fixed
+
+
+
+
+.c-table--bordered
+  // Styles
+  border: 1px solid
+
+  // Theme
+  border-color: $color-grey-muted
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Table Decendants
+// ---------------------------------------------------------
+
+// #Table Decendants Structure
+// -------------------------------------
+
+th,
+td,
+caption
+  .c-table--mini &
+    // Layout
+    padding: $table-padding-mini ($table-padding-mini * 2)
+
+
+  .c-table--tiny &
+    // Layout
+    padding: $table-padding-tiny ($table-padding-tiny * 2)
+
+
+  .c-table--small &
+    // Layout
+    padding: $table-padding-small ($table-padding-small * 2)
+
+
+  .c-table--medium &
+    // Layout
+    padding: $table-padding-medium ($table-padding-medium * 2)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Table Caption
+// ---------------------------------------------------------
+
+// #Table Caption Structure
+// -------------------------------------
+
+caption
+  .c-table &
+    // Theme
+    color: $color-grey-pivotal
+    background: alpha($color-grey-muted, 0.7)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Table Cells
+// ---------------------------------------------------------
+
+// #Table Cells Context
+// -------------------------------------
+
+th,
+td
+  .c-table--bordered &
+    // Styles
+    border: 1px solid
+
+    // Theme
+    border-color: $color-grey-muted
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Table Rows
+// ---------------------------------------------------------
+
+// #Table Rows Context
+// -------------------------------------
+
+tbody tr:nth-child(odd)
+  .c-table--striped &
+    // Theme
+    background: alpha($color-grey-muted, 0.3)
+
+
+
+
+tbody tr
+  .c-table--hoverable &
+    // Easing
+    transition: $default-transition
+
+    // Extra
+    cursor: pointer
+
+
+    &:hover
+      // Theme
+      background: alpha($color-grey-muted, 0.7)

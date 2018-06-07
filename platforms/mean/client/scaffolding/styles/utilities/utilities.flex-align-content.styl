@@ -1,0 +1,39 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ * + @Flex Align Content
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+$flex-align-content-prop-values  = 'flex-start' 'flex-end' 'center' 'stretch' 'space-between' 'space-around'
+$flex-align-content-prop-classes = '.u-flexContentStart' '.u-flexContentEnd' '.u-flexContentCenter' '.u-flexContentStretch' '.u-flexContentBetween' '.u-flexContentAround'
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Flex Align Content
+// ---------------------------------------------------------
+
+/**
+ * Function used to generate regular/responsive classes for `align-content`.
+ */
+
+-generate-rules('align-content', $flex-align-content-prop-values, $flex-align-content-prop-classes)

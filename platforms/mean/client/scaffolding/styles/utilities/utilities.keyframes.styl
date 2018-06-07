@@ -1,0 +1,149 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Fade In
+ * + @Fade Up
+ * + @Fade Down
+ * + @Scale In
+ * + @Scale Out
+ * + @Flip
+ * + @Spin
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Fade In
+// ---------------------------------------------------------
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Fade Up
+// ---------------------------------------------------------
+
+@keyframes fadeUp
+  0%
+    opacity: 0.8
+    transform: translate3d(0, 100%, 0)
+
+  100%
+    opacity: 1
+    transform: translate3d(0, 0, 0)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Fade Down
+// ---------------------------------------------------------
+
+@keyframes fadeDown
+  0%
+    opacity: 1
+    transform: translate3d(0, 0, 0)
+
+  100%
+    opacity: 0.5
+    transform: translate3d(0, 100%, 0)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Scale In
+// ---------------------------------------------------------
+
+@keyframes scaleIn
+  0%
+    opacity: 0
+    transform: scale(0.9) rotateX(-60deg)
+    transform-origin:  50% 0
+
+  100%
+    opacity: 1
+    transform: scale(1)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Scale Out
+// ---------------------------------------------------------
+
+@keyframes scaleOut
+  0%
+    opacity:  1
+    transform: scale(1)
+
+  100%
+    opacity: 0
+    transform: scale(0.9) rotateX(-60deg)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Flip
+// ---------------------------------------------------------
+
+@keyframes flip
+  0%
+    transform: perspective(200px) rotateX(0) rotateY(180deg)
+  50%
+    transform: perspective(200px) rotateX(0) rotateY(0)
+  100%
+    transform: perspective(200px) rotateX(180deg) rotateY(0)
+
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Spin
+// ---------------------------------------------------------
+
+@keyframes spin
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)

@@ -1,0 +1,105 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Color Variables
+ *
+ *
+ * + @Link
+ *     - #Label Structure
+ *
+ *
+ * + @Link Underline
+ *     - #Link Underline Structure
+ *     - #Link Underline Context
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Color Variables
+// -------------------------------------
+
+$link-color = $color-variant-primary
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Link
+// ---------------------------------------------------------
+
+// #Link Structure
+// -------------------------------------
+
+.c-link
+  // Typography
+  text-decoration: none
+
+  // Layout
+  display: inline-block
+  vertical-align: middle
+  position: relative
+
+  // Theme
+  color: $link-color
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Link Underline
+// ---------------------------------------------------------
+
+// #Link Underline Structure
+// -------------------------------------
+
+.c-link::after
+  // Layout
+  display: block
+  width: 100%
+  height: 1px
+  position: absolute
+  bottom: 0.125em
+  left: 0
+
+  // Theme
+  background: currentColor
+
+  // Easing
+  transition: $default-transition
+
+  // Extra
+  content: ''
+  transform: scaleX(0)
+
+
+
+
+
+
+
+// #Link Underline Context
+// -------------------------------------
+
+.c-link:hover::after
+  // Extra
+  transform: scaleX(1)

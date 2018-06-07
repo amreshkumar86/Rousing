@@ -1,0 +1,171 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Layout Variables
+ *     - #Color Variables
+ *
+ * + @Hamburger
+ *     - #Hamburger Structure
+ *     - #Hamburger States
+ *
+ * + @Hamburger Stripes
+ *     - #Hamburger Stripes Structure
+ *     - #Hamburger Stripes Context
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Layout Variables
+// -------------------------------------
+
+$hamburger-width                = 1.5em
+$hamburger-height               = 13px
+$hamburger-stripe-height        = 1px
+$hamburger-stripe-spacing-ratio = 5
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$hamburger-stripe-background    = $color-grey-minor
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Hamburger
+// ---------------------------------------------------------
+
+// #Hamburger Structure
+// -------------------------------------
+
+.c-hamburger
+  // Layout
+  width: $hamburger-width
+  height: $hamburger-height
+  cursor: pointer
+  position: relative
+
+  // Extra
+  transition: $default-transition
+
+
+
+
+
+
+
+// #Hamburger States
+// -------------------------------------
+
+.c-hamburger.is-active
+  // Extra
+  transform: scale(0.8)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Hamburger Stripes
+// ---------------------------------------------------------
+
+// #Hamburger Stripes Structure
+// -------------------------------------
+
+.c-hamburger span
+  // Layout
+  display: block
+  width: 100%
+  height: $hamburger-stripe-height
+  position: absolute
+  left: 0
+
+  // Styles
+  border-radius: 0
+  opacity: 1
+
+  // Theme
+  background: $hamburger-stripe-background
+
+  // Easing
+  transition: $default-transition
+
+  // Extra
+  transform: rotate(0deg)
+
+
+
+  // === Pseudo Elements
+
+  &:nth-child(1)
+    // Layout
+    top: 0
+
+
+  &:nth-child(2),
+  &:nth-child(3)
+    // Layout
+    top: 'calc(%s * %s)' % ($hamburger-stripe-spacing-ratio $hamburger-stripe-height)
+
+
+  &:nth-child(4)
+    // Layout
+    top: 'calc(2 * %s * %s)' % ($hamburger-stripe-spacing-ratio $hamburger-stripe-height)
+
+
+
+
+
+
+
+// #Hamburger Stripes Context
+// -------------------------------------
+
+.c-hamburger.is-active span
+  &:nth-child(1)
+    // Layout
+    width: 0
+    top: 'calc(%s * %s)' % ($hamburger-stripe-spacing-ratio $hamburger-stripe-height)
+    left: 50%
+
+
+  &:nth-child(2)
+    // Extra
+    transform: rotate(45deg)
+
+
+  &:nth-child(3)
+    // Extra
+    transform: rotate(-45deg)
+
+
+  &:nth-child(4)
+    // Layout
+    width: 0
+    top: 'calc(%s * %s)' % ($hamburger-stripe-spacing-ratio $hamburger-stripe-height)
+    left: 50%

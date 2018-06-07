@@ -1,0 +1,421 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/*
+ * + @Settings
+ *    - #Typography Variables
+ *    - #Layout Variables
+ *    - #Styles Variables
+ *    - #Color Variables
+ *
+ *
+ * + @Popover
+ *    - #Popover Structure
+ *    - #Popover Modifiers
+ *    - #Popover States
+ *
+ *
+ * + @Popover Header
+ *    - #Popover Header Structure
+ *
+ *
+ * + @Popover Title
+ *    - #Popover Title Structure
+ *
+ *
+ * + @Popover Close
+ *    - #Popover Close Structure
+ *
+ *
+ * + @Popover Body
+ *    - #Popover Body Structure
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Typography Variables
+// -------------------------------------
+
+$popover-font-size           = 0.875em
+
+
+
+
+
+
+
+// #Layout Variables
+// -------------------------------------
+
+$popover-tip-size            = 12px
+$popover-tip-diagonal-length = 17px
+$popover-max-width           = 16em
+$popover-min-width           = 8em
+
+
+
+
+
+
+
+// #Styles Variables
+// -------------------------------------
+
+$popover-border-radius       = 4px
+$popover-box-shadow          = $shadow-medium
+$popover-border-width        = 1px
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$popover-border-color        = $color-grey-muted
+$popover-header-background   = $color-grey-muted
+$popover-background          = $color-main
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Popover
+// ---------------------------------------------------------
+
+// #Popover Structure
+// -------------------------------------
+
+.c-popover
+  // Layout
+  max-width: $popover-max-width
+  min-width: $popover-min-width
+  position: absolute
+  z-index: $over-content
+  visibility: hidden
+
+  // Styles
+  border-radius: $popover-border-radius
+
+  // Easing
+  transition: $default-transition
+
+  // Extra
+  transform: translate3d(0, 0, 0)
+
+
+
+  // === Pseudo Elements
+
+  &::after
+    // Layout
+    display: block
+    width: $popover-tip-size
+    height: $popover-tip-size
+    position: absolute
+    z-index: -1
+
+    // Extra
+    content: ''
+    transform-origin: top left
+
+
+
+
+.c-popover,
+.c-popover::after
+  // Styles
+  box-shadow: $popover-box-shadow
+  border: $popover-border-width solid
+
+  // Theme
+  background: $popover-background
+  border-color: $popover-border-color
+
+
+
+
+
+
+
+// #Popover Modifiers
+// -------------------------------------
+
+.c-popover--top::after
+  // Layout
+  left: 50%
+  top: 100%
+
+  // Extra
+  transform: translate(0, -($popover-tip-diagonal-length/2)) rotate(45deg)
+
+
+
+
+.c-popover--right::after
+  // Layout
+  top: 50%
+  left: 0
+
+  // Extra
+  transform: translate(0, -50%) rotate(45deg)
+
+
+
+
+.c-popover--bottom::after
+  // Layout
+  left: 50%
+  top: 0
+
+  // Theme
+  background: $popover-header-background
+
+  // Extra
+  transform: translate(0, -($popover-tip-diagonal-length/2)) rotate(45deg)
+
+
+
+
+.c-popover--left::after
+  // Layout
+  top: 50%
+  left: 100%
+
+  // Extra
+  transform: translate(0, -($popover-tip-diagonal-length/2)) rotate(45deg)
+
+
+
+
+.c-popover--topLeft::after
+  // === Inheritance
+
+  @extend .c-popover--top::after
+
+  // Layout
+  left: $popover-tip-diagonal-length * 2
+
+
+
+
+.c-popover--topRight::after
+  // === Inheritance
+
+  @extend .c-popover--top::after
+
+  // Layout
+  left: auto
+  right: $popover-tip-diagonal-length * 1.5
+
+
+
+
+.c-popover--bottomLeft::after
+  // === Inheritance
+
+  @extend .c-popover--bottom::after
+
+  // Layout
+  left: $popover-tip-diagonal-length * 2
+
+
+
+
+.c-popover--bottomRight::after
+  // === Inheritance
+
+  @extend .c-popover--bottom::after
+
+  // Layout
+  left: auto
+  right: $popover-tip-diagonal-length * 1.5
+
+
+
+
+.c-popover--leftTop::after
+  // === Inheritance
+
+  background: $popover-header-background
+
+  // Layout
+  @extend .c-popover--left::after
+  top: $popover-tip-size + 0.5 * $popover-tip-diagonal-length
+
+
+
+
+.c-popover--rightTop::after
+  // === Inheritance
+
+  background: $popover-header-background
+
+  // Layout
+  @extend .c-popover--right::after
+  top: $popover-tip-size + 0.5 * $popover-tip-diagonal-length
+
+
+
+
+.c-popover--leftBottom::after
+  // === Inheritance
+
+  @extend .c-popover--left::after
+
+  // Layout
+  bottom: $popover-tip-diagonal-length * 1.5
+  top: auto
+
+
+
+
+.c-popover--rightBottom::after
+  // === Inheritance
+
+  @extend .c-popover--right::after
+
+  // Layout
+  bottom: $popover-tip-diagonal-length * 1.5
+  top: auto
+
+
+
+
+
+
+
+// #Popover States
+// -------------------------------------
+
+.is-visible
+  .c-popover&
+    // Layout
+    visibility: visible
+    margin: $popover-tip-size
+    position: relative
+
+    // Styles
+    opacity: 1
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Popover Header
+// ---------------------------------------------------------
+
+// #Popover Header Structure
+// -------------------------------------
+
+.c-popover__header
+  // Layout
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: ($popover-tip-size) ($popover-tip-size * 2)
+
+  // Styles
+  border-bottom: 1px solid
+  border-radius: $popover-border-radius $popover-border-radius 0 0
+
+  // Theme
+  border-color: $popover-border-color
+  background: $popover-header-background
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Popover Title
+// ---------------------------------------------------------
+
+// #Popover Title Structure
+// -------------------------------------
+
+.c-popover__title
+  // Typography
+  text-transform: uppercase
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Popover Close
+// ---------------------------------------------------------
+
+// #Popover Close Structure
+// -------------------------------------
+
+.c-popover__close
+  // Styles
+  opacity: 0.5
+
+  // Easing
+  transition: $default-transition
+
+  // Extra
+  cursor: pointer
+
+  &:hover
+    // Styles
+    opacity: 1
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Popover Body
+// ---------------------------------------------------------
+
+// #Popover Body Structure
+// -------------------------------------
+
+.c-popover__body
+  // Typography
+  font-size: $popover-font-size
+  line-height: 1.414em
+  text-align: left
+
+  // Layout
+  padding: 2 * $popover-tip-size
+  position: relative
+  z-index: $over-content
+
+  // Styles
+  border-radius: 0 0 $popover-border-radius $popover-border-radius
+
+  // Theme
+  background: $popover-background

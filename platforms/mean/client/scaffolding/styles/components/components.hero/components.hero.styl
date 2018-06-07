@@ -1,0 +1,204 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Hero
+ *     - #Hero Structure
+ *
+ *
+ * + @Hero Wrapper
+ *     - #Hero Wrapper Structure
+ *     - #Hero Wrapper Context
+ *
+ *
+ * + @Hero Header
+ *     - #Hero Header Structure
+ *
+ *
+ * + @Hero Content
+ *     - #Hero Content Structure
+ *
+ *
+ * + @Hero Footer
+ *     - #Hero Footer Structure
+ *
+ *
+ * + @Hero Title
+ *     - #Hero Title Structure
+ *
+ *
+ * + @Hero Lead
+ *     - #Hero Lead Structure
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Hero
+// ---------------------------------------------------------
+
+// #Hero Structure
+// -------------------------------------
+
+.c-hero
+  // Typography
+  text-align: center
+
+  // Layout
+  display: flex
+  flex-flow: column nowrap
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Hero Wrapper
+// ---------------------------------------------------------
+
+// #Hero Wrapper Structure
+// -------------------------------------
+
+.c-hero__wrapper
+  // Layout
+  justify-content: space-between
+
+
+
+  // === Mixins
+
+  collapse()
+
+
+
+  // === Inheritance
+
+  @extend .c-hero
+
+
+
+
+
+
+
+
+// #Hero Wrapper Context
+// -------------------------------------
+
+.c-hero__wrapper
+  .c-hero--fullscreen > &
+    // Layout
+    min-height: 100vh
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Hero Header
+// ---------------------------------------------------------
+
+// #Hero Header Structure
+// -------------------------------------
+
+.c-hero__header
+  // Layout
+  display: flex
+  align-items: center
+  justify-content: center
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Hero Content
+// ---------------------------------------------------------
+
+// #Hero Content Structure
+// -------------------------------------
+
+.c-hero__content
+  // Layout
+  flex-direction: column
+  flex: 1 1 auto
+
+  // Layout
+  display: flex
+  align-items: center
+  justify-content: center
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Hero Footer
+// ---------------------------------------------------------
+
+// #Hero Footer Structure
+// -------------------------------------
+
+.c-hero__footer
+  // Layout
+  display: flex
+  align-items: center
+  justify-content: center
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Hero Title
+// ---------------------------------------------------------
+
+// #Hero Title Structure
+// -------------------------------------
+
+.c-hero__title
+  // Layout
+  font-size: $font-size-divine
+  font-weight: 900
+  text-transform: capitalize
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Hero Lead
+// ---------------------------------------------------------
+
+// #Hero Lead Structure
+// -------------------------------------
+
+.c-hero__lead
+  // Typography
+  font-size: $font-size-large
+  font-weight: 200
+  text-transform: capitalize

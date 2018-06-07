@@ -1,0 +1,210 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Typography Variables
+ *     - #Layout Variables
+ *     - #Color Variables
+ *
+ *
+ * + @Rating
+ *     - #Rating Structure
+ *
+ * + @Rating Decendants
+ *     - #Rating Decendants Structure
+ *
+ *
+ * + @Rating Input
+ *     - #Rating Input Structure
+ *
+ *
+ * + @Rating Star
+ *     - #Rating Star Structure
+ *     - #Rating Star States
+ */
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Typography Variables
+// -------------------------------------
+
+$rating-star-font-family         = $font-icon
+$rating-star-font-size           = 1.5em
+$rating-star-glyph               = 'star'
+
+
+
+
+
+
+
+// #Layout Variables
+// -------------------------------------
+
+$rating-star-width               = 1em
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$rating-star-color               = $color-grey-muted
+$rating-idle-state-hover-color   = alpha($color-aside-warning, 0.5)
+$rating-active-state-color       = gold
+$rating-active-state-hover-color = $color-aside-warning
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Rating
+// ---------------------------------------------------------
+
+// #Rating Structure
+// -------------------------------------
+
+.c-rating
+  // Layout
+  display: inline-block
+  vertical-align: top
+  padding: 0
+  overflow: hidden
+
+  // Styles
+  border: 0
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Rating Decendants
+// ---------------------------------------------------------
+
+// #Rating Decendants Structure
+// -------------------------------------
+
+*
+  .c-rating > &
+    // Layout
+    float: right
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Rating Input
+// ---------------------------------------------------------
+
+// #Rating Input Structure
+// -------------------------------------
+
+.c-rating__input
+  // Layout
+  width: 1px
+  height: 1px
+  padding: 0
+  margin: -1px
+  position: absolute
+  overflow: hidden
+
+  // Extra
+  clip: rect(0, 0, 0, 0)
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Rating Star
+// ---------------------------------------------------------
+
+// #Rating Star Structure
+// -------------------------------------
+
+.c-rating__star
+  // Typography
+  font-size: $rating-star-font-size
+  white-space: nowrap
+
+  // Layout
+  width: $rating-star-width
+  overflow: hidden
+
+  // Theme
+  color: $rating-star-color
+
+  // Extra
+  cursor: pointer
+
+
+
+  // === Pseudo Elements
+
+  &::before
+    // Typography
+    font-family: $rating-star-font-family
+    line-height: 1
+    font-feature-settings: 'liga'
+
+    // Extra
+    content: $rating-star-glyph
+
+
+
+
+
+
+
+// #Rating Star States
+// -------------------------------------
+
+.c-rating__star:hover,
+.c-rating__star:hover ~ .c-rating__star
+  // Theme
+  color: $rating-idle-state-hover-color
+
+
+
+
+.c-rating__input:checked ~ .c-rating__star
+  // Theme
+  color: $rating-active-state-color
+
+
+
+
+.c-rating__input:checked + .c-rating__star:hover,
+.c-rating__input:checked + .c-rating__star:hover ~ .c-rating__star,
+.c-rating__input:checked ~ .c-rating__star:hover,
+.c-rating__input:checked ~ .c-rating__star:hover ~ .c-rating__star,
+.c-rating__star:hover ~ .c-rating__input:checked ~ .c-rating__star
+  // Theme
+  color: $rating-active-state-hover-color

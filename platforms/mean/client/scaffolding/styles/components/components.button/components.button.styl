@@ -1,0 +1,739 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Typography Variables
+ *     - #Layout Variables
+ *     - #Styles Variables
+ *     - #Color Variables
+ *     - #Easing Variables
+ *
+ *
+ * + @Button
+ *     - #Button Structure
+ *
+ *     - #Button Modifiers
+ *         > $Content Modifiers
+ *         > $Size Modifiers
+ *         > $Width Modifiers
+ *         > $Color Modifiers
+ *         > $Style Modifiers
+ *
+ *     - #Button States
+ *       > $Button Hover State
+ *       > $Button Disabled State
+ *
+ *     - #Button Context
+ *
+ *
+ * + @Button Hover Mask
+ *     - #Button Hover Mask Structure
+ *     - #Button Hover Mask Context
+ *
+ *
+ * + @Button Group
+ *     - #Button Group Structure
+ *     - #Button Group Modifiers
+ *
+ *
+ * + @Button Decendants
+ *     - #Button Decendants Structure
+ *
+ *
+ * + @Button Label Icon
+ *     - #Button Label Icon Structure
+ *     - #Button Label Icon Context
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Typography Variables
+// -------------------------------------
+
+$button-font-family           = $font-family-base
+$button-icon-font-family      = $font-icon
+$button-font-size             = 0.75em
+$button-small-font-size       = 0.8 * $button-font-size
+$button-big-font-size         = 1.25 * $button-font-size
+$button-label-font-size       = 1.33em
+$button-icon-size             = 1em
+$button-icon-small-size       = 0.8 * $button-icon-size
+$button-icon-big-size         = 1.25 * $button-icon-size
+
+
+
+
+
+
+
+// #Layout Variables
+// -------------------------------------
+
+$button-height                = 3.6em
+$button-padding               = 2.66em
+$button-label-spacing         = unit(( -strip($button-padding) / -strip($button-label-font-size) ), 'em')
+$button-label-padding         = 0.33 * $button-label-spacing
+
+
+
+
+
+
+
+// #Styles Variables
+// -------------------------------------
+
+$button-border-width          = 0
+$button-border-radius         = $base-border-radius
+$button-hollow-border-width   = 2px
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$button-color                 = $clr-white-900
+$button-color-primary         = $color-variant-primary
+$button-color-secondary       = $color-variant-secondary
+$button-color-accent          = $color-variant-accent
+$button-color-error           = $color-aside-error
+$button-color-success         = $color-aside-success
+$button-color-info            = $color-aside-info
+$button-color-warning         = $color-aside-warning
+$button-transparent-color     = $color-grey-pivotal
+$button-label-color           = $clr-white-100
+$button-background-color      = $color-variant-primary
+$button-highlight-color       = $color-variant-primary
+$button-hover-mask-background = $clr-black
+
+
+
+
+
+
+
+// #Easing Variables
+// -------------------------------------
+
+$button-transition            = $default-transition
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Button
+// ---------------------------------------------------------
+
+// #Button Structure
+// -------------------------------------
+
+.c-button
+  // Typography
+  font-family: $button-font-family
+  font-size: $button-font-size
+  font-weight: 600
+  font-style: normal
+  text-align: center
+  text-transform: uppercase
+  line-height: $button-height
+  letter-spacing: 0.08em
+  white-space: nowrap
+
+  // Layout
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  padding-right: $button-padding
+  padding-left: $button-padding
+  margin: 0
+  overflow: visible
+  position: relative
+  vertical-align: middle
+
+  // Styles
+  text-decoration: none
+  border-style: solid
+  border-radius: $button-border-radius
+  border-width: $button-border-width
+
+  // Theme
+  color: $button-color
+  background-color: $button-background-color
+
+  // Easing
+  transition: $button-transition
+
+  // Extra
+  transform: translate3d(0, 0, 0)
+  cursor: pointer
+
+  // Vendor Specific
+  -webkit-tap-highlight-color: $button-highlight-color
+
+
+
+  // === Mixins
+
+  undragable()
+  selectable(none)
+  collapse('horizontal')
+
+
+
+
+
+
+
+// #Button Modifiers
+// -------------------------------------
+
+/**
+ * ===== $Content Modifiers
+ */
+
+.c-button--labeledBefore
+  // Layout
+  padding-left: 0
+
+
+
+
+.c-button--labeledAfter
+  // Layout
+  padding-right: 0
+
+
+
+
+.c-button--icon
+  // Typography
+  font-size: $button-icon-size
+  line-height: $button-height * ($button-font-size / $button-icon-size)
+  font-family: $button-icon-font-family
+  text-transform: none
+  letter-spacing: 0
+  font-weight: normal
+  font-feature-settings: 'liga'
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizeLegibility
+  -moz-osx-font-smoothing: grayscale
+
+  // Layout
+  width: @line-height
+  padding: 0
+  justify-content: center
+
+
+
+  // === Coupling
+
+  &.c-button--big
+    // Typography
+    font-size: $button-icon-big-size
+
+  &.c-button--small
+    // Typography
+    font-size: $button-icon-small-size
+
+
+
+
+
+
+/**
+ * ===== $Size Modifiers
+ */
+
+.c-button--small
+  // Typography
+  font-size: $button-small-font-size
+
+
+
+
+.c-button--big
+  // Typography
+  font-size: $button-big-font-size
+
+
+
+
+
+
+/**
+ * ===== $Width Modifiers
+ */
+
+.c-button--block
+  // Layout
+  width: 100%
+
+
+
+
+
+
+/**
+ * ===== $Color Modifiers
+ */
+
+.c-button--light
+  // Theme
+  background-color: $color-main
+  color: $color-grey-pivotal
+
+
+
+
+.c-button--primary
+  // Theme
+  background-color: $button-color-primary
+
+
+
+
+.c-button--secondary
+  // Theme
+  background-color: $button-color-secondary
+
+
+
+
+.c-button--accent
+  // Theme
+  background-color: $button-color-accent
+
+
+
+
+.c-button--error
+  // Theme
+  background-color: $button-color-error
+
+
+
+
+.c-button--success
+  // Theme
+  background-color: $button-color-success
+
+
+
+
+.c-button--info
+  // Theme
+  background-color: $button-color-info
+
+
+
+
+.c-button--warning
+  // Theme
+  background-color: $button-color-warning
+
+
+
+
+.c-button--transparent
+  // Theme
+  background: transparent
+  color: $button-transparent-color
+
+
+
+
+
+
+/**
+ * ===== $Style Modifiers
+ */
+
+.c-button--hollow
+  // Layout
+  line-height: 'calc(%s - %s)' % ($button-height ($button-hollow-border-width * 2))
+
+  // Styles
+  border-width: $button-hollow-border-width
+
+  // Theme
+  border-color: inherit
+  background-color: transparent
+  color: $button-transparent-color
+
+
+
+  // === Coupling
+
+  &.c-button--icon
+    // Typography
+    line-height: 'calc(%s - %s)' % (($button-height * ($button-font-size / $button-icon-size)) ($button-hollow-border-width * 2))
+
+
+  &.c-button--light
+    // Theme
+    color: $color-main
+
+
+  &.c-button--primary
+    // Theme
+    color: $button-color-primary
+
+
+  &.c-button--secondary
+    // Theme
+    color: $button-color-secondary
+
+
+  &.c-button--accent
+    // Theme
+    color: $button-color-accent
+
+
+  &.c-button--error
+    // Theme
+    color: $button-color-error
+
+
+  &.c-button--success
+    // Theme
+    color: $button-color-success
+
+
+  &.c-button--info
+    // Theme
+    color: $button-color-info
+
+
+  &.c-button--warning
+    // Theme
+    color: $button-color-warning
+
+
+
+
+
+
+
+// #Button States
+// -------------------------------------
+
+/**
+ * ===== $Button Hover State
+ */
+
+.c-button--hollow:hover
+  // Theme
+  background: $button-transparent-color
+  color: $button-color
+  border-color: transparent
+
+
+.c-button--hollow:hover
+  .c-button--light&
+    // Theme
+    background-color: $color-main
+    color: $color-grey-pivotal
+
+
+  .c-button--primary&
+    // Theme
+    background-color: $button-color-primary
+
+
+  .c-button--secondary&
+    // Theme
+    background-color: $button-color-secondary
+
+
+  .c-button--accent&
+    // Theme
+    background-color: $button-color-accent
+
+
+  .c-button--error&
+    // Theme
+    background-color: $button-color-error
+
+
+  .c-button--success&
+    // Theme
+    background-color: $button-color-success
+
+
+  .c-button--info&
+    // Theme
+    background-color: $button-color-info
+
+
+  .c-button--warning&
+    // Theme
+    background-color: $button-color-warning
+
+
+
+
+
+
+/**
+ * ===== $Button Disabled State
+ */
+
+.c-button:disabled,
+.c-button--disabled
+  opacity: 0.35
+  pointer-events: none
+
+
+
+
+
+
+
+// #Button Context
+// -------------------------------------
+
+.c-button
+  .c-button-group--primary > &
+    // Theme
+    background: $button-color-primary
+    color: $button-color
+
+
+  .c-button-group--secondary > &
+    // Theme
+    background: $button-color-secondary
+    color: $button-color
+
+
+  .c-button-group--accent > &
+    // Theme
+    background: $button-color-accent
+    color: $button-color
+
+
+  .c-button-group--error > &
+    // Theme
+    background: $button-color-error
+    color: $button-color
+
+
+  .c-button-group--success > &
+    // Theme
+    background: $button-color-success
+    color: $button-color
+
+
+  .c-button-group--info > &
+    // Theme
+    background: $button-color-info
+    color: $button-color
+
+
+  .c-button-group--warning > &
+    // Theme
+    background: $button-color-warning
+    color: $button-color
+
+
+  .c-button-group--transparent > &
+    // Theme
+    background: transparent
+    color: $button-transparent-color
+
+
+  .c-button-group > &
+    border-radius: 0
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Button Hover Mask
+// ---------------------------------------------------------
+
+// #Button Hover Mask Structure
+// -------------------------------------
+
+::before
+  .c-button:not(.c-button--hollow)&
+    // Layout
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: -1
+
+    // Styles
+    border-radius: inherit
+    opacity: 0
+
+    // Theme
+    background: $button-hover-mask-background
+
+    // Easing
+    transition: $default-transition
+
+    // Extra
+    content: ''
+
+
+
+
+
+
+
+// #Button Hover Mask Context
+// -------------------------------------
+
+::before
+  .c-button:not(.c-button--hollow):hover&
+    // Styles
+    opacity: 0.12
+
+
+  .c-button.c-button--transparent:hover&
+    // Styles
+    opacity: 0.04
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Button Group
+// ---------------------------------------------------------
+
+// #Button Group Structure
+// -------------------------------------
+
+.c-button-group
+  // Layout
+  display: inline-flex
+  overflow: hidden
+
+  // Styles
+  border-radius: $button-border-radius
+
+
+
+
+
+
+
+// #Button Group Modifiers
+// -------------------------------------
+
+.c-button-group--vertical
+  // Layout
+  flex-direction: column
+  flex-wrap: nowrap
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Button Decendants
+// ---------------------------------------------------------
+
+// #Button Decendants Structure
+// -------------------------------------
+
+*
+  .c-button > &
+    // Layout
+    margin-left: $spacing-unit-tiny
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Button Label Icon
+// ---------------------------------------------------------
+
+// #Button Label Icon Structure
+// -------------------------------------
+
+.c-button__label-icon
+  // Typography
+  font-size: $button-label-font-size
+  line-height: inherit
+
+  // Layout
+  padding-right: $button-label-padding
+  padding-left: $button-label-padding
+
+  // Theme
+  background-color: $button-label-color
+
+
+
+
+
+
+
+// #Button Label Icon Context
+// -------------------------------------
+
+.c-button__label-icon
+  .c-button-group &
+    // Styles
+    border-radius: 0
+
+
+  .c-button--labeledBefore > &:first-child
+    // Layout
+    margin-right: $button-label-spacing
+
+    // Styles
+    border-top-left-radius: $button-border-radius
+    border-bottom-left-radius: $button-border-radius
+
+    // === Scaffoding
+
+    + *
+      margin-left: 0
+
+
+  .c-button--labeledAfter > &:last-child
+    // Layout
+    margin-left: $button-label-spacing
+
+    // Styles
+    border-top-right-radius: $button-border-radius
+    border-bottom-right-radius: $button-border-radius

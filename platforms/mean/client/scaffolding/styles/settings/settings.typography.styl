@@ -1,0 +1,90 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Font Base
+ * + @Font Families
+ * + @Font Scale
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Font Base
+// ---------------------------------------------------------
+
+/**
+ * [1] : (X) height of the project main font.
+ * [2] : Unit on which all project scales are calculted.
+ */
+
+$font-size-base      = 1em
+$font-size-base-max  = 14px
+$font-size-base-min  = 13px
+$font-x-height-ratio = 0.58                                   // [1]
+$x-factor            = $font-size-base * $font-x-height-ratio // [2]
+$base-line-height    = 3 * $x-factor
+
+
+
+
+/**
+ * This block is used for responsive typography.
+ *
+ * === Usage
+ *
+ * insde rule declaration use as `{$font-responsive}`
+ */
+
+$font-responsive     =
+  font-size: responsive $font-size-base-min $font-size-base-max
+  font-range: $viewport-xs $viewport-hd
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Font Families
+// ---------------------------------------------------------
+
+$font-stack-sans        = 'Source Sans Pro', sans-serif
+$font-stack-serif       = 'Roboto Slab', serif
+$font-stack-mono        = 'Fira Mono', monospace
+$font-stack-system      = system-ui
+
+$font-family-base       = $font-stack-sans
+$font-family-editorial  = $font-stack-serif
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Font Scale
+// ---------------------------------------------------------
+
+$font-scale-factor  = 1.25
+
+$font-size-divine   = ($font-scale-factor ** 9) * $x-factor
+$font-size-gigantic = $font-size-divine / $font-scale-factor
+$font-size-massive  = $font-size-gigantic / $font-scale-factor
+$font-size-huge     = $font-size-massive / $font-scale-factor
+$font-size-big      = $font-size-huge / $font-scale-factor
+$font-size-large    = $font-size-big / $font-scale-factor
+$font-size-medium   = $font-size-large / $font-scale-factor
+$font-size-small    = $font-size-medium / $font-scale-factor
+$font-size-tiny     = $font-size-small / $font-scale-factor
+$font-size-mini     = $font-size-tiny / $font-scale-factor

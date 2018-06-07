@@ -1,0 +1,182 @@
+// ---------------------------------------------------------
+// @Table of Contents
+// ---------------------------------------------------------
+
+/**
+ * + @Settings
+ *     - #Layout Variables
+ *     - #Color Variables
+ *
+ *
+ * + @Card
+ *     - #Card Structure
+ *
+ *
+ * + @Card Header
+ *     - #Card Header Structure
+ *
+ *
+ * + @Card Content
+ *     - #Card Content Structure
+ *
+ *
+ * + @Card Footer
+ *     - #Card Footer Structure
+ */
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Settings
+// ---------------------------------------------------------
+
+// #Layout Variables
+// -------------------------------------
+
+$card-padding    = 1em
+
+
+
+
+
+
+
+// #Color Variables
+// -------------------------------------
+
+$card-background = $color-main
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Card
+// ---------------------------------------------------------
+
+// #Card Structure
+// -------------------------------------
+
+.c-card
+  // Layout
+  display: flex
+  flex-flow: column nowrap
+
+  // Styles
+  box-shadow: $shadow-tiny
+  border: $base-border
+  border-radius: $base-border-radius
+
+  // Theme
+  background: $card-background
+  border-color: $base-border-color
+
+
+
+  // === Mixins
+
+  collapse()
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Card Header
+// ---------------------------------------------------------
+
+// #Card Header Structure
+// -------------------------------------
+
+.c-card__header
+  // Typography
+  text-transform: capitalize
+
+  // Layout
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  padding: $card-padding (2 * $card-padding)
+  position: relative
+
+  // Styles
+  border-bottom: $base-border $base-border-color
+
+  // Theme
+  border-color: $base-border-color
+
+
+
+  // === Mixins
+
+  collapse('horizontal')
+
+
+
+
+// ---------------------------------------------------------
+// @Card Content
+// ---------------------------------------------------------
+
+// #Card Content Structure
+// -------------------------------------
+
+.c-card__content
+  // Layout
+  display: block
+  width: 100%
+  padding: (2 * $card-padding)
+  position: relative
+
+
+
+  // === Mixins
+
+  collapse()
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// @Card Footer
+// ---------------------------------------------------------
+
+// #Card Footer Structure
+// -------------------------------------
+
+.c-card__footer
+  // Layout
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  padding: $card-padding (2 * $card-padding)
+  position: relative
+
+  // Styles
+  border-top: $base-border $base-border-color
+
+  // Theme
+  border-color: $base-border-color
+
+
+
+  // === Mixins
+
+  collapse('horizontal')

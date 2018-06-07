@@ -1,0 +1,80 @@
+
+<div class="c-mailboxMessages__header o-stack o-stack--center o-stack--splitted u-height-auto u-border-bottom">
+  <div class="c-mailboxMessages__searchBox o-stack__cell u-p-small u-border-bottom u-width-100p u-width-auto@hd- u-width-100p@md-">
+    <form action="./" method="POST">
+      <div class="c-control c-control--searchBG u-border-none u-radius-rounded u-pl-small u-width-100p u-width-auto@hd- u-width-100p@md-"><span class="c-icon c-icon--main">search</span>
+        <div class="c-control__input-box">
+          <input class="c-control__input u-pr-small" type="search" name="search" placeholder="Search Here..." ng-model="vm.query"/>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="o-stack__cell u-width-100p u-text-center u-width-auto@hd- u-width-100p@md-">
+    <div class="c-mailboxMessages__actionBar o-stack o-stack--center o-stack--nowrap o-stack--distributed u-font-large">
+      <div class="o-stack__cell u-flex u-flexJustifyCenter">
+        <label class="c-checkable">
+          <input class="c-checkable__input c-checkable__input--checkbox" type="checkbox" name="" value="" ng-model="vm.selectAll" ng-click="vm.checkAll()"/><span class="c-checkable__mask c-checkable__mask--major c-checkable__mask--checkbox u-mr-none"></span>
+        </label>
+      </div>
+      <div class="o-stack__cell u-relative"><a class="c-button c-button--transparent c-button--icon u-square" href="javascript:void(0)">refresh</a></div>
+      <div class="o-stack__cell u-relative" dropdown=""><a class="c-button c-button--transparent c-button--icon u-square fn-dropdownTrigger" href="javascript:void(0)">folder</a>
+        <ul class="c-menu c-menu--dropdown u-font-tiny u-r-none u-text-left">
+          <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">work</span></a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Family</span></a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Private</span></a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Friends</span></a></li>
+          <li class="c-menu__separator"></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Trash</span></a></li>
+          <li class="c-menu__separator"></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Spam</span></a></li>
+        </ul>
+      </div>
+      <div class="o-stack__cell u-relative" dropdown=""><a class="c-button c-button--transparent c-button--icon u-square fn-dropdownTrigger" href="javascript:void(0)">label</a>
+        <ul class="c-menu c-menu--dropdown u-font-tiny u-r-none u-text-left">
+          <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">work</span></a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Family</span></a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Private</span></a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">Friends</span></a></li>
+        </ul>
+      </div>
+      <div class="o-stack__cell u-relative" dropdown=""><a class="c-button c-button--transparent c-button--icon u-square fn-dropdownTrigger" href="javascript:void(0)">filter_list</a>
+        <ul class="c-menu c-menu--dropdown u-font-tiny u-r-none u-text-left">
+          <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">all</span></a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">read</span></a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">unread</span></a></li>
+          <li class="c-menu__separator"></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">starred</span></a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="javascript:void(0)"><span class="c-menu__text">unstarred</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="c-mailbox__messages">
+  <div class="c-mailbox__messageBrief o-stack o-stack--nowrap u-p-small u-border-bottom" ng-repeat="email in vm.emails | search : [ &quot;name&quot;, &quot;title&quot; ] : vm.query" ng-class="{ 'is-active': email.selected || $state.params.id == ($index + 1) }">
+    <div class="o-stack__cell u-mr-tiny">
+      <div class="o-block _u-mb-mini u-collapse">
+        <div class="o-block__cell">
+          <div class="c-avatar"><a href=""><img ng-src="{{ email.avatar }}" alt="{{ email.name }}"/></a></div>
+        </div>
+        <div class="o-block__cell">
+          <label class="c-checkable">
+            <input class="c-checkable__input c-checkable__input--checkbox" type="checkbox" name="" value="{{$index}}" ng-model="email.selected"/><span class="c-checkable__mask c-checkable__mask--small c-checkable__mask--omitted c-checkable__mask--checkbox u-mr-none"></span>
+          </label>
+        </div>
+        <div class="o-block__cell"><a class="c-icon c-icon--main u-color-minor u-opacity-50p" href="">star</a></div>
+      </div>
+    </div>
+    <div class="o-stack__cell--expanded">
+      <div class="o-stack o-stack--center o-stack--splitted">
+        <div class="o-stack__cell"><a class="c-link" href="">{{ email.name }}</a></div>
+        <div class="o-stack__cell u-opacity-50p"><i class="c-icon c-icon--main" ng-if="email.attachments">attachment</i><i class="u-ml-small">{{ email.receieved | relativeTime }}</i></div>
+      </div>
+      <div class="o-stack__cell u-mt-mini"><a class="u-text-capitalize u-block u-text-bare c-mailbox__briefTitle" href="" ui-sref="email.inbox.message({ id: email.id })">
+          <h4>{{ email.title }}</h4></a>
+        <p>{{ email.content }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="u-border-top u-text-center"><a class="u-block c-icon c-icon--main u-color-pivotal u-opacity-50p u-p-tiny" href="javascript:void(0)" tooltip="Reload More">refresh</a></div>
