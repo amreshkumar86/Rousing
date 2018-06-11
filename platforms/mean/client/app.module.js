@@ -24,6 +24,7 @@
         'ponut.icons',
         'ponut.dashboard',
         'ponut.connections',
+        'ponut.redirectAppUrl',
         'ponut.invoice',
         'ponut.maps',
         'ponut.portlets',
@@ -35,9 +36,27 @@
     ];
 
     var app = angular.module('ponut', dependancies);
-    // app.config(function($sceDelegateProvider) {
-    //     $sceDelegateProvider.resourceUrlWhitelist([
-    //         'https://tryit.w3schools.com/**'
-    //     ]);
+    // // app.config(function($sceDelegateProvider) {
+    // //     $sceDelegateProvider.resourceUrlWhitelist([
+    // //         'https://tryit.w3schools.com/**'
+    // //     ]);
+    // // });
+    // app.run(function($rootScope) {
+    //     $rootScope.$on("$locationChangeStart", function(event, next, current) { 
+    //         // handle route changes
+    //         // console.log("Current:"+current+"\nNext:"+next);
+    //         $rootScope.title = '';
+    //         $rootScope.subtitle = '';
+    //     });
     // });
+    app.directive('autoFocus', function($timeout) {
+        return {
+            restrict: 'AC',
+            link: function(_scope, _element) {
+                $timeout(function(){
+                    _element[0].focus();
+                }, 0);
+            }
+        };
+    });
 }());

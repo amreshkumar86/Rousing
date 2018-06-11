@@ -1,41 +1,41 @@
-;(function () {
+;
+(function() {
 
-  'use strict';
-
-
-  /**
-   * ======================
-   * Registering Controller
-   * ======================
-   */
-
-  angular
-    .module( 'ponut' )
-    .controller( 'headerCtrl', headerCtrl );
+    'use strict';
 
 
-  /**
-   * ===================
-   * Dependacy Injection
-   * ===================
-   */
+    /**
+     * ======================
+     * Registering Controller
+     * ======================
+     */
 
-  headerCtrl.$inject = ['$scope','$rootScope'];
+    angular
+        .module('ponut')
+        .controller('headerCtrl', headerCtrl);
 
 
-  /**
-   * =========================
-   * Controller Function Setup
-   * =========================
-   */
+    /**
+     * ===================
+     * Dependacy Injection
+     * ===================
+     */
 
-  function headerCtrl($scope,$rootScope) {
-    var vm = this;
-    $scope.refresh = function() {
-    
-        $rootScope.$emit("CallParentMethod", {});
+    headerCtrl.$inject = ['$scope', '$rootScope'];
+
+
+    /**
+     * =========================
+     * Controller Function Setup
+     * =========================
+     */
+
+    function headerCtrl($scope, $rootScope) {
+        var vm = this;
+        $scope.refresh = function() {
+            $rootScope.$emit("CallParentMethod", {});
+        }
     }
-}
-  
+
 
 })();

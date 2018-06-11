@@ -22,7 +22,7 @@ var webUrl = "http://localhost/nbano-Admin/nbanoui/#";*/
 /** staging config*/
 
 // var website_url = "http://103.87.92.13:8089/oen/";
-var website_url = 'http://localhost:9000';
+var website_url = 'https://www.rousingdesigns.com';
 
 
 /** production config*/

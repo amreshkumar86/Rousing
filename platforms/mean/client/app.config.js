@@ -65,5 +65,5 @@
         });
     }
 
-    var website_url = 'http://localhost:9000';
+    var website_url = 'https://localhost';
 }());

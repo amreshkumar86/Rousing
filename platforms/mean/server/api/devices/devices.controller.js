@@ -1,9 +1,9 @@
 'use strict';
 
-import ThirdPartyConnection from './thirdPartyConnection.model';
+import ThirdPartyConnection from '../thirdPartyConnection/thirdPartyConnection.model';
 import config from '../../config/environment';
-import jwt from 'jsonwebtoken';
-import request from 'request-promise';
+import lifx from 'lifx-http-api';
+import async from 'async';
 
 function validationError(res, statusCode) {
     statusCode = statusCode || 422;
@@ -24,7 +24,14 @@ export function index(req,res,next) {
     return ThirdPartyConnection
     .find({user: req.user})
     .then(connections => {
-    	return res.json(connections);
+    	async.map(connections,(connection,callback)=>{
+            new lifx({bearerToken:connection.accessToken})
+            .listLights('all').then(lights=>{
+                callback(null,{name:connection.name,lights})
+            }, handleError(res));
+        },(err,results)=>{
+           res.json(results);
+        });
     })
     .catch(handleError(res));
 }
@@ -32,38 +39,17 @@ export function index(req,res,next) {
 /**
  * Creates a third party connection
  */
-export function create(req, res) {
-    //Exchange code for authToken
-    request({
-        method: 'POST',
-        url : 'https://cloud.lifx.com/oauth/token?client_id='+config.lifx.clientID+'&client_secret='+config.lifx.clientSecret+'&code='+req.body.authToken+'&grant_type=authorization_code',
-        headers: {
-            // client_id: config.lifx.clientID,
-            // client_secret: config.lifx.clientSecret,
-            // code:req.body.authToken,
-            // grant_type: 'authorization_code',
-            'User-Agent': 'Request-Promise'
-        },
-        json: true
-    })
-    .then(result=>{
-        console.log(result);
-        var newConn = new ThirdPartyConnection();
-        newConn.name = req.body.name;
-        newConn.accessToken = result.access_token;
-        newConn.refreshToken = result.refresh_token;
-        newConn.user = req.user;
-        return newConn.save()
-            .then(function(conn) {
-                res.json({ success: true });
-            })
-            .catch(validationError(res));
-    })
-    .catch(function (err) {
-        // API call failed...
-        console.log(err);
-    });
-}
+// export function create(req, res) {
+//     var newConn = new ThirdPartyConnection();
+//     newConn.name = req.body.name;
+//     newConn.authToken = req.body.authToken;
+//     newConn.user = req.user;
+//     return newConn.save()
+//         .then(function(conn) {
+//             res.json({ success: true });
+//         })
+//         .catch(validationError(res));
+// }
 
 // function validationError(res, statusCode) {
 //     statusCode = statusCode || 422;

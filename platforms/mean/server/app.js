@@ -13,6 +13,8 @@ import initWebSocketServer from './config/websockets';
 import expressConfig from './config/express';
 import registerRoutes from './routes';
 import seedDatabaseIfNeeded from './config/seed';
+const fs = require('fs');
+const https = require('https');
 
 
 // Connect to MongoDB
@@ -22,9 +24,14 @@ mongoose.connection.on('error', function(err) {
     process.exit(-1); // eslint-disable-line no-process-exit
 });
 
+const httpsOptions = {
+  key: fs.readFileSync('./server/sslKeys/key.pem'),
+  cert: fs.readFileSync('./server/sslKeys/cert.pem')
+}
+
 // Setup server
 var app = express();
-var server = http.createServer(app);
+var server = https.createServer(httpsOptions,app);
 // const wsInitPromise = initWebSocketServer(server);
 expressConfig(app);
 registerRoutes(app);

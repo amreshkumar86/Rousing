@@ -1,11 +1,20 @@
 <div>
-  <h1>My Connections</h1>
   <div ng-if="allConnections.length > 0">
     <div>
       <button ng-click="addNewConnection()">Add New LIFX Account</button>
     </div>
-    <div ng-repeat="eachConnection in allConnections">{{eachConnection.name}}</div>
+    <div ng-repeat="eachConnection in allConnections">
+    	<div ng-if="eachConnection.editable">
+    		<input type="text" name="connectionName" ng-model="eachConnection.name" auto-focus/>
+    		<button ng-click="saveConnection(eachConnection)">Save</button>
+    		<button ng-click="cancel(eachConnection)">Cancel</button>
+    	</div>
+    	<div ng-if="!eachConnection.editable">
+    		<input type="text" name="connectionName" ng-model="eachConnection.name"/>
+    		<button ng-click="eachConnection.editable = true">Edit</button>
+    	</div>
+    </div>
   </div>
-  <div ng-click="addNewConnection()">You don't have any connected LIFX accounts.<br/>Click here to connect to your existing LIFX account</div>
+  <div ng-if="allConnections.length == 0" ng-click="addNewConnection()">You don't have any connected LIFX accounts.<br/>Click here to connect to your existing LIFX account</div>
 </div>
 <!-- <iframe class="youtube-player" type="text/html" width="640" height="385" ng-src="{{trustSrc(src)}}" allowfullscreen frameborder="0"> -->
