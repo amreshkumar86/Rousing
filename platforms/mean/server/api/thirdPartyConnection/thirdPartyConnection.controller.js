@@ -38,16 +38,11 @@ export function create(req, res) {
         method: 'POST',
         url : 'https://cloud.lifx.com/oauth/token?client_id='+config.lifx.clientID+'&client_secret='+config.lifx.clientSecret+'&code='+req.body.authToken+'&grant_type=authorization_code',
         headers: {
-            // client_id: config.lifx.clientID,
-            // client_secret: config.lifx.clientSecret,
-            // code:req.body.authToken,
-            // grant_type: 'authorization_code',
             'User-Agent': 'Request-Promise'
         },
         json: true
     })
     .then(result=>{
-        console.log(result);
         var newConn = new ThirdPartyConnection();
         newConn.name = req.body.name;
         newConn.accessToken = result.access_token;

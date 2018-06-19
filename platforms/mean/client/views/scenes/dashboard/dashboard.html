@@ -1,11 +1,14 @@
 <div>
-	<div ng-repeat="eachLocation in allLights">
+	<div ng-repeat="eachLocation in allLocations">
 		<div>
-			<h3>{{eachLocation.name}}</h3>
+			<h3>{{eachLocation.name}}</h3><span>      Currently consuming {{eachLocation.avgPowerConsumption}}</span>
 			<div>
-				<div ng-repeat="eachLight in eachLocation.lights">
+				{{getAvgPowerConsumedByLocation(eachLocation)}}
+				<div ng-repeat="eachGroup in eachLocation.groups">
 					<div>
-						<light light-data="eachLight">
+						{{eachGroup.name}} ({{eachGroup.connectedLights}} lights connected of {{eachGroup.getTotalLights()}} lights.)
+						<span>Currently consuming {{eachGroup.avgPowerConsumption}}</span>
+						<!-- <light light-data="eachLight"> -->
 						<!-- <span>{{eachLight.label}} last seen {{eachLight.last_seen}}</span> -->
 					</div> 
 				</div>

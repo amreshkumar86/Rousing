@@ -27,11 +27,63 @@ export function index(req,res,next) {
     	async.map(connections,(connection,callback)=>{
             new lifx({bearerToken:connection.accessToken})
             .listLights('all').then(lights=>{
-                callback(null,{name:connection.name,lights})
+                callback(null,{name:connection.name,id:connection.id,lights})
             }, handleError(res));
         },(err,results)=>{
            res.json(results);
         });
+    })
+    .catch(handleError(res));
+}
+
+export function lightStatus(req,res,next) {
+    var lightId = req.params.lightId;
+    var locationId = req.headers.locationid;
+    ThirdPartyConnection
+    .find({_id: locationId})
+    .then(connections => {
+        if(connections && connections.length == 1) {
+            var connection = connections[0];
+            var accessToken = connection.accessToken;
+            new lifx({bearerToken:connection.accessToken})
+            .listLights('id:'+lightId).then(lights=>{
+                if(lights && lights.length == 1) {
+                    res.json({
+                        success:true,
+                        light:lights[0]
+                    });
+                }
+                else {
+                    res.json({success:false});
+                }
+            }, handleError(res));
+        }
+    })
+    .catch(handleError(res));
+}
+
+export function groupStatus(req,res,next) {
+    var groupId = req.params.groupId;
+    var locationId = req.headers.locationid;
+    ThirdPartyConnection
+    .find({_id: locationId})
+    .then(connections => {
+        if(connections && connections.length == 1) {
+            var connection = connections[0];
+            var accessToken = connection.accessToken;
+            new lifx({bearerToken:connection.accessToken})
+            .listLights('group_id:'+groupId).then(lights=>{
+                if(lights && lights.length > 0) {
+                    res.json({
+                        success:true,
+                        lights:lights
+                    });
+                }
+                else {
+                    res.json({success:false});
+                }
+            }, handleError(res));
+        }
     })
     .catch(handleError(res));
 }

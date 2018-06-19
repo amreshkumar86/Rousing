@@ -17,7 +17,6 @@ export default function(app) {
     app.use('/redirectAppUrl',function(req,res,next){
         
         var queryData = url.parse(req.url, true).query;
-        console.log(queryData);
         //res.redirect('https://www.rousingdesigns.com/#!/redirectAppUrl'+req.url);
         res.writeHead(301,
           {Location: 'https://www.rousingdesigns.com/#!/redirectAppUrl/'+queryData['code']+'/'+queryData['scope']+'/'+queryData['state']}
