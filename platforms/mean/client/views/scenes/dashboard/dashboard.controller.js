@@ -60,16 +60,19 @@
      * ===================
      */
 
-    dashboardCtrl.$inject = ['$rootScope', '$timeout', 'dashboardServices', '$scope', '$location', '$activityIndicator'];
+    dashboardCtrl.$inject = ['$rootScope', '$timeout', 'dashboardServices', '$scope', '$location', '$activityIndicator','NgMap'];
 
 
 
     class Location {
-        constructor(data) {
+        constructor(data, updateCallback) {
             this.groups = data.groups;
             this.id = data.id;
             this.name = data.name;
             this.avgPowerConsumption = '';
+            this.address = data.address || '';
+            this.location = data.location;
+            this.updateCallback = updateCallback;
             for (var i = this.groups.length - 1; i >= 0; i--) {
                 var eachGroup = this.groups[i];
                 eachGroup.location = this;
@@ -91,7 +94,59 @@
             for (var i = this.groups.length - 1; i >= 0; i--) {
                 currentPowerConsumption += this.groups[i].getCurrentPowerConsumption();
             }
-            this.avgPowerConsumption = currentPowerConsumption.toFixed(2) + ' Watts/hour';
+            this.avgPowerConsumption = currentPowerConsumption.toFixed(2);
+            if(this.updateCallback) {
+              this.updateCallback();
+            }
+        }
+
+        getEnergyGraphColor() {
+          //Max is 9 watt per light
+          //Divide in 4 quarters
+          //0-25: Green
+          //26-50: Yellow
+          //51-75: Orange
+          //76-100: Red
+          var energyConsumptionPercent = (this.avgPowerConsumption/(this.getTotalLights()*9)*100);
+          var color = 'black';
+          if(energyConsumptionPercent <= 25) {
+            color = 'green';
+          }
+          else if(energyConsumptionPercent <= 50) {
+            color = 'yellow';
+          }
+          else if(energyConsumptionPercent <= 75) {
+            color = 'orange';
+          }
+          else if(energyConsumptionPercent <= 100) {
+            color = 'red';
+          }
+
+          return color;
+        }
+
+        getLightsStats() {
+          return this.getConnectedLights() + '/' + this.getTotalLights();
+        }
+
+        getTotalLights() {
+          var totalLights = 0;
+          for (var i = this.groups.length - 1; i >= 0; i--) {
+            totalLights += this.groups[i].getTotalLights();
+          }
+          return totalLights;
+        }
+
+        getConnectedLights() {
+          var totalLights = 0;
+          for (var i = this.groups.length - 1; i >= 0; i--) {
+            totalLights += this.groups[i].getConnectedLights();
+          }
+          return totalLights; 
+        }
+
+        getGatewayStats() {
+          return this.getTotalLights() > 0 ? 'Connected' : 'Disconnected';
         }
     }
 
@@ -212,211 +267,15 @@
      *
      */
 
-    function dashboardCtrl($rootScope, $timeout, dashboardServices, $scope, $location, $activityIndicator) {
-        // [1]
+    function dashboardCtrl($rootScope, $timeout, dashboardServices, $scope, $location, $activityIndicator, NgMap) {
         $rootScope.title = 'Dashboard';
         var init;
         if (localStorage.getItem('token') == null) {
             $location.path('/login');
 
-        } else
-
-        {
-
-            $scope.customer = {};
-            $scope.customerId = localStorage.getItem('customerId');
-
-            $scope.customer.customer_id = $scope.customerId;
-
-
-            $scope.getEnergyGraph = function() {
-                $activityIndicator.startAnimating();
-                $scope.json = angular.toJson($scope.customer);
-                dashboardServices.getEnergyGraph($scope.json).then(function mySucces(data) {
-                    $scope.response = data.data;
-                    $activityIndicator.stopAnimating();
-                    var plot;
-                    $scope.dataset = [];
-                    $scope.xData = [];
-                    for (var i = 0; i < $scope.response.length; i++) {
-                        $scope.dataset.push([$scope.response[i].timeValue, $scope.response[i].wattage]);
-                    }
-                    plot = $.plot("#line-chart", [$scope.dataset], {
-                        xaxes: [{
-                            position: 'bottom',
-                            axisLabel: 'Time'
-                        }],
-                        yaxes: [{
-                                position: 'left',
-                                axisLabel: 'Wattage in KWH',
-                                axisLabelPadding: 5
-                            },
-
-                        ],
-                        grid: {
-                            borderWidth: {
-                                top: 1,
-                                right: 1,
-                                bottom: 1,
-                                left: 1
-                            },
-                            borderColor: "colors.palette.grey.muted",
-                            margin: 0,
-                            minBorderMargin: 0,
-                            labelMargin: 14,
-                            hoverable: true,
-                            clickable: true,
-                            mouseActiveRadius: 6,
-                        },
-                        tooltip: true,
-                        tooltipOpts: {
-                            content: "%x.1 is %y.4",
-                            defaultTheme: false,
-                            shifts: {
-                                x: 0,
-                                y: 20
-                            }
-                        },
-                        series: {
-                            color: '#ff4444',
-                            shadowSize: null,
-                            splines: {
-                                show: true,
-                                tension: 0.35,
-                                lineWidth: 2,
-                                fill: 0
-                            },
-                            tooltip: true,
-                            legend: {
-                                backgroundOpacity: 0,
-                                position: "ne",
-                                noColumns: 2
-                            },
-
-
-                        }
-                    });
-                });
-            }
-
-
-
-            $scope.getCompleteLightData = function() {
-                $scope.group = [];
-                $scope.bulb = [];
-                dashboardServices.getCompleteLightData($scope.customerId).then(function mySucces(data) {
-                    $scope.responseData = data.data;
-
-                    for (var i = 0; i < $scope.responseData.length; i++) {
-                        if ($scope.responseData[i].type == "group") {
-                            $scope.group.push($scope.responseData[i]);
-                        } else if ($scope.responseData[i].type == "device") {
-                            $scope.bulb.push($scope.responseData[i]);
-                        }
-
-                    }
-
-                    $scope.groupCount = $scope.group.length;
-                    $scope.bulbCount = $scope.bulb.length;
-                });
-
-            }
-
-            $scope.getEnergyConsumed = function() {
-                $scope.cust = {};
-                $scope.cust.cust_id = $scope.customerId;
-                $scope.data = angular.toJson($scope.cust);
-                dashboardServices.getEnergyConsumed($scope.data).then(function mySucces(data) {
-                    $scope.countData = data.data;
-
-                    $scope.totalLightCount = $scope.countData[0].activeCount;
-                    $scope.totalLightEnergy = $scope.countData[0].totalKWH;
-                    $scope.totalGatewayEnergy = $scope.countData[1].totalKWH;
-                    $scope.totalEnergy = $scope.countData[0].totalKWH + $scope.countData[1].totalKWH;
-
-
-                });
-
-
-            }
-
-
-            $scope.isObjectEmpty = function(card) {
-                return Object.keys(card).length === 0;
-            }
-            $scope.getColor = function(colorValue, id, mode) {
-                var r = Math.floor(colorValue / (256 * 256));
-                var g = Math.floor((colorValue - r * 256 * 256) / 256);
-                var b = colorValue - r * 256 * 256 - g * 256;
-
-                var rgb = b | (g << 8) | (r << 16);
-                $scope.hex = '#' + (0x1000000 + rgb).toString(16).slice(1);
-                if (mode == 1) {
-                    $('#' + id).css({
-                        "background": "#fff"
-                    });
-                    $('#' + id).css({
-                        "border": "1px solid #fff"
-                    });
-                } else if (colorValue == undefined && mode == undefined) {
-                    $('#' + id).css({
-                        "background": "#fff"
-                    });
-                    $('#' + id).css({
-                        "border": "1px solid #fff"
-                    });
-
-                } else {
-                    $('#' + id).css({
-                        "background": $scope.hex
-                    });
-                    $('#' + id).css({
-                        "border": "1px solid" + $scope.hex
-                    });
-
-                }
-
-            }
-
-            $scope.getColorForGroup = function(colorValue, id, mode) {
-
-                var rc = Math.floor(colorValue / (256 * 256));
-                var gc = Math.floor((colorValue - rc * 256 * 256) / 256);
-                var bc = colorValue - rc * 256 * 256 - gc * 256;
-
-                var rgbc = bc | (gc << 8) | (rc << 16);
-                $scope.hexa = '#' + (0x1000000 + rgbc).toString(16).slice(1);
-                if (mode == 1) {
-                    $('#' + id).css({
-                        "background": "#fff"
-                    });
-                    $('#' + id).css({
-                        "border": "1px solid #fff"
-                    });
-                } else if (colorValue == undefined && mode == undefined) {
-                    $('#' + id).css({
-                        "background": "#fff"
-                    });
-                    $('#' + id).css({
-                        "border": "1px solid #fff"
-                    });
-
-                } else {
-                    $('#' + id).css({
-                        "background": $scope.hexa
-                    });
-                    $('#' + id).css({
-                        "border": "1px solid" + $scope.hexa
-                    });
-
-                }
-
-            }
+        } else {
 
             $rootScope.$on("CallParentMethod", function() {
-                // $scope.getEnergyGraph();
-                // $scope.getCompleteLightData();
-                // $scope.getEnergyConsumed();
                 $scope.getAllLights();
             });
 
@@ -447,10 +306,14 @@
                         allLocations.push(new Location({
                             name: eachLocation.name,
                             id: eachLocation.id,
+                            address: eachLocation.address,
+                            location : eachLocation.location,
                             groups: groups
-                        }));
+                        },$scope.refreshGraph));
                     }
                     $scope.allLocations = allLocations;
+                    $scope.updateMap();
+                    $scope.refreshGraph($scope.allLocations);
                 });
             }
 
@@ -459,6 +322,63 @@
             };
             init();
 
+            $scope.updateMap = function() {
+              NgMap.getMap().then(function(map) {
+                var bounds = new google.maps.LatLngBounds();
+                for (var i = $scope.allLocations.length - 1; i >= 0; i--) {
+                  var loc = $scope.allLocations[i].location;
+                  var marker = new google.maps.Marker({
+                    position: loc,
+                    map: map,
+                    title: $scope.allLocations[i].name
+                  });
+                  bounds.extend(marker.getPosition());
+                }
+                setTimeout(()=>{
+                  map.fitBounds(bounds);
+                },100);
+              });
+            }
+
+            $scope.refreshGraph = function() {
+              $scope.graphOptions = {
+                animation: false,
+                legend: {
+                    display: false,
+                },
+                title: {
+                    display: true,
+                    text: 'Current Power Consumption in Watts/Hr',
+                    fontColor: 'white',
+                },
+                scales: {
+                  yAxes: [{
+                      ticks: {
+                          fontColor: 'white',
+                      },
+                      gridLines : {
+                        // color: 'white'
+                      }
+                  }],
+                  xAxes: [{
+                      ticks: {
+                          fontColor: "white",
+                          fontSize: 14,
+                          stepSize: 1,
+                          beginAtZero: true
+                      }
+                  }],
+              }
+              }
+              $scope.graphData = {};
+              $scope.graphData.labels = $scope.allLocations.map(eachLocation=>{return eachLocation.name});
+              $scope.graphData.datasets = [{
+                // label : ''
+              }];
+              var plotData = $scope.graphData.datasets[0];
+              plotData.data = $scope.allLocations.map(eachLocation=>{return eachLocation.avgPowerConsumption;});
+              plotData.backgroundColor = $scope.allLocations.map(eachLocation=>{return eachLocation.getEnergyGraphColor()});
+            }
         }
     }
 

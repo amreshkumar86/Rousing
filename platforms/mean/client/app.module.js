@@ -33,6 +33,8 @@
         'ponut.tables',
         'ponut.widgets',
         'ponut.todo',
+        'ngMap',
+        'tc.chartjs'
     ];
 
     var app = angular.module('ponut', dependancies);

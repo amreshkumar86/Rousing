@@ -10,6 +10,11 @@ const authTypes = ['github', 'twitter', 'facebook', 'google'];
 var ThirdPartyConnectionSchema = new Schema({
     name: String,
     user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
+    address : String,
+    location : {
+    	lat : Number,
+    	lng: Number
+    },
     accessToken: String,
     refreshToken: String,
 });

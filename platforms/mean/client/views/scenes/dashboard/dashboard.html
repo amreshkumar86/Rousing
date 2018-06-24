@@ -1,18 +1,61 @@
-<div>
-	<div ng-repeat="eachLocation in allLocations">
-		<div>
-			<h3>{{eachLocation.name}}</h3><span>      Currently consuming {{eachLocation.avgPowerConsumption}}</span>
-			<div>
-				{{getAvgPowerConsumedByLocation(eachLocation)}}
-				<div ng-repeat="eachGroup in eachLocation.groups">
-					<div>
-						{{eachGroup.name}} ({{eachGroup.connectedLights}} lights connected of {{eachGroup.getTotalLights()}} lights.)
-						<span>Currently consuming {{eachGroup.avgPowerConsumption}}</span>
-						<!-- <light light-data="eachLight"> -->
-						<!-- <span>{{eachLight.label}} last seen {{eachLight.last_seen}}</span> -->
-					</div> 
-				</div>
-			</div>
-		</div>
-	</div>
+<style type="text/css">
+    .animate-show-hide.ng-hide {
+        opacity: 0;
+    }
+
+    .animate-show-hide.ng-hide-add,
+    .animate-show-hide.ng-hide-remove {
+        transition: all linear 0.25s;
+    }
+</style>
+<div style="padding:10px;">
+    <div class="u-relative o-grid o-grid--smallGap _u-6/12@lg+ _u-width-100p@lg- _u-4/12@hd+ animate-show-hide" ng-show="allLocations.length > 0">
+        <div class="o-grid__cell" style="position: absolute; left: 0%; top: 0px;">
+            <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-accent-2 u-color-white-900" style="height: 175px;">
+                <div class="c-portlet__header o-stack o-stack--center o-stack--splitted u-px-small u-py-mini">
+                    <div class="o-stack__cell">
+                        <h2 class="u-color-white-900">Smart Device Stats</h2>
+                    </div>
+                </div>
+                <div class="c-portlet__content u-pt-small">
+                    <div class="o-stack o-stack--center _u-px-small">
+                        <div class="o-stack__cell u-border-main u-text-center" ng-repeat="location in allLocations">
+                            <h3 class="u-color-white-900">{{location.name}}</h3><span class="u-font-medium u-lh-normal u-opacity-80p">{{location.getLightsStats()}} connected</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="o-grid__cell" style="position: absolute; left: 49.9492%; top: 0px;">
+            <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-primary u-color-white-900" style="height: 175px;">
+                <div class="c-portlet__header o-stack o-stack--center o-stack--splitted u-px-small u-py-mini">
+                    <div class="o-stack__cell">
+                        <h2 class="u-color-white-900">Gateway Stats</h2>
+                    </div>
+                </div>
+                <div class="c-portlet__content u-pt-small">
+                    <div class="o-stack o-stack--center _u-px-small">
+                        <div class="o-stack__cell u-border-main u-text-center" ng-repeat="location in allLocations">
+                            <h3 class="u-color-white-900">{{location.name}}</h3><span class="u-font-medium u-lh-normal u-opacity-80p">{{location.getGatewayStats()}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="u-relative o-grid o-grid--smallGap _u-6/12@lg+ _u-width-100p@lg- _u-4/12@hd+ animate-show-hide" ng-show="allLocations.length > 0" style="top:200px;">
+        <div class="o-grid__cell">
+            <div class="c-portlet o-block u-width-100p _u-width-100p u-shadow-mini u-bg-accent-2 u-color-white-900">
+                <div map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="">
+                    <ng-map center="41,-87" zoom="3"></ng-map>
+                </div>
+            </div>
+        </div>
+
+        <div class="o-grid__cell">
+            <div class="c-portlet o-block u-width-100p _u-width-100p u-color-white-900">
+                <canvas tc-chartjs chart-type="bar" chart-data="graphData" chart-options="graphOptions"></canvas>
+            </div>
+        </div>
+    </div>
 </div>

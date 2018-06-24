@@ -27,7 +27,7 @@ export function index(req,res,next) {
     	async.map(connections,(connection,callback)=>{
             new lifx({bearerToken:connection.accessToken})
             .listLights('all').then(lights=>{
-                callback(null,{name:connection.name,id:connection.id,lights})
+                callback(null,{name:connection.name,id:connection.id, address: connection.address, location: connection.location,lights})
             }, handleError(res));
         },(err,results)=>{
            res.json(results);
