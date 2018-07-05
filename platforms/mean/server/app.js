@@ -25,8 +25,9 @@ mongoose.connection.on('error', function(err) {
 });
 
 const httpsOptions = {
-  key: fs.readFileSync('./server/sslKeys/key.pem'),
-  cert: fs.readFileSync('./server/sslKeys/cert.pem')
+  key: fs.readFileSync('./server/sslKeys/rousingPkey.pem'),
+  cert: fs.readFileSync('./server/sslKeys/rousingCert.crt'),
+  ca: [fs.readFileSync('./server/sslKeys/rousingCA1.crt'), fs.readFileSync('./server/sslKeys/rousingCA2.crt'), fs.readFileSync('./server/sslKeys/rousingCA3.crt')]
 }
 
 // Setup server
