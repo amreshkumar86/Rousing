@@ -73,7 +73,7 @@
   function blankCtrl( $rootScope,$scope,blankServices,$location,toaster,$activityIndicator) {
     // [1]
     $rootScope.title = 'login';
-    $scope.user = {username : 'test@example.com',password:'test'};
+    $scope.user = {username : '',password:''};
     if(localStorage.getItem('token') != undefined)
 	{
 	$location.path('/dashboard');
