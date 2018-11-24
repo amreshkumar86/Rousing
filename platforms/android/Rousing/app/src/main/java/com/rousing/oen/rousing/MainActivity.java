@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     SeekBar brightnessBar;
     McuConnector connector;
     String deviceType = "STRIP";
+    String deviceIP = null;
 
     SharedPreferences pref;
     SharedPreferences.Editor editor;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
         editor = pref.edit();
         deviceType = getIntent().getStringExtra("DEVICE_TYPE");
+        deviceIP = getIntent().getStringExtra("DEVICE_IP");
         addListenerOnButton();
         if(deviceType.equalsIgnoreCase("LIFX")) {
             connector = McuConnector.getSharedConnectorLifx(null);
@@ -42,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
            smartLightButton.setVisibility(View.INVISIBLE);
         }
         else {
-            connector = McuConnector.getSharedConnectorStrip(null,null);
+            connector = McuConnector.getSharedConnectorStrip(MainActivity.this,deviceIP);
             boolean wasChecked = pref.getBoolean("STRIP_POWER",false);
             powerButton.setChecked(wasChecked);
             double brightVal = pref.getFloat("STRIP_BRIGHT",100);
@@ -66,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(context, ColorActivity.class);
                 intent.putExtra("DEVICE_TYPE", deviceType);
+                intent.putExtra("DEVICE_IP",deviceIP);
                 startActivity(intent);
 
             }
@@ -81,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(context, PresetActivity.class);
                 intent.putExtra("DEVICE_TYPE", deviceType);
+                intent.putExtra("DEVICE_IP",deviceIP);
                 startActivity(intent);
 
             }
@@ -149,7 +153,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-//        powerButton.setChecked(false);
     }
 }

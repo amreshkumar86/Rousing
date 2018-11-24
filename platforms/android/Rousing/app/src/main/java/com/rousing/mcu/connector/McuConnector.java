@@ -18,6 +18,8 @@ import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Dictionary;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -52,7 +54,7 @@ public class McuConnector {
 
         @Override
         public void onOpen(WebSocket webSocket, Response response) {
-
+            Log.d("","Connection established : ");
         }
 
         @Override
@@ -79,6 +81,7 @@ public class McuConnector {
     final String serverAddress = "http://192.168.4.1:80";
     private static McuConnector instanceStrip = null;
     private static McuConnector instanceLifx = null;
+    private static HashMap<String,McuConnector> stripInstances = new HashMap<String,McuConnector>();
     private OkHttpClient client;
     private WebSocket webSocketClient;
     private DEVICE_TYPE currentDevice;
@@ -86,11 +89,16 @@ public class McuConnector {
     private String LIFXToken = "c7d77fe4b94a81d39eb21623a63b1fc82388c072b7aa5796013bee73cf1a12d1";
     private String BulbId = "d073d531f221";
     public static McuConnector getSharedConnectorStrip(Context context, String nodeMCUIP) {
-        if(instanceStrip == null) {
-            instanceStrip = new McuConnector(DEVICE_TYPE.STRIP,context);
-            instanceStrip.createWebSocketClient(nodeMCUIP);
+        if(!nodeMCUIP.contains("http://")){
+            nodeMCUIP = "http://" + nodeMCUIP;
         }
-        return instanceStrip;
+        McuConnector strip = stripInstances.get(nodeMCUIP);
+        if(strip == null) {
+            strip= new McuConnector(DEVICE_TYPE.STRIP,context);
+            strip.createWebSocketClient(nodeMCUIP);
+            stripInstances.put(nodeMCUIP,strip);
+        }
+        return strip;
     }
 
     public static McuConnector getSharedConnectorLifx(Context context) {

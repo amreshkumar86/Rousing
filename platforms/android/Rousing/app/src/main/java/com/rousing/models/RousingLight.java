@@ -31,6 +31,10 @@ public class RousingLight extends Light {
     public String modelNumber;
     public String deviceID;
     public Group group;
+    public String deviceIP;
+    public String _rev;
+    public String _id;
+    public boolean isActive = false;
     @Override
     public String toString() {
         return this.modelName + ":" + this.modelNumber + " [" + this.serialNumber + "]";

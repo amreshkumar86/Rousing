@@ -77,10 +77,6 @@ public class LightSearchActivity extends AppCompatActivity {
 
     }
 
-    private void addLight(RousingLight light) {
-
-    }
-
     public void rescan(View v) {
         discoverRousingDevices(this);
     }
@@ -105,7 +101,7 @@ public class LightSearchActivity extends AppCompatActivity {
             //Get XML description of all found devices
             com.android.volley.RequestQueue queue = Volley.newRequestQueue(this);
             pendingRequests = addresses.toArray().length;
-            for (String xmlDescUrl:addresses
+            for (final String xmlDescUrl:addresses
                     ) {
                 StringRequest req = new StringRequest(Request.Method.GET, xmlDescUrl,
                         new Response.Listener<String>()
@@ -131,6 +127,7 @@ public class LightSearchActivity extends AppCompatActivity {
                                             device.modelName= getValue("modelName",element2);
                                             device.modelNumber = getValue("modelNumber",element2);
                                             device.serialNumber = getValue("serialNumber",element2);
+                                            device.deviceIP= getValue("modelURL",element2);
                                             foundDevices.add(device);
                                             if(--pendingRequests == 0) {
                                                 showDevicesInList(foundDevices);
@@ -197,8 +194,22 @@ public class LightSearchActivity extends AppCompatActivity {
             alert.show();
         }
         else {
+            ArrayList<RousingLight> savedDevices = DBManager.GetSharedDBManager().GetAllLights();
+            ArrayList<RousingLight> nonSavedDevices = new ArrayList<RousingLight>();
+            for (RousingLight eachLight : foundDevices) {
+                boolean isFound = false;
+                for (RousingLight eachSavedLight : savedDevices ) {
+                    if(eachLight.deviceID.equalsIgnoreCase(eachSavedLight.deviceID)) {
+                        isFound = true;
+                        break;
+                    }
+                }
+                if(!isFound) {
+                    nonSavedDevices.add(eachLight);
+                }
+            }
             adapter.clear();
-            adapter.addAll(foundDevices);
+            adapter.addAll(nonSavedDevices);
             adapter.notifyDataSetChanged();
         }
     }

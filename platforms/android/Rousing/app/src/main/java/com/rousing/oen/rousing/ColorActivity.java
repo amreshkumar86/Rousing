@@ -20,6 +20,7 @@ public class ColorActivity extends AppCompatActivity {
     McuConnector connector;
     SharedPreferences pref;
     SharedPreferences.Editor editor;
+    String deviceIP = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,14 +31,14 @@ public class ColorActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         final String deviceType = getIntent().getStringExtra("DEVICE_TYPE");
         colorPicker = (ColorPickerView)findViewById(R.id.cpv_color_picker_view);
-
+        deviceIP = getIntent().getStringExtra("DEVICE_IP");
         int savedColor = -1;
         if(deviceType.equalsIgnoreCase("LIFX")) {
             connector = McuConnector.getSharedConnectorLifx(null);
             savedColor = pref.getInt("LIFX_COLOR",-1);
         }
         else {
-            connector = McuConnector.getSharedConnectorStrip(null,null);
+            connector = McuConnector.getSharedConnectorStrip(ColorActivity.this,deviceIP);
             savedColor = pref.getInt("STRIP_COLOR",-1);
         }
         if(savedColor != -1) {
